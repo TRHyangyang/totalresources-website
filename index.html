@@ -9,7 +9,7 @@
 
 
 <title>
-TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+TOTAL RESOURCES HOLDING LTD. (CHONGQING) | Global Industrial Resources Platform
 </title>
 
 
@@ -18,13 +18,16 @@ TOTAL RESOURCES HOLDING LTD. (CHONGQING) is a global industrial resource integra
 ">
 
 
+
 <style>
 
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 
@@ -57,6 +60,14 @@ margin:auto;
 
 
 
+section{
+
+padding:90px 0;
+
+}
+
+
+
 h1,h2,h3{
 
 font-weight:700;
@@ -65,31 +76,14 @@ font-weight:700;
 
 
 
-h2{
-
-font-size:34px;
-
-margin-bottom:10px;
-
-}
-
-
-
 p{
 
-font-size:15px;
+font-size:16px;
 
-color:#333;
-
-}
-
-
-
-section{
-
-padding:80px 0;
+line-height:1.9;
 
 }
+
 
 
 
@@ -101,7 +95,7 @@ header{
 
 background:#071d38;
 
-height:70px;
+height:75px;
 
 display:flex;
 
@@ -127,7 +121,7 @@ align-items:center;
 
 color:white;
 
-font-size:20px;
+font-size:22px;
 
 font-weight:bold;
 
@@ -143,11 +137,22 @@ color:white;
 
 text-decoration:none;
 
-margin-left:35px;
+margin-left:30px;
 
 font-size:13px;
 
 }
+
+
+
+.menu a:hover{
+
+color:#d5ad4b;
+
+}
+
+
+
 
 
 
@@ -162,15 +167,20 @@ background:
 
 linear-gradient(
 135deg,
-#102b4c,
-#718093
-);
+rgba(7,29,56,0.95),
+rgba(80,105,130,0.85)
+),
+
+url("hero-bg.jpg");
+
+background-size:cover;
+
+background-position:center;
 
 
 color:white;
 
-
-padding:110px 0;
+padding:130px 0;
 
 
 }
@@ -179,9 +189,9 @@ padding:110px 0;
 
 .hero h1{
 
-font-size:52px;
+font-size:56px;
 
-letter-spacing:2px;
+letter-spacing:3px;
 
 margin-bottom:20px;
 
@@ -189,11 +199,9 @@ margin-bottom:20px;
 
 
 
-.hero h3{
+.company-name{
 
-font-size:20px;
-
-font-weight:400;
+font-size:15px;
 
 margin-bottom:25px;
 
@@ -201,25 +209,25 @@ margin-bottom:25px;
 
 
 
-.hero .company{
+.hero h2{
 
-font-size:14px;
+font-size:24px;
 
-margin-bottom:20px;
+font-weight:400;
+
+color:#d5ad4b;
+
+margin-bottom:25px;
 
 }
 
 
 
-.hero .tagline{
-
+.tagline{
 
 font-size:22px;
 
-color:#d5ad4b;
-
-margin-bottom:20px;
-
+margin-bottom:25px;
 
 }
 
@@ -227,11 +235,18 @@ margin-bottom:20px;
 
 .hero p{
 
+max-width:750px;
+
 color:white;
 
-max-width:700px;
+}
 
-font-size:16px;
+
+
+
+.buttons{
+
+margin-top:40px;
 
 }
 
@@ -242,15 +257,15 @@ font-size:16px;
 
 display:inline-block;
 
-margin-top:35px;
+padding:14px 32px;
 
 background:#d5ad4b;
 
 color:white;
 
-padding:12px 30px;
-
 text-decoration:none;
+
+margin-right:15px;
 
 font-size:14px;
 
@@ -259,16 +274,36 @@ font-size:14px;
 
 
 
+.btn-outline{
+
+background:transparent;
+
+border:1px solid white;
+
+}
 
 
-/* SECTION TITLE */
+
+
+
+
+
+/* TITLE */
 
 
 .section-title{
 
 text-align:center;
 
-margin-bottom:50px;
+margin-bottom:55px;
+
+}
+
+
+
+.section-title h2{
+
+font-size:40px;
 
 }
 
@@ -276,13 +311,14 @@ margin-bottom:50px;
 
 .section-title span{
 
+color:#777;
 
 font-size:16px;
 
-color:#666;
-
-
 }
+
+
+
 
 
 
@@ -292,13 +328,11 @@ color:#666;
 
 .about-text{
 
-
 max-width:900px;
 
 margin:auto;
 
 text-align:center;
-
 
 }
 
@@ -313,10 +347,11 @@ margin-bottom:20px;
 
 
 
-/* CARD */
+
+/* CAPABILITY */
 
 
-.cards{
+.capabilities{
 
 
 display:grid;
@@ -325,15 +360,17 @@ grid-template-columns:repeat(4,1fr);
 
 gap:25px;
 
+margin-top:50px;
+
 
 }
 
 
 
-.card{
+.capability{
 
 
-background:#f7f8fa;
+background:#f5f7fa;
 
 padding:35px 25px;
 
@@ -344,36 +381,63 @@ border-top:3px solid #d5ad4b;
 
 
 
-.card h3{
+.capability h3{
 
 font-size:18px;
 
-margin-bottom:12px;
+margin-bottom:10px;
 
 }
 
 
 
-.card h4{
-
-font-size:14px;
-
-margin-bottom:15px;
+.capability h4{
 
 color:#d5ad4b;
 
+margin-bottom:15px;
 
 }
 
 
 
-.card p{
+.capability p{
 
 font-size:14px;
 
 }
 
 
+
+
+
+
+
+@media(max-width:900px){
+
+
+.menu{
+
+display:none;
+
+}
+
+
+.capabilities{
+
+grid-template-columns:1fr;
+
+}
+
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+
+}
 
 
 </style>
@@ -386,10 +450,12 @@ font-size:14px;
 
 
 
+
 <!-- HEADER -->
 
 
 <header>
+
 
 <div class="container nav">
 
@@ -401,28 +467,50 @@ TOTAL RESOURCES
 </div>
 
 
+
 <div class="menu">
 
 
-<a href="#">HOME</a>
+<a href="index.html">
+HOME
+</a>
 
-<a href="#">ABOUT</a>
 
-<a href="#">BUSINESS</a>
+<a href="about.html">
+ABOUT
+</a>
 
-<a href="#">PROJECTS</a>
 
-<a href="#">INTELLIGENCE</a>
+<a href="business.html">
+BUSINESS
+</a>
 
-<a href="#">CONTACT</a>
+
+<a href="projects.html">
+PROJECTS
+</a>
+
+
+<a href="intelligence.html">
+INTELLIGENCE
+</a>
+
+
+<a href="#">
+CONTACT
+</a>
 
 
 </div>
 
 
 </div>
+
 
 </header>
+
+
+
 
 
 
@@ -445,15 +533,7 @@ TOTAL RESOURCES
 
 
 
-<h3>
-
-Global Industrial Resources & Supply Chain Platform
-
-</h3>
-
-
-
-<div class="company">
+<div class="company-name">
 
 
 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
@@ -464,6 +544,18 @@ TOTAL RESOURCES HOLDING LTD. (CHONGQING)
 
 
 </div>
+
+
+
+
+
+<h2>
+
+Global Industrial Resources
+& Supply Chain Platform
+
+</h2>
+
 
 
 
@@ -478,12 +570,15 @@ Industrial Capabilities and Sustainable Growth.
 
 
 
+
+
 <p>
 
 
-We integrate global industrial resources,
-energy solutions, supply chains and sustainable
-development opportunities to create long-term value.
+We integrate global resources,
+industrial capabilities,
+supply chain networks and intelligence systems
+to create sustainable long-term value.
 
 
 </p>
@@ -493,21 +588,35 @@ development opportunities to create long-term value.
 <p>
 
 
-连接全球资源、产业能力与可持续增长。
-通过产业整合、供应链运营和战略投资创造长期价值。
+连接全球资源、产业能力、
+供应链网络和智能研究体系，
+创造长期价值。
 
 
 </p>
 
 
 
-<a class="btn">
 
+<div class="buttons">
+
+
+<a class="btn" href="business.html">
 
 Explore Our Platform
 
+</a>
+
+
+<a class="btn btn-outline" href="#contact">
+
+Contact Us
 
 </a>
+
+
+
+</div>
 
 
 
@@ -522,7 +631,9 @@ Explore Our Platform
 
 
 
-<!-- ABOUT US -->
+
+
+<!-- ABOUT -->
 
 
 <section>
@@ -554,6 +665,7 @@ About Us
 
 
 
+
 <div class="about-text">
 
 
@@ -561,7 +673,8 @@ About Us
 
 
 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
-is a global industrial resource integration and supply chain operation platform.
+is a global industrial resource integration
+and supply chain operation platform.
 
 
 </p>
@@ -578,11 +691,14 @@ is a global industrial resource integration and supply chain operation platform.
 
 
 
+
 <p>
 
 
-Based in Chongqing, China, the company focuses on energy resources,
-industrial products, global supply chains and sustainable industrial development.
+Based in Chongqing, China,
+the company focuses on energy resources,
+industrial products,
+global supply chains and sustainable development.
 
 
 </p>
@@ -592,7 +708,9 @@ industrial products, global supply chains and sustainable industrial development
 <p>
 
 
-公司立足重庆，围绕能源资源、工业产品、全球供应链及可持续产业发展，
+公司立足重庆，
+围绕能源资源、工业产品、
+全球供应链及可持续产业发展，
 构建跨区域产业价值创造体系。
 
 
@@ -603,11 +721,144 @@ industrial products, global supply chains and sustainable industrial development
 </div>
 
 
+
+
+
+
+<div class="capabilities">
+
+
+<div class="capability">
+
+
+<h3>
+
+Industrial Integration
+
+</h3>
+
+
+<h4>
+
+产业整合
+
+</h4>
+
+
+<p>
+
+Connecting resources,
+industries and market opportunities.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="capability">
+
+
+<h3>
+
+Supply Chain Operation
+
+</h3>
+
+
+<h4>
+
+供应链运营
+
+</h4>
+
+
+<p>
+
+Building efficient global supply networks.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="capability">
+
+
+<h3>
+
+Strategic Investment
+
+</h3>
+
+
+<h4>
+
+战略投资
+
+</h4>
+
+
+<p>
+
+Creating value through industrial opportunities.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="capability">
+
+
+<h3>
+
+Intelligence Capability
+
+</h3>
+
+
+<h4>
+
+智能研究能力
+
+</h4>
+
+
+<p>
+
+Supporting decisions through intelligence systems.
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
 </div>
 
 
 </section>
-<!-- BUSINESS -->
+<!-- BUSINESS SECTION -->
 
 
 <section style="background:#071d38;color:white;">
@@ -639,11 +890,11 @@ Business
 
 
 
-<div class="cards">
+
+<div class="capabilities">
 
 
-
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -662,25 +913,19 @@ Energy & Industrial Resources
 
 
 
-<h3>
+<p>
 
 能源与工业资源
 
-</h3>
+<br><br>
 
+Global energy resources,
+industrial products and
+strategic supply chain solutions.
 
+<br><br>
 
-<p>
-
-Energy resources, industrial products and strategic supply chain solutions.
-
-</p>
-
-
-
-<p>
-
-能源资源、工业产品及产业供应链解决方案。
+全球能源资源、工业产品及产业供应链解决方案。
 
 </p>
 
@@ -693,7 +938,7 @@ Energy resources, industrial products and strategic supply chain solutions.
 
 
 
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -712,26 +957,18 @@ Global Supply Chain
 
 
 
-<h3>
+<p>
 
 全球供应链
 
-</h3>
-
-
-
-<p>
+<br><br>
 
 Connecting international suppliers,
-industrial customers and market opportunities.
+industrial customers and markets.
 
-</p>
+<br><br>
 
-
-
-<p>
-
-连接全球供应商、产业客户及市场机会。
+连接全球供应商、产业客户与市场机会。
 
 </p>
 
@@ -745,7 +982,7 @@ industrial customers and market opportunities.
 
 
 
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -764,26 +1001,18 @@ Sustainable Bio Resources
 
 
 
-<h3>
+<p>
 
 可持续生物资源
 
-</h3>
-
-
-
-<p>
+<br><br>
 
 Developing high-value natural resources
-through sustainable industrial models.
+through sustainable models.
 
-</p>
+<br><br>
 
-
-
-<p>
-
-通过可持续产业模式开发高价值天然资源。
+通过可持续模式开发高价值天然资源。
 
 </p>
 
@@ -796,7 +1025,7 @@ through sustainable industrial models.
 
 
 
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -815,31 +1044,24 @@ Industrial Innovation
 
 
 
-<h3>
+<p>
 
 产业创新
 
-</h3>
+<br><br>
 
+Technology-driven industrial solutions
+and intelligent systems.
 
+<br><br>
 
-<p>
-
-Applying technology and intelligence
-to improve industrial efficiency.
-
-</p>
-
-
-
-<p>
-
-应用技术与智能化提升产业效率。
+技术驱动的产业解决方案与智能体系。
 
 </p>
 
 
 </div>
+
 
 
 
@@ -858,7 +1080,9 @@ to improve industrial efficiency.
 
 
 
-<!-- PROJECTS -->
+
+
+<!-- PROJECTS SECTION -->
 
 
 <section>
@@ -890,23 +1114,26 @@ Projects
 
 
 
-
-<div class="cards" style="grid-template-columns:repeat(3,1fr);">
-
-
-
-
-
-
-<!-- BASINOL -->
+<div style="
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+">
 
 
-<div class="card">
+
+
+
+
+<!-- PROJECT 1 -->
+
+
+<div class="capability">
 
 
 <h3>
 
-Global Lubricant Business
+01
 
 </h3>
 
@@ -914,7 +1141,7 @@ Global Lubricant Business
 
 <h4>
 
-全球润滑油业务
+Global Lubricant Business
 
 </h4>
 
@@ -931,7 +1158,8 @@ BASINOL® 巴斯龙
 <p>
 
 
-German Premium Lubricant Brand.
+German Premium Lubricant Brand
+
 
 </p>
 
@@ -941,7 +1169,7 @@ German Premium Lubricant Brand.
 
 
 BASINOL® originates from Germany
-and provides high-performance lubricant
+and provides high-performance lubrication
 solutions for automotive,
 industrial and energy applications.
 
@@ -954,12 +1182,23 @@ industrial and energy applications.
 
 
 BASINOL® 巴斯龙源自德国，
-提供汽车、工业及能源领域
+为汽车、工业及能源领域提供
 高性能润滑解决方案。
 
 
 </p>
 
+
+<a href="basinol.html"
+style="
+color:#d5ad4b;
+text-decoration:none;
+font-size:14px;
+">
+
+Learn More →
+
+</a>
 
 
 </div>
@@ -971,15 +1210,16 @@ BASINOL® 巴斯龙源自德国，
 
 
 
-<!-- ROSE -->
+
+<!-- PROJECT 2 -->
 
 
-<div class="card">
+<div class="capability">
 
 
 <h3>
 
-Sustainable Botanical Resources
+02
 
 </h3>
 
@@ -987,7 +1227,7 @@ Sustainable Botanical Resources
 
 <h4>
 
-可持续植物资源
+Sustainable Botanical Resources
 
 </h4>
 
@@ -1003,6 +1243,7 @@ High-Altitude Damascus Rose
 
 <p>
 
+
 高原大马士革玫瑰产业
 
 
@@ -1014,7 +1255,7 @@ High-Altitude Damascus Rose
 
 
 Developing premium botanical resources
-based on high-altitude cultivation,
+through high-altitude cultivation,
 natural extraction and sustainable agriculture.
 
 
@@ -1025,7 +1266,8 @@ natural extraction and sustainable agriculture.
 <p>
 
 
-依托高海拔种植、天然提取和可持续农业，
+依托高海拔种植、
+天然提取和可持续农业，
 打造高价值植物资源产业。
 
 
@@ -1042,10 +1284,27 @@ natural extraction and sustainable agriculture.
 
 
 
-<!-- AGRICULTURE -->
+
+<!-- PROJECT 3 -->
 
 
-<div class="card">
+<div class="capability">
+
+
+<h3>
+
+03
+
+</h3>
+
+
+
+<h4>
+
+Modern Agricultural Supply Chain
+
+</h4>
+
 
 
 <h3>
@@ -1056,18 +1315,10 @@ Agricultural Industry Platform
 
 
 
-<h4>
-
-农业产业平台
-
-</h4>
-
-
-
 <p>
 
 
-Modern Agricultural Supply Chain Development
+现代农业产业平台
 
 
 </p>
@@ -1089,8 +1340,8 @@ supply chain and market development.
 <p>
 
 
-构建覆盖农业生产、供应链运营
-及市场开发的一体化农业产业服务体系。
+构建覆盖农业生产、
+供应链运营和市场开发的一体化农业服务体系。
 
 
 </p>
@@ -1098,6 +1349,8 @@ supply chain and market development.
 
 
 </div>
+
+
 
 
 
@@ -1111,7 +1364,7 @@ supply chain and market development.
 
 </section>
 
-<!-- MACRO COMPASS INTELLIGENCE -->
+<!-- INTELLIGENCE SECTION -->
 
 
 <section style="background:#071d38;color:white;">
@@ -1130,7 +1383,6 @@ Macro Compass Intelligence
 </h2>
 
 
-
 <span style="color:#ddd;">
 
 经纬金脉 · 全球产业洞察
@@ -1138,8 +1390,8 @@ Macro Compass Intelligence
 </span>
 
 
-
 </div>
+
 
 
 
@@ -1152,11 +1404,38 @@ text-align:center;
 ">
 
 
+<h3 style="
+color:#d5ad4b;
+font-size:24px;
+">
+
+
+Strategic Research & Intelligence Platform
+
+</h3>
+
+
+
 <p style="color:white;">
 
 
-Strategic Research & Intelligence Platform of
-TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+战略研究与产业智能平台
+
+
+</p>
+
+
+
+<br>
+
+
+
+<p style="color:white;">
+
+
+TOTAL RESOURCES develops intelligence capabilities
+to support industrial decisions,
+resource allocation and strategic development.
 
 
 </p>
@@ -1166,171 +1445,65 @@ TOTAL RESOURCES HOLDING LTD. (CHONGQING)
 <p style="color:white;">
 
 
-面向全球产业、能源、大宗商品与宏观经济的研究与智能决策平台。
+重庆首胜能源科技有限公司通过产业智能研究体系，
+为产业决策、资源配置和战略发展提供支持。
 
 
 </p>
 
 
 
-<p style="color:#d5ad4b;font-size:18px;">
-
-
-Intelligence-driven industrial decisions.
-
-</p>
+<br>
 
 
 
-<p style="color:#d5ad4b;font-size:18px;">
+
+<div style="
+font-size:20px;
+line-height:2.5;
+">
 
 
-以研究驱动产业决策。
+Global Macro
 
-</p>
+<br>
+
+↓
+
+<br>
+
+
+Energy Intelligence
+
+<br>
+
+↓
+
+<br>
+
+
+Industrial Research
+
+<br>
+
+↓
+
+<br>
+
+
+AI Knowledge System
+
+<br>
+
+↓
+
+<br>
+
+
+Strategic Decisions
 
 
 </div>
-
-
-
-
-
-
-
-<div class="cards" style="margin-top:50px;">
-
-
-
-<div class="card">
-
-
-<h3>
-
-Global Macro Intelligence
-
-</h3>
-
-
-
-<h4>
-
-全球宏观研究
-
-</h4>
-
-
-
-<p>
-
-Global economic trends,
-geopolitical changes
-and industrial cycles.
-
-</p>
-
-
-
-<p>
-
-全球经济周期、
-地缘政治变化、
-产业趋势研究。
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Energy Market Intelligence
-
-</h3>
-
-
-
-<h4>
-
-能源市场研究
-
-</h4>
-
-
-
-<p>
-
-Energy markets,
-commodities and
-supply chain analysis.
-
-</p>
-
-
-
-<p>
-
-能源市场、
-大宗商品及产业链分析。
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-AI Research System
-
-</h3>
-
-
-
-<h4>
-
-AI智能研究体系
-
-</h4>
-
-
-
-<p>
-
-AI-driven information management
-and strategic insights.
-
-</p>
-
-
-
-<p>
-
-人工智能驱动的信息管理、
-知识系统与战略洞察。
-
-</p>
-
-
-</div>
-
 
 
 
@@ -1349,7 +1522,8 @@ and strategic insights.
 
 
 
-<!-- GLOBAL PARTNERS -->
+
+<!-- PARTNERS -->
 
 
 <section>
@@ -1368,7 +1542,6 @@ Global Partners
 </h2>
 
 
-
 <span>
 
 全球合作伙伴
@@ -1376,50 +1549,17 @@ Global Partners
 </span>
 
 
-
 </div>
 
 
 
 
 
-<div style="
-max-width:900px;
-margin:auto;
-text-align:center;
-">
-
-
-<p>
-
-Building long-term cooperation
-with global industrial,
-technology and supply chain partners.
-
-</p>
+<div class="capabilities">
 
 
 
-<p>
-
-与全球产业伙伴、技术伙伴及供应链伙伴建立长期合作关系。
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="cards" style="margin-top:50px;">
-
-
-
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -1432,9 +1572,10 @@ Industrial Partners
 
 <h4>
 
-产业合作伙伴
+产业伙伴
 
 </h4>
+
 
 
 <p>
@@ -1453,7 +1594,7 @@ manufacturers and industrial operators.
 
 
 
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -1466,7 +1607,7 @@ Technology Partners
 
 <h4>
 
-技术合作伙伴
+技术伙伴
 
 </h4>
 
@@ -1488,7 +1629,7 @@ and industrial solution partners.
 
 
 
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -1501,7 +1642,7 @@ Supply Chain Partners
 
 <h4>
 
-供应链合作伙伴
+供应链伙伴
 
 </h4>
 
@@ -1523,7 +1664,7 @@ customers and market partners.
 
 
 
-<div class="card">
+<div class="capability">
 
 
 <h3>
@@ -1536,7 +1677,7 @@ Strategic Partners
 
 <h4>
 
-战略合作伙伴
+战略伙伴
 
 </h4>
 
@@ -1545,7 +1686,7 @@ Strategic Partners
 <p>
 
 Long-term industrial
-and investment cooperation.
+cooperation partners.
 
 </p>
 
@@ -1569,13 +1710,15 @@ and investment cooperation.
 
 
 
+
+
 <!-- CONTACT -->
 
 
-<section style="
+<section id="contact"
+style="
 background:#071d38;
 color:white;
-text-align:center;
 ">
 
 
@@ -1600,11 +1743,16 @@ Contact
 </span>
 
 
-
 </div>
 
 
 
+
+
+
+<div style="
+text-align:center;
+">
 
 
 <h3>
@@ -1639,6 +1787,7 @@ www.totalresources.info
 
 
 
+
 <p style="color:white;">
 
 Email
@@ -1654,7 +1803,11 @@ contact@totalresources.info
 </div>
 
 
+</div>
+
+
 </section>
+
 
 
 
@@ -1670,8 +1823,8 @@ contact@totalresources.info
 background:#111;
 color:white;
 text-align:center;
-padding:35px;
-font-size:14px;
+padding:35px 20px;
+font-size:13px;
 ">
 
 
@@ -1687,10 +1840,20 @@ Global Industrial Resources & Supply Chain Platform
 <br><br>
 
 
+Macro Compass Intelligence
+
+
+<br><br>
+
+
 © 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
 
 
 </footer>
+
+
+
+
 
 
 

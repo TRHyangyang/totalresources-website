@@ -13,10 +13,11 @@ BASINOL® | German Premium Lubricants
 </title>
 
 
-<meta name="description" content="
-BASINOL® German Premium Lubricants. 
-German engineering tradition since 1884.
-Developed for automotive and industrial applications.
+<meta name="description"
+content="
+BASINOL® German Premium Lubricants.
+German engineering since 1884.
+Advanced lubrication solutions for automotive and industrial applications.
 ">
 
 
@@ -24,9 +25,11 @@ Developed for automotive and industrial applications.
 
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 
@@ -37,68 +40,25 @@ Arial,
 Helvetica,
 sans-serif;
 
-color:#12243a;
+color:#14213d;
 
-line-height:1.8;
-
-}
-
-
-
-.container{
-
-width:90%;
-max-width:1200px;
-
-margin:auto;
+line-height:1.6;
 
 }
 
-
-
-section{
-
-padding:90px 0;
-
-}
-
-
-
-h1,h2,h3{
-
-font-weight:700;
-
-}
-
-
-
-p{
-
-font-size:16px;
-
-}
-
-
-
-
-/* HEADER */
 
 
 header{
 
-height:75px;
+position:absolute;
 
-background:#071d38;
+top:0;
 
-display:flex;
+width:100%;
 
-align-items:center;
+z-index:10;
 
-}
-
-
-
-.nav{
+padding:25px 8%;
 
 display:flex;
 
@@ -124,45 +84,34 @@ letter-spacing:2px;
 
 
 
-.menu a{
+nav a{
 
 color:white;
 
 text-decoration:none;
 
-margin-left:25px;
+margin-left:30px;
 
-font-size:13px;
-
-}
-
-
-
-.menu a:hover{
-
-color:#d5ad4b;
+font-size:14px;
 
 }
 
-
-
-
-
-/* HERO */
 
 
 .hero{
 
 
-height:700px;
+height:100vh;
+
+min-height:700px;
 
 
 background:
 
 linear-gradient(
 90deg,
-rgba(7,29,56,0.95),
-rgba(7,29,56,0.35)
+rgba(5,25,50,0.92),
+rgba(5,25,50,0.45)
 ),
 
 url("assets/images/basinol/racing-driver.JPG");
@@ -178,6 +127,8 @@ display:flex;
 
 align-items:center;
 
+padding-left:8%;
+
 
 color:white;
 
@@ -190,17 +141,32 @@ color:white;
 
 max-width:650px;
 
+
+}
+
+
+
+.basinol-logo{
+
+
+width:260px;
+
+margin-bottom:35px;
+
+
 }
 
 
 
 .hero h1{
 
-font-size:58px;
+
+font-size:52px;
 
 letter-spacing:3px;
 
 margin-bottom:20px;
+
 
 }
 
@@ -208,13 +174,15 @@ margin-bottom:20px;
 
 .hero h2{
 
-font-size:28px;
 
-color:#d5ad4b;
+font-size:28px;
 
 font-weight:400;
 
+color:#d5ad4b;
+
 margin-bottom:25px;
+
 
 }
 
@@ -222,18 +190,22 @@ margin-bottom:25px;
 
 .hero p{
 
-font-size:20px;
+
+font-size:18px;
+
+margin-bottom:15px;
+
 
 }
 
 
 
-.btn{
+.button{
 
 
 display:inline-block;
 
-margin-top:35px;
+margin-top:25px;
 
 padding:14px 35px;
 
@@ -243,53 +215,93 @@ color:white;
 
 text-decoration:none;
 
+font-weight:bold;
+
+
 }
 
 
 
+section{
 
 
-/* SECTION TITLE */
+padding:90px 8%;
 
 
-.title{
+}
+
+
+
+.section-title{
+
 
 text-align:center;
 
-margin-bottom:55px;
+margin-bottom:60px;
+
 
 }
 
 
 
-.title h2{
+.section-title h2{
 
-font-size:40px;
+
+font-size:36px;
+
+margin-bottom:15px;
+
 
 }
 
 
 
-.title span{
+.section-title p{
+
 
 color:#777;
 
+
 }
 
 
 
+.heritage{
 
 
-/* CARDS */
+text-align:center;
+
+background:#f7f8fa;
+
+
+}
+
+
+
+.year{
+
+
+font-size:80px;
+
+font-weight:bold;
+
+color:#287233;
+
+
+}
+
 
 
 .cards{
 
+
 display:grid;
 
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:
+repeat(3,1fr);
 
 gap:30px;
+
 
 }
 
@@ -297,11 +309,16 @@ gap:30px;
 
 .card{
 
+
 padding:35px;
 
-background:#f5f7fa;
+background:white;
 
-border-top:3px solid #19733b;
+border-top:3px solid #287233;
+
+box-shadow:
+0 5px 20px rgba(0,0,0,0.08);
+
 
 }
 
@@ -309,58 +326,22 @@ border-top:3px solid #19733b;
 
 .card h3{
 
-margin-bottom:15px;
-
-}
-
-
-
-.card h4{
-
-color:#19733b;
 
 margin-bottom:15px;
 
+color:#14395b;
+
+
 }
 
-
-
-
-/* DARK */
 
 
 .dark{
 
+
 background:#071d38;
 
 color:white;
-
-}
-
-
-
-@media(max-width:900px){
-
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-
-.menu{
-
-display:none;
-
-}
 
 
 }
@@ -376,11 +357,7 @@ display:none;
 <body>
 
 
-
 <header>
-
-
-<div class="container nav">
 
 
 <div class="logo">
@@ -390,25 +367,16 @@ TOTAL RESOURCES
 </div>
 
 
-<div class="menu">
+
+<nav>
 
 <a href="index.html">
 HOME
 </a>
 
 
-<a href="about.html">
-ABOUT
-</a>
-
-
-<a href="business.html">
-BUSINESS
-</a>
-
-
-<a href="projects.html">
-PROJECTS
+<a href="#">
+BASINOL
 </a>
 
 
@@ -417,54 +385,86 @@ INTELLIGENCE
 </a>
 
 
-<a href="basinol.html">
-BASINOL
+<a href="#">
+CONTACT
 </a>
 
-</div>
 
-
-</div>
+</nav>
 
 
 </header>
 
 
 
-
-
-
-
-<!-- HERO -->
-
-
 <section class="hero">
 
 
-<div class="container">
+<div class="hero-content">
+
+
+
+<img
+
+src="assets/images/basinol/basinol-logo.png"
+
+class="basinol-logo"
+
+alt="BASINOL Logo">
+
+
+<h1>
+
+German Premium Lubricants
+
+</h1>
+
+
+<h2>
+
+German Engineering Since 1884
+
+</h2>
+
+
+
+<p>
+
+Precision lubrication technology
+for automotive and industrial applications.
+
+</p>
+
+
+
+<p>
+
+德国精密润滑技术，
+服务汽车及工业领域。
+
+</p>
+
+
+
+<a href="#heritage" class="button">
+
+Explore BASINOL®
+
+</a>
+
 
 
 </div>
+
+
 </section>
 
 
 
+<section id="heritage" class="heritage">
 
 
-
-
-
-
-<!-- BRAND HERITAGE -->
-
-
-<section>
-
-
-<div class="container">
-
-
-<div class="title">
+<div class="section-title">
 
 
 <h2>
@@ -474,101 +474,52 @@ German Heritage
 </h2>
 
 
-<span>
+<p>
 
-德国制造传统
+德国工业传统与润滑技术积淀
 
-</span>
+</p>
 
 
 </div>
 
 
-
-
-
-<div style="
-text-align:center;
-max-width:850px;
-margin:auto;
-">
-
-
-<h1 style="
-font-size:80px;
-color:#19733b;
-">
+<div class="year">
 
 1884
 
-</h1>
-
-
-
-<h3>
-
-Lubrication Heritage Since 1884
-
-</h3>
-
-
-<br>
-
+</div>
 
 
 <p>
 
-
-BASINOL® represents German lubrication expertise
-built on more than a century of manufacturing tradition.
-
+More than 140 years of German lubrication expertise.
 
 </p>
-
-
-
-<p>
-
-
-BASINOL® 源于德国润滑制造传统，
-持续发展高品质润滑产品，
-服务汽车及工业领域。
-
-
-</p>
-
-
-</div>
-
-
-</div>
 
 
 </section>
 <!-- TECHNOLOGY ADVANTAGE -->
 
 
-<section class="dark">
+<section>
 
 
-<div class="container">
+<div class="section-title">
 
 
-<div class="title">
-
-
-<h2 style="color:white;">
+<h2>
 
 Technology Advantage
 
 </h2>
 
 
-<span style="color:#ddd;">
+<p>
 
-技术优势
+德国工程技术 · 高性能润滑解决方案
 
-</span>
+</p>
 
 
 </div>
@@ -592,38 +543,27 @@ German Engineering
 
 
 
-<h4>
-
-德国工程技术
-
-</h4>
-
-
-
 <p>
 
 
 Developed with German manufacturing
-standards and lubrication expertise.
+tradition and precision engineering.
 
 
 </p>
-
 
 
 <p>
 
 
-基于德国制造标准与润滑技术积累，
-提供稳定可靠的润滑解决方案。
+德国制造传统与精密工程技术，
+打造可靠润滑解决方案。
 
 
 </p>
 
 
-
 </div>
-
 
 
 
@@ -636,43 +576,32 @@ standards and lubrication expertise.
 
 <h3>
 
-Advanced Lubrication
+Advanced Lubrication Technology
 
 </h3>
-
-
-
-<h4>
-
-先进润滑科技
-
-</h4>
 
 
 
 <p>
 
 
-High-performance lubricant technology
+High-performance formulations
 designed for demanding applications.
 
 
 </p>
 
 
-
 <p>
 
 
-针对复杂工况开发的高性能润滑技术。
+针对复杂工况开发的高性能润滑配方。
 
 
 </p>
 
 
-
 </div>
-
 
 
 
@@ -685,51 +614,37 @@ designed for demanding applications.
 
 <h3>
 
-Quality & Reliability
+Reliable Protection
 
 </h3>
 
 
 
-<h4>
-
-品质与可靠性
-
-</h4>
-
-
-
 <p>
 
 
-Consistent quality control
-for automotive and industrial markets.
+Protecting engines,
+machines and industrial systems.
 
 
 </p>
 
 
-
 <p>
 
 
-持续质量管理，
-服务汽车及工业市场。
+保护发动机、机械设备及工业系统。
 
 
 </p>
 
 
-
 </div>
 
 
 
 </div>
 
-
-
-</div>
 
 
 </section>
@@ -745,13 +660,11 @@ for automotive and industrial markets.
 <!-- RACING PERFORMANCE -->
 
 
-<section>
+<section class="dark">
 
 
-<div class="container">
 
-
-<div class="title">
+<div class="section-title">
 
 
 <h2>
@@ -761,12 +674,11 @@ Racing Performance
 </h2>
 
 
-
-<span>
+<p>
 
 赛车性能基因
 
-</span>
+</p>
 
 
 </div>
@@ -786,14 +698,20 @@ align-items:center;
 <div>
 
 
-<img src="assets/images/basinol/racing-engine.jpg"
+<img
+
+src="assets/images/basinol/racing-engine.JPG"
+
+alt="BASINOL Racing Engine"
 
 style="
 width:100%;
-border-radius:5px;
+border-radius:8px;
 ">
 
+
 </div>
+
 
 
 
@@ -808,15 +726,6 @@ Extreme Performance
 </h2>
 
 
-<h3 style="
-color:#19733b;
-">
-
-极限环境下的性能保障
-
-</h3>
-
-
 
 <br>
 
@@ -825,9 +734,9 @@ color:#19733b;
 <p>
 
 
-BASINOL® racing applications
-demonstrate the brand's pursuit of
-performance, reliability and engineering excellence.
+Motorsport represents the pursuit of
+maximum performance,
+reliability and engineering excellence.
 
 
 </p>
@@ -837,8 +746,8 @@ performance, reliability and engineering excellence.
 <p>
 
 
-BASINOL® 赛车应用展示品牌
-对性能、可靠性和工程技术的持续追求。
+赛车运动体现对极致性能、
+可靠性和工程技术的追求。
 
 
 </p>
@@ -852,9 +761,9 @@ BASINOL® 赛车应用展示品牌
 <p>
 
 
-From racing engines to industrial systems,
-BASINOL® provides professional lubrication
-solutions for demanding environments.
+BASINOL® applies advanced lubrication
+technology to automotive and industrial
+applications.
 
 
 </p>
@@ -864,8 +773,8 @@ solutions for demanding environments.
 <p>
 
 
-从赛车发动机到工业系统，
-BASINOL® 为高要求环境提供专业润滑解决方案。
+BASINOL® 将先进润滑技术应用于
+汽车及工业领域。
 
 
 </p>
@@ -875,10 +784,9 @@ BASINOL® 为高要求环境提供专业润滑解决方案。
 </div>
 
 
-</div>
-
 
 </div>
+
 
 
 </section>
@@ -894,15 +802,10 @@ BASINOL® 为高要求环境提供专业润滑解决方案。
 <!-- PRODUCT PORTFOLIO -->
 
 
-<section style="
-background:#f5f7fa;
-">
+<section>
 
 
-<div class="container">
-
-
-<div class="title">
+<div class="section-title">
 
 
 <h2>
@@ -912,15 +815,15 @@ Product Portfolio
 </h2>
 
 
-<span>
+
+<p>
 
 产品体系
 
-</span>
+</p>
 
 
 </div>
-
 
 
 
@@ -941,12 +844,6 @@ Automotive Lubricants
 </h3>
 
 
-<h4>
-
-汽车润滑油
-
-</h4>
-
 
 <p>
 
@@ -959,14 +856,15 @@ and high-performance applications.
 </p>
 
 
+
 <p>
 
 
-乘用车、
-商用车辆及高性能应用。
+乘用车、商用车辆及高性能应用。
 
 
 </p>
+
 
 
 </div>
@@ -988,31 +886,27 @@ Industrial Lubricants
 </h3>
 
 
-<h4>
-
-工业润滑油
-
-</h4>
-
 
 <p>
 
 
-Solutions for machinery,
+Lubrication solutions for machinery,
 manufacturing and industrial systems.
 
 
 </p>
 
 
+
 <p>
 
 
-面向机械设备、
-制造业及工业系统。
+面向机械设备、制造业及工业系统
+提供润滑解决方案。
 
 
 </p>
+
 
 
 </div>
@@ -1034,12 +928,6 @@ Special Applications
 </h3>
 
 
-<h4>
-
-特殊应用领域
-
-</h4>
-
 
 <p>
 
@@ -1051,6 +939,7 @@ for demanding environments.
 </p>
 
 
+
 <p>
 
 
@@ -1060,37 +949,23 @@ for demanding environments.
 </p>
 
 
-</div>
-
-
 
 </div>
 
 
 
 </div>
+
 
 
 </section>
-
-
-
-
-
-
-
-
-
 <!-- APPLICATION INDUSTRIES -->
 
 
 <section>
 
 
-<div class="container">
-
-
-<div class="title">
+<div class="section-title">
 
 
 <h2>
@@ -1100,16 +975,14 @@ Application Industries
 </h2>
 
 
-<span>
+<p>
 
-应用领域
+应用行业
 
-</span>
+</p>
 
 
 </div>
-
-
 
 
 
@@ -1129,54 +1002,22 @@ Automotive
 </h3>
 
 
-<h4>
-
-汽车工业
-
-</h4>
-
-
 <p>
 
 
-Engine protection,
-performance optimization
-and reliability.
+Passenger vehicles,
+commercial vehicles
+and performance applications.
 
 
 </p>
 
 
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Commercial Vehicles
-
-</h3>
-
-
-<h4>
-
-商用车辆
-
-</h4>
-
 
 <p>
 
 
-Heavy-duty transportation
-and professional vehicle applications.
+汽车、商用车辆及高性能应用。
 
 
 </p>
@@ -1201,18 +1042,61 @@ Industrial Systems
 </h3>
 
 
-<h4>
+<p>
 
-工业系统
 
-</h4>
+Machinery,
+manufacturing equipment
+and industrial production.
+
+
+</p>
+
 
 
 <p>
 
 
-Machinery,
-equipment and industrial production.
+机械设备、制造系统及工业生产。
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h3>
+
+Energy & Special Applications
+
+</h3>
+
+
+<p>
+
+
+Professional lubrication solutions
+for demanding environments.
+
+
+</p>
+
+
+
+<p>
+
+
+能源及特殊工况领域专业润滑解决方案。
 
 
 </p>
@@ -1226,39 +1110,40 @@ equipment and industrial production.
 
 
 
-</div>
-
-
 </section>
+
+
+
+
+
+
+
+
+
 <!-- TOTAL RESOURCES × BASINOL -->
 
 
 <section class="dark">
 
 
-<div class="container">
+<div class="section-title">
 
 
-<div class="title">
-
-
-<h2 style="color:white;">
+<h2>
 
 TOTAL RESOURCES × BASINOL®
 
 </h2>
 
 
-
-<span style="color:#ddd;">
+<p>
 
 德国润滑科技与全球产业资源融合
 
-</span>
+</p>
 
 
 </div>
-
 
 
 
@@ -1267,7 +1152,7 @@ TOTAL RESOURCES × BASINOL®
 
 
 <div style="
-max-width:900px;
+max-width:850px;
 margin:auto;
 text-align:center;
 ">
@@ -1280,6 +1165,7 @@ Connecting German Lubricant Technology
 with Global Industrial Markets
 
 </h2>
+
 
 
 
@@ -1313,8 +1199,6 @@ technology with global industrial markets.
 
 
 
-</div>
-
 
 </div>
 
@@ -1329,31 +1213,27 @@ technology with global industrial markets.
 
 
 
-<!-- MARKET PLATFORM -->
+<!-- PARTNERSHIP -->
 
 
 <section>
 
 
-<div class="container">
-
-
-<div class="title">
+<div class="section-title">
 
 
 <h2>
 
-Global Market Platform
+Partnership Opportunities
 
 </h2>
 
 
+<p>
 
-<span>
+合作伙伴
 
-全球市场平台
-
-</span>
+</p>
 
 
 </div>
@@ -1373,46 +1253,32 @@ Global Market Platform
 
 <h3>
 
-China Market Development
+Distribution Partners
 
 </h3>
 
 
 
-<h4>
-
-中国市场发展
-
-</h4>
-
-
-
 <p>
 
 
-Building professional distribution,
-industrial cooperation and market development
-networks in China.
+Professional distributors
+and industrial supply partners.
 
 
 </p>
 
 
-
 <p>
 
 
-建立专业销售体系、
-工业合作网络及市场拓展渠道。
+专业经销商及工业供应合作伙伴。
 
 
 </p>
-
 
 
 </div>
-
-
 
 
 
@@ -1425,17 +1291,9 @@ networks in China.
 
 <h3>
 
-Industrial Partnerships
+Industrial Cooperation
 
 </h3>
-
-
-
-<h4>
-
-产业合作
-
-</h4>
 
 
 
@@ -1443,27 +1301,22 @@ Industrial Partnerships
 
 
 Working with automotive,
-manufacturing and industrial partners.
+manufacturing and industrial companies.
 
 
 </p>
-
 
 
 <p>
 
 
-与汽车、制造业及工业企业
-建立长期合作。
+与汽车、制造及工业企业开展合作。
 
 
 </p>
 
 
-
 </div>
-
-
 
 
 
@@ -1476,201 +1329,29 @@ manufacturing and industrial partners.
 
 <h3>
 
-International Expansion
+Strategic Partners
 
 </h3>
 
 
 
-<h4>
-
-国际拓展
-
-</h4>
-
-
-
 <p>
 
 
-Connecting global resources
-and creating sustainable value.
+Creating long-term value
+through global cooperation.
 
 
 </p>
 
 
-
 <p>
 
 
-连接全球资源，
-创造长期产业价值。
+通过全球合作创造长期价值。
 
 
 </p>
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- PARTNERSHIP -->
-
-
-<section style="
-background:#f5f7fa;
-">
-
-
-<div class="container">
-
-
-<div class="title">
-
-
-<h2>
-
-Partnership Opportunities
-
-</h2>
-
-
-
-<span>
-
-合作机会
-
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-<div style="
-max-width:850px;
-margin:auto;
-text-align:center;
-">
-
-
-<h3>
-
-Become a BASINOL® Partner
-
-</h3>
-
-
-
-<br>
-
-
-
-<p>
-
-
-We welcome cooperation with:
-
-</p>
-
-
-
-<br>
-
-
-
-<p>
-
-
-◆ Industrial distributors
-
-<br>
-
-工业品经销商
-
-
-<br><br>
-
-
-◆ Automotive service networks
-
-<br>
-
-汽车服务网络
-
-
-<br><br>
-
-
-◆ Manufacturing enterprises
-
-<br>
-
-制造企业
-
-
-<br><br>
-
-
-◆ Strategic partners
-
-<br>
-
-战略合作伙伴
-
-
-</p>
-
-
-
-
-<br>
-
-
-
-<p>
-
-
-Together, we create new opportunities
-in lubricant technology and industrial services.
-
-
-</p>
-
-
-
-<p>
-
-
-携手合作，共同拓展润滑科技
-与工业服务领域的新机遇。
-
-
-</p>
-
 
 
 </div>
@@ -1699,25 +1380,26 @@ color:white;
 ">
 
 
-<div class="container">
+
+<div class="section-title">
 
 
-<div class="title">
-
-
-<h2 style="color:white;">
+<h2 style="
+color:white;
+">
 
 Contact
 
 </h2>
 
 
-
-<span style="color:#ddd;">
+<p style="
+color:#ddd;
+">
 
 联系我们
 
-</span>
+</p>
 
 
 </div>
@@ -1741,23 +1423,15 @@ TOTAL RESOURCES HOLDING LTD. (CHONGQING)
 
 
 
-<p>
-
-重庆首胜能源科技有限公司
-
-</p>
-
-
-
 <br>
 
 
 
-<h3>
+<p>
 
 BASINOL® Global Lubricant Business
 
-</h3>
+</p>
 
 
 
@@ -1785,7 +1459,6 @@ www.totalresources.info
 
 
 
-
 <p>
 
 Email
@@ -1796,9 +1469,6 @@ contact@totalresources.info
 
 </p>
 
-
-
-</div>
 
 
 </div>
@@ -1821,7 +1491,7 @@ contact@totalresources.info
 background:#111;
 color:white;
 text-align:center;
-padding:35px;
+padding:35px 20px;
 font-size:13px;
 ">
 
@@ -1844,6 +1514,12 @@ TOTAL RESOURCES HOLDING LTD. (CHONGQING)
 <br><br>
 
 
+Global Industrial Resources Platform
+
+
+<br><br>
+
+
 © 2026 TOTAL RESOURCES HOLDING LTD.
 
 
@@ -1853,9 +1529,6 @@ TOTAL RESOURCES HOLDING LTD. (CHONGQING)
 
 
 
-
-
 </body>
-
 
 </html>

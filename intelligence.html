@@ -4,2132 +4,1963 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <title>
-Macro Compass Intelligence | TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+TOTAL RESOURCES Intelligence | Macro Compass
 </title>
 
-
 <meta name="description" content="
-Macro Compass Intelligence is the Global Industrial Intelligence Platform of TOTAL RESOURCES HOLDING LTD. (CHONGQING), focusing on global macro, energy markets, industrial research and AI knowledge systems.
+TOTAL RESOURCES Intelligence integrates global macro research,
+energy intelligence, industrial research, supply chain intelligence
+and AI-enabled knowledge systems to support strategic industrial decisions.
 ">
-
-
 
 <style>
 
+:root{
+    --navy:#071f38;
+    --navy2:#0b2d50;
+    --green:#267248;
+    --gold:#c8a957;
+    --text:#102235;
+    --gray:#687582;
+    --light:#f4f6f8;
+    --line:#e2e7eb;
+    --white:#ffffff;
+}
 
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-
+html{
+    scroll-behavior:smooth;
+}
 
 body{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
 
-font-family:
-Arial,
-Helvetica,
-sans-serif;
-
-color:#10243e;
-
-line-height:1.8;
-
+    color:var(--text);
+    background:#fff;
+    line-height:1.72;
 }
 
-
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
 .container{
-
-width:90%;
-max-width:1200px;
-
-margin:auto;
-
+    width:88%;
+    max-width:1180px;
+    margin:0 auto;
 }
-
-
 
 section{
-
-padding:90px 0;
-
+    padding:100px 0;
 }
 
-
-
-h1,h2,h3{
-
-font-weight:700;
-
+.eyebrow{
+    color:var(--green);
+    font-size:11px;
+    letter-spacing:2.6px;
+    text-transform:uppercase;
+    font-weight:800;
+    margin-bottom:13px;
 }
 
-
-
-
-p{
-
-font-size:16px;
-
-line-height:1.9;
-
+.section-head{
+    max-width:820px;
+    margin:0 auto 58px;
+    text-align:center;
 }
 
+.section-head h2{
+    color:var(--navy);
+    font-size:42px;
+    line-height:1.18;
+    margin-bottom:13px;
+}
 
+.section-head p{
+    color:var(--gray);
+    font-size:16px;
+}
 
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.55);
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:var(--navy);
+}
 
 /* HEADER */
 
-
-header{
-
-background:#071d38;
-
-height:75px;
-
-display:flex;
-
-align-items:center;
-
+.site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:50;
+    border-bottom:1px solid rgba(255,255,255,.13);
 }
-
-
 
 .nav{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-
-
-.logo{
-
-color:white;
-
-font-size:22px;
-
-font-weight:bold;
-
-letter-spacing:2px;
-
+.brand{
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:2px;
 }
 
-
-
-.menu a{
-
-color:white;
-
-text-decoration:none;
-
-margin-left:28px;
-
-font-size:13px;
-
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
 }
 
-
-
-.menu a:hover{
-
-color:#d5ad4b;
-
+.nav-links a{
+    color:rgba(255,255,255,.82);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-transform:uppercase;
 }
 
+.nav-links a:hover{
+    color:#fff;
+}
 
-
-
-
-
+.nav-links .basinol-link{
+    color:#ddc176;
+}
 
 /* HERO */
 
-
 .hero{
+    min-height:610px;
+    padding:0;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    position:relative;
 
-
-background:
-
-linear-gradient(
-135deg,
-rgba(7,29,56,0.95),
-rgba(80,105,130,0.85)
-);
-
-
-color:white;
-
-padding:130px 0;
-
-
+    background:
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(38,114,72,.18),
+        transparent 30%
+    ),
+    linear-gradient(
+        120deg,
+        #061b32,
+        #0a2a48 55%,
+        #123f5d
+    );
 }
 
+.hero-content{
+    padding-top:55px;
+    max-width:900px;
+}
 
+.hero-kicker{
+    color:#d9bc71;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:800;
+    margin-bottom:22px;
+}
 
 .hero h1{
-
-font-size:52px;
-
-letter-spacing:2px;
-
-margin-bottom:20px;
-
+    font-size:60px;
+    line-height:1.04;
+    margin-bottom:18px;
 }
-
-
 
 .hero h2{
-
-font-size:26px;
-
-font-weight:400;
-
-color:#d5ad4b;
-
-margin-bottom:25px;
-
+    font-size:28px;
+    font-weight:500;
+    line-height:1.3;
+    margin-bottom:10px;
 }
 
-
+.hero-cn{
+    color:#d9bc71;
+    font-size:18px;
+    margin-bottom:22px;
+}
 
 .hero p{
-
-max-width:850px;
-
-color:white;
-
-font-size:17px;
-
+    max-width:760px;
+    color:rgba(255,255,255,.70);
+    font-size:15.5px;
 }
 
+/* MISSION */
 
-
-
-
-/* TITLE */
-
-
-.section-title{
-
-text-align:center;
-
-margin-bottom:55px;
-
+.mission-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:90px;
+    align-items:center;
 }
 
-
-
-.section-title h2{
-
-font-size:40px;
-
+.mission-left{
+    border-right:1px solid var(--line);
+    padding-right:65px;
 }
 
-
-
-.section-title span{
-
-color:#777;
-
+.mission-left h2{
+    color:var(--navy);
+    font-size:46px;
+    line-height:1.14;
+    margin-bottom:15px;
 }
 
-
-
-
-
-/* CARDS */
-
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:30px;
-
+.mission-left .cn{
+    color:var(--green);
+    font-size:17px;
+    font-weight:700;
 }
 
-
-
-.card{
-
-background:#f5f7fa;
-
-padding:35px;
-
-border-top:3px solid #d5ad4b;
-
+.mission-right h3{
+    color:var(--navy);
+    font-size:25px;
+    line-height:1.35;
+    margin-bottom:18px;
 }
 
-
-
-.card h3{
-
-margin-bottom:15px;
-
+.mission-right p{
+    color:#5f6b76;
+    font-size:15.5px;
+    margin-bottom:15px;
 }
 
+/* RESEARCH ARCHITECTURE */
 
-
-.card h4{
-
-color:#d5ad4b;
-
-margin-bottom:20px;
-
+.architecture-section{
+    background:var(--light);
 }
 
-
-
-.card p{
-
-font-size:15px;
-
+.architecture-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-
-
-
-
-
-
-.framework{
-
-
-max-width:700px;
-
-margin:auto;
-
-text-align:center;
-
-font-size:22px;
-
-line-height:2.5;
-
+.architecture-card{
+    background:#fff;
+    border-top:3px solid var(--green);
+    padding:38px 30px;
+    min-height:300px;
+    transition:.25s;
 }
 
-
-
-
-.dark{
-
-background:#071d38;
-
-color:white;
-
+.architecture-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 35px rgba(10,31,51,.08);
 }
 
-
-
-.dark .section-title span{
-
-color:#ddd;
-
+.arch-index{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:27px;
 }
 
-
-
-@media(max-width:900px){
-
-
-.menu{
-
-display:none;
-
+.architecture-card h3{
+    color:var(--navy);
+    font-size:21px;
+    margin-bottom:6px;
 }
 
-
-.cards{
-
-grid-template-columns:1fr;
-
+.architecture-card h4{
+    color:var(--green);
+    font-size:13px;
+    margin-bottom:15px;
 }
 
-
-.hero h1{
-
-font-size:38px;
-
+.architecture-card p{
+    color:#687582;
+    font-size:14px;
 }
 
+/* MACRO COMPASS */
 
+.macro-section{
+    background:var(--navy);
+    color:#fff;
 }
 
+.macro-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:90px;
+    align-items:center;
+}
+
+.macro-label{
+    color:#d9bc71;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.4px;
+    margin-bottom:18px;
+}
+
+.macro-grid h2{
+    font-size:46px;
+    line-height:1.12;
+    margin-bottom:12px;
+}
+
+.macro-grid h3{
+    color:#d9bc71;
+    font-size:17px;
+    margin-bottom:22px;
+}
+
+.macro-grid p{
+    color:rgba(255,255,255,.67);
+    font-size:15px;
+    margin-bottom:14px;
+}
+
+.macro-modules{
+    border-top:1px solid rgba(255,255,255,.16);
+}
+
+.macro-item{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:17px;
+    padding:22px 0;
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.macro-item span{
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+}
+
+.macro-item strong{
+    display:block;
+    font-size:17px;
+    margin-bottom:3px;
+}
+
+.macro-item p{
+    color:rgba(255,255,255,.52);
+    font-size:12px;
+}
+
+/* ENERGY */
+
+.energy-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:80px;
+    align-items:start;
+}
+
+.energy-panel{
+    background:#eef2f4;
+    padding:45px 36px;
+}
+
+.energy-label{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.energy-panel h2{
+    color:var(--navy);
+    font-size:37px;
+    line-height:1.14;
+    margin-bottom:10px;
+}
+
+.energy-panel h3{
+    color:var(--green);
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.energy-panel p{
+    color:#64707b;
+    font-size:14.5px;
+    margin-bottom:14px;
+}
+
+.energy-list{
+    display:grid;
+    gap:18px;
+}
+
+.energy-item{
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.energy-item:last-child{
+    border-bottom:0;
+}
+
+.energy-item span{
+    display:block;
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.7px;
+    margin-bottom:4px;
+}
+
+.energy-item strong{
+    display:block;
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:3px;
+}
+
+.energy-item p{
+    color:#687582;
+    font-size:14px;
+}
+
+/* INDUSTRIAL + SUPPLY CHAIN */
+
+.industry-section{
+    background:var(--light);
+}
+
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.industry-card{
+    background:#fff;
+    padding:38px 30px;
+    border-left:3px solid var(--gold);
+    min-height:280px;
+}
+
+.industry-card h3{
+    color:var(--navy);
+    font-size:20px;
+    margin-bottom:6px;
+}
+
+.industry-card h4{
+    color:var(--green);
+    font-size:13px;
+    margin-bottom:14px;
+}
+
+.industry-card p{
+    color:#687582;
+    font-size:14px;
+}
+
+/* AI SYSTEM */
+
+.ai-section{
+    background:var(--navy);
+    color:#fff;
+}
+
+.ai-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.ai-label{
+    color:#d9bc71;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.4px;
+    margin-bottom:18px;
+}
+
+.ai-grid h2{
+    font-size:45px;
+    line-height:1.12;
+    margin-bottom:12px;
+}
+
+.ai-grid h3{
+    color:#d9bc71;
+    font-size:17px;
+    margin-bottom:22px;
+}
+
+.ai-grid p{
+    color:rgba(255,255,255,.67);
+    font-size:15px;
+    margin-bottom:14px;
+}
+
+.ai-stack{
+    border-top:1px solid rgba(255,255,255,.16);
+}
+
+.ai-item{
+    padding:22px 0;
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.ai-item strong{
+    display:block;
+    color:#fff;
+    font-size:17px;
+    margin-bottom:4px;
+}
+
+.ai-item span{
+    color:#d9bc71;
+    font-size:11px;
+}
+
+/* DECISION SUPPORT */
+
+.decision-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.decision-item{
+    padding:38px 27px;
+    border-right:1px solid var(--line);
+}
+
+.decision-item:last-child{
+    border-right:0;
+}
+
+.decision-item span{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.decision-item h3{
+    color:var(--navy);
+    font-size:18px;
+    margin:11px 0 5px;
+}
+
+.decision-item h4{
+    color:var(--green);
+    font-size:13px;
+    margin-bottom:13px;
+}
+
+.decision-item p{
+    color:#687582;
+    font-size:14px;
+}
+
+/* CONTENT & WECHAT */
+
+.content-section{
+    background:#eef2f4;
+}
+
+.content-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.content-card{
+    background:#fff;
+    padding:40px 32px;
+    min-height:300px;
+}
+
+.content-tag{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:28px;
+}
+
+.content-card h3{
+    color:var(--navy);
+    font-size:23px;
+    line-height:1.2;
+    margin-bottom:8px;
+}
+
+.content-card h4{
+    color:var(--green);
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.content-card p{
+    color:#687582;
+    font-size:14px;
+    margin-bottom:24px;
+}
+
+.content-card a{
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+}
+
+/* CTA */
+
+.cta-section{
+    background:var(--navy);
+    color:#fff;
+    padding:80px 0;
+}
+
+.cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.cta-inner .eyebrow{
+    color:#d9bc71;
+}
+
+.cta-inner h2{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:7px;
+}
+
+.cta-inner p{
+    color:rgba(255,255,255,.62);
+    font-size:15px;
+}
+
+.cta-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* CONTACT */
+
+.contact-section{
+    background:var(--navy2);
+    color:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+}
+
+.contact-label{
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2.4px;
+    margin-bottom:14px;
+}
+
+.contact-grid h2{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.contact-grid p{
+    color:rgba(255,255,255,.65);
+}
+
+.contact-info{
+    display:grid;
+    gap:23px;
+}
+
+.contact-info span{
+    display:block;
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.7px;
+    margin-bottom:4px;
+}
+
+.contact-info a{
+    color:#fff;
+}
+
+/* FOOTER */
+
+footer{
+    background:#031321;
+    color:rgba(255,255,255,.52);
+    padding:29px 0;
+    font-size:12px;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer-inner strong{
+    color:#fff;
+    margin-right:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .nav-links a{
+        font-size:9px;
+    }
+
+    .mission-grid,
+    .macro-grid,
+    .energy-grid,
+    .ai-grid,
+    .content-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .mission-left{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+        padding:0 0 35px;
+    }
+
+    .architecture-grid,
+    .industry-grid{
+        grid-template-columns:1fr;
+    }
+
+    .decision-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:650px){
+
+    section{
+        padding:74px 0;
+    }
+
+    .nav{
+        height:66px;
+    }
+
+    .brand{
+        font-size:14px;
+    }
+
+    .nav-links a:not(.basinol-link){
+        display:none;
+    }
+
+    .hero{
+        min-height:530px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .section-head h2,
+    .mission-left h2,
+    .macro-grid h2,
+    .energy-panel h2,
+    .ai-grid h2,
+    .cta-inner h2{
+        font-size:34px;
+    }
+
+    .decision-grid{
+        grid-template-columns:1fr;
+    }
+
+    .decision-item{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+    }
+}
 
 </style>
 
-
 </head>
-
 
 
 <body>
 
 
-
-
 <!-- HEADER -->
 
-
-<header>
-
+<header class="site-header">
 
 <div class="container nav">
 
+    <a href="index.html" class="brand">
+        TOTAL RESOURCES
+    </a>
 
-<div class="logo">
+    <nav class="nav-links">
 
-TOTAL RESOURCES
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="business.html">Business</a>
+        <a href="projects.html">Projects</a>
+        <a href="intelligence.html">Intelligence</a>
 
-</div>
+        <a href="basinol.html" class="basinol-link">
+            BASINOL®
+        </a>
 
-
-
-<div class="menu">
-
-
-<a href="index.html">
-HOME
-</a>
-
-
-<a href="about.html">
-ABOUT
-</a>
-
-
-<a href="business.html">
-BUSINESS
-</a>
-
-
-<a href="projects.html">
-PROJECTS
-</a>
-
-
-<a href="intelligence.html">
-INTELLIGENCE
-</a>
-
+    </nav>
 
 </div>
-
-
-</div>
-
 
 </header>
 
 
-
-
-
-
-
-
-
 <!-- HERO -->
-
 
 <section class="hero">
 
-
 <div class="container">
 
+    <div class="hero-content">
 
-<h1>
+        <div class="hero-kicker">
+            TOTAL RESOURCES Intelligence
+        </div>
 
-Macro Compass Intelligence
+        <h1>
+            Intelligence for
+            Industrial Decisions.
+        </h1>
 
-</h1>
+        <h2>
+            Global Macro · Energy · Industry · Supply Chain · AI Knowledge
+        </h2>
 
+        <div class="hero-cn">
+            经纬金脉 · 为产业决策提供全球研究与情报支持
+        </div>
 
+        <p>
+            TOTAL RESOURCES Intelligence integrates macro research,
+            energy and commodity intelligence, industrial analysis,
+            supply chain information and AI-enabled knowledge systems
+            to support strategic decisions.
+        </p>
 
-<h2>
-
-经纬金脉 · 全球产业洞察
-
-</h2>
-
-
-
-<p>
-
-
-Global Industrial Intelligence Platform of
-TOTAL RESOURCES HOLDING LTD. (CHONGQING).
-
-
-</p>
-
-
-
-<br>
-
-
-
-<p>
-
-
-重庆首胜能源科技有限公司战略研究与产业智能平台，
-通过全球宏观、能源市场、产业研究和AI知识系统，
-支持产业决策与资源配置。
-
-
-</p>
-
-
+    </div>
 
 </div>
-
 
 </section>
 
 
-
-
-
-
-
-
-
-<!-- INTELLIGENCE FRAMEWORK -->
-
+<!-- MISSION -->
 
 <section>
 
-
 <div class="container">
 
+    <div class="mission-grid">
 
-<div class="section-title">
+        <div class="mission-left">
 
+            <div class="eyebrow">
+                Intelligence Mission
+            </div>
 
-<h2>
+            <h2>
+                Research Must
+                Support Decisions.
+            </h2>
 
-Intelligence Framework
+            <div class="cn">
+                研究最终服务于决策
+            </div>
 
-</h2>
-
-
-<span>
-
-全球产业智能体系
-
-</span>
-
-
-</div>
-
+        </div>
 
 
+        <div class="mission-right">
 
+            <h3>
+                Information is valuable only
+                when it improves decision quality.
+            </h3>
 
+            <p>
+                TOTAL RESOURCES Intelligence is designed
+                to connect global information with
+                real industrial and investment decisions.
+            </p>
 
+            <p>
+                Our research framework focuses on
+                macro conditions, energy markets,
+                industrial trends, supply chain risks
+                and project implications.
+            </p>
 
-<div class="framework">
+            <p>
+                我们不追求信息数量本身，
+                而强调宏观、能源、产业、供应链与项目之间的传导关系，
+                让研究最终形成可执行的判断。
+            </p>
 
+        </div>
 
-Global Macro
-
-<br>
-
-全球宏观
-
-<br>
-
-↓
-
-<br>
-
-
-Energy Markets
-
-<br>
-
-能源市场
-
-<br>
-
-↓
-
-<br>
-
-
-Industrial Chains
-
-<br>
-
-产业链研究
-
-<br>
-
-↓
-
-<br>
-
-
-AI Knowledge System
-
-<br>
-
-AI知识系统
-
-<br>
-
-↓
-
-<br>
-
-
-Strategic Decisions
-
-<br>
-
-战略决策
-
+    </div>
 
 </div>
-
-
-
-</div>
-
 
 </section>
 
 
+<!-- RESEARCH ARCHITECTURE -->
 
-
-
-
-
-
-
-<!-- GLOBAL MACRO -->
-
-
-<section style="background:#f5f7fa;">
-
+<section class="architecture-section">
 
 <div class="container">
 
+    <div class="section-head">
 
-<div class="section-title">
+        <div class="eyebrow">
+            Research Architecture
+        </div>
+
+        <h2>
+            A Multi-Layer Intelligence System
+        </h2>
+
+        <p>
+            多层次研究与情报体系
+        </p>
+
+    </div>
 
 
-<h2>
-
-01
-
-</h2>
+    <div class="architecture-grid">
 
 
-<h2>
+        <div class="architecture-card">
 
-Global Macro Intelligence
+            <div class="arch-index">
+                01 / MACRO
+            </div>
 
-</h2>
+            <h3>
+                Global Macro
+            </h3>
+
+            <h4>
+                全球宏观
+            </h4>
+
+            <p>
+                Monetary policy, economic cycles,
+                inflation, liquidity, currencies
+                and geopolitical transmission.
+            </p>
+
+        </div>
 
 
-<span>
+        <div class="architecture-card">
 
-全球宏观研究
+            <div class="arch-index">
+                02 / ENERGY
+            </div>
 
-</span>
+            <h3>
+                Energy Intelligence
+            </h3>
 
+            <h4>
+                能源情报
+            </h4>
+
+            <p>
+                Crude oil, refined products,
+                petrochemicals, inventories,
+                flows, positioning and market structure.
+            </p>
+
+        </div>
+
+
+        <div class="architecture-card">
+
+            <div class="arch-index">
+                03 / INDUSTRY
+            </div>
+
+            <h3>
+                Industrial Research
+            </h3>
+
+            <h4>
+                产业研究
+            </h4>
+
+            <p>
+                Industrial trends, value chains,
+                capacity, competition,
+                investment and project opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="architecture-card">
+
+            <div class="arch-index">
+                04 / SUPPLY CHAIN
+            </div>
+
+            <h3>
+                Supply Chain Intelligence
+            </h3>
+
+            <h4>
+                供应链情报
+            </h4>
+
+            <p>
+                Suppliers, logistics, trade flows,
+                pricing, operational risks
+                and market connectivity.
+            </p>
+
+        </div>
+
+
+        <div class="architecture-card">
+
+            <div class="arch-index">
+                05 / AI
+            </div>
+
+            <h3>
+                AI Knowledge System
+            </h3>
+
+            <h4>
+                AI知识系统
+            </h4>
+
+            <p>
+                Structured research workflows,
+                knowledge management,
+                AI-assisted analysis and information synthesis.
+            </p>
+
+        </div>
+
+
+        <div class="architecture-card">
+
+            <div class="arch-index">
+                06 / DECISION
+            </div>
+
+            <h3>
+                Strategic Decisions
+            </h3>
+
+            <h4>
+                战略决策
+            </h4>
+
+            <p>
+                Translating research into
+                market views, risk signals,
+                project implications and action priorities.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </div>
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Understanding Global Economic Cycles
-
-</h3>
-
-
-
-<h4>
-
-理解全球经济周期
-
-</h4>
-
-
-
-
-<p>
-
-
-Macro Compass studies the forces shaping
-global economic changes, including
-financial cycles, monetary policies,
-geopolitical developments and industrial trends.
-
-
-</p>
-
-
-
-<p>
-
-
-经纬金脉关注影响全球变化的核心力量，
-包括金融周期、货币政策、
-地缘政治变化和产业趋势。
-
-
-</p>
-
-
-
-
-<br>
-
-
-
-<p>
-
-
-Research Areas:
-
-</p>
-
-
-
-<p>
-
-
-◆ Global Economy
-
-<br>
-
-全球经济
-
-
-<br><br>
-
-
-◆ Monetary Policy
-
-<br>
-
-货币政策
-
-
-<br><br>
-
-
-◆ Geopolitical Changes
-
-<br>
-
-地缘政治变化
-
-
-<br><br>
-
-
-◆ Industrial Cycles
-
-<br>
-
-产业周期
-
-
-</p>
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-<!-- ENERGY MARKET INTELLIGENCE -->
-
-
-<section class="dark">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<h2 style="color:white;">
-
-02
-
-</h2>
-
-
-<h2 style="color:white;">
-
-Energy Market Intelligence
-
-</h2>
-
-
-
-<span>
-
-能源市场研究
-
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Energy · Commodities · Supply Chains
-
-</h3>
-
-
-
-<h4>
-
-能源 · 大宗商品 · 产业链
-
-</h4>
-
-
-
-
-
-<p>
-
-
-Macro Compass focuses on global energy markets,
-commodity cycles and industrial supply chains.
-
-
-</p>
-
-
-
-<p>
-
-
-经纬金脉重点研究全球能源市场、
-大宗商品周期及产业链变化。
-
-
-</p>
-
-
-
-
-<br>
-
-
-
-
-<h3>
-
-Crude Oil Intelligence
-
-</h3>
-
-
-<h4>
-
-原油智能研究
-
-</h4>
-
-
-
-<p>
-
-
-Research areas include:
-
-
-</p>
-
-
-
-<p>
-
-
-◆ Brent Crude
-
-<br>
-
-布伦特原油
-
-
-<br><br>
-
-
-◆ WTI Crude
-
-<br>
-
-WTI原油
-
-
-<br><br>
-
-
-◆ Shanghai Crude (SC)
-
-<br>
-
-上海原油期货
-
-
-<br><br>
-
-
-◆ OPEC+ Policy
-
-<br>
-
-OPEC+供应政策
-
-
-<br><br>
-
-
-◆ EIA / IEA Reports
-
-<br>
-
-EIA / IEA能源报告
-
-
-<br><br>
-
-
-◆ Global Inventory
-
-<br>
-
-全球库存变化
-
-
-<br><br>
-
-
-◆ Refining Margin
-
-<br>
-
-炼化利润变化
-
-
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card" style="margin-top:40px;">
-
-
-
-<h3>
-
-Petrochemical Chain Intelligence
-
-</h3>
-
-
-
-<h4>
-
-石化产业链研究
-
-</h4>
-
-
-
-<p>
-
-
-Following the transmission from crude oil
-to petrochemical products and industrial demand.
-
-
-</p>
-
-
-
-<p>
-
-
-研究原油价格向石化产品及工业需求的传导机制。
-
-
-</p>
-
-
-
-
-<br>
-
-
-
-<p>
-
-
-Key Areas:
-
-
-</p>
-
-
-
-<p>
-
-
-◆ Aromatics Chain
-
-<br>
-
-芳烃产业链
-
-
-<br><br>
-
-
-◆ PX
-
-<br>
-
-对二甲苯
-
-
-<br><br>
-
-
-◆ PTA
-
-<br>
-
-精对苯二甲酸
-
-
-<br><br>
-
-
-◆ EB / Styrene
-
-<br>
-
-苯乙烯产业链
-
-
-<br><br>
-
-
-◆ Supply & Demand Balance
-
-<br>
-
-供需平衡分析
-
-
-</p>
-
-
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
+<!-- MACRO COMPASS -->
+
+<section class="macro-section">
+
+<div class="container">
+
+    <div class="macro-grid">
 
 
+        <div>
+
+            <div class="macro-label">
+                MACRO COMPASS
+            </div>
+
+            <h2>
+                From Global Events
+                to Industrial Implications.
+            </h2>
+
+            <h3>
+                经纬金脉 · 全球宏观研究体系
+            </h3>
+
+            <p>
+                Macro Compass is the core macro
+                and cross-asset research framework
+                within TOTAL RESOURCES Intelligence.
+            </p>
+
+            <p>
+                It connects global events,
+                central bank policy, financial markets,
+                energy, commodities and industrial
+                transmission into a structured decision framework.
+            </p>
+
+        </div>
 
 
+        <div class="macro-modules">
 
 
+            <div class="macro-item">
 
-<!-- INDUSTRIAL RESEARCH -->
+                <span>01</span>
 
+                <div>
+                    <strong>Daily Intelligence</strong>
+                    <p>隔夜全球重大事件与市场晨读</p>
+                </div>
+
+            </div>
+
+
+            <div class="macro-item">
+
+                <span>02</span>
+
+                <div>
+                    <strong>Weekly Outlook</strong>
+                    <p>下周风险日历与重要事件报告</p>
+                </div>
+
+            </div>
+
+
+            <div class="macro-item">
+
+                <span>03</span>
+
+                <div>
+                    <strong>Cross-Asset Analysis</strong>
+                    <p>利率、美元、股票、大宗商品与风险偏好</p>
+                </div>
+
+            </div>
+
+
+            <div class="macro-item">
+
+                <span>04</span>
+
+                <div>
+                    <strong>Transmission Paths</strong>
+                    <p>从宏观变量到产业与资产价格的传导路径</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ENERGY INTELLIGENCE -->
 
 <section>
 
-
 <div class="container">
 
-
-<div class="section-title">
-
-
-<h2>
-
-03
-
-</h2>
+    <div class="energy-grid">
 
 
-<h2>
+        <div class="energy-panel">
 
-Industrial Research
+            <div class="energy-label">
+                ENERGY INTELLIGENCE
+            </div>
 
-</h2>
+            <h2>
+                Oil Daily
+                & Energy Markets.
+            </h2>
+
+            <h3>
+                原油与能源产业链研究
+            </h3>
+
+            <p>
+                Energy Intelligence tracks
+                crude oil fundamentals,
+                inventories, OPEC+,
+                positioning, physical flows,
+                refining and petrochemical transmission.
+            </p>
+
+            <p>
+                The objective is not merely
+                to explain price movements,
+                but to identify changes
+                in market structure and industrial impact.
+            </p>
+
+        </div>
 
 
-<span>
+        <div class="energy-list">
 
-产业趋势研究
 
-</span>
+            <div class="energy-item">
 
+                <span>MARKET</span>
+
+                <strong>
+                    Crude Oil Structure
+                </strong>
+
+                <p>
+                    Brent, WTI, spreads,
+                    curves, volatility and market regime.
+                </p>
+
+            </div>
+
+
+            <div class="energy-item">
+
+                <span>FUNDAMENTALS</span>
+
+                <strong>
+                    Supply · Demand · Inventories
+                </strong>
+
+                <p>
+                    OPEC+, EIA, IEA,
+                    inventories, production and consumption.
+                </p>
+
+            </div>
+
+
+            <div class="energy-item">
+
+                <span>POSITIONING</span>
+
+                <strong>
+                    Futures & Market Sentiment
+                </strong>
+
+                <p>
+                    CFTC positioning, speculative flows
+                    and risk sentiment.
+                </p>
+
+            </div>
+
+
+            <div class="energy-item">
+
+                <span>TRANSMISSION</span>
+
+                <strong>
+                    Petrochemical Chain
+                </strong>
+
+                <p>
+                    Crude oil transmission into
+                    PX, PTA, aromatics and industrial chains.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
 
 </div>
-
-
-
-
-
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-
-<h3>
-
-Energy Transition
-
-</h3>
-
-
-
-<h4>
-
-能源转型
-
-</h4>
-
-
-
-<p>
-
-
-Researching energy transition,
-new technologies and industrial opportunities.
-
-
-</p>
-
-
-
-<p>
-
-
-研究能源转型、
-新技术发展和产业机会。
-
-
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Sustainable Resources
-
-</h3>
-
-
-
-<h4>
-
-可持续资源
-
-</h4>
-
-
-
-<p>
-
-
-Exploring high-value natural resources
-and sustainable industrial models.
-
-
-</p>
-
-
-
-<p>
-
-
-探索高价值自然资源
-及可持续产业模式。
-
-
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Agricultural Industry
-
-</h3>
-
-
-
-<h4>
-
-农业产业链
-
-</h4>
-
-
-
-<p>
-
-
-Studying modern agriculture,
-supply chains and industrial integration.
-
-
-</p>
-
-
-
-<p>
-
-
-研究现代农业、
-供应链和产业融合发展。
-
-
-</p>
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
+<!-- INDUSTRIAL & SUPPLY CHAIN -->
+
+<section class="industry-section">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div class="eyebrow">
+            Industrial Intelligence
+        </div>
+
+        <h2>
+            Research Beyond Financial Markets
+        </h2>
+
+        <p>
+            从金融市场延伸到真实产业与供应链
+        </p>
+
+    </div>
 
 
+    <div class="industry-grid">
 
 
+        <div class="industry-card">
 
+            <h3>
+                Industrial Value Chains
+            </h3>
+
+            <h4>
+                产业链研究
+            </h4>
+
+            <p>
+                Mapping upstream resources,
+                production capacity,
+                downstream demand
+                and competitive structure.
+            </p>
+
+        </div>
+
+
+        <div class="industry-card">
+
+            <h3>
+                Supply Chain Intelligence
+            </h3>
+
+            <h4>
+                供应链情报
+            </h4>
+
+            <p>
+                Tracking suppliers,
+                trade routes, logistics,
+                pricing and operational risks.
+            </p>
+
+        </div>
+
+
+        <div class="industry-card">
+
+            <h3>
+                Project Intelligence
+            </h3>
+
+            <h4>
+                项目研究
+            </h4>
+
+            <p>
+                Evaluating industrial projects
+                through market demand,
+                operating logic, capital
+                and long-term value.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
 
 
 <!-- AI KNOWLEDGE SYSTEM -->
 
-
-<section style="background:#f5f7fa;">
-
+<section class="ai-section">
 
 <div class="container">
 
-
-<div class="section-title">
-
-
-<h2>
-
-04
-
-</h2>
+    <div class="ai-grid">
 
 
-<h2>
+        <div>
 
-AI Knowledge System
+            <div class="ai-label">
+                AI KNOWLEDGE SYSTEM
+            </div>
 
-</h2>
+            <h2>
+                From Information
+                to Structured Knowledge.
+            </h2>
+
+            <h3>
+                AI驱动的研究与知识管理体系
+            </h3>
+
+            <p>
+                TOTAL RESOURCES is building
+                an AI-enabled research workflow
+                connecting data collection,
+                analysis, knowledge management
+                and decision support.
+            </p>
+
+            <p>
+                The objective is to reduce
+                information fragmentation
+                and improve research continuity,
+                traceability and analytical efficiency.
+            </p>
+
+        </div>
 
 
-<span>
+        <div class="ai-stack">
 
-AI知识系统
 
-</span>
+            <div class="ai-item">
 
+                <strong>
+                    Data Collection
+                </strong>
+
+                <span>
+                    数据采集与信息监测
+                </span>
+
+            </div>
+
+
+            <div class="ai-item">
+
+                <strong>
+                    Data Fusion
+                </strong>
+
+                <span>
+                    多源数据融合
+                </span>
+
+            </div>
+
+
+            <div class="ai-item">
+
+                <strong>
+                    Knowledge Management
+                </strong>
+
+                <span>
+                    结构化知识库
+                </span>
+
+            </div>
+
+
+            <div class="ai-item">
+
+                <strong>
+                    AI-Assisted Research
+                </strong>
+
+                <span>
+                    AI辅助分析与研究
+                </span>
+
+            </div>
+
+
+            <div class="ai-item">
+
+                <strong>
+                    Decision Output
+                </strong>
+
+                <span>
+                    决策支持与研究输出
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
 
 </div>
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Intelligence Powered by Technology
-
-</h3>
-
-
-
-<h4>
-
-技术驱动智能研究
-
-</h4>
-
-
-
-
-
-<p>
-
-
-TOTAL RESOURCES integrates AI agents,
-knowledge management and data systems
-to improve research efficiency
-and strategic decision-making.
-
-
-</p>
-
-
-
-<p>
-
-
-重庆首胜能源科技有限公司整合AI智能代理、
-知识管理和数据系统，
-提升研究效率和战略决策能力。
-
-
-</p>
-
-
-
-
-<br>
-
-
-
-<h3>
-
-AI Research Workflow
-
-</h3>
-
-
-
-<p>
-
-
-AI Agents
-
-<br>
-
-AI智能代理
-
-
-↓
-
-<br>
-
-
-Knowledge Management
-
-<br>
-
-知识管理
-
-
-↓
-
-<br>
-
-
-Data Processing
-
-<br>
-
-数据处理
-
-
-↓
-
-<br>
-
-
-Research Output
-
-<br>
-
-研究输出
-
-
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="cards" style="margin-top:40px;">
-
-
-
-<div class="card">
-
-
-<h3>
-
-OpenClaw
-
-</h3>
-
-
-<h4>
-
-AI Agent Automation
-
-</h4>
-
-
-<p>
-
-
-Automated information collection
-and workflow assistance.
-
-
-</p>
-
-
-<p>
-
-
-自动化信息采集与工作流辅助。
-
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Obsidian Knowledge System
-
-</h3>
-
-
-<h4>
-
-知识管理系统
-
-</h4>
-
-
-<p>
-
-
-Structured knowledge organization
-for continuous learning.
-
-
-</p>
-
-
-<p>
-
-
-结构化知识管理与持续积累。
-
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Macro Compass AI
-
-</h3>
-
-
-<h4>
-
-经纬金脉AI系统
-
-</h4>
-
-
-<p>
-
-
-Transforming information into
-strategic insights.
-
-
-</p>
-
-
-<p>
-
-
-将信息转化为战略洞察。
-
-
-</p>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-<!-- MACRO COMPASS ARTICLES -->
-
-
-<section class="dark">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-
-<h2 style="color:white;">
-
-05
-
-</h2>
-
-
-
-<h2 style="color:white;">
-
-Macro Compass Articles
-
-</h2>
-
-
-
-<span>
-
-经纬金脉文章中心
-
-</span>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Selected Strategic Research
-
-</h3>
-
-
-
-<h4>
-
-精选战略研究
-
-</h4>
-
-
-
-
-<p>
-
-
-Macro Compass Articles represents
-the research publications and strategic insights
-of TOTAL RESOURCES HOLDING LTD. (CHONGQING).
-
-
-</p>
-
-
-
-<p>
-
-
-“经纬金脉”代表重庆首胜能源科技有限公司
-面向全球产业、能源和宏观领域的研究成果与战略洞察。
-
-
-</p>
-
-
-
-<br>
-
-
-
-<h3>
-
-Featured Research Areas
-
-</h3>
-
-
-
-<p>
-
-
-◆ Macro Compass Morning Brief
-
-<br>
-
-经纬金脉晨读
-
-
-<br><br>
-
-
-◆ Energy Research
-
-<br>
-
-能源研究
-
-
-<br><br>
-
-
-◆ Global Market Review
-
-<br>
-
-全球市场观察
-
-
-<br><br>
-
-
-◆ Special Reports
-
-<br>
-
-专题研究报告
-
-
-</p>
-
-
-
-<br>
-
-
-
-<p>
-
-
-Future research publications will connect
-with the Macro Compass knowledge system
-and AI research workflow.
-
-
-</p>
-
-
-
-<p>
-
-
-未来研究内容将与经纬金脉知识系统
-及AI研究工作流连接，
-形成持续积累的产业智能资产。
-
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
-
-
-
-
-
-
-
-<!-- INTELLIGENCE CREATES VALUE -->
-
+<!-- DECISION SUPPORT -->
 
 <section>
 
-
 <div class="container">
 
+    <div class="section-head">
 
-<div class="section-title">
+        <div class="eyebrow">
+            Decision Support
+        </div>
+
+        <h2>
+            Research With an Operating Purpose
+        </h2>
+
+        <p>
+            研究最终回到产业经营与投资决策
+        </p>
+
+    </div>
 
 
-<h2>
-
-Intelligence Creates Value
-
-</h2>
+    <div class="decision-grid">
 
 
+        <div class="decision-item">
 
-<span>
+            <span>01</span>
 
-智能创造价值
+            <h3>
+                Risk Signals
+            </h3>
 
-</span>
+            <h4>
+                风险信号
+            </h4>
 
+            <p>
+                Identify macro,
+                market and supply chain
+                risks before they affect operations.
+            </p>
+
+        </div>
+
+
+        <div class="decision-item">
+
+            <span>02</span>
+
+            <h3>
+                Market Direction
+            </h3>
+
+            <h4>
+                市场判断
+            </h4>
+
+            <p>
+                Understand changes
+                in market regimes,
+                pricing and demand.
+            </p>
+
+        </div>
+
+
+        <div class="decision-item">
+
+            <span>03</span>
+
+            <h3>
+                Project Implications
+            </h3>
+
+            <h4>
+                项目影响
+            </h4>
+
+            <p>
+                Translate macro
+                and industrial developments
+                into project implications.
+            </p>
+
+        </div>
+
+
+        <div class="decision-item">
+
+            <span>04</span>
+
+            <h3>
+                Action Priorities
+            </h3>
+
+            <h4>
+                行动优先级
+            </h4>
+
+            <p>
+                Convert research conclusions
+                into operational
+                and strategic priorities.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </div>
-
-
-
-
-
-
-
-
-<div style="
-max-width:900px;
-margin:auto;
-text-align:center;
-">
-
-
-
-<h2 style="
-color:#d5ad4b;
-">
-
-
-Better Information Creates Better Decisions
-
-</h2>
-
-
-
-<br>
-
-
-
-<p>
-
-
-Our mission is to transform global information,
-industrial knowledge and market insights
-into strategic value.
-
-
-</p>
-
-
-
-<p>
-
-
-我们的使命是将全球信息、
-产业知识和市场洞察，
-转化为战略价值。
-
-
-</p>
-
-
-
-<br>
-
-
-
-<div style="
-font-size:22px;
-line-height:2.5;
-">
-
-
-
-Information
-
-<br>
-
-信息
-
-<br>
-
-↓
-
-<br>
-
-
-Knowledge
-
-<br>
-
-知识
-
-<br>
-
-↓
-
-<br>
-
-
-Insight
-
-<br>
-
-洞察
-
-<br>
-
-↓
-
-<br>
-
-
-Decision
-
-<br>
-
-决策
-
-<br>
-
-↓
-
-<br>
-
-
-Value Creation
-
-<br>
-
-价值创造
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
+<!-- CONTENT / WECHAT -->
+
+<section class="content-section">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div class="eyebrow">
+            Publications & Content
+        </div>
+
+        <h2>
+            Research Across Multiple Channels
+        </h2>
+
+        <p>
+            网站研究内容与微信公众号协同
+        </p>
+
+    </div>
 
 
+    <div class="content-grid">
 
 
+        <div class="content-card">
 
+            <div class="content-tag">
+                TOTAL RESOURCES INTELLIGENCE
+            </div>
+
+            <h3>
+                Website Research Center
+            </h3>
+
+            <h4>
+                网站研究中心
+            </h4>
+
+            <p>
+                The Intelligence section is designed
+                to become the central archive
+                for Macro Compass,
+                energy research,
+                industrial intelligence
+                and selected research reports.
+            </p>
+
+            <a href="#">
+                Research Archive →
+            </a>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="content-tag">
+                WECHAT PUBLICATION
+            </div>
+
+            <h3>
+                蓝毗尼的经纬金脉
+            </h3>
+
+            <h4>
+                WeChat Research Publication
+            </h4>
+
+            <p>
+                Selected Macro Compass research,
+                long-form analysis
+                and industry observations
+                can be published through
+                the WeChat public account
+                and linked with this website.
+            </p>
+
+            <a href="#">
+                WeChat Content →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<div class="container">
+
+    <div class="cta-inner">
+
+
+        <div>
+
+            <div class="eyebrow">
+                Intelligence
+            </div>
+
+            <h2>
+                Better Information.
+                Better Industrial Decisions.
+            </h2>
+
+            <p>
+                让信息真正转化为更高质量的产业决策
+            </p>
+
+        </div>
+
+
+        <div class="cta-actions">
+
+            <a href="mailto:contact@totalresources.info"
+               class="btn btn-primary">
+
+                Intelligence Inquiry
+
+            </a>
+
+            <a href="projects.html"
+               class="btn btn-outline">
+
+                Explore Projects
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
 
 
 <!-- CONTACT -->
 
-
-<section style="background:#071d38;color:white;">
-
+<section class="contact-section">
 
 <div class="container">
 
-
-<div class="section-title">
-
-
-<h2 style="color:white;">
-
-Contact
-
-</h2>
+    <div class="contact-grid">
 
 
-<span>
+        <div>
 
-联系我们
+            <div class="contact-label">
+                CONTACT
+            </div>
 
-</span>
+            <h2>
+                TOTAL RESOURCES
+            </h2>
 
+            <p style="color:#fff;font-weight:700;">
+                TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+            </p>
 
-</div>
+            <p>
+                重庆首胜能源科技有限公司
+            </p>
 
-
-
-
-
-
-
-<div style="
-text-align:center;
-">
-
-
-
-<h3>
-
-TOTAL RESOURCES HOLDING LTD. (CHONGQING)
-
-</h3>
+        </div>
 
 
-
-<p style="color:white;">
-
-重庆首胜能源科技有限公司
-
-</p>
+        <div class="contact-info">
 
 
+            <div>
+
+                <span>WEBSITE</span>
+
+                <a href="https://totalresources.info/">
+                    totalresources.info
+                </a>
+
+            </div>
 
 
-<br>
+            <div>
+
+                <span>EMAIL</span>
+
+                <a href="mailto:contact@totalresources.info">
+                    contact@totalresources.info
+                </a>
+
+            </div>
 
 
+            <div>
 
-<h3>
+                <span>INTELLIGENCE</span>
 
-Macro Compass Intelligence
+                <p>
+                    Macro · Energy · Industry ·
+                    Supply Chain · AI Knowledge
+                </p>
 
-</h3>
-
-
-
-<p style="color:white;">
-
-经纬金脉 · 全球产业洞察
-
-</p>
+            </div>
 
 
-
-<br>
-
+        </div>
 
 
-<p style="color:white;">
-
-Website
-
-<br>
-
-www.totalresources.info
-
-</p>
-
-
-
-<p style="color:white;">
-
-Email
-
-<br>
-
-contact@totalresources.info
-
-</p>
-
-
-
+    </div>
 
 </div>
-
-
-</div>
-
 
 </section>
 
 
-
-
-
-
-
-
-
 <!-- FOOTER -->
 
+<footer>
 
-<footer style="
-background:#111;
-color:white;
-text-align:center;
-padding:35px 20px;
-font-size:13px;
-">
+<div class="container footer-inner">
 
+    <div>
 
-TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+        <strong>
+            TOTAL RESOURCES INTELLIGENCE
+        </strong>
 
+        Macro Compass · Industrial Research Platform
 
-<br><br>
-
-
-Macro Compass Intelligence
+    </div>
 
 
-<br>
+    <div>
+        © 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+    </div>
 
-
-经纬金脉 · 全球产业洞察
-
-
-<br><br>
-
-
-Global Industrial Intelligence Platform
-
-
-<br><br>
-
-
-© 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
-
+</div>
 
 </footer>
 
 
-
-
-
-
-
 </body>
-
 
 </html>

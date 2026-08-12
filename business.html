@@ -4,285 +4,827 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 <title>
-Business | TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+TOTAL RESOURCES | Business
 </title>
 
-
 <meta name="description" content="
-Business areas of TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+TOTAL RESOURCES develops value through energy and industrial supply chains,
+industrial investment, project development and operations, modern agriculture,
+and strategic resource integration.
 ">
-
 
 <style>
 
+:root{
+    --navy:#071f38;
+    --navy2:#0b2d50;
+    --green:#267248;
+    --gold:#c8a957;
+    --text:#102235;
+    --gray:#687582;
+    --light:#f4f6f8;
+    --line:#e2e7eb;
+    --white:#ffffff;
+}
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-
+html{
+    scroll-behavior:smooth;
+}
 
 body{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
 
-font-family:
-Arial,
-Helvetica,
-sans-serif;
-
-color:#10243e;
-
-line-height:1.8;
-
+    color:var(--text);
+    background:#fff;
+    line-height:1.72;
 }
 
-
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
 .container{
-
-width:90%;
-max-width:1200px;
-margin:auto;
-
+    width:88%;
+    max-width:1180px;
+    margin:0 auto;
 }
-
-
 
 section{
-
-padding:80px 0;
-
+    padding:100px 0;
 }
 
+.eyebrow{
+    color:var(--green);
+    font-size:11px;
+    letter-spacing:2.6px;
+    text-transform:uppercase;
+    font-weight:800;
+    margin-bottom:13px;
+}
 
+.section-head{
+    max-width:820px;
+    margin:0 auto 58px;
+    text-align:center;
+}
+
+.section-head h2{
+    color:var(--navy);
+    font-size:42px;
+    line-height:1.18;
+    margin-bottom:13px;
+}
+
+.section-head p{
+    color:var(--gray);
+    font-size:16px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 28px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.55);
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:var(--navy);
+}
 
 /* HEADER */
 
-
-header{
-
-background:#071d38;
-height:70px;
-display:flex;
-align-items:center;
-
+.site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:50;
+    border-bottom:1px solid rgba(255,255,255,.13);
 }
-
-
 
 .nav{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-
-
-.logo{
-
-color:white;
-font-size:20px;
-font-weight:bold;
-letter-spacing:2px;
-
+.brand{
+    color:#fff;
+    font-size:17px;
+    font-weight:800;
+    letter-spacing:2px;
 }
 
-
-
-.menu a{
-
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-size:13px;
-
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
 }
 
+.nav-links a{
+    color:rgba(255,255,255,.82);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+}
 
+.nav-links a:hover{
+    color:#fff;
+}
 
-
+.nav-links .basinol-link{
+    color:#ddc176;
+}
 
 /* HERO */
 
-
 .hero{
+    min-height:590px;
+    padding:0;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    position:relative;
 
-background:
-linear-gradient(
-135deg,
-#102b4c,
-#718093
-);
-
-color:white;
-
-padding:100px 0;
-
+    background:
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(38,114,72,.19),
+        transparent 30%
+    ),
+    linear-gradient(
+        120deg,
+        #061b32,
+        #0a2a48 55%,
+        #123f5d
+    );
 }
 
+.hero-content{
+    padding-top:55px;
+    max-width:900px;
+}
 
+.hero-kicker{
+    color:#d9bc71;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:800;
+    margin-bottom:22px;
+}
 
 .hero h1{
-
-font-size:48px;
-margin-bottom:20px;
-
+    font-size:62px;
+    line-height:1.04;
+    margin-bottom:18px;
 }
-
-
 
 .hero h2{
-
-font-size:22px;
-color:#d5ad4b;
-font-weight:400;
-margin-bottom:25px;
-
+    font-size:28px;
+    font-weight:500;
+    line-height:1.3;
+    margin-bottom:10px;
 }
 
-
+.hero-cn{
+    color:#d9bc71;
+    font-size:18px;
+    margin-bottom:22px;
+}
 
 .hero p{
-
-max-width:850px;
-font-size:16px;
-
+    max-width:760px;
+    color:rgba(255,255,255,.70);
+    font-size:15.5px;
 }
 
+/* BUSINESS OVERVIEW */
 
-
-
-
-
-/* TITLE */
-
-
-.title{
-
-text-align:center;
-margin-bottom:50px;
-
+.overview-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:90px;
+    align-items:center;
 }
 
-
-.title h2{
-
-font-size:36px;
-
+.overview-left{
+    border-right:1px solid var(--line);
+    padding-right:65px;
 }
 
-
-
-.title span{
-
-color:#777;
-
+.overview-left h2{
+    color:var(--navy);
+    font-size:46px;
+    line-height:1.14;
+    margin-bottom:15px;
 }
 
-
-
-
-
-
-/* BUSINESS CARD */
-
-
-.cards{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:30px;
-
+.overview-left .cn{
+    color:var(--green);
+    font-size:17px;
+    font-weight:700;
 }
 
-
-
-.card{
-
-background:#fff;
-
-padding:35px;
-
-border-top:
-3px solid #d5ad4b;
-
-box-shadow:
-0 5px 20px rgba(0,0,0,0.08);
-
+.overview-right h3{
+    color:var(--navy);
+    font-size:25px;
+    line-height:1.35;
+    margin-bottom:18px;
 }
 
-
-
-.card h3{
-
-margin-bottom:15px;
-
+.overview-right p{
+    color:#5f6b76;
+    font-size:15.5px;
+    margin-bottom:15px;
 }
 
+/* BUSINESS LINES */
 
-
-.card h4{
-
-color:#d5ad4b;
-
-margin-bottom:20px;
-
+.business-section{
+    background:var(--light);
 }
 
-
-
-.card p{
-
-font-size:15px;
-
+.business-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
 }
 
-
-
-
-
-.gold{
-
-color:#d5ad4b;
-
-font-size:22px;
-
-font-weight:bold;
-
+.business-card{
+    background:#fff;
+    border-top:3px solid var(--green);
+    padding:42px 34px;
+    min-height:370px;
+    transition:.25s ease;
 }
 
-
-
-.dark{
-
-background:#071d38;
-
-color:white;
-
+.business-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 35px rgba(10,31,51,.08);
 }
 
-
-
-.dark h2{
-
-color:white;
-
+.business-index{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:30px;
 }
 
+.business-card h3{
+    color:var(--navy);
+    font-size:27px;
+    line-height:1.2;
+    margin-bottom:7px;
+}
+
+.business-card h4{
+    color:var(--green);
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.business-card p{
+    color:#66727e;
+    font-size:14.5px;
+    margin-bottom:20px;
+}
+
+.business-list{
+    list-style:none;
+    margin-top:18px;
+}
+
+.business-list li{
+    color:#5d6873;
+    font-size:14px;
+    padding:8px 0;
+    border-top:1px solid var(--line);
+}
+
+/* VALUE CREATION */
+
+.value-section{
+    background:var(--navy);
+    color:#fff;
+}
+
+.value-head{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:end;
+    margin-bottom:60px;
+}
+
+.value-head .eyebrow{
+    color:#d9bc71;
+}
+
+.value-head h2{
+    font-size:47px;
+    line-height:1.1;
+}
+
+.value-copy p{
+    color:rgba(255,255,255,.68);
+    font-size:15px;
+    margin-bottom:12px;
+}
+
+.value-chain{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    border-top:1px solid rgba(255,255,255,.16);
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.value-item{
+    padding:36px 24px;
+    border-right:1px solid rgba(255,255,255,.16);
+}
+
+.value-item:last-child{
+    border-right:0;
+}
+
+.value-item span{
+    display:block;
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:18px;
+}
+
+.value-item h3{
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.value-item h4{
+    color:#d9bc71;
+    font-size:13px;
+    margin-bottom:14px;
+}
+
+.value-item p{
+    color:rgba(255,255,255,.58);
+    font-size:13px;
+}
+
+/* OPERATING BUSINESSES */
+
+.operating-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.operating-card{
+    border:1px solid var(--line);
+    padding:40px 30px;
+    min-height:350px;
+    transition:.25s;
+}
+
+.operating-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px rgba(10,31,51,.08);
+}
+
+.operating-tag{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:35px;
+}
+
+.operating-card h3{
+    color:var(--navy);
+    font-size:24px;
+    line-height:1.2;
+    margin-bottom:7px;
+}
+
+.operating-card h4{
+    color:var(--green);
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.operating-card p{
+    color:#687582;
+    font-size:14px;
+    margin-bottom:26px;
+}
+
+.operating-card a{
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+}
+
+/* INDUSTRIAL DISCIPLINE */
+
+.discipline-section{
+    background:#eef2f4;
+}
+
+.discipline-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid #d8dee3;
+    border-bottom:1px solid #d8dee3;
+}
+
+.discipline-item{
+    padding:38px 27px;
+    border-right:1px solid #d8dee3;
+}
+
+.discipline-item:last-child{
+    border-right:0;
+}
+
+.discipline-item span{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.discipline-item h3{
+    color:var(--navy);
+    font-size:18px;
+    margin:11px 0 5px;
+}
+
+.discipline-item h4{
+    color:var(--green);
+    font-size:13px;
+    margin-bottom:13px;
+}
+
+.discipline-item p{
+    color:#687582;
+    font-size:14px;
+}
+
+/* BASINOL */
+
+.basinol-section{
+    background:
+    linear-gradient(
+        120deg,
+        #071f38,
+        #0c3152
+    );
+    color:#fff;
+}
+
+.basinol-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:90px;
+    align-items:center;
+}
+
+.basinol-label{
+    color:#d9bc71;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.4px;
+    margin-bottom:18px;
+}
+
+.basinol-grid h2{
+    font-size:43px;
+    line-height:1.13;
+    margin-bottom:12px;
+}
+
+.basinol-grid h3{
+    color:#d9bc71;
+    font-size:17px;
+    margin-bottom:22px;
+}
+
+.basinol-grid p{
+    color:rgba(255,255,255,.68);
+    font-size:15px;
+    margin-bottom:14px;
+}
+
+.basinol-grid .btn{
+    margin-top:15px;
+}
+
+.basinol-side{
+    border-left:1px solid rgba(255,255,255,.17);
+    padding-left:50px;
+}
+
+.basinol-side div{
+    padding:23px 0;
+    border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+.basinol-side div:last-child{
+    border-bottom:0;
+}
+
+.basinol-side strong{
+    display:block;
+    color:#d9bc71;
+    font-size:22px;
+    margin-bottom:3px;
+}
+
+.basinol-side span{
+    color:rgba(255,255,255,.55);
+    font-size:12px;
+}
+
+/* PARTNERSHIP */
+
+.partner-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.partner-card{
+    background:var(--light);
+    border-left:3px solid var(--gold);
+    padding:36px 30px;
+    min-height:250px;
+}
+
+.partner-card h3{
+    color:var(--navy);
+    font-size:20px;
+    margin-bottom:6px;
+}
+
+.partner-card h4{
+    color:var(--green);
+    font-size:13px;
+    margin-bottom:14px;
+}
+
+.partner-card p{
+    color:#687582;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta-section{
+    background:var(--navy);
+    color:#fff;
+    padding:80px 0;
+}
+
+.cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.cta-inner .eyebrow{
+    color:#d9bc71;
+}
+
+.cta-inner h2{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:7px;
+}
+
+.cta-inner p{
+    color:rgba(255,255,255,.62);
+    font-size:15px;
+}
+
+.cta-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* CONTACT */
+
+.contact-section{
+    background:var(--navy2);
+    color:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+}
+
+.contact-label{
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2.4px;
+    margin-bottom:14px;
+}
+
+.contact-grid h2{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.contact-grid p{
+    color:rgba(255,255,255,.65);
+}
+
+.contact-info{
+    display:grid;
+    gap:23px;
+}
+
+.contact-info span{
+    display:block;
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.7px;
+    margin-bottom:4px;
+}
+
+.contact-info a{
+    color:#fff;
+}
+
+/* FOOTER */
+
+footer{
+    background:#031321;
+    color:rgba(255,255,255,.52);
+    padding:29px 0;
+    font-size:12px;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer-inner strong{
+    color:#fff;
+    margin-right:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .nav-links a{
+        font-size:9px;
+    }
+
+    .overview-grid,
+    .value-head,
+    .basinol-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .overview-left{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+        padding:0 0 35px;
+    }
+
+    .business-grid{
+        grid-template-columns:1fr;
+    }
+
+    .value-chain{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .operating-grid,
+    .partner-grid{
+        grid-template-columns:1fr;
+    }
+
+    .discipline-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .basinol-side{
+        border-left:0;
+        border-top:1px solid rgba(255,255,255,.17);
+        padding:25px 0 0;
+    }
+
+    .cta-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:650px){
+
+    section{
+        padding:74px 0;
+    }
+
+    .nav{
+        height:66px;
+    }
+
+    .brand{
+        font-size:14px;
+    }
+
+    .nav-links a:not(.basinol-link){
+        display:none;
+    }
+
+    .hero{
+        min-height:520px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .section-head h2,
+    .overview-left h2,
+    .value-head h2,
+    .basinol-grid h2,
+    .cta-inner h2{
+        font-size:34px;
+    }
+
+    .value-chain,
+    .discipline-grid{
+        grid-template-columns:1fr;
+    }
+
+    .value-item,
+    .discipline-item{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+    }
+}
 
 </style>
-
 
 </head>
 
@@ -290,990 +832,982 @@ color:white;
 <body>
 
 
+<!-- HEADER -->
 
-<header>
-
+<header class="site-header">
 
 <div class="container nav">
 
+    <a href="index.html" class="brand">
+        TOTAL RESOURCES
+    </a>
 
-<div class="logo">
+    <nav class="nav-links">
 
-TOTAL RESOURCES
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="business.html">Business</a>
+        <a href="projects.html">Projects</a>
+        <a href="intelligence.html">Intelligence</a>
 
-</div>
+        <a href="basinol.html" class="basinol-link">
+            BASINOL®
+        </a>
 
-
-<div class="menu">
-
-
-<a href="index.html">
-HOME
-</a>
-
-
-<a href="about.html">
-ABOUT
-</a>
-
-
-<a href="business.html">
-BUSINESS
-</a>
-
-
-<a href="#">
-PROJECTS
-</a>
-
-
-<a href="#">
-INTELLIGENCE
-</a>
-
-
-<a href="#">
-CONTACT
-</a>
-
+    </nav>
 
 </div>
-
-
-</div>
-
 
 </header>
 
 
-
-
-
-
+<!-- HERO -->
 
 <section class="hero">
 
-
 <div class="container">
 
+    <div class="hero-content">
 
-<h1>
+        <div class="hero-kicker">
+            Business · TOTAL RESOURCES
+        </div>
 
-Business
+        <h1>
+            From Resources
+            to Operating Businesses.
+        </h1>
 
-</h1>
+        <h2>
+            Industrial Investment · Supply Chain Operations ·
+            Project Development · Resource Integration
+        </h2>
 
+        <div class="hero-cn">
+            从资源连接到产业运营与长期价值创造
+        </div>
 
-<h2>
+        <p>
+            TOTAL RESOURCES develops business around real industrial demand,
+            combining market connectivity, supply chain operations,
+            investment capability and project execution.
+        </p>
 
-Four Strategic Business Areas
-
-</h2>
-
-
-
-<p>
-
-TOTAL RESOURCES HOLDING LTD. (CHONGQING)
-develops integrated industrial capabilities through
-resource coordination, supply chain operation,
-sustainable development and technological innovation.
-
-</p>
-
-
-
-<p>
-
-重庆首胜能源科技有限公司通过资源整合、
-供应链运营、可持续发展和技术创新，
-构建综合产业能力体系。
-
-</p>
-
+    </div>
 
 </div>
-
 
 </section>
 
 
-
-
-
-
+<!-- BUSINESS OVERVIEW -->
 
 <section>
 
-
 <div class="container">
 
+    <div class="overview-grid">
 
-<div class="title">
+        <div class="overview-left">
 
+            <div class="eyebrow">
+                Business Model
+            </div>
 
-<h2>
+            <h2>
+                Industry First.
+                Operations Driven.
+            </h2>
 
-Core Business
+            <div class="cn">
+                产业为本 · 运营驱动
+            </div>
 
-</h2>
-
-
-<span>
-
-核心业务
-
-</span>
-
-
-</div>
-
-
-<div class="cards">
+        </div>
 
 
+        <div class="overview-right">
 
-<div class="card">
+            <h3>
+                We participate in industry,
+                not just transactions.
+            </h3>
 
+            <p>
+                TOTAL RESOURCES focuses on building businesses
+                that combine resources, markets, supply chains,
+                capital and execution capabilities.
+            </p>
 
-<h3>
+            <p>
+                Our business model emphasizes market demand,
+                operating capability and long-term industrial participation
+                rather than short-term transaction volume.
+            </p>
 
-01
+            <p>
+                我们关注的不只是交易本身，而是围绕真实产业需求，
+                将资源、市场、供应链、资本和项目执行能力组合起来，
+                形成可持续运营的产业价值。
+            </p>
 
-</h3>
+        </div>
 
-
-<h2>
-
-Energy & Industrial Resources
-
-</h2>
-
-
-<h4>
-
-能源与工业资源
-
-</h4>
-
-
-
-<p>
-
-Global resources,
-industrial products and
-strategic supply chain solutions.
-
-</p>
-
-
-
-<p>
-
-全球资源、工业产品及产业供应链解决方案。
-
-</p>
-
+    </div>
 
 </div>
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-02
-
-</h3>
-
-
-<h2>
-
-Global Supply Chain
-
-</h2>
-
-
-<h4>
-
-全球供应链
-
-</h4>
-
-
-<p>
-
-Connecting international suppliers,
-industrial customers and market opportunities.
-
-</p>
-
-
-<p>
-
-连接全球供应商、产业客户及市场机会。
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-<!-- SUSTAINABLE BIO RESOURCES -->
-
-
-<section class="dark">
-
-
-<div class="container">
-
-
-<div class="title">
-
-
-<h2>
-
-03
-
-</h2>
-
-
-<h2>
-
-Sustainable Bio Resources
-
-</h2>
-
-
-<span style="color:#ddd;">
-
-可持续生物资源
-
-</span>
-
-
-</div>
-
-
-
-
-
-<div style="
-max-width:900px;
-margin:auto;
-text-align:center;
-">
-
-
-<div class="gold">
-
-Developing High-Value Natural Resources
-
-</div>
-
-
-
-<p style="color:white;">
-
-开发高价值天然资源
-
-</p>
-
-
-
-<br>
-
-
-
-<p style="color:white;">
-
-
-TOTAL RESOURCES develops sustainable botanical resources
-and agricultural value chains based on unique geographic
-advantages and industrial capabilities.
-
-
-</p>
-
-
-
-<p style="color:white;">
-
-
-公司依托特色地理优势和产业能力，
-探索可持续植物资源开发及农业价值链建设。
-
-
-</p>
-
-
-
-<br>
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-
-<h3>
-
-High-Altitude Botanical Resources
-
-</h3>
-
-
-
-<h4>
-
-高原植物资源
-
-</h4>
-
-
-
-<p>
-
-Developing premium botanical resources
-through sustainable cultivation and processing.
-
-</p>
-
-
-
-<p>
-
-依托可持续种植和加工方式，
-开发高价值植物资源。
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Sustainable Agriculture
-
-</h3>
-
-
-
-<h4>
-
-可持续农业
-
-</h4>
-
-
-
-<p>
-
-Integrating cultivation,
-processing and market development.
-
-</p>
-
-
-
-<p>
-
-融合种植、加工和市场开发，
-打造完整产业链。
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Natural Product Innovation
-
-</h3>
-
-
-
-<h4>
-
-天然产品创新
-
-</h4>
-
-
-
-<p>
-
-Creating high-value products
-through industrial transformation.
-
-</p>
-
-
-
-<p>
-
-通过产业化转化创造高价值产品。
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
+<!-- CORE BUSINESS LINES -->
+
+<section class="business-section">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div class="eyebrow">
+            Core Business Lines
+        </div>
+
+        <h2>
+            Four Business Pillars
+        </h2>
+
+        <p>
+            四大业务支柱
+        </p>
+
+    </div>
 
 
+    <div class="business-grid">
 
 
+        <div class="business-card">
+
+            <div class="business-index">
+                01 / ENERGY & INDUSTRIAL
+            </div>
+
+            <h3>
+                Energy & Industrial
+                Supply Chain
+            </h3>
+
+            <h4>
+                能源与工业品供应链
+            </h4>
+
+            <p>
+                Connecting upstream industrial resources,
+                manufacturers and downstream customers
+                through market-oriented supply chain operations.
+            </p>
+
+            <ul class="business-list">
+                <li>Energy & industrial materials</li>
+                <li>Global sourcing & procurement</li>
+                <li>Industrial customer development</li>
+                <li>Supply chain coordination</li>
+            </ul>
+
+        </div>
 
 
+        <div class="business-card">
 
-<!-- INDUSTRIAL INNOVATION -->
+            <div class="business-index">
+                02 / INVESTMENT
+            </div>
 
+            <h3>
+                Industrial Investment
+            </h3>
+
+            <h4>
+                产业投资
+            </h4>
+
+            <p>
+                Identifying industrial opportunities
+                and supporting projects through resource integration,
+                capital coordination and strategic participation.
+            </p>
+
+            <ul class="business-list">
+                <li>Industrial opportunity identification</li>
+                <li>Project incubation</li>
+                <li>Capital coordination</li>
+                <li>Long-term value participation</li>
+            </ul>
+
+        </div>
+
+
+        <div class="business-card">
+
+            <div class="business-index">
+                03 / PROJECT DEVELOPMENT
+            </div>
+
+            <h3>
+                Project Development
+                & Operations
+            </h3>
+
+            <h4>
+                项目开发与运营
+            </h4>
+
+            <p>
+                Coordinating stakeholders, resources,
+                market channels and implementation capability
+                to move projects from concept into operation.
+            </p>
+
+            <ul class="business-list">
+                <li>Project planning</li>
+                <li>Stakeholder coordination</li>
+                <li>Industrial introduction</li>
+                <li>Operations & market development</li>
+            </ul>
+
+        </div>
+
+
+        <div class="business-card">
+
+            <div class="business-index">
+                04 / AGRICULTURE
+            </div>
+
+            <h3>
+                Modern Agriculture
+            </h3>
+
+            <h4>
+                现代农业
+            </h4>
+
+            <p>
+                Developing agricultural industries through
+                production, processing, logistics,
+                branding and downstream market integration.
+            </p>
+
+            <ul class="business-list">
+                <li>Agricultural resource development</li>
+                <li>Processing & value addition</li>
+                <li>Cold chain & logistics</li>
+                <li>Brand & market development</li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- HOW WE CREATE VALUE -->
+
+<section class="value-section">
+
+<div class="container">
+
+    <div class="value-head">
+
+        <div>
+
+            <div class="eyebrow">
+                How We Create Value
+            </div>
+
+            <h2>
+                From Opportunity
+                to Sustainable Operations.
+            </h2>
+
+        </div>
+
+
+        <div class="value-copy">
+
+            <p>
+                TOTAL RESOURCES combines five connected capabilities
+                to turn industrial opportunities into operating businesses.
+            </p>
+
+            <p>
+                通过资源、供应链、资本、项目开发与运营能力的连接，
+                将产业机会转化为可持续经营的业务。
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="value-chain">
+
+
+        <div class="value-item">
+
+            <span>01</span>
+
+            <h3>Resources</h3>
+
+            <h4>资源</h4>
+
+            <p>
+                Identify and connect industrial resources
+                and strategic partners.
+            </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+            <span>02</span>
+
+            <h3>Supply Chain</h3>
+
+            <h4>供应链</h4>
+
+            <p>
+                Connect supply with real industrial
+                and market demand.
+            </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+            <span>03</span>
+
+            <h3>Investment</h3>
+
+            <h4>投资</h4>
+
+            <p>
+                Structure capital participation
+                and strategic resource support.
+            </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+            <span>04</span>
+
+            <h3>Project</h3>
+
+            <h4>项目</h4>
+
+            <p>
+                Coordinate planning, partners
+                and implementation capability.
+            </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+            <span>05</span>
+
+            <h3>Operations</h3>
+
+            <h4>运营</h4>
+
+            <p>
+                Build market access,
+                operating systems and long-term value.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- OPERATING BUSINESSES -->
 
 <section>
 
-
 <div class="container">
 
+    <div class="section-head">
 
-<div class="title">
+        <div class="eyebrow">
+            Operating Businesses
+        </div>
+
+        <h2>
+            Businesses Built Around Real Markets
+        </h2>
+
+        <p>
+            面向真实市场形成的产业业务
+        </p>
+
+    </div>
 
 
-<h2>
-
-04
-
-</h2>
+    <div class="operating-grid">
 
 
-<h2>
+        <div class="operating-card">
 
-Industrial Innovation
+            <div class="operating-tag">
+                INDUSTRIAL BRAND
+            </div>
 
-</h2>
+            <h3>
+                BASINOL®
+            </h3>
+
+            <h4>
+                German Premium Lubricants
+            </h4>
+
+            <p>
+                A professional lubricant business connecting
+                German manufacturing heritage
+                with automotive, commercial vehicle
+                and industrial markets.
+            </p>
+
+            <a href="basinol.html">
+                Explore BASINOL® →
+            </a>
+
+        </div>
 
 
-<span>
+        <div class="operating-card">
 
-产业创新
+            <div class="operating-tag">
+                BOTANICAL RESOURCES
+            </div>
 
-</span>
+            <h3>
+                High-Altitude
+                Damascus Rose
+            </h3>
 
+            <h4>
+                高原大马士革玫瑰产业
+            </h4>
+
+            <p>
+                Developing high-value botanical resources
+                through cultivation, processing,
+                natural extraction and market development.
+            </p>
+
+            <a href="projects.html">
+                Explore Project →
+            </a>
+
+        </div>
+
+
+        <div class="operating-card">
+
+            <div class="operating-tag">
+                AGRICULTURAL PLATFORM
+            </div>
+
+            <h3>
+                Agricultural
+                Industry Platform
+            </h3>
+
+            <h4>
+                现代农业产业平台
+            </h4>
+
+            <p>
+                Integrating production, processing,
+                cold chain, logistics and market channels
+                into scalable agricultural ecosystems.
+            </p>
+
+            <a href="projects.html">
+                Explore Projects →
+            </a>
+
+        </div>
+
+
+    </div>
 
 </div>
-
-
-
-
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-
-<h3>
-
-Digital Transformation
-
-</h3>
-
-
-<h4>
-
-数字化转型
-
-</h4>
-
-
-<p>
-
-Applying digital technologies
-to improve industrial management
-and operational efficiency.
-
-</p>
-
-
-<p>
-
-利用数字技术提升产业管理能力
-和运营效率。
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-AI Knowledge System
-
-</h3>
-
-
-<h4>
-
-AI知识系统
-
-</h4>
-
-
-<p>
-
-Using intelligence tools
-to enhance research
-and strategic decisions.
-
-</p>
-
-
-<p>
-
-利用人工智能工具提升研究能力
-和战略决策水平。
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Industrial Solutions
-
-</h3>
-
-
-<h4>
-
-产业解决方案
-
-</h4>
-
-
-<p>
-
-Supporting partners with
-integrated technology
-and business solutions.
-
-</p>
-
-
-<p>
-
-为合作伙伴提供综合技术
-与商业解决方案。
-
-</p>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
+<!-- INDUSTRIAL DISCIPLINE -->
 
-
-
-
-
-
-
-<!-- BUSINESS PHILOSOPHY -->
-
-
-<section style="background:#f5f7fa;">
-
+<section class="discipline-section">
 
 <div class="container">
 
+    <div class="section-head">
 
-<div class="title">
+        <div class="eyebrow">
+            Operating Discipline
+        </div>
+
+        <h2>
+            How We Approach Industrial Opportunities
+        </h2>
+
+        <p>
+            我们如何判断和推进产业机会
+        </p>
+
+    </div>
 
 
-<h2>
-
-Business Philosophy
-
-</h2>
+    <div class="discipline-grid">
 
 
+        <div class="discipline-item">
 
-<span>
+            <span>01</span>
 
-业务理念
+            <h3>
+                Real Demand
+            </h3>
 
-</span>
+            <h4>
+                真实需求
+            </h4>
 
+            <p>
+                Start from real customers,
+                markets and operating demand.
+            </p>
+
+        </div>
+
+
+        <div class="discipline-item">
+
+            <span>02</span>
+
+            <h3>
+                Operational Logic
+            </h3>
+
+            <h4>
+                运营逻辑
+            </h4>
+
+            <p>
+                Define how a project will operate
+                before expanding investment.
+            </p>
+
+        </div>
+
+
+        <div class="discipline-item">
+
+            <span>03</span>
+
+            <h3>
+                Resource Fit
+            </h3>
+
+            <h4>
+                资源匹配
+            </h4>
+
+            <p>
+                Match partners, capital,
+                technology and supply chains
+                to the project.
+            </p>
+
+        </div>
+
+
+        <div class="discipline-item">
+
+            <span>04</span>
+
+            <h3>
+                Long-Term Value
+            </h3>
+
+            <h4>
+                长期价值
+            </h4>
+
+            <p>
+                Focus on sustainable operations
+                and industrial value creation.
+            </p>
+
+        </div>
+
+
+    </div>
 
 </div>
-
-
-
-
-
-
-
-<div style="
-text-align:center;
-max-width:900px;
-margin:auto;
-">
-
-
-
-<div class="gold">
-
-Integration Creates Value
-
-</div>
-
-
-
-<p>
-
-整合创造价值
-
-</p>
-
-
-
-<br>
-
-
-
-<p>
-
-Our capability comes from connecting:
-
-</p>
-
-
-
-<p>
-
-我们的能力来自连接：
-
-</p>
-
-
-
-<br>
-
-
-
-<h3>
-
-Global Resources
-
-</h3>
-
-
-<p>
-
-全球资源
-
-</p>
-
-
-
-↓
-
-<br>
-
-
-<h3>
-
-Industrial Capabilities
-
-</h3>
-
-
-<p>
-
-产业能力
-
-</p>
-
-
-
-↓
-
-<br>
-
-
-<h3>
-
-Supply Chain Networks
-
-</h3>
-
-
-<p>
-
-供应链网络
-
-</p>
-
-
-
-↓
-
-<br>
-
-
-<h3>
-
-Intelligence Insights
-
-</h3>
-
-
-<p>
-
-智能洞察
-
-</p>
-
-
-
-↓
-
-<br>
-
-
-<h3>
-
-Sustainable Value Creation
-
-</h3>
-
-
-<p>
-
-长期价值创造
-
-</p>
-
-
-
-</div>
-
-
-</div>
-
 
 </section>
 
 
+<!-- BASINOL FEATURE -->
+
+<section class="basinol-section">
+
+<div class="container">
+
+    <div class="basinol-grid">
 
 
+        <div>
+
+            <div class="basinol-label">
+                TOTAL RESOURCES × BASINOL®
+            </div>
+
+            <h2>
+                German Lubrication Technology
+                Meets Industrial Market Development.
+            </h2>
+
+            <h3>
+                德国润滑科技与产业市场连接
+            </h3>
+
+            <p>
+                BASINOL® is one of the representative operating businesses
+                within the TOTAL RESOURCES industrial platform.
+            </p>
+
+            <p>
+                TOTAL RESOURCES supports market development,
+                industrial cooperation and supply chain connectivity
+                around professional lubrication applications.
+            </p>
+
+            <a href="basinol.html"
+               class="btn btn-primary">
+
+                Visit BASINOL®
+
+            </a>
+
+        </div>
 
 
+        <div class="basinol-side">
 
+
+            <div>
+
+                <strong>1884</strong>
+
+                <span>
+                    German Manufacturing Heritage
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>PERFORMANCE</strong>
+
+                <span>
+                    Automotive & Industrial Applications
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>PARTNERSHIP</strong>
+
+                <span>
+                    Distribution · Industrial · Strategic Cooperation
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- PARTNERSHIP -->
+
+<section>
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div class="eyebrow">
+            Business Partnership
+        </div>
+
+        <h2>
+            Building Businesses Through Cooperation
+        </h2>
+
+        <p>
+            通过产业合作建立长期业务关系
+        </p>
+
+    </div>
+
+
+    <div class="partner-grid">
+
+
+        <div class="partner-card">
+
+            <h3>
+                Industrial Partners
+            </h3>
+
+            <h4>
+                产业合作伙伴
+            </h4>
+
+            <p>
+                Cooperation with manufacturers,
+                operators and industrial customers.
+            </p>
+
+        </div>
+
+
+        <div class="partner-card">
+
+            <h3>
+                Supply Chain Partners
+            </h3>
+
+            <h4>
+                供应链合作伙伴
+            </h4>
+
+            <p>
+                Connecting suppliers, logistics,
+                channels and downstream demand.
+            </p>
+
+        </div>
+
+
+        <div class="partner-card">
+
+            <h3>
+                Investment & Strategic Partners
+            </h3>
+
+            <h4>
+                投资与战略伙伴
+            </h4>
+
+            <p>
+                Long-term cooperation around
+                industrial projects and value creation.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<div class="container">
+
+    <div class="cta-inner">
+
+
+        <div>
+
+            <div class="eyebrow">
+                Partnership
+            </div>
+
+            <h2>
+                Build the Next
+                Industrial Opportunity Together.
+            </h2>
+
+            <p>
+                共同发现、构建并运营下一项产业机会
+            </p>
+
+        </div>
+
+
+        <div class="cta-actions">
+
+            <a href="mailto:contact@totalresources.info"
+               class="btn btn-primary">
+
+                Business Inquiry
+
+            </a>
+
+            <a href="projects.html"
+               class="btn btn-outline">
+
+                Explore Projects
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
 
 
 <!-- CONTACT -->
 
-
-<section class="dark">
-
+<section class="contact-section">
 
 <div class="container">
 
-
-<div class="title">
-
-
-<h2>
-
-Contact
-
-</h2>
+    <div class="contact-grid">
 
 
-<span style="color:#ddd;">
+        <div>
 
-联系我们
+            <div class="contact-label">
+                CONTACT
+            </div>
 
-</span>
+            <h2>
+                TOTAL RESOURCES
+            </h2>
 
+            <p style="color:#fff;font-weight:700;">
+                TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+            </p>
 
-</div>
+            <p>
+                重庆首胜能源科技有限公司
+            </p>
 
-
-
-
-
-<div style="
-text-align:center;
-">
-
-
-<h3>
-
-TOTAL RESOURCES HOLDING LTD. (CHONGQING)
-
-</h3>
+        </div>
 
 
-
-<p style="color:white;">
-
-重庆首胜能源科技有限公司
-
-</p>
+        <div class="contact-info">
 
 
+            <div>
 
-<br>
+                <span>WEBSITE</span>
 
+                <a href="https://totalresources.info/">
+                    totalresources.info
+                </a>
 
-
-<p style="color:white;">
-
-Website
-
-<br>
-
-www.totalresources.info
-
-</p>
+            </div>
 
 
+            <div>
 
-<p style="color:white;">
+                <span>EMAIL</span>
 
-Email
+                <a href="mailto:contact@totalresources.info">
+                    contact@totalresources.info
+                </a>
 
-<br>
-
-contact@totalresources.info
-
-</p>
+            </div>
 
 
+            <div>
+
+                <span>BUSINESS</span>
+
+                <p>
+                    Industrial Cooperation · Supply Chain ·
+                    Investment · Project Development
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
 
 </div>
-
-
-</div>
-
 
 </section>
 
 
-
-
-
-
-
-
 <!-- FOOTER -->
 
+<footer>
 
-<footer style="
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-font-size:13px;
-">
+<div class="container footer-inner">
 
+    <div>
 
-TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+        <strong>
+            TOTAL RESOURCES
+        </strong>
 
-<br><br>
+        Industrial Resources Integration
+        & Value Creation Platform
 
-
-Global Industrial Resources & Supply Chain Platform
+    </div>
 
 
-<br><br>
+    <div>
+        © 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+    </div>
 
-
-© 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
-
+</div>
 
 </footer>
-
 
 
 </body>

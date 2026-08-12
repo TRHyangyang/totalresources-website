@@ -1,1225 +1,1118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>BASINOL® | German Premium Lubricants</title>
 
-<title>
-BASINOL® | German Premium Lubricants
-</title>
-
-
-<meta name="description" content="
-BASINOL® German Premium Lubricants.
-German engineering tradition since 1884.
-Automotive and industrial lubrication solutions.
-">
-
+<meta name="description" content="BASINOL® German Premium Lubricants. German lubricant manufacturing tradition since 1884. Automotive, commercial vehicle and industrial lubrication solutions.">
 
 <style>
-
+:root{
+    --navy:#061b33;
+    --navy2:#0b2948;
+    --green:#1f713d;
+    --gold:#d4b15b;
+    --text:#17263a;
+    --muted:#6d7885;
+    --light:#f5f7f8;
+    --white:#ffffff;
+    --border:#e5e9ed;
+}
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-
-font-family:
-"Helvetica Neue",
-Arial,
-sans-serif;
-
-color:#10233f;
-
-background:#ffffff;
-
-line-height:1.6;
-
+    font-family:Arial, Helvetica, "Microsoft YaHei", sans-serif;
+    color:var(--text);
+    background:var(--white);
+    line-height:1.75;
 }
 
-
-
-nav{
-
-height:80px;
-
-background:#071d38;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 8%;
-
-color:white;
-
+a{
+    text-decoration:none;
 }
 
-
-
-.logo{
-
-font-size:24px;
-
-font-weight:700;
-
-letter-spacing:2px;
-
+img{
+    max-width:100%;
+    display:block;
 }
 
-
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-margin-left:30px;
-
-font-size:14px;
-
+.container{
+    width:88%;
+    max-width:1180px;
+    margin:0 auto;
 }
-
-
-
-.hero{
-
-
-height:720px;
-
-
-background:
-
-linear-gradient(
-90deg,
-rgba(7,29,56,.92),
-rgba(7,29,56,.45)
-),
-
-url(
-"assets/images/basinol/racing-driver.JPG"
-);
-
-
-background-size:cover;
-
-background-position:center;
-
-
-display:flex;
-
-align-items:center;
-
-
-padding-left:8%;
-
-
-color:white;
-
-
-}
-
-
-
-.hero-content{
-
-
-max-width:650px;
-
-
-}
-
-
-
-.hero h1{
-
-
-font-size:64px;
-
-letter-spacing:4px;
-
-margin-bottom:20px;
-
-
-}
-
-
-
-.hero h2{
-
-
-font-size:30px;
-
-font-weight:400;
-
-color:#d6b45c;
-
-margin-bottom:30px;
-
-
-}
-
-
-
-.hero p{
-
-
-font-size:18px;
-
-margin-bottom:30px;
-
-
-}
-
-
-
-.btn{
-
-
-display:inline-block;
-
-padding:14px 35px;
-
-background:#d6b45c;
-
-color:#071d38;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-
 
 section{
-
-
-padding:90px 8%;
-
+    padding:95px 0;
 }
 
+/* =========================
+   HEADER
+========================= */
 
-
-.section-title{
-
-
-text-align:center;
-
-font-size:38px;
-
-margin-bottom:50px;
-
-color:#071d38;
-
-
+.site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:20;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
 
-
-
-.subtitle{
-
-
-text-align:center;
-
-color:#777;
-
-margin-bottom:50px;
-
-
+.nav-wrap{
+    height:82px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-
-
-.grid{
-
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
-
-gap:30px;
-
-
+.trh-brand{
+    color:#fff;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:2px;
 }
 
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
 
+.nav-menu a{
+    color:#fff;
+    font-size:13px;
+    letter-spacing:.7px;
+    transition:.25s;
+}
+
+.nav-menu a:hover{
+    color:var(--gold);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:760px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    color:#fff;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(4,20,38,.93) 0%,
+        rgba(4,20,38,.78) 38%,
+        rgba(4,20,38,.36) 72%,
+        rgba(4,20,38,.10) 100%
+    ),
+    url("assets/images/basinol/racing-driver.JPG");
+
+    background-size:cover;
+    background-position:center center;
+}
+
+.hero-content{
+    max-width:660px;
+    padding-top:65px;
+}
+
+.hero-logo{
+    width:245px;
+    max-width:65%;
+    margin-bottom:28px;
+}
+
+.eyebrow{
+    color:var(--gold);
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:62px;
+    line-height:1.08;
+    letter-spacing:-1.5px;
+    margin-bottom:23px;
+}
+
+.hero h2{
+    font-size:25px;
+    font-weight:400;
+    line-height:1.45;
+    margin-bottom:25px;
+}
+
+.hero-lead{
+    font-size:17px;
+    color:rgba(255,255,255,.88);
+    max-width:620px;
+}
+
+.hero-cn{
+    font-size:16px;
+    color:rgba(255,255,255,.72);
+    margin-top:10px;
+}
+
+.hero-actions{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    font-size:14px;
+    font-weight:700;
+    transition:.25s ease;
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    color:#fff;
+    border:1px solid rgba(255,255,255,.7);
+    background:rgba(255,255,255,.03);
+}
+
+.btn-outline:hover{
+    color:var(--navy);
+    background:#fff;
+}
+
+.hero-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-top:40px;
+    font-size:11px;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.68);
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.section-head{
+    text-align:center;
+    max-width:820px;
+    margin:0 auto 58px;
+}
+
+.section-head .mini{
+    color:var(--green);
+    text-transform:uppercase;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:2.5px;
+    margin-bottom:10px;
+}
+
+.section-head h2{
+    color:var(--navy);
+    font-size:40px;
+    line-height:1.2;
+    margin-bottom:12px;
+}
+
+.section-head p{
+    color:var(--muted);
+    font-size:16px;
+}
+
+.dark .section-head h2,
+.dark .section-head p{
+    color:#fff;
+}
+
+.dark .section-head .mini{
+    color:var(--gold);
+}
+
+/* =========================
+   HERITAGE
+========================= */
+
+.heritage{
+    background:var(--light);
+}
+
+.heritage-grid{
+    display:grid;
+    grid-template-columns:1fr 1.25fr;
+    gap:70px;
+    align-items:center;
+}
+
+.year-block{
+    text-align:center;
+    border-right:1px solid var(--border);
+    padding-right:50px;
+}
+
+.year{
+    font-size:112px;
+    font-weight:800;
+    line-height:1;
+    color:var(--green);
+}
+
+.year-label{
+    color:var(--navy);
+    font-size:17px;
+    margin-top:15px;
+    font-weight:700;
+}
+
+.heritage-copy h3{
+    font-size:30px;
+    color:var(--navy);
+    margin-bottom:20px;
+}
+
+.heritage-copy p{
+    color:#505d68;
+    margin-bottom:16px;
+}
+
+/* =========================
+   ENGINEERING
+========================= */
+
+.cards-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
 
 .card{
-
-
-background:#f5f7fa;
-
-padding:35px;
-
-text-align:center;
-
-border-top:3px solid #d6b45c;
-
-
+    background:#fff;
+    border:1px solid var(--border);
+    padding:36px 30px;
+    transition:.25s ease;
 }
 
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px rgba(6,27,51,.09);
+}
 
+.card-number{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:2px;
+    font-weight:700;
+    margin-bottom:18px;
+}
 
 .card h3{
-
-
-margin-bottom:15px;
-
-color:#071d38;
-
-
+    color:var(--navy);
+    font-size:21px;
+    margin-bottom:11px;
 }
 
-
+.card h4{
+    color:var(--green);
+    font-size:15px;
+    margin-bottom:17px;
+}
 
 .card p{
-
-
-font-size:15px;
-
-color:#555;
-
-
+    color:#5b6570;
+    font-size:15px;
 }
 
-
+/* =========================
+   RACING
+========================= */
 
 .dark{
-
-
-background:#071d38;
-
-color:white;
-
-
+    background:var(--navy);
+    color:#fff;
 }
 
-
-
-.dark .section-title{
-
-
-color:white;
-
-
+.racing-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:65px;
+    align-items:center;
 }
 
+.racing-image{
+    min-height:410px;
+    width:100%;
+    object-fit:cover;
+}
 
+.racing-copy .mini{
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:15px;
+}
 
+.racing-copy h2{
+    font-size:40px;
+    line-height:1.15;
+    margin-bottom:22px;
+}
+
+.racing-copy p{
+    color:rgba(255,255,255,.78);
+    margin-bottom:17px;
+}
+
+.performance-line{
+    margin-top:30px;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,.15);
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:.8px;
+}
+
+/* =========================
+   PRODUCT PORTFOLIO
+========================= */
+
+.products{
+    background:var(--light);
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product-card{
+    background:#fff;
+    padding:32px 25px;
+    border-bottom:3px solid var(--green);
+}
+
+.product-tag{
+    font-size:11px;
+    color:var(--gold);
+    letter-spacing:2px;
+    font-weight:700;
+    margin-bottom:13px;
+}
+
+.product-card h3{
+    color:var(--navy);
+    font-size:19px;
+    margin-bottom:10px;
+}
+
+.product-card h4{
+    color:var(--green);
+    font-size:14px;
+    margin-bottom:13px;
+}
+
+.product-card p{
+    color:#606a75;
+    font-size:14px;
+}
+
+/* =========================
+   APPLICATIONS
+========================= */
+
+.application-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--border);
+}
+
+.application-item{
+    padding:38px 28px;
+    border-right:1px solid var(--border);
+}
+
+.application-item:last-child{
+    border-right:0;
+}
+
+.application-item span{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.application-item h3{
+    color:var(--navy);
+    margin:10px 0 5px;
+}
+
+.application-item p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =========================
+   TRH × BASINOL
+========================= */
+
+.platform-inner{
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.platform-inner h2{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.platform-inner h3{
+    color:var(--gold);
+    font-size:20px;
+    font-weight:400;
+    margin-bottom:27px;
+}
+
+.platform-inner p{
+    color:rgba(255,255,255,.78);
+    margin-bottom:16px;
+}
+
+/* =========================
+   PARTNERSHIP
+========================= */
+
+.partnership{
+    background:#fff;
+}
+
+.partner-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.partner-card{
+    padding:34px 30px;
+    background:var(--light);
+    border-left:3px solid var(--gold);
+}
+
+.partner-card h3{
+    color:var(--navy);
+    margin-bottom:8px;
+}
+
+.partner-card h4{
+    color:var(--green);
+    margin-bottom:13px;
+    font-size:14px;
+}
+
+.partner-card p{
+    color:#5c6671;
+    font-size:14px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#0b2948;
+    color:#fff;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.contact .cn{
+    color:var(--gold);
+    margin-bottom:30px;
+}
+
+.contact-company{
+    font-size:19px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.contact p{
+    color:rgba(255,255,255,.78);
+}
+
+.contact-links{
+    margin-top:28px;
+}
+
+.contact-links a{
+    color:#fff;
+    border-bottom:1px solid rgba(255,255,255,.4);
+    margin:0 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#031221;
+    color:rgba(255,255,255,.6);
+    text-align:center;
+    padding:33px 20px;
+    font-size:13px;
+}
+
+footer strong{
+    color:#fff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-menu{
+        display:none;
+    }
+
+    .hero{
+        min-height:700px;
+        background-position:63% center;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero h2{
+        font-size:21px;
+    }
+
+    .hero-logo{
+        width:205px;
+    }
+
+    .heritage-grid,
+    .racing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .year-block{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+        padding:0 0 40px;
+    }
+
+    .cards-3,
+    .product-grid,
+    .partner-grid{
+        grid-template-columns:1fr;
+    }
+
+    .application-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .application-item{
+        border-bottom:1px solid var(--border);
+    }
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:90%;
+    }
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero{
+        min-height:680px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero-points{
+        display:none;
+    }
+
+    .section-head h2,
+    .racing-copy h2,
+    .platform-inner h2{
+        font-size:32px;
+    }
+
+    .year{
+        font-size:82px;
+    }
+
+    .application-grid{
+        grid-template-columns:1fr;
+    }
+}
 </style>
-
-
 </head>
-
-
 
 <body>
 
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container nav-wrap">
+        <div class="trh-brand">TOTAL RESOURCES</div>
 
-<nav>
+        <nav class="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="business.html">BUSINESS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="intelligence.html">INTELLIGENCE</a>
+            <a href="basinol.html">BASINOL</a>
+        </nav>
+    </div>
+</header>
 
-
-<div class="logo">
-TOTAL RESOURCES
-</div>
-
-
-<div>
-
-<a href="index.html">
-HOME
-</a>
-
-
-<a href="business.html">
-BUSINESS
-</a>
-
-
-<a href="intelligence.html">
-INTELLIGENCE
-</a>
-
-
-<a href="basinol.html">
-BASINOL
-</a>
-
-
-</div>
-
-
-</nav>
-
-
-
+<!-- HERO -->
 <section class="hero">
+    <div class="container">
+        <div class="hero-content">
 
+            <img
+                src="assets/images/basinol/basinol-logo.png"
+                class="hero-logo"
+                alt="BASINOL® logo">
 
-<div class="hero-content">
+            <div class="eyebrow">
+                German Engineering · Since 1884
+            </div>
 
+            <h1>
+                Premium Lubrication.<br>
+                Engineered to Perform.
+            </h1>
 
-<h1>
-BASINOL®
-</h1>
+            <h2>
+                German lubrication expertise for automotive,
+                commercial vehicle and industrial applications.
+            </h2>
 
+            <p class="hero-lead">
+                Built on a German lubricant manufacturing tradition dating to 1884,
+                BASINOL® delivers professional lubrication solutions engineered for
+                performance, reliability and demanding operating conditions.
+            </p>
 
-<h2>
-German Premium Lubricants
-</h2>
+            <p class="hero-cn">
+                源自德国润滑制造传统，BASINOL® 巴斯龙以性能、可靠性与专业工程能力，
+                服务汽车、商用车辆及工业应用领域。
+            </p>
 
+            <div class="hero-actions">
+                <a href="#products" class="btn btn-primary">
+                    Explore Products
+                </a>
 
-<p>
+                <a href="#partnership" class="btn btn-outline">
+                    Become a Partner
+                </a>
+            </div>
 
-Since 1884.
-<br>
+            <div class="hero-points">
+                <span>German Engineering</span>
+                <span>Automotive</span>
+                <span>Industrial</span>
+                <span>Performance</span>
+            </div>
 
-Engineered in Germany.
-<br>
-
-Trusted by Automotive and Industrial Applications.
-
-</p>
-
-
-<a class="btn" href="#heritage">
-Explore BASINOL
-</a>
-
-
-</div>
-
-
+        </div>
+    </div>
 </section>
 
+<!-- HERITAGE -->
+<section class="heritage">
+    <div class="container">
 
+        <div class="section-head">
+            <div class="mini">Brand Heritage</div>
+            <h2>German Lubrication Tradition</h2>
+            <p>德国润滑制造传统与工程技术积淀</p>
+        </div>
 
-<section id="heritage">
+        <div class="heritage-grid">
 
+            <div class="year-block">
+                <div class="year">1884</div>
+                <div class="year-label">
+                    A German manufacturing heritage
+                </div>
+            </div>
 
-<h2 class="section-title">
-German Heritage
-</h2>
+            <div class="heritage-copy">
+                <h3>Engineering experience built over generations.</h3>
 
+                <p>
+                    Finke Mineralölwerk GmbH was founded in Germany in 1884
+                    and has developed, produced and marketed high-quality
+                    lubricants through successive generations of industrial technology.
+                </p>
 
-<p class="subtitle">
+                <p>
+                    BASINOL® builds on this German lubricant manufacturing heritage,
+                    combining formulation expertise, quality management and practical
+                    industrial experience.
+                </p>
 
-A tradition of German lubrication technology since 1884
+                <p>
+                    BASINOL® 巴斯龙依托德国长期积累的润滑制造传统，
+                    将配方技术、质量管理与工业应用经验结合，
+                    为现代汽车与工业设备提供专业润滑解决方案。
+                </p>
+            </div>
 
-</p>
-
-
-<div class="grid">
-
-
-<div class="card">
-
-
-<h3>
-1884
-</h3>
-
-
-<p>
-
-More than 140 years of engineering heritage and continuous innovation.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-
-<h3>
-German Engineering
-</h3>
-
-
-<p>
-
-Precision manufacturing philosophy and advanced lubrication technology.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-
-<h3>
-Global Vision
-</h3>
-
-
-<p>
-
-Connecting German technology with worldwide industrial markets.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
+        </div>
+    </div>
 </section>
 
-
-<section class="dark">
-
-
-<h2 class="section-title">
-Racing Performance
-</h2>
-
-
-<p class="subtitle">
-
-Extreme Performance Proven on the Track
-
-</p>
-
-
-
-<div class="grid">
-
-
-
-<div class="card">
-
-
-<img src="assets/images/basinol/racing-engine.JPG"
-
-style="width:100%;height:220px;object-fit:cover;margin-bottom:20px;">
-
-
-<h3>
-Motorsport Technology
-</h3>
-
-
-<p>
-
-BASINOL lubrication technology has been tested under demanding racing conditions,
-where extreme temperature, high speed and mechanical stress require maximum reliability.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-
-<h3>
-High Performance Formula
-</h3>
-
-
-<p>
-
-Advanced base oils and additive systems provide:
-
-<br><br>
-
-• Excellent wear protection
-
-<br>
-
-• Thermal stability
-
-<br>
-
-• Engine cleanliness
-
-<br>
-
-• Long service performance
-
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-
-<h3>
-German Motorsport Spirit
-</h3>
-
-
-<p>
-
-From racing environments to industrial applications,
-BASINOL transfers performance experience into everyday lubrication solutions.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
+<!-- ENGINEERING -->
 <section>
+    <div class="container">
 
+        <div class="section-head">
+            <div class="mini">Engineering Excellence</div>
+            <h2>Technology Built for Performance</h2>
+            <p>德国工程技术 · 专业润滑性能</p>
+        </div>
 
-<h2 class="section-title">
-Technology Advantage
-</h2>
+        <div class="cards-3">
 
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>German Engineering</h3>
+                <h4>德国工程技术</h4>
+                <p>
+                    Lubrication solutions developed around precision,
+                    reliability and demanding application requirements.
+                </p>
+            </div>
 
-<p class="subtitle">
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>Advanced Formulation</h3>
+                <h4>先进配方体系</h4>
+                <p>
+                    Carefully selected base oils and formulation technologies
+                    designed for modern automotive and industrial systems.
+                </p>
+            </div>
 
-Engineering Excellence Behind Every Product
+            <div class="card">
+                <div class="card-number">03</div>
+                <h3>Quality & Reliability</h3>
+                <h4>品质与可靠性</h4>
+                <p>
+                    Quality control across development, production and finished
+                    products supports consistent performance.
+                </p>
+            </div>
 
-</p>
-
-
-
-
-<div class="grid">
-
-
-<div class="card">
-
-
-<h3>
-Synthetic Technology
-</h3>
-
-
-<p>
-
-High-quality synthetic formulations designed for modern engines and industrial equipment.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-Advanced Protection
-</h3>
-
-
-<p>
-
-Reduced friction, improved wear resistance and reliable protection under severe conditions.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-German Quality Philosophy
-</h3>
-
-
-<p>
-
-Precision, reliability and continuous improvement are the foundation of BASINOL products.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
+        </div>
+    </div>
 </section>
 
-
-
-
-
-<section>
-
-
-<h2 class="section-title">
-Product Portfolio
-</h2>
-
-
-<p class="subtitle">
-
-Professional Lubrication Solutions For Multiple Industries
-
-</p>
-
-
-
-<div class="grid">
-
-
-
-<div class="card">
-
-
-<h3>
-Automotive Lubricants
-</h3>
-
-
-<p>
-
-Passenger cars,
-commercial vehicles,
-high-performance engines.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-Industrial Lubricants
-</h3>
-
-
-<p>
-
-Machinery,
-manufacturing equipment,
-industrial systems.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-Special Applications
-</h3>
-
-
-<p>
-
-Customized lubrication solutions
-for demanding operating environments.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
+<!-- RACING -->
 <section class="dark">
+    <div class="container">
 
+        <div class="racing-grid">
 
-<h2 class="section-title">
-Application Industries
-</h2>
+            <img
+                src="assets/images/basinol/racing-engine.JPG"
+                class="racing-image"
+                alt="BASINOL® motorsport application">
 
+            <div class="racing-copy">
 
+                <div class="mini">Performance Environment</div>
 
-<div class="grid">
+                <h2>
+                    Tested Where Performance Matters.
+                </h2>
 
+                <p>
+                    Motorsport represents a demanding environment for
+                    lubrication technology, combining heat, speed,
+                    mechanical stress and reliability requirements.
+                </p>
 
+                <p>
+                    BASINOL® uses performance-oriented engineering experience
+                    to support both automotive and professional industrial applications.
+                </p>
 
-<div class="card">
+                <p>
+                    赛车环境代表高温、高转速、高负荷与可靠性的综合考验，
+                    BASINOL® 将性能导向的润滑技术应用于汽车及专业工业领域。
+                </p>
 
+                <div class="performance-line">
+                    Performance · Protection · Precision
+                </div>
 
-<h3>
-Automotive
-</h3>
+            </div>
 
-
-<p>
-
-Engine protection,
-performance optimization,
-mobility solutions.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-Commercial Vehicles
-</h3>
-
-
-<p>
-
-Heavy-duty transportation
-and fleet operation.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-Industrial Systems
-</h3>
-
-
-<p>
-
-Manufacturing equipment,
-machinery and energy sectors.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
+        </div>
+    </div>
 </section>
 
+<!-- PRODUCTS -->
+<section class="products" id="products">
+    <div class="container">
 
+        <div class="section-head">
+            <div class="mini">Product Portfolio</div>
+            <h2>Professional Lubrication Solutions</h2>
+            <p>覆盖汽车、商用车辆、船舶及工业应用的专业润滑产品体系</p>
+        </div>
 
+        <div class="product-grid">
 
+            <div class="product-card">
+                <div class="product-tag">01 / AUTOMOTIVE</div>
+                <h3>Passenger Car Lubricants</h3>
+                <h4>乘用车润滑油</h4>
+                <p>
+                    Engine and drivetrain lubrication solutions
+                    for modern passenger vehicles.
+                </p>
+            </div>
 
+            <div class="product-card">
+                <div class="product-tag">02 / HEAVY DUTY</div>
+                <h3>Commercial Vehicles</h3>
+                <h4>商用车辆</h4>
+                <p>
+                    Heavy-duty lubrication solutions for trucks,
+                    fleets and demanding transport applications.
+                </p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-tag">03 / MARINE</div>
+                <h3>Marine & Railway</h3>
+                <h4>船舶与铁路</h4>
+                <p>
+                    Lubricants for marine engines, rail applications
+                    and stationary equipment.
+                </p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-tag">04 / INDUSTRIAL</div>
+                <h3>Industrial Lubricants</h3>
+                <h4>工业润滑</h4>
+                <p>
+                    Solutions for machinery, manufacturing equipment
+                    and industrial operating systems.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION -->
 <section>
+    <div class="container">
 
+        <div class="section-head">
+            <div class="mini">Applications</div>
+            <h2>Built for Real-World Industry</h2>
+            <p>服务真实工业环境与专业应用场景</p>
+        </div>
 
-<h2 class="section-title">
-Global Market Platform
-</h2>
+        <div class="application-grid">
 
+            <div class="application-item">
+                <span>01</span>
+                <h3>Automotive</h3>
+                <p>乘用车与高性能汽车应用</p>
+            </div>
 
-<p class="subtitle">
+            <div class="application-item">
+                <span>02</span>
+                <h3>Heavy Duty</h3>
+                <p>商用车辆、运输与车队应用</p>
+            </div>
 
-Connecting German Lubrication Technology With Global Partners
+            <div class="application-item">
+                <span>03</span>
+                <h3>Marine</h3>
+                <p>船舶、铁路与固定式设备</p>
+            </div>
 
-</p>
+            <div class="application-item">
+                <span>04</span>
+                <h3>Industrial</h3>
+                <p>机械制造与工业系统应用</p>
+            </div>
 
-
-
-
-<div class="grid">
-
-
-
-<div class="card">
-
-
-<h3>
-China Market Development
-</h3>
-
-
-<p>
-
-Building professional distribution channels
-and industrial cooperation networks.
-
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-
-<h3>
-Industrial Partnership
-</h3>
-
-
-<p>
-
-Working with manufacturers,
-engineering companies and technical partners.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-International Expansion
-</h3>
-
-
-<p>
-
-Bringing BASINOL technology
-to worldwide markets.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
+        </div>
+    </div>
 </section>
+
+<!-- TOTAL RESOURCES × BASINOL -->
 <section class="dark">
+    <div class="container">
 
+        <div class="platform-inner">
 
-<h2 class="section-title">
-Partnership Opportunities
-</h2>
+            <div class="eyebrow">
+                TOTAL RESOURCES × BASINOL®
+            </div>
 
+            <h2>
+                Connecting German Lubrication Technology
+                with Global Industrial Markets
+            </h2>
 
-<p class="subtitle">
+            <h3>
+                连接德国润滑科技与全球产业市场
+            </h3>
 
-Become A BASINOL® Global Partner
+            <p>
+                TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+                develops industrial cooperation, market connectivity
+                and supply chain capabilities around BASINOL®.
+            </p>
 
-</p>
+            <p>
+                重庆首胜能源科技有限公司依托产业资源整合、
+                市场连接与供应链能力，推动 BASINOL® 巴斯龙
+                在中国及国际市场的产业合作与长期发展。
+            </p>
 
+        </div>
 
-
-<div class="grid">
-
-
-
-<div class="card">
-
-
-<h3>
-Distribution Partners
-</h3>
-
-
-<p>
-
-Develop BASINOL products in automotive,
-industrial and professional markets.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-OEM Cooperation
-</h3>
-
-
-<p>
-
-Cooperate with manufacturers,
-service providers and technical companies.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="card">
-
-
-<h3>
-Industrial Solutions
-</h3>
-
-
-<p>
-
-Provide customized lubrication solutions
-for demanding applications.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
+    </div>
 </section>
 
+<!-- PARTNERSHIP -->
+<section class="partnership" id="partnership">
+    <div class="container">
 
+        <div class="section-head">
+            <div class="mini">Partnership</div>
+            <h2>Build Long-Term Industrial Cooperation</h2>
+            <p>面向专业市场建立长期产业合作关系</p>
+        </div>
 
+        <div class="partner-grid">
 
+            <div class="partner-card">
+                <h3>Distribution Partnership</h3>
+                <h4>渠道合作</h4>
+                <p>
+                    Cooperation with professional distributors
+                    and market development partners.
+                </p>
+            </div>
 
-<section>
+            <div class="partner-card">
+                <h3>Industrial Customers</h3>
+                <h4>工业客户</h4>
+                <p>
+                    Lubrication solutions for manufacturing,
+                    transportation and industrial operators.
+                </p>
+            </div>
 
+            <div class="partner-card">
+                <h3>Strategic Cooperation</h3>
+                <h4>战略合作</h4>
+                <p>
+                    Long-term cooperation in market development,
+                    supply chain and industrial services.
+                </p>
+            </div>
 
-<h2 class="section-title">
+        </div>
 
-TOTAL RESOURCES × BASINOL®
-
-</h2>
-
-
-
-<p class="subtitle">
-
-Connecting German Lubrication Technology With Global Industrial Markets
-
-</p>
-
-
-
-<div style="
-max-width:900px;
-margin:auto;
-text-align:center;
-font-size:18px;
-color:#555;
-">
-
-
-<p>
-
-
-TOTAL RESOURCES is committed to introducing
-high-quality international industrial technologies
-into global markets.
-
-
-</p>
-
-
-<br>
-
-
-<p>
-
-
-Through strategic cooperation,
-supply chain integration and market development,
-BASINOL® provides professional lubrication solutions
-for automotive and industrial customers.
-
-
-</p>
-
-
-</div>
-
-
-
+    </div>
 </section>
 
+<!-- CONTACT -->
+<section class="contact">
+    <div class="container">
 
+        <h2>Contact BASINOL®</h2>
+        <div class="cn">联系我们</div>
 
+        <div class="contact-company">
+            TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+        </div>
 
+        <p>重庆首胜能源科技有限公司</p>
 
+        <div class="contact-links">
+            <a href="https://totalresources.info/">totalresources.info</a>
+            <a href="mailto:contact@totalresources.info">
+                contact@totalresources.info
+            </a>
+        </div>
 
-<section class="dark">
-
-
-<h2 class="section-title">
-
-Contact
-
-</h2>
-
-
-
-<div style="
-text-align:center;
-font-size:17px;
-">
-
-
-<p>
-
-TOTAL RESOURCES
-
-</p>
-
-
-<br>
-
-
-<p>
-
-BASINOL® Global Lubricant Business
-
-</p>
-
-
-<br>
-
-
-<p>
-
-Website:
-
-<br>
-
-https://totalresources.info/
-
-</p>
-
-
-<br>
-
-
-<p>
-
-China Market Development
-
-<br>
-
-Industrial Partnership
-
-<br>
-
-International Cooperation
-
-</p>
-
-
-
-</div>
-
-
-
+    </div>
 </section>
 
-
-
-
-
-<footer style="
-
-background:#041426;
-
-color:white;
-
-text-align:center;
-
-padding:40px;
-
-font-size:14px;
-
-">
-
-
-<p>
-
-© 2026 TOTAL RESOURCES
-
-</p>
-
-
-<p>
-
-BASINOL® German Premium Lubricants
-
-</p>
-
-
+<!-- FOOTER -->
+<footer>
+    <strong>BASINOL®</strong>
+    &nbsp;·&nbsp;
+    German Premium Lubricants
+    <br><br>
+    TOTAL RESOURCES HOLDING LTD. (CHONGQING)
+    <br><br>
+    © 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
 </footer>
 
-
-
 </body>
-
 </html>
-<!-- branch deploy test -->

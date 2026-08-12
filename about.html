@@ -4,23 +4,31 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>
 TOTAL RESOURCES | Industrial Resources Integration & Value Creation
 </title>
 
-<meta name="description"
-content="TOTAL RESOURCES is an industrial resources integration and value creation platform focused on energy and industrial supply chains, industrial investment, project development and modern agriculture.">
+<meta name="description" content="
+TOTAL RESOURCES HOLDING LTD. (CHONGQING) is an industrial resources integration
+and value creation platform focused on energy and industrial supply chains,
+industrial investment, project development, modern agriculture and strategic intelligence.
+">
 
 <style>
 
-/* =========================================================
-   TOTAL RESOURCES V2.0
-   GLOBAL
-========================================================= */
+:root{
+    --navy:#071f38;
+    --navy2:#0b2d50;
+    --green:#267248;
+    --gold:#c8a957;
+    --text:#102235;
+    --gray:#687582;
+    --light:#f4f6f8;
+    --line:#e2e7eb;
+    --white:#ffffff;
+}
 
 *{
     margin:0;
@@ -42,646 +50,1061 @@ body{
     "Microsoft YaHei",
     sans-serif;
 
-    color:#102235;
-    background:#ffffff;
-    line-height:1.7;
+    color:var(--text);
+    background:#fff;
+    line-height:1.72;
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
 }
 
 img{
-    display:block;
     max-width:100%;
+    display:block;
 }
 
 .container{
-    width:min(1180px,88%);
+    width:88%;
+    max-width:1180px;
     margin:0 auto;
 }
 
 section{
-    padding:105px 0;
+    padding:100px 0;
 }
 
 
-/* =========================================================
-   COLORS
-========================================================= */
-
-:root{
-
-    --navy:#071f38;
-
-    --navy-light:#0c2d50;
-
-    --green:#267248;
-
-    --gold:#c7a75a;
-
-    --text:#102235;
-
-    --gray:#687582;
-
-    --light:#f4f6f8;
-
-    --line:#e2e7eb;
-
-}
-
-
-/* =========================================================
-   TYPOGRAPHY
-========================================================= */
+/* =========================================
+   COMMON
+========================================= */
 
 .eyebrow{
-
     color:var(--green);
-
-    font-size:12px;
-
-    font-weight:700;
-
+    font-size:11px;
     letter-spacing:2.6px;
-
     text-transform:uppercase;
-
-    margin-bottom:14px;
-
+    font-weight:800;
+    margin-bottom:13px;
 }
 
 .section-head{
-
-    max-width:760px;
-
+    max-width:800px;
     margin:0 auto 58px;
-
     text-align:center;
-
 }
 
 .section-head h2{
-
     color:var(--navy);
-
     font-size:42px;
-
-    line-height:1.2;
-
+    line-height:1.18;
     letter-spacing:-1px;
-
-    margin-bottom:15px;
-
+    margin-bottom:13px;
 }
 
 .section-head p{
-
     color:var(--gray);
-
     font-size:16px;
-
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
 .btn{
-
     display:inline-block;
-
-    padding:15px 27px;
-
+    padding:15px 28px;
     font-size:13px;
-
-    font-weight:700;
-
-    letter-spacing:.3px;
-
+    font-weight:800;
     transition:.25s ease;
-
 }
 
 .btn-primary{
-
     background:var(--gold);
-
     color:var(--navy);
-
 }
 
 .btn-primary:hover{
-
     transform:translateY(-2px);
-
 }
 
 .btn-outline{
-
-    border:1px solid rgba(255,255,255,.55);
-
     color:#fff;
-
+    border:1px solid rgba(255,255,255,.6);
 }
 
 .btn-outline:hover{
-
     background:#fff;
-
     color:var(--navy);
-
 }
 
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* =========================================
+   HEADER
+========================================= */
 
-header{
-
+.site-header{
     position:absolute;
-
     top:0;
-
     left:0;
-
     width:100%;
-
-    z-index:100;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.12);
-
+    z-index:50;
+    border-bottom:1px solid rgba(255,255,255,.13);
 }
 
 .nav{
-
-    height:78px;
-
+    height:80px;
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
 }
 
 .brand{
-
     color:#fff;
-
     font-size:17px;
-
     font-weight:800;
-
-    letter-spacing:1.8px;
-
+    letter-spacing:2px;
 }
 
 .nav-links{
-
     display:flex;
-
+    gap:28px;
     align-items:center;
-
-    gap:29px;
-
 }
 
 .nav-links a{
-
-    color:rgba(255,255,255,.83);
-
-    font-size:12px;
-
-    font-weight:600;
-
-    letter-spacing:.45px;
-
+    color:rgba(255,255,255,.82);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.6px;
     text-transform:uppercase;
-
-    transition:.2s;
-
 }
 
 .nav-links a:hover{
-
     color:#fff;
-
 }
 
 .nav-links .basinol-link{
-
-    color:#d7bc72;
-
+    color:#ddc176;
 }
 
 
-/* =========================================================
+/* =========================================
    HERO
-========================================================= */
+========================================= */
 
 .hero{
-
-    min-height:780px;
-
+    min-height:790px;
     padding:0;
-
+    display:flex;
+    align-items:center;
+    position:relative;
     color:#fff;
 
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
     background:
-
-    linear-gradient(
-        90deg,
-        rgba(3,20,38,.96) 0%,
-        rgba(5,28,51,.89) 42%,
-        rgba(5,28,51,.55) 72%,
-        rgba(5,28,51,.40) 100%
+    radial-gradient(
+        circle at 78% 34%,
+        rgba(40,114,72,.20),
+        transparent 31%
     ),
-
     linear-gradient(
-        135deg,
-        #071f38,
-        #124263
+        120deg,
+        #061b32 0%,
+        #092b4a 53%,
+        #103e5a 100%
     );
+}
 
+.hero:before{
+    content:"";
+    position:absolute;
+    width:520px;
+    height:520px;
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:50%;
+    right:4%;
+    top:13%;
 }
 
 .hero:after{
-
     content:"";
-
     position:absolute;
-
     bottom:0;
-
     left:0;
-
     width:100%;
-
-    height:6px;
-
+    height:5px;
     background:
     linear-gradient(
         90deg,
-        var(--green) 0 33%,
-        var(--gold) 33% 48%,
+        var(--green) 0 34%,
+        var(--gold) 34% 48%,
         transparent 48%
     );
-
 }
 
 .hero-content{
-
     position:relative;
-
     z-index:2;
-
     max-width:850px;
-
-    padding-top:60px;
-
+    padding-top:65px;
 }
 
 .hero-kicker{
-
-    color:#d7bc72;
-
-    text-transform:uppercase;
-
+    color:#d9bc71;
+    font-size:11px;
+    font-weight:800;
     letter-spacing:3px;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    margin-bottom:22px;
-
+    text-transform:uppercase;
+    margin-bottom:24px;
 }
 
 .hero h1{
-
     font-size:72px;
-
-    line-height:.98;
-
-    letter-spacing:-2.5px;
-
+    line-height:.97;
+    letter-spacing:-2px;
     margin-bottom:28px;
-
 }
 
 .hero h2{
-
-    font-size:31px;
-
-    line-height:1.25;
-
     max-width:780px;
-
+    font-size:31px;
     font-weight:500;
-
-    margin-bottom:13px;
-
+    line-height:1.25;
+    margin-bottom:10px;
 }
 
 .hero-cn{
-
-    color:rgba(255,255,255,.72);
-
-    font-size:19px;
-
-    margin-bottom:25px;
-
+    color:#d9bc71;
+    font-size:18px;
+    margin-bottom:24px;
 }
 
 .hero-description{
-
     max-width:720px;
-
     color:rgba(255,255,255,.72);
-
     font-size:16px;
-
-    margin-bottom:35px;
-
+    margin-bottom:34px;
 }
 
-.hero-buttons{
-
+.hero-actions{
     display:flex;
-
     gap:13px;
-
     flex-wrap:wrap;
-
 }
-
-
-/* =========================================================
-   HERO SIGNALS
-========================================================= */
 
 .hero-signals{
-
     position:absolute;
-
-    right:6%;
-
-    bottom:54px;
-
     z-index:3;
-
+    right:6%;
+    bottom:55px;
     display:flex;
-
-    gap:35px;
-
+    gap:34px;
 }
 
 .hero-signal{
-
-    border-left:
-    1px solid rgba(255,255,255,.27);
-
-    padding-left:15px;
-
+    padding-left:14px;
+    border-left:1px solid rgba(255,255,255,.28);
 }
 
 .hero-signal strong{
-
     display:block;
-
-    color:#fff;
-
-    font-size:13px;
-
-    margin-bottom:2px;
-
+    font-size:11px;
+    letter-spacing:1.2px;
 }
 
 .hero-signal span{
-
-    color:rgba(255,255,255,.55);
-
-    font-size:11px;
-
+    color:rgba(255,255,255,.5);
+    font-size:10px;
 }
 
 
-/* =========================================================
+/* =========================================
    WHO WE ARE
-========================================================= */
+========================================= */
 
 .intro-grid{
-
     display:grid;
-
     grid-template-columns:.82fr 1.18fr;
-
-    gap:95px;
-
+    gap:90px;
     align-items:center;
-
 }
 
 .intro-left{
-
     border-right:1px solid var(--line);
-
-    padding-right:70px;
-
+    padding-right:65px;
 }
 
 .intro-left h2{
-
     color:var(--navy);
-
-    font-size:48px;
-
-    line-height:1.13;
-
-    margin-bottom:18px;
-
+    font-size:47px;
+    line-height:1.12;
+    margin-bottom:17px;
 }
 
-.intro-left .cn{
-
+.intro-cn{
     color:var(--green);
-
-    font-size:18px;
-
-    font-weight:600;
-
+    font-size:17px;
+    font-weight:700;
 }
 
 .intro-right h3{
-
     color:var(--navy);
-
     font-size:25px;
-
     line-height:1.35;
-
-    margin-bottom:20px;
-
+    margin-bottom:19px;
 }
 
 .intro-right p{
-
-    color:#5e6a76;
-
-    font-size:16px;
-
-    margin-bottom:16px;
-
+    color:#5d6975;
+    font-size:15.5px;
+    margin-bottom:15px;
 }
 
 .intro-line{
-
-    width:65px;
-
+    width:68px;
     height:3px;
-
     background:var(--gold);
-
     margin-top:28px;
-
 }
 
 
-/* =========================================================
-   CORE BUSINESS
-========================================================= */
+/* =========================================
+   BUSINESS
+========================================= */
 
 .business-section{
-
     background:var(--light);
-
 }
 
 .business-grid{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:20px;
-
 }
 
 .business-card{
-
     background:#fff;
-
-    padding:38px 28px 34px;
-
-    min-height:310px;
-
+    min-height:315px;
+    padding:38px 28px;
     border-top:3px solid var(--green);
-
-    transition:.25s ease;
-
+    transition:.25s;
 }
 
 .business-card:hover{
-
     transform:translateY(-5px);
-
-    box-shadow:
-    0 12px 35px rgba(10,31,51,.08);
-
+    box-shadow:0 14px 35px rgba(10,31,51,.08);
 }
 
 .business-number{
-
     color:var(--gold);
-
-    font-size:11px;
-
-    font-weight:700;
-
+    font-size:10px;
+    font-weight:800;
     letter-spacing:2px;
-
-    margin-bottom:29px;
-
+    margin-bottom:27px;
 }
 
 .business-card h3{
-
     color:var(--navy);
-
-    font-size:21px;
-
+    font-size:20px;
     line-height:1.3;
-
     margin-bottom:7px;
-
 }
 
 .business-card h4{
-
     color:var(--green);
-
-    font-size:14px;
-
-    margin-bottom:16px;
-
+    font-size:13px;
+    margin-bottom:15px;
 }
 
 .business-card p{
-
     color:#66727e;
-
-    font-size:14.5px;
-
+    font-size:14px;
 }
 
 
-/* =========================================================
-   MOBILE — BASE
-========================================================= */
+/* =========================================
+   OPERATING MODEL
+========================================= */
+
+.model-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.model-item{
+    padding:41px 29px;
+    border-right:1px solid var(--line);
+}
+
+.model-item:last-child{
+    border-right:0;
+}
+
+.model-number{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:27px;
+}
+
+.model-item h3{
+    color:var(--navy);
+    font-size:19px;
+    margin-bottom:6px;
+}
+
+.model-item h4{
+    color:var(--green);
+    font-size:13px;
+    margin-bottom:16px;
+}
+
+.model-item p{
+    color:#687582;
+    font-size:14px;
+}
+
+
+/* =========================================
+   STRATEGIC PLATFORM
+========================================= */
+
+.platform-section{
+    background:var(--navy);
+    color:#fff;
+}
+
+.platform-head{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+    align-items:end;
+    margin-bottom:58px;
+}
+
+.platform-head .eyebrow{
+    color:#d9bc71;
+}
+
+.platform-head h2{
+    font-size:47px;
+    line-height:1.08;
+}
+
+.platform-intro p{
+    color:rgba(255,255,255,.67);
+    font-size:15px;
+    margin-bottom:11px;
+}
+
+.platform-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.platform-card{
+    border:1px solid rgba(255,255,255,.15);
+    padding:35px 29px;
+    min-height:325px;
+    transition:.25s;
+}
+
+.platform-card:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.045);
+}
+
+.platform-index{
+    color:#d9bc71;
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:800;
+    margin-bottom:30px;
+}
+
+.platform-card h3{
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.platform-card h4{
+    color:#d9bc71;
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.platform-cn{
+    color:rgba(255,255,255,.58);
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.platform-card p{
+    color:rgba(255,255,255,.64);
+    font-size:14px;
+}
+
+.platform-line{
+    margin-top:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    color:rgba(255,255,255,.57);
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.platform-line i{
+    width:60px;
+    height:1px;
+    display:block;
+    background:rgba(255,255,255,.2);
+}
+
+
+/* =========================================
+   FEATURED BUSINESS
+========================================= */
+
+.featured-section{
+    background:var(--light);
+}
+
+.featured-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.featured-card{
+    background:#fff;
+    min-height:355px;
+    padding:42px 31px;
+    border-bottom:3px solid var(--green);
+}
+
+.featured-card.dark-card{
+    background:var(--navy);
+    color:#fff;
+    border-bottom-color:var(--gold);
+}
+
+.featured-card.basinol-card{
+    background:#edf3ef;
+}
+
+.featured-tag{
+    color:var(--green);
+    font-size:10px;
+    letter-spacing:2px;
+    font-weight:800;
+    margin-bottom:40px;
+}
+
+.dark-card .featured-tag{
+    color:#d9bc71;
+}
+
+.featured-card h3{
+    color:var(--navy);
+    font-size:24px;
+    line-height:1.2;
+    margin-bottom:7px;
+}
+
+.dark-card h3{
+    color:#fff;
+}
+
+.featured-card h4{
+    color:var(--green);
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.featured-card p{
+    color:#687582;
+    font-size:14px;
+    margin-bottom:28px;
+}
+
+.dark-card p{
+    color:rgba(255,255,255,.64);
+}
+
+.featured-card a{
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+}
+
+.dark-card a{
+    color:#d9bc71;
+}
+
+
+/* =========================================
+   BASINOL FEATURE
+========================================= */
+
+.basinol-feature{
+    background:
+    linear-gradient(
+        120deg,
+        #071f38,
+        #0c3152
+    );
+    color:#fff;
+}
+
+.basinol-feature-grid{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:95px;
+    align-items:center;
+}
+
+.basinol-small{
+    color:#d9bc71;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.3px;
+    margin-bottom:19px;
+}
+
+.basinol-feature h2{
+    font-size:44px;
+    line-height:1.12;
+    margin-bottom:12px;
+}
+
+.basinol-feature h3{
+    color:#d9bc71;
+    font-size:17px;
+    margin-bottom:24px;
+}
+
+.basinol-feature p{
+    color:rgba(255,255,255,.67);
+    font-size:15px;
+    margin-bottom:14px;
+}
+
+.basinol-feature .btn{
+    margin-top:15px;
+}
+
+.basinol-stats{
+    border-left:1px solid rgba(255,255,255,.18);
+    padding-left:50px;
+}
+
+.basinol-stat{
+    padding:24px 0;
+    border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+.basinol-stat:last-child{
+    border-bottom:0;
+}
+
+.basinol-stat strong{
+    display:block;
+    color:#d9bc71;
+    font-size:25px;
+    margin-bottom:3px;
+}
+
+.basinol-stat span{
+    color:rgba(255,255,255,.55);
+    font-size:12px;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.project-card{
+    min-height:355px;
+    padding:40px 30px;
+    border:1px solid var(--line);
+    transition:.25s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px rgba(10,31,51,.08);
+}
+
+.project-tag{
+    color:var(--gold);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:36px;
+}
+
+.project-card h3{
+    color:var(--navy);
+    font-size:24px;
+    line-height:1.2;
+    margin-bottom:6px;
+}
+
+.project-card h4{
+    color:var(--green);
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.project-card p{
+    color:#687582;
+    font-size:14px;
+    margin-bottom:27px;
+}
+
+.project-card a{
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+}
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.global-section{
+    background:#eef2f4;
+}
+
+.global-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+}
+
+.global-grid h2{
+    color:var(--navy);
+    font-size:43px;
+    line-height:1.15;
+    margin-bottom:12px;
+}
+
+.global-cn{
+    color:var(--green);
+    font-size:17px;
+    font-weight:700;
+}
+
+.global-copy p{
+    color:#5f6b76;
+    font-size:15px;
+    margin-bottom:14px;
+}
+
+.global-signals{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid #d7dde2;
+    border-bottom:1px solid #d7dde2;
+}
+
+.global-signals div{
+    padding:26px 21px;
+    border-right:1px solid #d7dde2;
+}
+
+.global-signals div:last-child{
+    border-right:0;
+}
+
+.global-signals strong{
+    display:block;
+    color:var(--navy);
+    font-size:10px;
+    letter-spacing:1.4px;
+    margin-bottom:4px;
+}
+
+.global-signals span{
+    color:#7a8691;
+    font-size:11px;
+}
+
+
+/* =========================================
+   INTELLIGENCE
+========================================= */
+
+.intelligence-section{
+    background:var(--navy);
+    color:#fff;
+}
+
+.intelligence-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:95px;
+    align-items:center;
+}
+
+.intel-label{
+    color:#d9bc71;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:2.3px;
+    margin-bottom:19px;
+}
+
+.intelligence-left h2{
+    font-size:46px;
+    line-height:1.1;
+    margin-bottom:11px;
+}
+
+.intelligence-left h3{
+    color:#d9bc71;
+    font-size:18px;
+    margin-bottom:23px;
+}
+
+.intelligence-left p{
+    max-width:610px;
+    color:rgba(255,255,255,.67);
+    font-size:15px;
+    margin-bottom:27px;
+}
+
+.intelligence-right{
+    border-top:1px solid rgba(255,255,255,.16);
+}
+
+.intel-item{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:17px;
+    padding:22px 0;
+    border-bottom:1px solid rgba(255,255,255,.16);
+}
+
+.intel-item span{
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+}
+
+.intel-item strong{
+    display:block;
+    font-size:16px;
+    margin-bottom:3px;
+}
+
+.intel-item p{
+    color:rgba(255,255,255,.52);
+    font-size:12px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-section{
+    padding:78px 0;
+}
+
+.cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:45px;
+}
+
+.cta-inner h2{
+    color:var(--navy);
+    font-size:39px;
+    line-height:1.15;
+    margin-bottom:6px;
+}
+
+.cta-inner p{
+    color:var(--green);
+    font-size:15px;
+}
+
+.cta-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.cta-dark{
+    background:var(--navy);
+    color:#fff;
+}
+
+.cta-light{
+    border:1px solid var(--navy);
+    color:var(--navy);
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section{
+    background:var(--navy2);
+    color:#fff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+}
+
+.contact-label{
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2.4px;
+    margin-bottom:14px;
+}
+
+.contact-grid h2{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.contact-company{
+    color:#fff !important;
+    font-weight:700;
+}
+
+.contact-grid p{
+    color:rgba(255,255,255,.65);
+}
+
+.contact-info{
+    display:grid;
+    gap:23px;
+}
+
+.contact-info span{
+    display:block;
+    color:#d9bc71;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.7px;
+    margin-bottom:4px;
+}
+
+.contact-info a{
+    color:#fff;
+}
+
+.contact-info p{
+    font-size:14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+    background:#031321;
+    padding:29px 0;
+    color:rgba(255,255,255,.52);
+    font-size:12px;
+}
+
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer-inner strong{
+    color:#fff;
+    margin-right:10px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media(max-width:950px){
-
-    .nav-links{
-        gap:15px;
-    }
-
-    .nav-links a{
-        font-size:10px;
-    }
 
     .hero h1{
         font-size:58px;
     }
 
-    .intro-grid{
+    .hero-signals{
+        display:none;
+    }
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .nav-links a{
+        font-size:9px;
+    }
+
+    .intro-grid,
+    .platform-head,
+    .basinol-feature-grid,
+    .global-grid,
+    .intelligence-grid,
+    .contact-grid{
         grid-template-columns:1fr;
-        gap:45px;
     }
 
     .intro-left{
         border-right:0;
         border-bottom:1px solid var(--line);
-        padding-right:0;
-        padding-bottom:40px;
+        padding:0 0 38px;
     }
 
-    .business-grid{
+    .business-grid,
+    .model-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .hero-signals{
-        display:none;
+    .platform-grid,
+    .featured-grid,
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .basinol-stats{
+        border-left:0;
+        border-top:1px solid rgba(255,255,255,.18);
+        padding:24px 0 0;
+    }
+
+    .global-signals{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta-inner{
+        align-items:flex-start;
+        flex-direction:column;
     }
 
 }
@@ -689,11 +1112,11 @@ header{
 @media(max-width:650px){
 
     section{
-        padding:75px 0;
+        padding:74px 0;
     }
 
     .nav{
-        height:65px;
+        height:66px;
     }
 
     .brand{
@@ -709,19 +1132,41 @@ header{
     }
 
     .hero h1{
-        font-size:45px;
+        font-size:46px;
     }
 
     .hero h2{
         font-size:24px;
     }
 
-    .business-grid{
+    .section-head h2,
+    .intro-left h2,
+    .platform-head h2,
+    .basinol-feature h2,
+    .global-grid h2,
+    .intelligence-left h2,
+    .cta-inner h2{
+        font-size:34px;
+    }
+
+    .business-grid,
+    .model-grid,
+    .global-signals{
         grid-template-columns:1fr;
     }
 
-    .section-head h2{
-        font-size:34px;
+    .model-item,
+    .global-signals div{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+    }
+
+    .platform-line{
+        flex-wrap:wrap;
+    }
+
+    .platform-line i{
+        width:25px;
     }
 
 }
@@ -734,43 +1179,29 @@ header{
 <body>
 
 
-<!-- =====================================================
-     NAVIGATION
-====================================================== -->
+<!-- HEADER -->
 
-<header>
+<header class="site-header">
 
 <div class="container nav">
 
-    <a href="index.html"
-       class="brand">
+    <a href="index.html" class="brand">
         TOTAL RESOURCES
     </a>
 
     <nav class="nav-links">
 
-        <a href="index.html">
-            Home
-        </a>
+        <a href="index.html">Home</a>
 
-        <a href="about.html">
-            About
-        </a>
+        <a href="about.html">About</a>
 
-        <a href="business.html">
-            Business
-        </a>
+        <a href="business.html">Business</a>
 
-        <a href="projects.html">
-            Projects
-        </a>
+        <a href="projects.html">Projects</a>
 
-        <a href="intelligence.html">
-            Intelligence
-        </a>
+        <a href="intelligence.html">Intelligence</a>
 
-        <a href="basinol.html"
-           class="basinol-link">
+        <a href="basinol.html" class="basinol-link">
             BASINOL®
         </a>
 
@@ -781,9 +1212,7 @@ header{
 </header>
 
 
-<!-- =====================================================
-     HERO
-====================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -823,15 +1252,13 @@ header{
 
         </p>
 
-        <div class="hero-buttons">
+        <div class="hero-actions">
 
-            <a href="#business"
-               class="btn btn-primary">
+            <a href="#business" class="btn btn-primary">
                 Explore Our Business
             </a>
 
-            <a href="about.html"
-               class="btn btn-outline">
+            <a href="about.html" class="btn btn-outline">
                 About TOTAL RESOURCES
             </a>
 
@@ -845,39 +1272,18 @@ header{
 <div class="hero-signals">
 
     <div class="hero-signal">
-
-        <strong>
-            INDUSTRY
-        </strong>
-
-        <span>
-            Industrial Operations
-        </span>
-
+        <strong>INDUSTRY</strong>
+        <span>Industrial Operations</span>
     </div>
 
     <div class="hero-signal">
-
-        <strong>
-            CAPITAL
-        </strong>
-
-        <span>
-            Investment & Value Creation
-        </span>
-
+        <strong>CAPITAL</strong>
+        <span>Investment & Value Creation</span>
     </div>
 
     <div class="hero-signal">
-
-        <strong>
-            GLOBAL
-        </strong>
-
-        <span>
-            Resource Connectivity
-        </span>
-
+        <strong>GLOBAL</strong>
+        <span>Resource Connectivity</span>
     </div>
 
 </div>
@@ -885,9 +1291,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     WHO WE ARE
-====================================================== -->
+<!-- WHO WE ARE -->
 
 <section>
 
@@ -906,7 +1310,7 @@ header{
                 Through Industry.
             </h2>
 
-            <div class="cn">
+            <div class="intro-cn">
                 以产业创造长期价值
             </div>
 
@@ -921,29 +1325,23 @@ header{
             </h3>
 
             <p>
-
                 TOTAL RESOURCES is positioned as an
                 industrial resources integration and
                 value creation platform.
-
             </p>
 
             <p>
-
                 We connect industrial resources,
                 capital, supply chains, technology
                 and project execution capabilities
-                to identify opportunities and transform
-                them into sustainable operating businesses.
-
+                to transform opportunities into
+                sustainable operating businesses.
             </p>
 
             <p>
-
                 TOTAL RESOURCES 不是单一的贸易企业或投资机构，
                 而是以产业为基础，通过资源整合、资本协同、
                 供应链运营与项目落地实现价值创造的综合产业平台。
-
             </p>
 
             <div class="intro-line"></div>
@@ -957,13 +1355,9 @@ header{
 </section>
 
 
-<!-- =====================================================
-     CORE BUSINESS
-====================================================== -->
+<!-- CORE BUSINESS -->
 
-<section
-    id="business"
-    class="business-section">
+<section id="business" class="business-section">
 
 <div class="container">
 
@@ -987,8 +1381,6 @@ header{
     <div class="business-grid">
 
 
-        <!-- 01 -->
-
         <div class="business-card">
 
             <div class="business-number">
@@ -996,8 +1388,7 @@ header{
             </div>
 
             <h3>
-                Energy & Industrial
-                Supply Chain
+                Energy & Industrial Supply Chain
             </h3>
 
             <h4>
@@ -1005,17 +1396,13 @@ header{
             </h4>
 
             <p>
-
                 Market-oriented supply chain operations
                 connecting upstream resources,
                 industrial customers and global markets.
-
             </p>
 
         </div>
 
-
-        <!-- 02 -->
 
         <div class="business-card">
 
@@ -1024,8 +1411,7 @@ header{
             </div>
 
             <h3>
-                Industrial
-                Investment
+                Industrial Investment
             </h3>
 
             <h4>
@@ -1033,17 +1419,13 @@ header{
             </h4>
 
             <p>
-
                 Identifying industrial opportunities,
-                integrating strategic resources
-                and supporting long-term value creation.
-
+                integrating strategic resources and
+                supporting long-term value creation.
             </p>
 
         </div>
 
-
-        <!-- 03 -->
 
         <div class="business-card">
 
@@ -1052,8 +1434,7 @@ header{
             </div>
 
             <h3>
-                Project Development
-                & Operations
+                Project Development & Operations
             </h3>
 
             <h4>
@@ -1061,17 +1442,13 @@ header{
             </h4>
 
             <p>
-
-                From project planning and resource
-                coordination to implementation,
-                operations and market development.
-
+                From planning and resource coordination
+                to implementation, operations
+                and market development.
             </p>
 
         </div>
 
-
-        <!-- 04 -->
 
         <div class="business-card">
 
@@ -1080,8 +1457,7 @@ header{
             </div>
 
             <h3>
-                Modern
-                Agriculture
+                Modern Agriculture
             </h3>
 
             <h4>
@@ -1089,11 +1465,9 @@ header{
             </h4>
 
             <p>
-
                 Connecting agricultural resources,
-                processing, supply chains and markets
+                processing, logistics and markets
                 through industry-driven development.
-
             </p>
 
         </div>
@@ -1104,11 +1478,11 @@ header{
 </div>
 
 </section>
-<!-- =====================================================
-     OPERATING MODEL
-====================================================== -->
 
-<section class="operating-model">
+
+<!-- OPERATING MODEL -->
+
+<section>
 
 <div class="container">
 
@@ -1131,24 +1505,19 @@ header{
 
     <div class="model-grid">
 
+
         <div class="model-item">
 
-            <div class="model-number">
-                01
-            </div>
+            <div class="model-number">01</div>
 
-            <h3>
-                Industrial Investment
-            </h3>
+            <h3>Industrial Investment</h3>
 
-            <h4>
-                产业投资
-            </h4>
+            <h4>产业投资</h4>
 
             <p>
                 Identify industrial opportunities,
-                structure investment pathways and
-                participate in long-term value creation.
+                structure investment pathways
+                and participate in long-term value creation.
             </p>
 
         </div>
@@ -1156,22 +1525,16 @@ header{
 
         <div class="model-item">
 
-            <div class="model-number">
-                02
-            </div>
+            <div class="model-number">02</div>
 
-            <h3>
-                Supply Chain Operations
-            </h3>
+            <h3>Supply Chain Operations</h3>
 
-            <h4>
-                供应链运营
-            </h4>
+            <h4>供应链运营</h4>
 
             <p>
                 Connect upstream resources,
                 industrial customers and markets
-                through professional supply chain operations.
+                through professional operations.
             </p>
 
         </div>
@@ -1179,22 +1542,16 @@ header{
 
         <div class="model-item">
 
-            <div class="model-number">
-                03
-            </div>
+            <div class="model-number">03</div>
 
-            <h3>
-                Project Development
-            </h3>
+            <h3>Project Development</h3>
 
-            <h4>
-                项目开发
-            </h4>
+            <h4>项目开发</h4>
 
             <p>
                 Coordinate resources, partners,
                 financing and execution capabilities
-                to move projects from concept to operation.
+                from concept to operation.
             </p>
 
         </div>
@@ -1202,25 +1559,20 @@ header{
 
         <div class="model-item">
 
-            <div class="model-number">
-                04
-            </div>
+            <div class="model-number">04</div>
 
-            <h3>
-                Resource Integration
-            </h3>
+            <h3>Resource Integration</h3>
 
-            <h4>
-                资源整合
-            </h4>
+            <h4>资源整合</h4>
 
             <p>
                 Integrate industrial resources,
-                capital, technology and market channels
+                capital, technology and markets
                 into scalable business platforms.
             </p>
 
         </div>
+
 
     </div>
 
@@ -1229,9 +1581,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     STRATEGIC PLATFORM
-====================================================== -->
+<!-- STRATEGIC PLATFORM -->
 
 <section class="platform-section">
 
@@ -1241,7 +1591,7 @@ header{
 
         <div>
 
-            <div class="eyebrow light-eyebrow">
+            <div class="eyebrow">
                 Strategic Platform
             </div>
 
@@ -1256,19 +1606,15 @@ header{
         <div class="platform-intro">
 
             <p>
-
                 TOTAL RESOURCES has developed
                 a collaborative platform structure
                 connecting industrial operations,
                 investment and technology.
-
             </p>
 
             <p>
-
-                通过产业运营、投资孵化和技术能力的协同，
+                通过产业运营、投资孵化和技术能力协同，
                 构建面向产业项目的综合资源整合体系。
-
             </p>
 
         </div>
@@ -1298,12 +1644,10 @@ header{
             </div>
 
             <p>
-
-                Responsible for industrial resource
-                integration, energy and industrial
-                supply chain operations, project
-                development and market execution.
-
+                Industrial resource integration,
+                supply chain operations,
+                project development
+                and market execution.
             </p>
 
         </div>
@@ -1328,11 +1672,10 @@ header{
             </div>
 
             <p>
-
-                Focused on industrial investment,
-                project incubation, capital coordination
-                and strategic investment opportunities.
-
+                Industrial investment,
+                project incubation,
+                capital coordination
+                and strategic opportunities.
             </p>
 
         </div>
@@ -1357,12 +1700,10 @@ header{
             </div>
 
             <p>
-
-                Providing technology integration,
-                digital systems and technical solutions
+                Technology integration,
+                digital systems and solutions
                 supporting industrial projects
                 and operational efficiency.
-
             </p>
 
         </div>
@@ -1373,27 +1714,19 @@ header{
 
     <div class="platform-line">
 
-        <span>
-            INDUSTRY
-        </span>
+        <span>INDUSTRY</span>
 
         <i></i>
 
-        <span>
-            CAPITAL
-        </span>
+        <span>CAPITAL</span>
 
         <i></i>
 
-        <span>
-            TECHNOLOGY
-        </span>
+        <span>TECHNOLOGY</span>
 
         <i></i>
 
-        <span>
-            EXECUTION
-        </span>
+        <span>EXECUTION</span>
 
     </div>
 
@@ -1402,9 +1735,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     FEATURED BUSINESS
-====================================================== -->
+<!-- FEATURED BUSINESS -->
 
 <section class="featured-section">
 
@@ -1430,9 +1761,7 @@ header{
     <div class="featured-grid">
 
 
-        <!-- ENERGY -->
-
-        <div class="featured-card featured-dark">
+        <div class="featured-card dark-card">
 
             <div class="featured-tag">
                 ENERGY & INDUSTRIAL
@@ -1444,11 +1773,9 @@ header{
             </h3>
 
             <p>
-
                 Building market-oriented connections
                 between industrial resources,
                 manufacturers and downstream customers.
-
             </p>
 
             <a href="business.html">
@@ -1458,9 +1785,7 @@ header{
         </div>
 
 
-        <!-- BASINOL -->
-
-        <div class="featured-card featured-basinol">
+        <div class="featured-card basinol-card">
 
             <div class="featured-tag">
                 GERMAN LUBRICATION
@@ -1475,11 +1800,9 @@ header{
             </h4>
 
             <p>
-
                 Connecting German lubrication technology
                 with automotive, commercial vehicle
                 and industrial markets.
-
             </p>
 
             <a href="basinol.html">
@@ -1489,8 +1812,6 @@ header{
         </div>
 
 
-        <!-- AGRICULTURE -->
-
         <div class="featured-card">
 
             <div class="featured-tag">
@@ -1498,17 +1819,14 @@ header{
             </div>
 
             <h3>
-                Agricultural Industry
-                Development
+                Agricultural Industry Development
             </h3>
 
             <p>
-
-                Integrating agricultural production,
-                processing, logistics, branding
-                and market channels into sustainable
-                industrial ecosystems.
-
+                Integrating production,
+                processing, logistics,
+                branding and market channels
+                into sustainable industrial ecosystems.
             </p>
 
             <a href="projects.html">
@@ -1525,9 +1843,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     BASINOL FEATURE
-====================================================== -->
+<!-- BASINOL FEATURE -->
 
 <section class="basinol-feature">
 
@@ -1536,7 +1852,7 @@ header{
     <div class="basinol-feature-grid">
 
 
-        <div class="basinol-feature-left">
+        <div>
 
             <div class="basinol-small">
                 TOTAL RESOURCES × BASINOL®
@@ -1552,23 +1868,18 @@ header{
             </h3>
 
             <p>
-
                 BASINOL® represents an important
                 industrial business within the
                 TOTAL RESOURCES platform.
-
             </p>
 
             <p>
-
                 Through market development,
                 supply chain integration and
                 industrial cooperation,
                 TOTAL RESOURCES connects
                 professional German lubrication
-                solutions with customers and partners
-                across multiple industries.
-
+                solutions with customers and partners.
             </p>
 
             <a href="basinol.html"
@@ -1581,7 +1892,8 @@ header{
         </div>
 
 
-        <div class="basinol-feature-right">
+        <div class="basinol-stats">
+
 
             <div class="basinol-stat">
 
@@ -1621,6 +1933,7 @@ header{
 
             </div>
 
+
         </div>
 
 
@@ -1631,634 +1944,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     PART 2 STYLES
-====================================================== -->
-
-<style>
-
-
-/* =========================================================
-   OPERATING MODEL
-========================================================= */
-
-.operating-model{
-
-    background:#fff;
-
-}
-
-.model-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    border-top:1px solid var(--line);
-
-    border-bottom:1px solid var(--line);
-
-}
-
-.model-item{
-
-    padding:42px 30px;
-
-    border-right:1px solid var(--line);
-
-}
-
-.model-item:last-child{
-
-    border-right:0;
-
-}
-
-.model-number{
-
-    color:var(--gold);
-
-    font-size:12px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
-    margin-bottom:28px;
-
-}
-
-.model-item h3{
-
-    color:var(--navy);
-
-    font-size:20px;
-
-    line-height:1.3;
-
-    margin-bottom:7px;
-
-}
-
-.model-item h4{
-
-    color:var(--green);
-
-    font-size:13px;
-
-    margin-bottom:17px;
-
-}
-
-.model-item p{
-
-    color:#687582;
-
-    font-size:14px;
-
-}
-
-
-/* =========================================================
-   STRATEGIC PLATFORM
-========================================================= */
-
-.platform-section{
-
-    background:var(--navy);
-
-    color:#fff;
-
-}
-
-.light-eyebrow{
-
-    color:#d7bc72;
-
-}
-
-.platform-head{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:90px;
-
-    align-items:end;
-
-    margin-bottom:60px;
-
-}
-
-.platform-head h2{
-
-    font-size:47px;
-
-    line-height:1.1;
-
-    letter-spacing:-1px;
-
-}
-
-.platform-intro p{
-
-    color:rgba(255,255,255,.68);
-
-    font-size:15px;
-
-    margin-bottom:12px;
-
-}
-
-.platform-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-
-}
-
-.platform-card{
-
-    border:1px solid rgba(255,255,255,.15);
-
-    padding:36px 30px;
-
-    min-height:330px;
-
-    transition:.25s ease;
-
-}
-
-.platform-card:hover{
-
-    background:rgba(255,255,255,.05);
-
-    transform:translateY(-4px);
-
-}
-
-.platform-index{
-
-    color:#d7bc72;
-
-    font-size:10px;
-
-    letter-spacing:2px;
-
-    font-weight:700;
-
-    margin-bottom:31px;
-
-}
-
-.platform-card h3{
-
-    font-size:21px;
-
-    margin-bottom:6px;
-
-}
-
-.platform-card h4{
-
-    color:#d7bc72;
-
-    font-size:14px;
-
-    margin-bottom:6px;
-
-}
-
-.platform-cn{
-
-    color:rgba(255,255,255,.62);
-
-    font-size:13px;
-
-    margin-bottom:20px;
-
-}
-
-.platform-card p{
-
-    color:rgba(255,255,255,.65);
-
-    font-size:14px;
-
-}
-
-.platform-line{
-
-    margin-top:58px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:20px;
-
-    color:rgba(255,255,255,.65);
-
-    font-size:10px;
-
-    letter-spacing:2px;
-
-}
-
-.platform-line i{
-
-    display:block;
-
-    width:65px;
-
-    height:1px;
-
-    background:rgba(255,255,255,.25);
-
-}
-
-
-/* =========================================================
-   FEATURED BUSINESS
-========================================================= */
-
-.featured-section{
-
-    background:#f4f6f8;
-
-}
-
-.featured-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:22px;
-
-}
-
-.featured-card{
-
-    background:#fff;
-
-    padding:43px 32px;
-
-    min-height:360px;
-
-    border-bottom:3px solid var(--green);
-
-}
-
-.featured-dark{
-
-    background:var(--navy);
-
-    color:#fff;
-
-    border-bottom-color:var(--gold);
-
-}
-
-.featured-basinol{
-
-    background:#eef3ef;
-
-}
-
-.featured-tag{
-
-    color:var(--green);
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
-    margin-bottom:42px;
-
-}
-
-.featured-dark .featured-tag{
-
-    color:#d7bc72;
-
-}
-
-.featured-card h3{
-
-    color:var(--navy);
-
-    font-size:25px;
-
-    line-height:1.2;
-
-    margin-bottom:8px;
-
-}
-
-.featured-dark h3{
-
-    color:#fff;
-
-}
-
-.featured-card h4{
-
-    color:var(--green);
-
-    font-size:14px;
-
-    margin-bottom:18px;
-
-}
-
-.featured-card p{
-
-    color:#697681;
-
-    font-size:14px;
-
-    margin-bottom:30px;
-
-}
-
-.featured-dark p{
-
-    color:rgba(255,255,255,.65);
-
-}
-
-.featured-card a{
-
-    color:var(--green);
-
-    font-size:12px;
-
-    font-weight:800;
-
-    letter-spacing:.4px;
-
-}
-
-.featured-dark a{
-
-    color:#d7bc72;
-
-}
-
-
-/* =========================================================
-   BASINOL FEATURE
-========================================================= */
-
-.basinol-feature{
-
-    background:
-    linear-gradient(
-        120deg,
-        #071f38 0%,
-        #0b2c4e 100%
-    );
-
-    color:#fff;
-
-}
-
-.basinol-feature-grid{
-
-    display:grid;
-
-    grid-template-columns:1.25fr .75fr;
-
-    gap:100px;
-
-    align-items:center;
-
-}
-
-.basinol-small{
-
-    color:#d7bc72;
-
-    font-size:11px;
-
-    font-weight:700;
-
-    letter-spacing:2.3px;
-
-    margin-bottom:20px;
-
-}
-
-.basinol-feature-left h2{
-
-    font-size:44px;
-
-    line-height:1.13;
-
-    max-width:700px;
-
-    margin-bottom:12px;
-
-}
-
-.basinol-feature-left h3{
-
-    color:#d7bc72;
-
-    font-size:17px;
-
-    margin-bottom:25px;
-
-}
-
-.basinol-feature-left p{
-
-    color:rgba(255,255,255,.68);
-
-    max-width:670px;
-
-    font-size:15px;
-
-    margin-bottom:15px;
-
-}
-
-.basinol-feature-left .btn{
-
-    margin-top:18px;
-
-}
-
-.basinol-feature-right{
-
-    border-left:
-    1px solid rgba(255,255,255,.18);
-
-    padding-left:55px;
-
-}
-
-.basinol-stat{
-
-    padding:25px 0;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.15);
-
-}
-
-.basinol-stat:last-child{
-
-    border-bottom:0;
-
-}
-
-.basinol-stat strong{
-
-    display:block;
-
-    color:#d7bc72;
-
-    font-size:26px;
-
-    letter-spacing:1px;
-
-    margin-bottom:4px;
-
-}
-
-.basinol-stat span{
-
-    color:rgba(255,255,255,.6);
-
-    font-size:12px;
-
-}
-
-
-/* =========================================================
-   PART 2 MOBILE
-========================================================= */
-
-@media(max-width:950px){
-
-    .model-grid{
-
-        grid-template-columns:1fr 1fr;
-
-    }
-
-    .model-item:nth-child(2){
-
-        border-right:0;
-
-    }
-
-    .platform-head{
-
-        grid-template-columns:1fr;
-
-        gap:30px;
-
-    }
-
-    .platform-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .featured-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .basinol-feature-grid{
-
-        grid-template-columns:1fr;
-
-        gap:55px;
-
-    }
-
-    .basinol-feature-right{
-
-        border-left:0;
-
-        border-top:
-        1px solid rgba(255,255,255,.18);
-
-        padding-left:0;
-
-        padding-top:25px;
-
-    }
-
-}
-
-
-@media(max-width:650px){
-
-    .model-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .model-item{
-
-        border-right:0;
-
-        border-bottom:1px solid var(--line);
-
-    }
-
-    .model-item:last-child{
-
-        border-bottom:0;
-
-    }
-
-    .platform-head h2{
-
-        font-size:37px;
-
-    }
-
-    .platform-line{
-
-        flex-wrap:wrap;
-
-    }
-
-    .platform-line i{
-
-        width:25px;
-
-    }
-
-    .basinol-feature-left h2{
-
-        font-size:34px;
-
-    }
-
-}
-
-</style>
-<!-- =====================================================
-     SELECTED PROJECTS
-====================================================== -->
+<!-- SELECTED PROJECTS -->
 
 <section>
 
@@ -2286,7 +1972,7 @@ header{
 
         <div class="project-card">
 
-            <div class="project-top">
+            <div class="project-tag">
                 01 / INDUSTRIAL BRAND
             </div>
 
@@ -2299,12 +1985,9 @@ header{
             </h4>
 
             <p>
-
                 A professional lubricant business
                 connecting German manufacturing heritage
-                with automotive, commercial vehicle
-                and industrial applications.
-
+                with automotive and industrial applications.
             </p>
 
             <a href="basinol.html">
@@ -2316,7 +1999,7 @@ header{
 
         <div class="project-card">
 
-            <div class="project-top">
+            <div class="project-tag">
                 02 / BOTANICAL RESOURCES
             </div>
 
@@ -2330,11 +2013,9 @@ header{
             </h4>
 
             <p>
-
                 Developing high-value botanical resources
                 through cultivation, processing,
                 natural extraction and market development.
-
             </p>
 
             <a href="projects.html">
@@ -2346,7 +2027,7 @@ header{
 
         <div class="project-card">
 
-            <div class="project-top">
+            <div class="project-tag">
                 03 / AGRICULTURE
             </div>
 
@@ -2360,12 +2041,9 @@ header{
             </h4>
 
             <p>
-
                 Integrating agricultural production,
-                processing, logistics, supply chain
-                and market channels into scalable
-                industrial ecosystems.
-
+                processing, logistics and market channels
+                into scalable industrial ecosystems.
             </p>
 
             <a href="projects.html">
@@ -2382,9 +2060,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     GLOBAL CONNECTIVITY
-====================================================== -->
+<!-- GLOBAL -->
 
 <section class="global-section">
 
@@ -2392,9 +2068,10 @@ header{
 
     <div class="global-grid">
 
+
         <div>
 
-            <div class="eyebrow global-eyebrow">
+            <div class="eyebrow">
                 Global Connectivity
             </div>
 
@@ -2413,39 +2090,35 @@ header{
         <div class="global-copy">
 
             <p>
-
                 TOTAL RESOURCES operates from Chongqing,
-                one of Western China's key industrial
-                and logistics hubs.
-
+                one of Western China's important
+                industrial and logistics hubs.
             </p>
 
             <p>
-
                 We connect international suppliers,
                 industrial technologies, capital,
                 logistics networks and market opportunities
-                with projects and customers in China
-                and other markets.
-
+                with projects and customers.
             </p>
 
             <p>
-
                 公司立足重庆，通过全球供应商、
                 产业技术、资本资源、物流网络与市场渠道的连接，
                 推动资源向产业价值转化。
-
             </p>
 
         </div>
+
 
     </div>
 
 
     <div class="global-signals">
 
+
         <div>
+
             <strong>
                 GLOBAL SOURCING
             </strong>
@@ -2453,10 +2126,12 @@ header{
             <span>
                 International Resources
             </span>
+
         </div>
 
 
         <div>
+
             <strong>
                 CHINA MARKET
             </strong>
@@ -2464,10 +2139,12 @@ header{
             <span>
                 Industrial Demand
             </span>
+
         </div>
 
 
         <div>
+
             <strong>
                 SUPPLY CHAIN
             </strong>
@@ -2475,10 +2152,12 @@ header{
             <span>
                 Logistics & Distribution
             </span>
+
         </div>
 
 
         <div>
+
             <strong>
                 PROJECT EXECUTION
             </strong>
@@ -2486,7 +2165,9 @@ header{
             <span>
                 From Opportunity to Operation
             </span>
+
         </div>
+
 
     </div>
 
@@ -2495,9 +2176,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     INTELLIGENCE
-====================================================== -->
+<!-- INTELLIGENCE -->
 
 <section class="intelligence-section">
 
@@ -2505,9 +2184,10 @@ header{
 
     <div class="intelligence-grid">
 
+
         <div class="intelligence-left">
 
-            <div class="intelligence-label">
+            <div class="intel-label">
                 MACRO COMPASS INTELLIGENCE
             </div>
 
@@ -2521,14 +2201,12 @@ header{
             </h3>
 
             <p>
-
                 TOTAL RESOURCES integrates
                 global macro research,
                 energy market intelligence,
-                industrial research and AI-enabled
-                knowledge systems to support
-                strategic industrial decisions.
-
+                industrial research and
+                AI-enabled knowledge systems
+                to support strategic industrial decisions.
             </p>
 
             <a href="intelligence.html"
@@ -2546,20 +2224,11 @@ header{
 
             <div class="intel-item">
 
-                <span>
-                    01
-                </span>
+                <span>01</span>
 
                 <div>
-
-                    <strong>
-                        Global Macro
-                    </strong>
-
-                    <p>
-                        全球宏观与金融周期研究
-                    </p>
-
+                    <strong>Global Macro</strong>
+                    <p>全球宏观与金融周期研究</p>
                 </div>
 
             </div>
@@ -2567,20 +2236,11 @@ header{
 
             <div class="intel-item">
 
-                <span>
-                    02
-                </span>
+                <span>02</span>
 
                 <div>
-
-                    <strong>
-                        Energy Intelligence
-                    </strong>
-
-                    <p>
-                        原油、能源与石化产业链研究
-                    </p>
-
+                    <strong>Energy Intelligence</strong>
+                    <p>原油、能源与石化产业链研究</p>
                 </div>
 
             </div>
@@ -2588,20 +2248,11 @@ header{
 
             <div class="intel-item">
 
-                <span>
-                    03
-                </span>
+                <span>03</span>
 
                 <div>
-
-                    <strong>
-                        Industrial Research
-                    </strong>
-
-                    <p>
-                        产业趋势与项目机会研究
-                    </p>
-
+                    <strong>Industrial Research</strong>
+                    <p>产业趋势与项目机会研究</p>
                 </div>
 
             </div>
@@ -2609,26 +2260,18 @@ header{
 
             <div class="intel-item">
 
-                <span>
-                    04
-                </span>
+                <span>04</span>
 
                 <div>
-
-                    <strong>
-                        AI Knowledge System
-                    </strong>
-
-                    <p>
-                        AI驱动的知识管理与研究体系
-                    </p>
-
+                    <strong>AI Knowledge System</strong>
+                    <p>AI驱动的知识管理与研究体系</p>
                 </div>
 
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -2637,15 +2280,14 @@ header{
 </section>
 
 
-<!-- =====================================================
-     PARTNERSHIP CTA
-====================================================== -->
+<!-- CTA -->
 
-<section class="partnership-cta">
+<section class="cta-section">
 
 <div class="container">
 
     <div class="cta-inner">
+
 
         <div>
 
@@ -2668,20 +2310,21 @@ header{
         <div class="cta-actions">
 
             <a href="mailto:contact@totalresources.info"
-               class="btn cta-primary">
+               class="btn cta-dark">
 
                 Business Inquiry
 
             </a>
 
             <a href="projects.html"
-               class="btn cta-secondary">
+               class="btn cta-light">
 
                 Explore Projects
 
             </a>
 
         </div>
+
 
     </div>
 
@@ -2690,15 +2333,14 @@ header{
 </section>
 
 
-<!-- =====================================================
-     CONTACT
-====================================================== -->
+<!-- CONTACT -->
 
 <section class="contact-section">
 
 <div class="container">
 
     <div class="contact-grid">
+
 
         <div>
 
@@ -2757,13 +2399,15 @@ header{
                 </span>
 
                 <p>
-                    Industrial Cooperation · Supply Chain · Investment · Projects
+                    Industrial Cooperation · Supply Chain ·
+                    Investment · Project Development
                 </p>
 
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -2772,9 +2416,7 @@ header{
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-====================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -2786,9 +2428,8 @@ header{
             TOTAL RESOURCES
         </strong>
 
-        <span>
-            Industrial Resources Integration & Value Creation Platform
-        </span>
+        Industrial Resources Integration
+        & Value Creation Platform
 
     </div>
 
@@ -2796,662 +2437,3 @@ header{
     <div>
 
         © 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)
-
-    </div>
-
-</div>
-
-</footer>
-
-
-<!-- =====================================================
-     PART 3 STYLES
-====================================================== -->
-
-<style>
-
-
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-.projects-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:22px;
-
-}
-
-.project-card{
-
-    border:1px solid var(--line);
-
-    padding:41px 31px;
-
-    min-height:360px;
-
-    transition:.25s ease;
-
-}
-
-.project-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 12px 35px rgba(10,31,51,.08);
-
-}
-
-.project-top{
-
-    color:var(--gold);
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
-    margin-bottom:38px;
-
-}
-
-.project-card h3{
-
-    color:var(--navy);
-
-    font-size:25px;
-
-    line-height:1.2;
-
-    margin-bottom:7px;
-
-}
-
-.project-card h4{
-
-    color:var(--green);
-
-    font-size:14px;
-
-    margin-bottom:18px;
-
-}
-
-.project-card p{
-
-    color:#67737e;
-
-    font-size:14.5px;
-
-    margin-bottom:28px;
-
-}
-
-.project-card a{
-
-    color:var(--green);
-
-    font-size:12px;
-
-    font-weight:800;
-
-}
-
-
-/* =========================================================
-   GLOBAL CONNECTIVITY
-========================================================= */
-
-.global-section{
-
-    background:#eef2f4;
-
-}
-
-.global-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:90px;
-
-    align-items:start;
-
-}
-
-.global-eyebrow{
-
-    color:var(--green);
-
-}
-
-.global-grid h2{
-
-    color:var(--navy);
-
-    font-size:44px;
-
-    line-height:1.15;
-
-    margin-bottom:13px;
-
-}
-
-.global-cn{
-
-    color:var(--green);
-
-    font-size:17px;
-
-    font-weight:600;
-
-}
-
-.global-copy p{
-
-    color:#5f6b76;
-
-    margin-bottom:15px;
-
-    font-size:15.5px;
-
-}
-
-.global-signals{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    margin-top:65px;
-
-    border-top:1px solid #d8dee3;
-
-    border-bottom:1px solid #d8dee3;
-
-}
-
-.global-signals div{
-
-    padding:27px 22px;
-
-    border-right:1px solid #d8dee3;
-
-}
-
-.global-signals div:last-child{
-
-    border-right:0;
-
-}
-
-.global-signals strong{
-
-    display:block;
-
-    color:var(--navy);
-
-    font-size:11px;
-
-    letter-spacing:1.4px;
-
-    margin-bottom:5px;
-
-}
-
-.global-signals span{
-
-    color:#7a8691;
-
-    font-size:11px;
-
-}
-
-
-/* =========================================================
-   INTELLIGENCE
-========================================================= */
-
-.intelligence-section{
-
-    background:var(--navy);
-
-    color:#fff;
-
-}
-
-.intelligence-grid{
-
-    display:grid;
-
-    grid-template-columns:1.05fr .95fr;
-
-    gap:95px;
-
-    align-items:center;
-
-}
-
-.intelligence-label{
-
-    color:#d7bc72;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:2.4px;
-
-    margin-bottom:20px;
-
-}
-
-.intelligence-left h2{
-
-    font-size:47px;
-
-    line-height:1.1;
-
-    margin-bottom:12px;
-
-}
-
-.intelligence-left h3{
-
-    color:#d7bc72;
-
-    font-size:18px;
-
-    margin-bottom:24px;
-
-}
-
-.intelligence-left p{
-
-    color:rgba(255,255,255,.68);
-
-    font-size:15px;
-
-    max-width:620px;
-
-    margin-bottom:28px;
-
-}
-
-.intelligence-right{
-
-    border-top:
-    1px solid rgba(255,255,255,.16);
-
-}
-
-.intel-item{
-
-    display:grid;
-
-    grid-template-columns:50px 1fr;
-
-    gap:18px;
-
-    padding:23px 0;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.16);
-
-}
-
-.intel-item span{
-
-    color:#d7bc72;
-
-    font-size:11px;
-
-    font-weight:800;
-
-}
-
-.intel-item strong{
-
-    display:block;
-
-    font-size:17px;
-
-    margin-bottom:4px;
-
-}
-
-.intel-item p{
-
-    color:rgba(255,255,255,.55);
-
-    font-size:12px;
-
-}
-
-
-/* =========================================================
-   PARTNERSHIP CTA
-========================================================= */
-
-.partnership-cta{
-
-    background:#fff;
-
-    padding:80px 0;
-
-}
-
-.cta-inner{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:50px;
-
-}
-
-.cta-inner h2{
-
-    color:var(--navy);
-
-    font-size:40px;
-
-    line-height:1.15;
-
-    margin-bottom:7px;
-
-}
-
-.cta-inner p{
-
-    color:var(--green);
-
-    font-size:15px;
-
-}
-
-.cta-actions{
-
-    display:flex;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-}
-
-.cta-primary{
-
-    background:var(--navy);
-
-    color:#fff;
-
-}
-
-.cta-secondary{
-
-    border:1px solid var(--navy);
-
-    color:var(--navy);
-
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact-section{
-
-    background:#0b2d50;
-
-    color:#fff;
-
-}
-
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:90px;
-
-}
-
-.contact-label{
-
-    color:#d7bc72;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:2.5px;
-
-    margin-bottom:15px;
-
-}
-
-.contact-grid h2{
-
-    font-size:39px;
-
-    margin-bottom:10px;
-
-}
-
-.contact-grid p{
-
-    color:rgba(255,255,255,.67);
-
-}
-
-.contact-company{
-
-    color:#fff !important;
-
-    font-weight:700;
-
-}
-
-.contact-info{
-
-    display:grid;
-
-    gap:25px;
-
-}
-
-.contact-info span{
-
-    display:block;
-
-    color:#d7bc72;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:1.8px;
-
-    margin-bottom:5px;
-
-}
-
-.contact-info a{
-
-    color:#fff;
-
-    font-size:15px;
-
-}
-
-.contact-info p{
-
-    font-size:14px;
-
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-
-    background:#031321;
-
-    color:rgba(255,255,255,.54);
-
-    padding:30px 0;
-
-    font-size:12px;
-
-}
-
-.footer-inner{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:30px;
-
-    flex-wrap:wrap;
-
-}
-
-.footer-inner strong{
-
-    color:#fff;
-
-    margin-right:12px;
-
-}
-
-.footer-inner span{
-
-    color:rgba(255,255,255,.5);
-
-}
-
-
-/* =========================================================
-   PART 3 MOBILE
-========================================================= */
-
-@media(max-width:950px){
-
-    .projects-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .global-grid{
-
-        grid-template-columns:1fr;
-
-        gap:35px;
-
-    }
-
-    .global-signals{
-
-        grid-template-columns:1fr 1fr;
-
-    }
-
-    .global-signals div:nth-child(2){
-
-        border-right:0;
-
-    }
-
-    .intelligence-grid{
-
-        grid-template-columns:1fr;
-
-        gap:55px;
-
-    }
-
-    .cta-inner{
-
-        align-items:flex-start;
-
-        flex-direction:column;
-
-    }
-
-    .contact-grid{
-
-        grid-template-columns:1fr;
-
-        gap:50px;
-
-    }
-
-}
-
-
-@media(max-width:650px){
-
-    .global-grid h2{
-
-        font-size:35px;
-
-    }
-
-    .global-signals{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .global-signals div{
-
-        border-right:0;
-
-        border-bottom:1px solid #d8dee3;
-
-    }
-
-    .global-signals div:last-child{
-
-        border-bottom:0;
-
-    }
-
-    .intelligence-left h2{
-
-        font-size:36px;
-
-    }
-
-    .cta-inner h2{
-
-        font-size:33px;
-
-    }
-
-}
-
-</style>
-
-
-</body>
-
-</html>

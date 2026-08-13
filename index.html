@@ -1269,7 +1269,16 @@ footer{
 <button class="menu-toggle"
         type="button"
         aria-label="Open navigation menu"
-        aria-expanded="false">
+        aria-expanded="false"
+        onclick="
+            const nav=this.parentElement.querySelector('.nav-links');
+            nav.classList.toggle('open');
+            this.classList.toggle('active');
+            this.setAttribute(
+                'aria-expanded',
+                nav.classList.contains('open') ? 'true' : 'false'
+            );
+        ">
     <span></span>
     <span></span>
     <span></span>
@@ -2528,26 +2537,6 @@ footer{
 </div>
 
 </footer>
-
-<script>
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-
-    menuToggle.classList.toggle('active', isOpen);
-    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-});
-
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuToggle.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-    });
-});
-</script>
 </body>
 
 </html>

@@ -179,7 +179,10 @@ section{
     flex-direction:column;
     justify-content:center;
     gap:5px;
-}
+    position:relative;
+z-index:1001;
+pointer-events:auto;
+touch-action:manipulation;}
 
 .menu-toggle span{
     display:block;
@@ -1141,25 +1144,15 @@ footer{
     }
 
     .nav{
-        height:66px;
-    }
+
+    height:66px;
+    position:relative;
+}
 
     .brand{
         font-size:14px;
     }
-@media(max-width:650px){
 
-    section{
-        padding:74px 0;
-    }
-
-    .nav{
-        height:66px;
-    }
-
-    .brand{
-        font-size:14px;
-    }
 
     .menu-toggle{
         display:flex;
@@ -1173,7 +1166,8 @@ footer{
     .nav-links a:not(.basinol-link){
         display:none;
     .nav-links.open{
-    position:absolute;
+        z-index:1000;
+        position:absolute;
     top:66px;
     left:0;
     right:0;

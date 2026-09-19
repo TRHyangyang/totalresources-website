@@ -28,22 +28,29 @@ def public_body(markdown):
     research = research.replace("写入Vault", "归档")
     research = research.replace("自动包抓到", "晨间资料记录")
     research = research.replace("研究包", "研究材料")
+    research = research.replace("精确的Truth Layer价格", "精确核验的价格")
 
     disclaimer = internal_disclaimer.strip()
     replacements = (
         ("MCIS/OpenClaw晨间研究", "晨间研究材料"),
+        ("MCIS/OpenClaw RSS情报", "晨间公开资讯"),
         ("已落盘", "已归档"),
         ("RSS与原始数据", "公开资讯与原始数据"),
+        ("主要来自单一媒体或知情人士口径", "部分来自二级来源、单一媒体或知情人士口径"),
         ("未重新采集或联网补缺", "数据和信息来源可能存在时点差异，缺口未以推测填补"),
         ("Truth Layer有效人工核验内容及市场价格Gate锚为空，状态为DEGRADED", "部分市场价格缺少足够的直接核验依据"),
+        ("Truth Layer有效内容为空，市场价格Gate锚为零，状态为DEGRADED", "部分市场价格缺少足够的直接核验依据"),
         ("交易所机器层核验", "交易所直接核验"),
         ("不自动升级为正式VERIFIED价格", "不能视为完全确认的价格"),
+        ("不标记为VERIFIED结算", "不能视为完全确认的结算"),
         ("Human CIO已批准任何投资决定", "已获批准的投资决定"),
         ("研究包", "研究材料"),
     )
     for internal, public in replacements:
         disclaimer = disclaimer.replace(internal, public)
     disclaimer = disclaimer.replace("本文仅供研究与信息交流，不构成投资建议。", "").strip()
+    if "冲突" not in disclaimer or "待核" not in disclaimer:
+        disclaimer += " 不同来源可能存在时点差异；冲突或待核信息不能视为完全确认。"
     disclaimer += "本文仅供研究与信息交流，不构成投资建议，也不构成交易执行建议；读者应独立核验并作出判断。"
     published = research + marker + disclaimer
     if PRIVATE_TERMS.search(published):

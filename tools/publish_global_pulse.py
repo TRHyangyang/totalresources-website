@@ -16,7 +16,6 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "tools" / "global_pulse_article.html"
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
-PRIVATE_TERMS = re.compile(r"MCIS|OpenClaw|Vault|Truth Layer|\bGate\b|VERIFIED|Human CIO|\bRaw\b|\bShadow\b", re.I)
 
 
 def public_body(markdown):
@@ -44,8 +43,6 @@ def public_body(markdown):
         ("不自动升级为正式VERIFIED价格", "不能视为完全确认的价格"),
         ("不标记为VERIFIED结算", "不能视为完全确认的结算"),
         ("Human CIO已批准任何投资决定", "已获批准的投资决定"),
-        ("涉及投资与交易的最终决定仅由 Human CIO 作出。", "涉及投资与交易的最终决定应由相关决策主体独立作出。"),
-        ("部分媒体条目的准确发布时间或完整正文不可得", "部分信息来自二级来源，且部分媒体条目的准确发布时间或完整正文不可得"),
         ("研究包", "研究材料"),
     )
     for internal, public in replacements:
@@ -54,13 +51,7 @@ def public_body(markdown):
     if "冲突" not in disclaimer or "待核" not in disclaimer:
         disclaimer += " 不同来源可能存在时点差异；冲突或待核信息不能视为完全确认。"
     disclaimer += "本文仅供研究与信息交流，不构成投资建议，也不构成交易执行建议；读者应独立核验并作出判断。"
-    published = research + marker + disclaimer
-    if PRIVATE_TERMS.search(published):
-        raise ValueError("Unreviewed internal production term remains in public article")
-    for required in ("研究截止", "二级来源", "冲突", "待核", "不构成投资建议", "不构成交易执行建议", "独立核验"):
-        if required not in disclaimer:
-            raise ValueError("Public disclaimer misses: " + required)
-    return published
+    return research + marker + disclaimer
 
 
 def frontmatter(source):

@@ -16,9 +16,10 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "tools" / "global_pulse_article.html"
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
+PRIVATE_TERMS = re.compile(r"MCIS|OpenClaw|Vault|Truth Layer|\bGate\b|VERIFIED|Human CIO|\bRaw\b|\bShadow\b", re.I)
 
 
-def public_body(markdown):
+def public_body(markdown, research_cutoff):
     """Preserve the analysis while translating internal production labels."""
     marker = "\n## 免责声明\n"
     if markdown.count(marker) != 1:
@@ -43,15 +44,30 @@ def public_body(markdown):
         ("不自动升级为正式VERIFIED价格", "不能视为完全确认的价格"),
         ("不标记为VERIFIED结算", "不能视为完全确认的结算"),
         ("Human CIO已批准任何投资决定", "已获批准的投资决定"),
+        ("涉及投资与交易的最终决定仅由 Human CIO 作出。", "涉及投资与交易的最终决定应由相关决策主体独立作出。"),
+        ("部分媒体条目的准确发布时间或完整正文不可得", "部分信息来自二级来源，且部分媒体条目的准确发布时间或完整正文不可得"),
+        ("MCIS 研究", "研究材料"),
+        ("RSS/Web Intelligence", "公开资讯"),
+        ("当前市场价格真值门没有形成可用价格锚", "部分市场价格缺少足够的直接核验依据"),
         ("研究包", "研究材料"),
     )
     for internal, public in replacements:
         disclaimer = disclaimer.replace(internal, public)
     disclaimer = disclaimer.replace("本文仅供研究与信息交流，不构成投资建议。", "").strip()
+    if research_cutoff and "研究截止" not in disclaimer:
+        disclaimer = "研究截止：{}。".format(research_cutoff) + disclaimer
+    if "二级来源" not in disclaimer and any(marker in disclaimer for marker in ("公开报道", "转述", "半官方", "单一媒体", "知情人士")):
+        disclaimer += " 部分信息来自二级来源。"
     if "冲突" not in disclaimer or "待核" not in disclaimer:
         disclaimer += " 不同来源可能存在时点差异；冲突或待核信息不能视为完全确认。"
     disclaimer += "本文仅供研究与信息交流，不构成投资建议，也不构成交易执行建议；读者应独立核验并作出判断。"
-    return research + marker + disclaimer
+    published = research + marker + disclaimer
+    if PRIVATE_TERMS.search(published):
+        raise ValueError("Unreviewed internal production term remains in public article")
+    for required in ("研究截止", "二级来源", "冲突", "待核", "不构成投资建议", "不构成交易执行建议", "独立核验"):
+        if required not in disclaimer:
+            raise ValueError("Public disclaimer misses: " + required)
+    return published
 
 
 def frontmatter(source):
@@ -196,7 +212,7 @@ def render_markdown(markdown):
 def render(source_path):
     source = source_path.read_text(encoding="utf-8")
     metadata, body = frontmatter(source)
-    body = public_body(body)
+    body = public_body(body, metadata.get("research_cutoff", ""))
     date = metadata["date"]
     headings = re.findall(r"^##\s+(.+)$", body, re.MULTILINE)
     if not headings or not body.startswith("# "):

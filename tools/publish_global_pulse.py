@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "tools" / "global_pulse_article.html"
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
-PRIVATE_TERMS = re.compile(r"MCIS|OpenClaw|Vault|Truth Layer|\bGate\b|VERIFIED|Human CIO|\bRaw\b|\bShadow\b", re.I)
+PRIVATE_TERMS = re.compile(r"MCIS|OpenClaw|Vault|Truth Layer|市场价格真值门|\bGate\b|VERIFIED|Human CIO|\bRaw\b|\bShadow\b", re.I)
 
 
 def public_body(markdown, research_cutoff):
@@ -32,6 +32,7 @@ def public_body(markdown, research_cutoff):
     research = research.replace("Truth Layer已验证的官方结算", "充分核验的官方结算")
     research = research.replace("均未进入当日Truth Gate", "均未获得当日直接核验")
     research = research.replace("Truth Gate无锚", "缺少直接核验锚点")
+    research = research.replace("当天市场价格真值门没有形成任何可用锚", "当天市场价格缺少足够的直接核验依据")
 
     disclaimer = internal_disclaimer.strip()
     replacements = (
@@ -52,6 +53,7 @@ def public_body(markdown, research_cutoff):
         ("MCIS 研究", "研究材料"),
         ("MCIS正式研究", "正式研究材料"),
         ("完整Truth Layer验证", "完整的直接核验"),
+        ("市场价格真值门当日没有形成可用锚", "部分市场价格缺少足够的直接核验依据"),
         ("RSS/Web Intelligence", "公开资讯"),
         ("当前市场价格真值门没有形成可用价格锚", "部分市场价格缺少足够的直接核验依据"),
         ("研究包", "研究材料"),

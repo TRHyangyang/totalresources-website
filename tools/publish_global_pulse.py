@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "tools" / "global_pulse_article.html"
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
 PRIVATE_TERMS = re.compile(r"MCIS|OpenClaw|Vault|Truth Layer|市场价格真值门|\bGate\b|VERIFIED|Human CIO|\bRaw\b|\bShadow\b", re.I)
+PUBLIC_DISCLAIMER = "免责声明：本文仅供研究与信息参考，不构成任何投资、交易或其他决策建议。"
 
 
 def public_body(markdown, research_cutoff):
@@ -24,7 +25,7 @@ def public_body(markdown, research_cutoff):
     marker = "\n## 免责声明\n"
     if markdown.count(marker) != 1:
         raise ValueError("A single disclaimer section is required")
-    research, internal_disclaimer = markdown.split(marker, 1)
+    research, _internal_disclaimer = markdown.split(marker, 1)
     research = research.replace("写入Vault", "归档")
     research = research.replace("自动包抓到", "晨间资料记录")
     research = research.replace("研究包", "研究材料")
@@ -34,46 +35,9 @@ def public_body(markdown, research_cutoff):
     research = research.replace("Truth Gate无锚", "缺少直接核验锚点")
     research = research.replace("当天市场价格真值门没有形成任何可用锚", "当天市场价格缺少足够的直接核验依据")
 
-    disclaimer = internal_disclaimer.strip()
-    replacements = (
-        ("MCIS/OpenClaw晨间研究", "晨间研究材料"),
-        ("MCIS/OpenClaw RSS情报", "晨间公开资讯"),
-        ("已落盘", "已归档"),
-        ("RSS与原始数据", "公开资讯与原始数据"),
-        ("主要来自单一媒体或知情人士口径", "部分来自二级来源、单一媒体或知情人士口径"),
-        ("未重新采集或联网补缺", "数据和信息来源可能存在时点差异，缺口未以推测填补"),
-        ("Truth Layer有效人工核验内容及市场价格Gate锚为空，状态为DEGRADED", "部分市场价格缺少足够的直接核验依据"),
-        ("Truth Layer有效内容为空，市场价格Gate锚为零，状态为DEGRADED", "部分市场价格缺少足够的直接核验依据"),
-        ("交易所机器层核验", "交易所直接核验"),
-        ("不自动升级为正式VERIFIED价格", "不能视为完全确认的价格"),
-        ("不标记为VERIFIED结算", "不能视为完全确认的结算"),
-        ("Human CIO已批准任何投资决定", "已获批准的投资决定"),
-        ("涉及投资与交易的最终决定仅由 Human CIO 作出。", "涉及投资与交易的最终决定应由相关决策主体独立作出。"),
-        ("部分媒体条目的准确发布时间或完整正文不可得", "部分信息来自二级来源，且部分媒体条目的准确发布时间或完整正文不可得"),
-        ("MCIS 研究", "研究材料"),
-        ("MCIS正式研究", "正式研究材料"),
-        ("完整Truth Layer验证", "完整的直接核验"),
-        ("市场价格真值门当日没有形成可用锚", "部分市场价格缺少足够的直接核验依据"),
-        ("RSS/Web Intelligence", "公开资讯"),
-        ("当前市场价格真值门没有形成可用价格锚", "部分市场价格缺少足够的直接核验依据"),
-        ("研究包", "研究材料"),
-    )
-    for internal, public in replacements:
-        disclaimer = disclaimer.replace(internal, public)
-    disclaimer = disclaimer.replace("本文仅供研究与信息交流，不构成投资建议。", "").strip()
-    if research_cutoff and "研究截止" not in disclaimer:
-        disclaimer = "研究截止：{}。".format(research_cutoff) + disclaimer
-    if "二级来源" not in disclaimer and any(marker in disclaimer for marker in ("公开报道", "转述", "半官方", "单一媒体", "知情人士")):
-        disclaimer += " 部分信息来自二级来源。"
-    if "冲突" not in disclaimer or "待核" not in disclaimer:
-        disclaimer += " 不同来源可能存在时点差异；冲突或待核信息不能视为完全确认。"
-    disclaimer += "本文仅供研究与信息交流，不构成投资建议，也不构成交易执行建议；读者应独立核验并作出判断。"
-    published = research + marker + disclaimer
+    published = research + marker + PUBLIC_DISCLAIMER
     if PRIVATE_TERMS.search(published):
         raise ValueError("Unreviewed internal production term remains in public article")
-    for required in ("研究截止", "二级来源", "冲突", "待核", "不构成投资建议", "不构成交易执行建议", "独立核验"):
-        if required not in disclaimer:
-            raise ValueError("Public disclaimer misses: " + required)
     return published
 
 

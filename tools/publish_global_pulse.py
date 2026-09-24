@@ -29,6 +29,9 @@ def public_body(markdown, research_cutoff):
     research = research.replace("自动包抓到", "晨间资料记录")
     research = research.replace("研究包", "研究材料")
     research = research.replace("精确的Truth Layer价格", "精确核验的价格")
+    research = research.replace("Truth Layer已验证的官方结算", "充分核验的官方结算")
+    research = research.replace("均未进入当日Truth Gate", "均未获得当日直接核验")
+    research = research.replace("Truth Gate无锚", "缺少直接核验锚点")
 
     disclaimer = internal_disclaimer.strip()
     replacements = (
@@ -47,6 +50,8 @@ def public_body(markdown, research_cutoff):
         ("涉及投资与交易的最终决定仅由 Human CIO 作出。", "涉及投资与交易的最终决定应由相关决策主体独立作出。"),
         ("部分媒体条目的准确发布时间或完整正文不可得", "部分信息来自二级来源，且部分媒体条目的准确发布时间或完整正文不可得"),
         ("MCIS 研究", "研究材料"),
+        ("MCIS正式研究", "正式研究材料"),
+        ("完整Truth Layer验证", "完整的直接核验"),
         ("RSS/Web Intelligence", "公开资讯"),
         ("当前市场价格真值门没有形成可用价格锚", "部分市场价格缺少足够的直接核验依据"),
         ("研究包", "研究材料"),

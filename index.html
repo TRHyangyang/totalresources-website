@@ -251,6 +251,48 @@ touch-action:manipulation;}
     top:13%;
 }
 
+/* Industrial imagery stays inside the existing decorative globe footprint. */
+.hero-industrial-globe{
+    position:absolute;
+    top:13%;
+    right:4%;
+    width:520px;
+    height:520px;
+    border-radius:50%;
+    pointer-events:none;
+    overflow:hidden;
+    -webkit-mask-image:radial-gradient(circle,#000 48%,rgba(0,0,0,.85) 62%,transparent 73%);
+    mask-image:radial-gradient(circle,#000 48%,rgba(0,0,0,.85) 62%,transparent 73%);
+}
+.hero-industrial-globe::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(7,32,55,.82),rgba(7,32,55,.22) 48%,rgba(7,32,55,.15)),linear-gradient(0deg,rgba(7,32,55,.35),transparent 45%);
+}
+.hero-industrial-globe img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.85;
+    filter:saturate(.75);
+}
+.hero-industrial-network{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    color:#a5c6d7;
+    opacity:.28;
+}
+@media(min-width:951px) and (max-width:1200px){
+    .hero-industrial-globe{opacity:.55}
+}
+@media(max-width:950px){
+    .hero-industrial-globe{display:none}
+}
+
 .hero:after{
     content:"";
     position:absolute;
@@ -1351,6 +1393,23 @@ footer{
 <!-- HERO -->
 
 <section class="hero">
+
+<!-- Decorative generated port concept; not a photograph of company-owned facilities. -->
+<div class="hero-industrial-globe" aria-hidden="true">
+    <img src="assets/images/hero-industrial-port.webp" alt="" width="1024" height="1024" fetchpriority="high">
+    <svg class="hero-industrial-network" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="currentColor" stroke-width=".75">
+            <circle cx="260" cy="260" r="244"/>
+            <ellipse cx="260" cy="260" rx="132" ry="244" transform="rotate(-24 260 260)"/>
+            <ellipse cx="260" cy="260" rx="219" ry="244" transform="rotate(-24 260 260)"/>
+            <ellipse cx="260" cy="260" rx="244" ry="72" transform="rotate(-24 260 260)"/>
+            <ellipse cx="260" cy="260" rx="244" ry="169" transform="rotate(-24 260 260)"/>
+            <path d="M100 176Q273 52 410 201M123 344Q310 165 432 319M100 176Q342 215 376 401" stroke="#d9bc71"/>
+        </g>
+        <g fill="#e4c47e"><circle cx="100" cy="176" r="3"/><circle cx="410" cy="201" r="3"/><circle cx="123" cy="344" r="3"/><circle cx="432" cy="319" r="3"/><circle cx="376" cy="401" r="3"/></g>
+    </svg>
+</div>
+
 
 <div class="container">
 

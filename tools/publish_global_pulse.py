@@ -29,6 +29,14 @@ def public_body(markdown, research_cutoff):
     research = research.replace("写入Vault", "归档")
     research = research.replace("自动包抓到", "晨间资料记录")
     research = research.replace("研究包", "研究材料")
+    research = research.replace("MCIS晨间价格快照", "晨间价格快照")
+    research = research.replace("MCIS晨间快照", "晨间价格快照")
+    research = research.replace("MCIS晨间包", "晨间研究材料")
+    research = research.replace("MCIS判断", "研究判断")
+    research = research.replace("此前MCIS一直等待", "此前研究一直等待")
+    research = research.replace("MCIS采集显示", "晨间资料显示")
+    research = research.replace("Truth Layer为空", "直接核验资料缺失")
+    research = research.replace("更准确的Truth Layer应该拆成三层", "更准确的核验状态应该拆成三层")
     research = research.replace("精确的Truth Layer价格", "精确核验的价格")
     research = research.replace("Truth Layer已验证的官方结算", "充分核验的官方结算")
     research = research.replace("均未进入当日Truth Gate", "均未获得当日直接核验")
@@ -62,7 +70,13 @@ def frontmatter(source):
     if not DATE_RE.fullmatch(date):
         raise ValueError("Invalid or missing publication date")
     body = "\n".join(lines[end + 1:]).strip()
-    for required in ("## 市场留下来的几组数字", "## 关于我们", "## 免责声明"):
+    market_sections = (
+        "## 市场留下来的几组数字",
+        "## 一、市场温度计",
+    )
+    if not any(section in body for section in market_sections):
+        raise ValueError("Missing required market-data section")
+    for required in ("## 关于我们", "## 免责声明"):
         if required not in body:
             raise ValueError("Missing required article section: " + required)
     return metadata, body
@@ -109,6 +123,16 @@ def is_table_separator(line):
     return bool(cells) and all(re.fullmatch(r":?-{3,}:?", c) for c in cells)
 
 
+def simple_table_spans(line):
+    spans = [(match.start(), match.end()) for match in re.finditer(r"-{3,}", line)]
+    return spans if len(spans) >= 2 else []
+
+
+def simple_table_cells(line, spans):
+    cells = re.split(r"\s{2,}", line.strip(), maxsplit=len(spans) - 1)
+    return cells + [""] * (len(spans) - len(cells))
+
+
 def render_markdown(markdown):
     lines = markdown.splitlines()
     out = []
@@ -118,6 +142,28 @@ def render_markdown(markdown):
         line = lines[i].strip()
         if not line:
             i += 1
+            continue
+        if (
+            re.fullmatch(r"-{6,}", line)
+            and i + 2 < len(lines)
+            and simple_table_spans(lines[i + 2])
+        ):
+            spans = simple_table_spans(lines[i + 2])
+            headers = simple_table_cells(lines[i + 1], spans)
+            out.append('<div class="table-scroll" role="region" aria-label="研究数据表" tabindex="0"><table class="research-table"><thead><tr>')
+            out.extend("<th>{}</th>".format(inline(cell)) for cell in headers)
+            out.append("</tr></thead><tbody>")
+            i += 3
+            while i < len(lines):
+                current = lines[i]
+                if re.fullmatch(r"\s*-{6,}\s*", current):
+                    i += 1
+                    break
+                if current.strip():
+                    cells = simple_table_cells(current, spans)
+                    out.append("<tr>" + "".join("<td>{}</td>".format(inline(cell)) for cell in cells) + "</tr>")
+                i += 1
+            out.append("</tbody></table></div>")
             continue
         if re.fullmatch(r"-{3,}|\*{3,}", line):
             out.append("<hr>")

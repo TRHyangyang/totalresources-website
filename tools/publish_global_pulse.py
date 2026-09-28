@@ -9,6 +9,7 @@ import argparse
 import html
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -17,7 +18,27 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "tools" / "global_pulse_article.html"
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
 PRIVATE_TERMS = re.compile(r"MCIS|OpenClaw|Vault|Truth Layer|市场价格真值门|\bGate\b|VERIFIED|Human CIO|\bRaw\b|\bShadow\b", re.I)
+INTERNAL_PROCESS_TERMS = re.compile(r"系统(?:自己)?(?:已经|已)?识别|自动包|研究包")
 PUBLIC_DISCLAIMER = "免责声明：本文仅供研究与信息参考，不构成任何投资、交易或其他决策建议。"
+
+
+# Bounded phrase mappings: leave unfamiliar contexts for the residual gate.
+PUBLIC_LANGUAGE_RULES = (
+    (r"MCIS\s*((?:[01]?\d|2[0-3]):[0-5]\d)\s*快照", r"\1市场数据快照"),
+    (r"((?:今天|今日|当天))的Truth Layer应该写成", r"\1可以确认的事实状态应表述为"),
+    (r"Truth Layer应该写成", "截至目前可以确认的事实状态应表述为"),
+    (r"MCIS在这里一直坚持", "本研究在这里一直坚持"),
+    (r"MCIS((?:今天|今日|当天)的)研究(?:包|材料)", r"\1研究材料"),
+    (r"MCIS研究(?:包|材料)", "研究材料"),
+    (r"MCIS自动包", "晨间研究材料"),
+    (r"系统(?:自己)?(?:已经|已)识别", "资料核对已识别"),
+)
+
+
+def map_public_language(research):
+    for pattern, replacement in PUBLIC_LANGUAGE_RULES:
+        research = re.sub(pattern, replacement, research)
+    return research
 
 
 def public_body(markdown, research_cutoff):
@@ -26,6 +47,7 @@ def public_body(markdown, research_cutoff):
     if markdown.count(marker) != 1:
         raise ValueError("A single disclaimer section is required")
     research, _internal_disclaimer = markdown.split(marker, 1)
+    research = map_public_language(research)
     research = research.replace("写入Vault", "归档")
     research = research.replace("自动包抓到", "晨间资料记录")
     research = research.replace("研究包", "研究材料")
@@ -44,7 +66,7 @@ def public_body(markdown, research_cutoff):
     research = research.replace("当天市场价格真值门没有形成任何可用锚", "当天市场价格缺少足够的直接核验依据")
 
     published = research + marker + PUBLIC_DISCLAIMER
-    if PRIVATE_TERMS.search(published):
+    if PRIVATE_TERMS.search(published) or INTERNAL_PROCESS_TERMS.search(published):
         raise ValueError("Unreviewed internal production term remains in public article")
     return published
 
@@ -129,8 +151,27 @@ def simple_table_spans(line):
 
 
 def simple_table_cells(line, spans):
-    cells = re.split(r"\s{2,}", line.strip(), maxsplit=len(spans) - 1)
-    return cells + [""] * (len(spans) - len(cells))
+    if "|" in line:
+        cells = table_cells(line)
+        if len(cells) != len(spans):
+            raise ValueError("Table cell count differs from header")
+        return cells
+    if not spans:
+        raise ValueError("Missing simple-table column boundaries")
+    # Pandoc simple-table separator positions are display columns, not
+    # Python character offsets: CJK characters occupy two display columns.
+    cells = [""] * len(spans)
+    column = 0
+    cell = 0
+    for char in line.expandtabs(8):
+        width = 0 if unicodedata.combining(char) else (2 if unicodedata.east_asian_width(char) in "WF" else 1)
+        while cell + 1 < len(spans) and column >= spans[cell + 1][0]:
+            cell += 1
+        if cell + 1 < len(spans) and column < spans[cell + 1][0] < column + width:
+            raise ValueError("Table boundary splits a display character")
+        cells[cell] += char
+        column += width
+    return [value.strip() for value in cells]
 
 
 def render_markdown(markdown):
@@ -218,11 +259,11 @@ def render_markdown(markdown):
             if paragraph and (current.startswith(("#", ">", "|")) or re.fullmatch(r"-{3,}", current)):
                 break
             if paragraph:
-                paragraph.append("<br>" if previous_hard_break else " ")
-            paragraph.append(inline(current.rstrip("\\")))
+                paragraph.append("\n" if previous_hard_break else " ")
+            paragraph.append(current.rstrip("\\"))
             previous_hard_break = raw.endswith("  ") or raw.rstrip().endswith("\\")
             i += 1
-        out.append("<p>{}</p>".format("".join(paragraph)))
+        out.append("<p>{}</p>".format("<br>".join(inline(part) for part in "".join(paragraph).split("\n"))))
     return "\n".join(out)
 
 

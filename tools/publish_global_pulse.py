@@ -95,6 +95,7 @@ def frontmatter(source):
     market_sections = (
         "## 市场留下来的几组数字",
         "## 一、市场温度计",
+        "## 一、今天市场真正发生了什么",
     )
     if not any(section in body for section in market_sections):
         raise ValueError("Missing required market-data section")

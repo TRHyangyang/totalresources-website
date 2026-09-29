@@ -1,5 +1,5 @@
 import unittest
-from publish_global_pulse import simple_table_cells, render_markdown
+from publish_global_pulse import simple_table_cells, render_markdown, frontmatter
 
 
 class TableParsingTests(unittest.TestCase):
@@ -25,6 +25,20 @@ class TableParsingTests(unittest.TestCase):
     def test_ambiguous_display_boundary_rejected(self):
         with self.assertRaises(ValueError):
             simple_table_cells('中A', [(0,1),(1,4)])
+
+
+class MarketSectionTests(unittest.TestCase):
+    def source(self, heading):
+        return "---\ndate: 2026-01-01\npublication_status: FINAL\nsystem: MCIS\ntype: MCIS Global Pulse\n---\n# 标题\n" + heading + "\n市场正文\n## 关于我们\n说明\n## 免责声明\n说明"
+
+    def test_market_narrative_heading(self):
+        metadata, body = frontmatter(self.source("## 一、今天市场真正发生了什么"))
+        self.assertEqual(metadata["date"], "2026-01-01")
+        self.assertIn("市场正文", body)
+
+    def test_unknown_market_heading_rejected(self):
+        with self.assertRaises(ValueError):
+            frontmatter(self.source("## 未知标题"))
 
 
 if __name__ == '__main__':

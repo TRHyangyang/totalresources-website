@@ -80,7 +80,11 @@ def frontmatter(source):
     except ValueError as exc:
         raise ValueError("Unclosed YAML front matter") from exc
     metadata = {}
+    key = None
     for line in lines[1:end]:
+        if line.startswith("  ") and key == "title":
+            metadata[key] += " " + line.strip()
+            continue
         if ":" in line:
             key, value = line.split(":", 1)
             metadata[key.strip()] = value.strip()
@@ -97,7 +101,7 @@ def frontmatter(source):
         "## 一、市场温度计",
         "## 一、今天市场真正发生了什么",
     )
-    if not any(section in body for section in market_sections):
+    if not any(section in body for section in market_sections) and not re.search(r"^##\s+一、(?:今天的)?市场温度计(?:[：:]|$)", body, re.MULTILINE):
         raise ValueError("Missing required market-data section")
     for required in ("## 关于我们", "## 免责声明"):
         if required not in body:

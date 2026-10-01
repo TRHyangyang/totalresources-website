@@ -41,6 +41,14 @@ def map_public_language(research):
     return research
 
 
+def frontmatter_scalar(value):
+    """Normalize the small YAML scalar subset accepted by this publisher."""
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in ('"', "'"):
+        return value[1:-1]
+    return value
+
+
 def public_body(markdown, research_cutoff):
     """Preserve the analysis while translating internal production labels."""
     marker = "\n## 免责声明\n"
@@ -87,7 +95,7 @@ def frontmatter(source):
             continue
         if ":" in line:
             key, value = line.split(":", 1)
-            metadata[key.strip()] = value.strip()
+            metadata[key.strip()] = frontmatter_scalar(value)
     if metadata.get("publication_status") != "FINAL":
         raise ValueError("publication_status must be FINAL")
     if metadata.get("system") != "MCIS" or metadata.get("type") != "MCIS Global Pulse":

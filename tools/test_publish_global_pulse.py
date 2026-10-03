@@ -41,5 +41,16 @@ class MarketSectionTests(unittest.TestCase):
             frontmatter(self.source("## 未知标题"))
 
 
+class ArticleTitleTests(unittest.TestCase):
+    def test_standalone_article_heading(self):
+        self.assertEqual(render_markdown("# Publication\n\n# Article title\n\n## Market"), "<h1>Publication</h1>\n<h2>Article title</h2>\n<h2>Market</h2>")
+
+    def test_existing_title_format_unchanged(self):
+        self.assertEqual(render_markdown("# Publication\n\n## Article title"), "<h1>Publication</h1>\n<h2>Article title</h2>")
+
+    def test_market_data_heading(self):
+        frontmatter(MarketSectionTests().source("## 市场数据"))
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -106,6 +106,7 @@ def frontmatter(source):
     body = "\n".join(lines[end + 1:]).strip()
     market_sections = (
         "## 市场留下来的几组数字",
+        "## 市场数据",
         "## 一、市场温度计",
         "## 一、今天市场真正发生了什么",
     )
@@ -187,7 +188,13 @@ def simple_table_cells(line, spans):
     return [value.strip() for value in cells]
 
 
+def normalize_article_title(markdown):
+    """Map a separate leading article H1 to the established publication H2 slot."""
+    return re.sub(r"\A(# [^\n]+\n\s*)# ([^\n]+)(?=\n|$)", r"\1## \2", markdown, count=1)
+
+
 def render_markdown(markdown):
+    markdown = normalize_article_title(markdown)
     lines = markdown.splitlines()
     out = []
     i = 0
@@ -285,15 +292,17 @@ def render(source_path):
     metadata, body = frontmatter(source)
     body = public_body(body, metadata.get("research_cutoff", ""))
     date = metadata["date"]
+    body = normalize_article_title(body)
     headings = re.findall(r"^##\s+(.+)$", body, re.MULTILINE)
     if not headings or not body.startswith("# "):
         raise ValueError("Article title or sections missing")
     subtitle = headings[0]
     canonical = "https://totalresources.info/intelligence/{}.html".format(date)
-    description = "{}｜{} 研究截止：{}。".format(metadata["title"], subtitle, metadata.get("research_cutoff", ""))
+    page_title = metadata["title"] if metadata["title"].endswith(subtitle) else metadata["title"] + "｜" + subtitle
+    description = "{} 研究截止：{}。".format(page_title, metadata.get("research_cutoff", ""))
     rendered = TEMPLATE.read_text(encoding="utf-8")
     values = {
-        "TITLE": html.escape(metadata["title"] + "｜" + subtitle),
+        "TITLE": html.escape(page_title),
         "DESCRIPTION": html.escape(description, quote=True),
         "CANONICAL": canonical,
         "DATE": date,

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-06",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-06T09:51:42.692028+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-euro-fiscal",
+      "date": "2026-10-06",
+      "time": "10-05 18:37",
+      "headline_cn": "欧洲财政与政治忧虑施压欧元",
+      "headline_en": "Euro sinks as fiscal and political worries mount",
+      "summary": "Semafor 报道，欧元在财政与政治忧虑中走弱；西班牙提前大选进一步加重市场对欧元区债务负担的担忧。值得关注的是，欧洲政治不确定性可能影响资金流向和美元计价能源的进口成本。",
+      "category": "MACRO",
+      "source_name": "SEMAFOR",
+      "source_url": "https://www.semafor.com/article/10/05/2026/euro-sinks-as-fiscal-and-political-worries-mount",
+      "source_publish_time": "2026-10-05T18:37:33+08:00",
+      "sources": [
+        {
+          "source_name": "SEMAFOR",
+          "source_url": "https://www.semafor.com/article/10/05/2026/euro-sinks-as-fiscal-and-political-worries-mount",
+          "source_publish_time": "2026-10-05T18:37:33+08:00"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "mcis_relevance": "影响汇率、跨境资金与能源进口成本；传导部分明确为判断。",
+      "rank": 1,
+      "material_new_information": "本窗口报道欧元走弱与西班牙提前大选的关联；未重用历史欧元点位或利差。"
+    },
+    {
+      "event_id": "dh-private-credit-review",
+      "date": "2026-10-06",
+      "time": "10-06 04:09",
+      "headline_cn": "私人信贷估值引发美联储审查",
+      "headline_en": "Private-credit worries spur Fed review",
+      "summary": "Semafor 报道，美联储正审查摩根士丹利、巴克莱等银行的私人信贷贷款估值，关注风险敞口、风险管理和抵押品质量。值得关注的是，估值审查可能影响银行风险偏好及信贷供给，尚不能据此判断已出现系统性损失。",
+      "category": "MACRO",
+      "source_name": "SEMAFOR",
+      "source_url": "https://www.semafor.com/article/10/05/2026/private-credit-worries-spur-fed-review",
+      "source_publish_time": "2026-10-06T04:09:30+08:00",
+      "sources": [
+        {
+          "source_name": "SEMAFOR",
+          "source_url": "https://www.semafor.com/article/10/05/2026/private-credit-worries-spur-fed-review",
+          "source_publish_time": "2026-10-06T04:09:30+08:00"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "mcis_relevance": "监管、估值和抵押品质量可能改变金融条件判断。",
+      "rank": 2,
+      "material_new_information": "本窗口出现具体监管审查报道；不同于泛泛的私人信贷风险讨论。"
+    }
+  ]
+}

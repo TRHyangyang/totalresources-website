@@ -56,4 +56,20 @@ class SafetyTests(unittest.TestCase):
   self.item['published']='UNKNOWN';self.row['reason']='TIME_UNVERIFIED';self.assertRaisesRegex(ValueError,'Ineligible',self.check)
  def test_product_noise(self):self.assertEqual(m.classify({'headline':'Omega has new James Bond watches','summary':'New watches.'})[0],'OTHER')
  def test_truncation_detection(self):self.assertEqual(m.insufficient({'headline':'test','summary':'<p>Enough words in this synthetic test sentence to pass minimum length before a dangling element.</p><p>'}),'TRUNCATED_SUMMARY')
+ def test_negative_evidence_index(self):
+  self.h['evidence_indices']=[-1];self.assertRaisesRegex(ValueError,'Invalid evidence',self.check)
+ def test_number_substring_not_evidence(self):
+  self.item['summary']+=' 1999.';self.h['headline_cn']+='99';self.assertRaisesRegex(ValueError,'Unsupported number',self.check)
+ def test_relevance_override(self):
+  self.row['reason']='BELOW_MATERIALITY_THRESHOLD';self.h.update(relevance_override_reason='TEST material regulation',category_override='MACRO');self.assertEqual(len(self.check()[0]['headlines']),1)
+ def test_override_cannot_allow_truncated(self):
+  self.row['reason']='TRUNCATED_SUMMARY';self.h.update(relevance_override_reason='TEST',category_override='MACRO');self.assertRaisesRegex(ValueError,'Ineligible',self.check)
+ def test_cluster_identity_cannot_evade_memory(self):
+  self.packet['clusters']=[{'event_id':'dh-invented-new-id','item_indices':[0],'rationale':'TEST'}];self.assertRaisesRegex(ValueError,'preserve',self.check)
+ def test_cluster_duplicate_members(self):
+  self.packet['clusters']=[{'event_id':self.row['event_id'],'item_indices':[0,0],'rationale':'TEST'}];self.assertRaisesRegex(ValueError,'Invalid editorial',self.check)
+ def test_cluster_preserves_existing_identity(self):
+  self.packet['clusters']=[{'event_id':self.row['event_id'],'item_indices':[0],'rationale':'TEST same event'}];self.assertEqual(len(self.check()[0]['headlines']),1)
+ def test_unknown_gap_blocks_no_change(self):
+  self.row['reason']='TRUNCATED_SUMMARY';self.packet.update(headlines=[],no_material_change_reason='TEST',coverage_complete=True,decisions={self.row['event_id']:{'action':'REJECT','reason':'TEST insufficient'}});self.assertRaisesRegex(ValueError,'evidence gap',self.check)
 if __name__=='__main__':unittest.main()

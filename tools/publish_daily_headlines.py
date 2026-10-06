@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Daily Headlines V1: local evidence only; preview by default; no collection or deployment.
+"""Daily Headlines V1: local evidence only; guarded preview generation.
 Editorial decisions are an explicit input, never inferred from importance labels.
 """
 import argparse, datetime as dt, difflib, hashlib, html, json, pathlib, re, shutil
@@ -91,7 +91,6 @@ def discover(scan_path,date,history_dir,rss):
   if not reason and i.get('noise_reason'):reason='NOISE_FILTERED'
   if not reason:reason=insufficient(i)
   if not reason and category=='OTHER':reason='NO_MCIS_RELEVANCE'
-  if not reason and i.get('source')=='ZEROHEDGE':reason='SIGNAL_SOURCE_NEEDS_INDEPENDENT_EVIDENCE'
   prior=[]
   words=set(re.findall(r'[a-z]{4,}',i['headline'].lower()))
   possible={id(x):x for w in words for x in history_words.get(w,[]) if len(words & set(re.findall(r'[a-z]{4,}',clean(x.get('headline')).lower())))>=max(2,len(words)*.6)}
@@ -146,7 +145,28 @@ def check_url(url):
  if urllib.parse.urlsplit(final).scheme!='https':raise ValueError('Insecure source redirect')
  return {'url':url,'status':status,'final_url':final,'checked_at':dt.datetime.now(TZ).isoformat()}
 
+def apply_editorial_clusters(report,packet):
+ used=set()
+ for cluster in packet.get('clusters',[]):
+  members=cluster.get('item_indices',[]);canonical=cluster.get('event_id','')
+  if not re.fullmatch(r'dh-[a-z0-9][a-z0-9-]{0,140}',canonical) or not cluster.get('rationale'):raise ValueError('Invalid editorial cluster identity')
+  if not members or len(set(members))!=len(members) or any(type(n) is not int or n<0 or n>=len(report['records']) or n in used for n in members):raise ValueError('Invalid editorial cluster members')
+  rows=[report['records'][n] for n in members]
+  known={r['event_id'] for r in rows}|{h['event_id'] for r in report['records'] for h in r['previous_published_events']}
+  if canonical not in known:raise ValueError('Cluster must preserve an existing input or historical event identity')
+  for row in rows:
+   used.add(row['item_index']);row['event_id']=canonical;row['cluster_rationale']=cluster['rationale']
+   for p in (ROOT/'data/daily-headlines').glob('????/??/????-??-??.json'):
+    previous=json.loads(p.read_text())
+    if previous['date']<report['date']:
+     row['previous_published_events'] += [h for h in previous['headlines'] if h['event_id']==canonical and h not in row['previous_published_events']]
+ if used:
+  groups={}
+  for r in report['records']:groups.setdefault(r['event_id'],[]).append(r)
+  report['eligible_clusters']=[c for c in groups.values() if any(not r['reason'] for r in c)]
+
 def validate(scan,report,packet,verify):
+ apply_editorial_clusters(report,packet)
  if packet.get('date')!=report['date'] or packet.get('scan_sha256')!=report['scan_sha256']:raise ValueError('Editorial input snapshot mismatch')
  if packet.get('review',{}).get('status')!='REVIEWED':raise ValueError('Editorial review required')
  required=['facts_vs_analysis','numbers_names','headline_summary_consistency','material_novelty','evidence_sufficiency']
@@ -160,7 +180,9 @@ def validate(scan,report,packet,verify):
   if not packet.get('no_material_change_reason') or packet.get('coverage_complete') is not True:raise ValueError('Empty output needs completed materiality and coverage assessment')
   if any(v.get('status')!='OK' for v in scan.get('source_status',{}).values()):raise ValueError('Failed sources cannot imply no material change')
   for row in report['records']:
-   if row['score']>=75 and row['reason'] not in ('OUT_OF_WINDOW','TIME_UNVERIFIED','NOISE_FILTERED') and row['event_id'] not in decisions:raise ValueError('Unresolved evidence gaps: output must remain PENDING')
+   if row['score']>=75 and row['reason'] not in ('OUT_OF_WINDOW','TIME_UNVERIFIED','NOISE_FILTERED'):
+    if row['event_id'] not in decisions:raise ValueError('Unresolved evidence gaps: output must remain PENDING')
+    if row['reason'] in ('EMPTY_SUMMARY','TRUNCATED_SUMMARY','TIME_NOT_ABSOLUTELY_VERIFIED','INSUFFICIENT_FACTS') and decisions[row['event_id']].get('disposition') not in ('NON_MATERIAL','OLD_NEWS','OUT_OF_SCOPE'):raise ValueError('Unresolved high-relevance evidence gap cannot mean no material change')
  seen=set();headlines=[];urls=[]
  for rank,h in enumerate(selected,1):
   eid=h['event_id']
@@ -169,13 +191,18 @@ def validate(scan,report,packet,verify):
   if decisions.get(eid,{}).get('action')!='SELECT':raise ValueError('Selection decision missing')
   indices=h.get('evidence_indices',[])
   if not indices:raise ValueError('No evidence')
+  if len(set(indices))!=len(indices) or any(type(n) is not int or n<0 or n>=len(report['records']) for n in indices):raise ValueError('Invalid evidence indices')
   rows=[report['records'][n] for n in indices]
-  if any(r['reason'] for r in rows):raise ValueError('Ineligible evidence')
+  for r in rows:
+   if r['reason'] in ('BELOW_MATERIALITY_THRESHOLD','NO_MCIS_RELEVANCE') and h.get('relevance_override_reason') and h.get('category_override') in {x[0] for x in PRIORITIES}:
+    r['category']=h['category_override']
+   elif r['reason']:raise ValueError('Ineligible evidence')
   if any(r['event_id']!=eid for r in rows):raise ValueError('Cross-event evidence')
   if any(r['previous_source_matches'] or r['previous_published_events'] for r in rows):
    if not h.get('material_new_information') or not h.get('prior_comparison') or not h.get('novelty_quote'):raise ValueError('Old-news replay lacks comparison and new evidence quote')
    prior_text=' '.join(x.get('summary','') for r in rows for x in r['previous_source_matches'])
    if h['novelty_quote'] not in ' '.join(r['headline']+' '+r['summary'] for r in rows):raise ValueError('Novelty quote not in current evidence')
+   prior_text+=' '+' '.join(x.get('headline','') for r in rows for x in r['previous_source_matches'])
    if h['novelty_quote'] in prior_text:raise ValueError('Novelty quote already in historical evidence')
   if not h.get('material_new_information'):raise ValueError('Material novelty assessment missing')
   corpus=' '.join(scan['items'][n]['headline']+' '+clean(scan['items'][n].get('summary')) for n in indices)
@@ -193,13 +220,13 @@ def validate(scan,report,packet,verify):
   if not 50<=len(re.findall(r'[\u4e00-\u9fff]',summary))<=120:raise ValueError('Summary outside 50–120 Chinese characters')
   if len(h['headline_cn'])>50 or re.search(r'[↑↓→]{2,}',h['headline_cn']+summary):raise ValueError('Editorial style violation')
   for number in re.findall(r'\d+(?:[.,]\d+)*',h['headline_cn']+summary):
-   if number not in corpus:raise ValueError('Unsupported number '+number)
+   if not re.search(r'(?<![\d.,])'+re.escape(number)+r'(?![\d.,])',corpus):raise ValueError('Unsupported number '+number)
   for name in h.get('entities',[]):
    if name['original'] not in corpus or name['cn'] not in h['headline_cn']+summary:raise ValueError('Name mapping mismatch')
   confidence=h['confidence']
   if confidence not in ('CONFIRMED','PARTIAL','DEVELOPING'):raise ValueError('Invalid confidence')
   domains={urllib.parse.urlsplit(r['source_url']).netloc for r in rows}
-  if confidence=='CONFIRMED' and len(domains)<2:raise ValueError('CONFIRMED needs independent cross-source evidence')
+  if confidence=='CONFIRMED' and (len(domains)<2 or not h.get('independent_sources_verified')):raise ValueError('CONFIRMED needs independent cross-source evidence')
   sources=[{'source_name':r['source_name'],'source_url':r['source_url'],'source_publish_time':r['source_publish_time']} for r in rows]
   r=rows[0]; t=stamp(r['source_publish_time'])
   headlines.append({'event_id':eid,'date':report['date'],'time':t.strftime('%m-%d %H:%M'),

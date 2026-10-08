@@ -1373,6 +1373,7 @@ footer{
 </style>
 
 <link rel="stylesheet" href="/assets/css/daily-headlines.css">
+<link rel="stylesheet" href="assets/css/weekly-outlook-home.css">
 </head>
 
 
@@ -1552,6 +1553,26 @@ footer{
 <!-- DAILY HEADLINES V1 -->
 <section class="dh-section" data-daily-headlines aria-labelledby="dh-heading"><div class="dh-wrap"><p class="dh-eyebrow">DAILY HEADLINES</p><h2 id="dh-heading">每日头条</h2><p class="dh-caption"><span data-dh-date></span> · 能源、宏观与产业链的新变化</p><div class="dh-grid" hidden></div><p class="dh-state" role="status">今日情报更新待完成<span>Daily Intelligence Update Pending</span></p><a class="dh-action" href="/intelligence/daily-headlines/">查看全部今日头条 <span lang="en">View All Daily Headlines</span></a><noscript><p class="dh-caption">请进入日期归档查看已发布内容；今日状态需要 JavaScript 校验。</p></noscript></div></section>
 <!-- END DAILY HEADLINES V1 -->
+
+<!-- WEEKLY OUTLOOK HOME -->
+<section class="home-weekly" aria-labelledby="home-weekly-heading" data-weekly-outlook>
+    <div class="container">
+        <div class="home-weekly-head">
+            <div class="eyebrow">WEEKLY OUTLOOK</div>
+            <h2 id="home-weekly-heading">每周展望</h2>
+            <p>全球风险日历与重大事件 · Weekly Outlook</p>
+        </div>
+        <p class="home-weekly-status" role="status">正在加载最新一期每周展望…</p>
+        <article class="home-weekly-card" hidden>
+            <time class="home-weekly-date"></time>
+            <div class="home-weekly-content"><h3></h3><p></p></div>
+            <a class="home-weekly-read">Read Weekly Outlook →</a>
+        </article>
+        <a class="home-weekly-all" href="intelligence.html#weekly-outlook">View All Weekly Outlook → <span lang="zh-CN">查看全部每周展望 →</span></a>
+        <noscript><p class="home-weekly-status">请进入 Intelligence 阅读最新一期每周展望。</p></noscript>
+    </div>
+</section>
+<!-- END WEEKLY OUTLOOK HOME -->
 
 
 <!-- WHO WE ARE -->
@@ -2718,6 +2739,7 @@ footer{
 </footer>
 <script src="assets/js/global-pulse.js" defer></script>
 <script src="/assets/js/daily-headlines.js" defer></script>
+<script src="assets/js/weekly-outlook-home.js" defer></script>
 </body>
 
 </html>

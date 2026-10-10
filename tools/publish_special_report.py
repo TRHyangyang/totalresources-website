@@ -49,9 +49,9 @@ def load(source):
     issues = []
     if 'pending' in scalar(meta.get('status')).lower():
         issues.append('Resolve pending publication status in FINAL.md')
-    if re.search(r'\[(?:iea|english\.stm|csis)\]', body):
+    if re.search(r'\[(?:iea|english\.stm|csis)\](?!\()', body):
         issues.append('Replace source placeholders with verified clickable links')
-    if '发布前核验' in body:
+    if '发布前核验' in body and not (meta.get('verification_status') in {'completed', 'completed-with-disclosed-limitations'} and meta.get('verification_notes_section') and ('## '+str(meta['verification_notes_section'])) in body):
         issues.append('Resolve the file’s pre-publication verification notes')
     if '表1' in body and not re.search(r'^\s*\|.*\|\s*$', body, re.M):
         issues.append('Supply Table 1 or explicitly document its absence for readers')
@@ -68,10 +68,21 @@ def run(args):
     relative = 'special-reports/' + slug + '.html'
     canonical = 'https://totalresources.info/' + relative
     article = markdown.markdown(body, extensions=['extra', 'sane_lists'], output_format='html5')
+    article = article.replace("<table>", '<div class="table-scroll"><table>').replace("</table>", "</table></div>")
     SafeHTML().feed(article)
     for ref in re.findall(r'\[\^([^\]]+)\]', body):
         if not re.search(r'^\[\^'+re.escape(ref)+r'\]:', body, re.M):
             raise ValueError('Undefined footnote: ' + ref)
+    image_bytes = None
+    hero = ''
+    if args.image:
+        image_bytes = args.image.resolve(strict=True).read_bytes()
+        if not image_bytes.startswith(b'\xff\xd8\xff'):
+            raise ValueError('Hero image must be JPEG')
+        if not args.image_alt:
+            raise ValueError('Supply --image-alt')
+        image_url = 'assets/'+slug+'.jpg'
+        hero = '<figure class="report-hero-image"><img src="'+image_url+'" alt="'+html.escape(args.image_alt, quote=True)+'" width="'+str(args.image_width)+'" height="'+str(args.image_height)+'" fetchpriority="high"></figure>'
     values = dict(TITLE=title, DESCRIPTION=scalar(meta.get('description')) or title, CANONICAL=canonical,
                   DATE=day, AUTHORS=scalar(meta.get('authors') or meta.get('author')), SOURCE=scalar(meta.get('source')),
                   ORIGINALDATE=scalar(meta.get('original_date')) or '—')
@@ -82,6 +93,8 @@ def run(args):
         for key in ('rights_cleared', 'image_rights_cleared_or_no_image', 'file_checks_completed', 'publish_approved'):
             if receipt.get(key) is not True:
                 raise ValueError('Review not completed: ' + key)
+        if image_bytes and receipt.get('image_sha256') != hashlib.sha256(image_bytes).hexdigest():
+            raise ValueError('Image does not match reviewed image')
         if receipt.get('source_sha256') != digest or receipt.get('publication_date') != day:
             raise ValueError('Review receipt does not match the exact source and publication date')
         if not receipt.get('reviewer') or not receipt.get('evidence'):
@@ -95,6 +108,7 @@ def run(args):
     page = (ROOT/'tools/special_report_article.html').read_text()
     escaped = {k:html.escape(v, quote=True) for k,v in values.items()}
     escaped['ARTICLE'] = article
+    escaped['HEROIMAGE'] = hero
     page = re.sub(r'\{\{([A-Z]+)\}\}', lambda m:escaped[m[1]], page)
     if not args.publish:
         if not args.preview_dir:
@@ -105,6 +119,9 @@ def run(args):
         out.mkdir(parents=True, exist_ok=True)
         page = page.replace('发布日期 '+day, '网站发布日期 待定').replace('Publication Date<strong>'+day, 'Publication Date<strong>待定')
         page = page.replace('<head>', '<head>\n<meta name="robots" content="noindex,nofollow">').replace('<body>', '<body><p style="padding:16px;background:#fff4d8">待发布预览 · 未公开上线</p>')
+        if image_bytes:
+            (out/'assets').mkdir(exist_ok=True)
+            (out/image_url).write_bytes(image_bytes)
         (out/(slug+'.html')).write_text(page)
         (out/'review.json').write_text(json.dumps(dict(title=title, source=str(source), source_sha256=digest, status='pending', publication_date=None, original_date=scalar(meta.get('original_date')), blockers=issues, required_reviews=['CSIS translation/republication rights', 'Image permission or no image', 'Source links and Table 1', 'Resource/reserve units, graphite 27 million short tons, time-sensitive project claims, author roles']),ensure_ascii=False,indent=2))
         print(out/(slug+'.html'))
@@ -138,12 +155,19 @@ def run(args):
     sm = sm.replace('</urlset>',f'  <url><loc>{canonical}</loc></url>\n</urlset>')
     ET.fromstring(sm)
     # Validate and render all outputs before mutating any public files.
+    if image_bytes:
+        image_target = ROOT/'special-reports'/image_url
+        if image_target.exists():
+            raise ValueError('Image asset already exists')
+        image_target.parent.mkdir(exist_ok=True)
+        image_target.write_bytes(image_bytes)
     target.write_text(page); indexpath.write_text(newindex); landingpath.write_text(landing); smpath.write_text(sm)
     print(canonical)
 
 if __name__ == '__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('source',type=Path);p.add_argument('--date');p.add_argument('--slug')
+    p.add_argument('--image',type=Path);p.add_argument('--image-alt');p.add_argument('--image-width',type=int,default=1400);p.add_argument('--image-height',type=int,default=600)
     p.add_argument('--preview-dir',type=Path);p.add_argument('--publish',action='store_true');p.add_argument('--approval',type=Path)
     try:
         run(p.parse_args())

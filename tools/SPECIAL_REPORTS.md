@@ -33,10 +33,17 @@ python3 tools/publish_special_report.py /absolute/path/FINAL.md --slug report-sl
 }
 ```
 
-原稿仍含 pending 状态、来源占位符、发布前核验说明或缺失表1时拒绝发布。先按证据完成修订，归档修订稿，再生成相应记录。修订需保留原译文与编者附录的归属，不擅自改写数据。每份文章都需要有效授权依据；对于已获得覆盖未来文章的授权，可引用同一授权证据。
+原稿仍含 pending 状态、未链接的来源占位符、未完成的发布前核验说明或缺失表1时拒绝发布。已完成的历史核验说明可以保留，但需设置 verification_status 为 completed 或 completed-with-disclosed-limitations，verification_notes_section 指向正文中实际存在的出版核验完成记录；披露数据局限不代表将原文全部数据确认为正确。先按证据完成修订，归档修订稿，再生成相应记录。修订需保留原译文与编者附录的归属，不擅自改写数据。每份文章都需要有效授权依据；对于已获得覆盖未来文章的授权，可引用同一授权证据。
 
 ```sh
 python3 tools/publish_special_report.py /absolute/path/FINAL.md --date YYYY-MM-DD --publish --approval /absolute/path/private-review.json
 ```
 
 工具仅生成文章 HTML，更新 intelligence.html 的 Special Reports 区块、专题目录与 sitemap.xml。验证桌面/手机排版、正文/脚注/附录、链接、最新置顶及其他栏目未变化，审查 `git diff --check`。按官网现有方式 fetch 最新 main、提交精确文件、push；确认部署 commit 并访问线上页面。不要发布尚未过门槛的文章。
+
+
+## 用户指定配图
+
+提供 `--image /absolute/path/authorized.jpg --image-alt "图片描述" --image-width 1400 --image-height 600`（宽高必须为实际原图尺寸）。工具原样复制 JPEG 到 `/special-reports/assets/`，在主标题后、正文前居中显示，最大宽度980px，按原始比例适配手机。核验记录需增加 image_sha256，将图片授权绑定到实际文件。不得从原文网站下载第三方配图替代用户授权图。
+
+首篇文章允许用户指定日期直接发布；后续默认每周日由用户上传触发，不创建自动调度，不把原始报告日期当网站发布日期。

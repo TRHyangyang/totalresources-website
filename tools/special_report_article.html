@@ -63,7 +63,8 @@ footer{background:#031321;color:rgba(255,255,255,.58);padding:29px 0;font-size:1
 .footer-inner{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
 .footer-inner strong{color:#fff;margin-right:10px}
 @media(max-width:760px){.container{width:90%}.nav{padding:20px 0;align-items:flex-start;flex-direction:column}.nav-links{gap:12px 17px}.article-hero{padding:48px 0}.article-hero h1{font-size:30px}.publication-meta-inner{width:90%;gap:8px 22px;padding:16px 0}.publication-meta .publication-label{width:100%}.article-wrap{padding:38px 0 70px}.article-body{font-size:16.5px;line-height:1.92}.article-body h1{font-size:13px}.article-body h1+h2{font-size:26px}.article-body h2{font-size:23px}.article-body p{margin-bottom:22px}.article-body hr{margin:43px 0 26px}.article-body table{font-size:14px;min-width:760px}.article-body th,.article-body td{padding:14px 15px}.article-body .publication-signature{font-size:16.5px;padding:23px 22px}.article-body .disclaimer-heading+p{font-size:14px;padding:21px 20px}}
-.article-body .footnote{font-size:14px}.article-body pre{overflow:auto;background:var(--light);padding:18px}.article-body img{max-width:100%;height:auto}.article-body table{display:block;overflow:auto}.article-body :target{scroll-margin-top:24px}
+.article-body .footnote{font-size:14px}.article-body pre{overflow:auto;background:var(--light);padding:18px}.article-body img{max-width:100%;height:auto}.article-body table{width:100%;min-width:560px}.article-body :target{scroll-margin-top:24px}
+.report-hero-image{max-width:980px;margin:28px auto 24px}.report-hero-image img{display:block;width:100%;height:auto;max-width:100%;margin:0 auto}.article-hero h1{max-width:980px}@media(max-width:760px){.article-hero h1{font-size:28px}}
 </style>
 </head>
 <body>
@@ -72,7 +73,7 @@ footer{background:#031321;color:rgba(255,255,255,.58);padding:29px 0;font-size:1
 <nav class="nav-links" aria-label="Primary navigation">
 <a href="../index.html">Home</a><a href="../about.html">About</a><a href="../business.html">Business</a><a href="../projects.html">Projects</a><a href="../intelligence.html">Intelligence</a><a class="basinol-link" href="../basinol.html">BASINOL®</a>
 </nav></div></header>
-<div class="article-hero"><div class="container"><div class="eyebrow">TOTAL RESOURCES INTELLIGENCE · SPECIAL REPORTS</div><h1>{{TITLE}}</h1><p>发布日期 {{DATE}} · 专题研究</p></div></div>
+<div class="article-hero"><div class="container"><div class="eyebrow">TOTAL RESOURCES INTELLIGENCE · SPECIAL REPORTS</div><h1>{{TITLE}}</h1>{{HEROIMAGE}}<p>发布日期 {{DATE}} · 专题研究</p></div></div>
 <div class="publication-meta"><div class="publication-meta-inner"><span class="publication-label">03 Special Reports · 专题研究</span><span class="meta-item">作者<strong>{{AUTHORS}}</strong></span><span class="meta-item">来源<strong>{{SOURCE}}</strong></span><span class="meta-item">原始日期<strong>{{ORIGINALDATE}}</strong></span><span class="meta-item">Publication Date<strong>{{DATE}}</strong></span></div></div>
 <main class="container"><div class="article-wrap"><a class="back-link" href="../intelligence.html#special-reports">← 返回 Special Reports</a><article class="article-body">{{ARTICLE}}</article></div></main>
 <footer><div class="container footer-inner"><div><strong>TOTAL RESOURCES INTELLIGENCE</strong> Macro Compass · Industrial Research Platform</div><div>© 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)</div></div></footer>

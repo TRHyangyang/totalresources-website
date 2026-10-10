@@ -4,7 +4,7 @@ Explicit human-approved FINAL Markdown is the sole content source. Archive the o
 
 `02 Global Intelligence（全球情报）/Weekly Outlook（每周展望）/YYYY/MM/`
 
-YYYY/MM comes from the publication `date`. Required YAML fields: `date: YYYY-MM-DD`, `status: FINAL` (or `publication_status: FINAL`), `title`; optional `subtitle`.
+YYYY/MM comes from the publication `date`. Required YAML fields: `date: YYYY-MM-DD` (or `issue_date: YYYY-MM-DD`; if both exist they must agree), `status: FINAL` (or `publication_status: FINAL`), `title`; optional `subtitle` (defaults to the first level-two body heading).
 
 From a clean checkout of current origin/main, run:
 

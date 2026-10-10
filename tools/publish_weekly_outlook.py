@@ -22,12 +22,14 @@ def publish(source):
         raise ValueError('YAML front matter required')
     meta = {}
     for line in match[1].splitlines():
-        item = re.match(r'^(date|status|publication_status|title|subtitle):\s*(.*?)\s*$', line)
+        item = re.match(r'^(date|issue_date|status|publication_status|title|subtitle):\s*(.*?)\s*$', line)
         if item:
             meta[item[1]] = item[2].strip('\'"')
     if meta.get('status', meta.get('publication_status')) != 'FINAL':
         raise ValueError('Explicit FINAL status required')
-    day = meta.get('date', '')
+    if meta.get('date') and meta.get('issue_date') and meta['date'] != meta['issue_date']:
+        raise ValueError('Conflicting date and issue_date')
+    day = meta.get('date', meta.get('issue_date', ''))
     if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', day):
         raise ValueError('ISO publication date required')
     date.fromisoformat(day)
@@ -46,7 +48,8 @@ def publish(source):
     if dates and day <= max(dates):
         raise ValueError('Publication must be newer than the latest Weekly issue')
     title = html.escape(meta['title'])
-    subtitle = html.escape(meta.get('subtitle', ''))
+    heading = re.search(r'^##\s+(.+)$', match[2], re.M)
+    subtitle = html.escape(meta.get('subtitle') or (heading[1] if heading else ''))
     canonical = 'https://totalresources.info/' + relative
     page = (ROOT / 'tools/weekly_outlook_article.html').read_text(encoding='utf-8')
     values = {'TITLE': title + ('｜' + subtitle if subtitle else ''), 'DESCRIPTION': title + ' ' + subtitle,

@@ -34,6 +34,54 @@ def scalar(value):
         return '、'.join(map(str, value))
     return str(value or '')
 
+HOME_START = '<!-- SPECIAL REPORTS HOME -->'
+HOME_END = '<!-- END SPECIAL REPORTS HOME -->'
+
+
+def summary_text(meta, body):
+    """Prefer supplied editorial summary; otherwise retain a short prose excerpt."""
+    text = scalar(meta.get('summary') or meta.get('description'))
+    if not text:
+        for paragraph in re.split(r'\n\s*\n', body):
+            paragraph = paragraph.strip()
+            if not paragraph or paragraph.startswith(('#', '>', '<', '|', '-', '*', 'https://')):
+                continue
+            text = paragraph
+            break
+    rendered = markdown.markdown(text)
+    class Text(HTMLParser):
+        def __init__(self):
+            super().__init__(); self.parts = []
+        def handle_data(self, data):
+            self.parts.append(data)
+    parser = Text(); parser.feed(rendered)
+    plain = re.sub(r'\s+', ' ', ''.join(parser.parts)).strip()
+    if not plain:
+        raise ValueError('Homepage requires summary/description or a prose paragraph')
+    return plain if len(plain) <= 140 else plain[:139] + '…'
+
+
+def home_section(title, day, relative, summary):
+    title, summary = html.escape(title), html.escape(summary)
+    return (HOME_START + '\n<section class="sr-home" aria-labelledby="sr-home-heading"><div class="container">'
+            '<div class="sr-home-head"><div class="eyebrow">SPECIAL REPORTS</div>'
+            '<h2 id="sr-home-heading">Special Reports｜专题研究</h2>'
+            '<p>每周日 · 全球战略、能源资源、地缘政治与产业深度研究</p></div>'
+            '<article class="sr-home-card"><time class="sr-home-date" datetime="'+day+'">'+day+'</time>'
+            '<div class="sr-home-content"><h3>'+title+'</h3><p>'+summary+'</p></div>'
+            '<a class="sr-home-read" href="'+relative+'">阅读专题文章 →</a></article>'
+            '<a class="sr-home-all" href="special-reports/">查看全部专题 <span lang="en">View All Special Reports →</span></a>'
+            '</div></section>\n' + HOME_END)
+
+
+def update_home(home, title, day, relative, summary):
+    if home.count(HOME_START) != 1 or home.count(HOME_END) != 1:
+        raise ValueError('Homepage Special Reports section missing or ambiguous')
+    prefix, section = home.split(HOME_START)
+    section, suffix = section.split(HOME_END)
+    return prefix + home_section(title, day, relative, summary) + suffix
+
+
 def load(source):
     raw = source.read_bytes()
     text = raw.decode('utf-8-sig')
@@ -142,7 +190,10 @@ def run(args):
     archive = ''.join(ordered)
     latest = ordered[0]
     latest_slug = re.search(r'special-report:[^:]+:([^ ]+) ', latest)[1]
+    homepath = ROOT/'index.html'
+    home = homepath.read_text()
     if latest_slug == slug:
+        home = update_home(home, title, day, relative, summary_text(meta, body))
         card = f'<div class="latest-card"><div class="latest-date">{day}</div><h3>{escaped["TITLE"]}</h3><p>{escaped["SOURCE"]} · {escaped["AUTHORS"]}</p><a href="{relative}">Read Special Report →</a></div>'
         section = re.sub(r'<div class="latest-card">.*?</div>(?=\s*<div class="archive-list">)',lambda m:card,section,flags=re.S)
     section = re.sub(r'<ul>.*?</ul>',lambda m:'<ul>'+archive+'</ul>',section,flags=re.S)
@@ -161,7 +212,7 @@ def run(args):
             raise ValueError('Image asset already exists')
         image_target.parent.mkdir(exist_ok=True)
         image_target.write_bytes(image_bytes)
-    target.write_text(page); indexpath.write_text(newindex); landingpath.write_text(landing); smpath.write_text(sm)
+    target.write_text(page); indexpath.write_text(newindex); landingpath.write_text(landing); smpath.write_text(sm); homepath.write_text(home)
     print(canonical)
 
 if __name__ == '__main__':

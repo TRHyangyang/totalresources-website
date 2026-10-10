@@ -39,7 +39,7 @@ python3 tools/publish_special_report.py /absolute/path/FINAL.md --slug report-sl
 python3 tools/publish_special_report.py /absolute/path/FINAL.md --date YYYY-MM-DD --publish --approval /absolute/path/private-review.json
 ```
 
-工具仅生成文章 HTML，更新 intelligence.html 的 Special Reports 区块、专题目录与 sitemap.xml。验证桌面/手机排版、正文/脚注/附录、链接、最新置顶及其他栏目未变化，审查 `git diff --check`。按官网现有方式 fetch 最新 main、提交精确文件、push；确认部署 commit 并访问线上页面。不要发布尚未过门槛的文章。
+工具仅生成文章 HTML，更新 intelligence.html 的 Special Reports 区块、专题目录、首页 Special Reports 最新文章卡片与 sitemap.xml。验证桌面/手机排版、正文/脚注/附录、链接、最新置顶及其他栏目未变化，审查 `git diff --check`。按官网现有方式 fetch 最新 main、提交精确文件、push；确认部署 commit 并访问线上页面。不要发布尚未过门槛的文章。
 
 
 ## 用户指定配图
@@ -47,3 +47,8 @@ python3 tools/publish_special_report.py /absolute/path/FINAL.md --date YYYY-MM-D
 提供 `--image /absolute/path/authorized.jpg --image-alt "图片描述" --image-width 1400 --image-height 600`（宽高必须为实际原图尺寸）。工具原样复制 JPEG 到 `/special-reports/assets/`，在主标题后、正文前居中显示，最大宽度980px，按原始比例适配手机。核验记录需增加 image_sha256，将图片授权绑定到实际文件。不得从原文网站下载第三方配图替代用户授权图。
 
 首篇文章允许用户指定日期直接发布；后续默认每周日由用户上传触发，不创建自动调度，不把原始报告日期当网站发布日期。
+
+
+## 首页同步
+
+正式发布时同一工具更新 index.html 中独立的 SPECIAL REPORTS HOME 区块，只显示最新一篇的标题、网站发布日期、简短摘要、阅读链接与全部专题入口。模块始终位于 Weekly Outlook 下方。优先使用 FINAL.md 的 summary 或 description；缺省时截取正文首个普通段落（最多140字），不另写研究内容。历史回填不会替换首页较新的文章。原有《环球脉搏》、Daily Headlines、Weekly Outlook 的 HTML、样式和脚本不变；无需新增自动化或修改 Website Skill。发布提交必须包含 index.html。

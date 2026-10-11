@@ -2,13 +2,17 @@
 """Daily Headlines V1: local evidence only; guarded preview generation.
 Editorial decisions are an explicit input, never inferred from importance labels.
 """
+import importlib.util
 import argparse, datetime as dt, difflib, hashlib, html, json, pathlib, re, shutil
 import string, sys, tempfile, urllib.parse, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
+sys.dont_write_bytecode=True
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+_spec=importlib.util.spec_from_file_location('daily_evidence', pathlib.Path(__file__).with_name('daily_headlines_evidence.py'))
+evidence_module=importlib.util.module_from_spec(_spec);_spec.loader.exec_module(evidence_module)
 TZ = ZoneInfo('Asia/Shanghai')
 PRIORITIES = [
- ('ENERGY',r'oil|diesel|refiner|gasoline|lng|natural gas|crude|aramco|hormuz|fuel|energy stockpile',1),
+ ('ENERGY',r'\b(?:oil|diesel|refiner(?:y|ies|s)?|refining|gasoline|lng|natural gas|crude|aramco|hormuz|fuels?|energy stockpile)\b',1),
  ('GEOPOLITICS',r'houthi|yemen|saudi|iran|tanker|shipping|sanction|red sea|bab.el.mand',2),
  ('MACRO',r'fed\b|\brates?\b|dollar|euro\b|fiscal|private.credit|\bbonds?\b|treasur|inflation|payroll|debt|financial',3),
  ('CHINA',r'china|chinese|beijing',4),
@@ -46,17 +50,27 @@ def eventid(item):
   if re.search(pattern,text):return 'dh-'+name
  slug=re.sub(r'[^a-z0-9]+','-',text).strip('-')
  return 'dh-'+slug[:100]
+def evidence_text(i):
+ return i.get('evidence_text') or i.get('summary','')
+
+def non_news(i):
+ title=i.get('headline','').lower();url=i.get('url','').lower()
+ return bool(re.search(r'coupon codes?|coupons?[:–—]|promo code|discount code|\bbest\b.*(?:phones|laptops|power banks|deals|bottles)|shopping guide|buying guide|prime day|james bond.*watch',title) or re.search(r'/(?:investing|rating-system|tools|coupons|promo-codes)(?:/|#|$)',url))
+
 def classify(i):
+ # Compound verbs such as conflict-fueled are not energy-sector keywords.
  text=(i['headline']+' '+clean(i.get('summary'))).lower()
- if re.search(r'james bond|bond watches|prime day|documentary|best power banks|review:',text):return ('OTHER',7)
- # Chemical and AI subject keywords override upstream category errors.
+ text=re.sub(r'\b[\w]+[-–—]fuel(?:ed|led|ing|ling)\b','',text)
+ if non_news(i) or re.search(r'james bond|bond watches|prime day|documentary|best power banks|review:',text):return ('OTHER',7)
  if re.search(PRIORITIES[4][1],text):return ('CHEMICALS',5)
- if re.search(PRIORITIES[5][1],text) and not re.search(r'fuel|oil|diesel|hormuz',text):return ('AI GOVERNANCE',6)
+ if re.search(PRIORITIES[5][1],text) and not re.search(PRIORITIES[0][1],text):return ('AI GOVERNANCE',6)
  for category,pattern,priority in PRIORITIES:
   if re.search(pattern,text):return(category,priority)
  return ('OTHER',7)
+
 def insufficient(i):
- raw=i.get('summary','');s=clean(raw)
+ raw=evidence_text(i);s=clean(raw)
+ if not i.get('evidence_text') and (i.get('summary_truncated') or len(i.get('summary',''))==400):return 'TRUNCATED_SUMMARY'
  if not s:return 'EMPTY_SUMMARY'
  if len(s)<65:return 'INSUFFICIENT_FACTS'
  if re.search(r'<[^>]*$',raw) or re.search(r'<(?:p|a|div|ul)\b[^>]*>\s*$',raw):return 'TRUNCATED_SUMMARY'
@@ -64,7 +78,7 @@ def insufficient(i):
  if s.lower()==i['headline'].lower():return 'TITLE_ONLY'
  return None
 
-def discover(scan_path,date,history_dir,rss):
+def discover(scan_path,date,history_dir,rss,evidence_path=None):
  input_bytes=scan_path.read_bytes();scan=json.loads(input_bytes);input_hash=hashlib.sha256(input_bytes).hexdigest(); now=dt.datetime.now(TZ)
  if date!=now.date().isoformat():raise ValueError('Only the current Shanghai date is allowed')
  if scan.get('date')!=date:raise ValueError('Scan date mismatch')
@@ -73,6 +87,9 @@ def discover(scan_path,date,history_dir,rss):
  if not dt.timedelta(hours=23)<=cutoff-start<=dt.timedelta(hours=25):raise ValueError('Invalid scan window')
  if not isinstance(scan.get('items'),list) or not scan['items']:raise ValueError('Missing scan items')
  if not any(v.get('status')=='OK' for v in scan.get('source_status',{}).values()):raise ValueError('No successful source')
+ evidence_hash=None
+ if evidence_path:
+  evidence_hash=digest(evidence_path);scan=evidence_module.overlay(scan,json.loads(pathlib.Path(evidence_path).read_text()),input_hash)
  previous=[]
  for p in history_dir.glob('**/web_intel_*.json'):
   if p==scan_path:continue
@@ -102,6 +119,7 @@ def discover(scan_path,date,history_dir,rss):
     if not start<=t<=cutoff:reason='OUT_OF_WINDOW'
     elif i.get('time_source') not in ('FEED_PUBDATE','PAGE_METADATA'):reason='TIME_NOT_ABSOLUTELY_VERIFIED'
    except (ValueError,KeyError,TypeError):reason='TIME_UNVERIFIED'
+  if non_news(i):reason='NON_NEWS'
   if not reason and i.get('noise_reason'):reason='NOISE_FILTERED'
   if not reason:reason=insufficient(i)
   if not reason and category=='OTHER':reason='NO_MCIS_RELEVANCE'
@@ -112,7 +130,7 @@ def discover(scan_path,date,history_dir,rss):
   possible.update({id(x):x for x in history_topics.get(eventid(i),[])})
   for x in possible.values():
    if eventid(x)==eventid(i) or urlnorm(x.get('url',''))==urlnorm(i['url']) or difflib.SequenceMatcher(None,clean(x.get('headline')).lower(),i['headline'].lower()).ratio()>.9:
-    prior.append({'headline':x.get('headline'),'summary':clean(x.get('summary')),'source_url':x.get('url')})
+    prior.append({'headline':x.get('headline'),'summary':clean(evidence_text(x)),'source_url':x.get('url')})
   eid=eventid(i)
   published_before=[x for x in memory if x['event_id']==eid or urlnorm(x['source_url'])==urlnorm(i['url'])]
   score={1:85,2:80,3:80,4:78,5:76,6:72,7:0}[priority]
@@ -124,14 +142,14 @@ def discover(scan_path,date,history_dir,rss):
   if not reason and score<75:reason='BELOW_MATERIALITY_THRESHOLD'
   rows.append({'item_index':n,'event_id':eid,'category':category,'priority':priority,'score':score,
     'headline':i['headline'],'source_name':i['source'],'source_url':i['url'],'source_publish_time':i.get('published'),
-    'summary':clean(i.get('summary')),'importance':i.get('importance'),'reason':reason,
+    'summary':clean(i.get('summary')),'evidence_text':clean(evidence_text(i)),'evidence_origin':i.get('evidence_origin','SCAN'),'importance':i.get('importance'),'reason':reason,
     'previous_source_matches':prior,'previous_published_events':published_before})
  # Relevance ranking independent of upstream importance. Clustering retains evidence rows.
  clusters={}
  for row in rows:
   clusters.setdefault(row['event_id'],[]).append(row)
  ranked=sorted(clusters.values(),key=lambda c:(min(x['priority'] for x in c),-max(x['score'] for x in c),c[0]['event_id']))
- report={'date':date,'scan_sha256':input_hash,'source_raw_count':len(rows),
+ report={'date':date,'scan_sha256':input_hash,'evidence_sha256':evidence_hash,'source_raw_count':len(rows),
   'source_in_window_count':sum(i.get('window_status')=='IN_WINDOW_24H' for i in scan['items']),
   'source_clean_window_count':sum(i.get('window_status')=='IN_WINDOW_24H' and not i.get('noise_reason') for i in scan['items']),
   'eligible_record_count':sum(not r['reason'] for r in rows),'event_cluster_count':len(clusters),
@@ -180,8 +198,10 @@ def apply_editorial_clusters(report,packet):
   report['eligible_clusters']=[c for c in groups.values() if any(not r['reason'] for r in c)]
 
 def validate(scan,report,packet,verify):
+ if scan.get('evidence_mode')=='HISTORICAL_TEST':raise ValueError('Historical test evidence cannot be published')
  apply_editorial_clusters(report,packet)
  if packet.get('date')!=report['date'] or packet.get('scan_sha256')!=report['scan_sha256']:raise ValueError('Editorial input snapshot mismatch')
+ if report.get('evidence_sha256') and packet.get('evidence_sha256')!=report['evidence_sha256']:raise ValueError('Editorial evidence snapshot mismatch')
  if packet.get('review',{}).get('status')!='REVIEWED':raise ValueError('Editorial review required')
  required=['facts_vs_analysis','numbers_names','headline_summary_consistency','material_novelty','evidence_sufficiency']
  if not all(packet['review'].get(k) is True for k in required):raise ValueError('Missing editorial QA checklist')
@@ -194,7 +214,7 @@ def validate(scan,report,packet,verify):
   if not packet.get('no_material_change_reason') or packet.get('coverage_complete') is not True:raise ValueError('Empty output needs completed materiality and coverage assessment')
   if any(v.get('status')!='OK' for v in scan.get('source_status',{}).values()):raise ValueError('Failed sources cannot imply no material change')
   for row in report['records']:
-   if row['score']>=75 and row['reason'] not in ('OUT_OF_WINDOW','TIME_UNVERIFIED','NOISE_FILTERED'):
+   if row['score']>=75 and row['reason'] not in ('OUT_OF_WINDOW','TIME_UNVERIFIED','NOISE_FILTERED','NON_NEWS'):
     if row['event_id'] not in decisions:raise ValueError('Unresolved evidence gaps: output must remain PENDING')
     if row['reason'] in ('EMPTY_SUMMARY','TRUNCATED_SUMMARY','TIME_NOT_ABSOLUTELY_VERIFIED','INSUFFICIENT_FACTS') and decisions[row['event_id']].get('disposition') not in ('NON_MATERIAL','OLD_NEWS','OUT_OF_SCOPE'):raise ValueError('Unresolved high-relevance evidence gap cannot mean no material change')
  seen=set();headlines=[];urls=[]
@@ -215,17 +235,17 @@ def validate(scan,report,packet,verify):
   if any(r['previous_source_matches'] or r['previous_published_events'] for r in rows):
    if not h.get('material_new_information') or not h.get('prior_comparison') or not h.get('novelty_quote'):raise ValueError('Old-news replay lacks comparison and new evidence quote')
    prior_text=' '.join(x.get('summary','') for r in rows for x in r['previous_source_matches'])
-   if h['novelty_quote'] not in ' '.join(r['headline']+' '+r['summary'] for r in rows):raise ValueError('Novelty quote not in current evidence')
+   if h['novelty_quote'] not in ' '.join(r['headline']+' '+r.get('evidence_text',r['summary']) for r in rows):raise ValueError('Novelty quote not in current evidence')
    prior_text+=' '+' '.join(x.get('headline','') for r in rows for x in r['previous_source_matches'])
    if h['novelty_quote'] in prior_text:raise ValueError('Novelty quote already in historical evidence')
   if not h.get('material_new_information'):raise ValueError('Material novelty assessment missing')
-  corpus=' '.join(scan['items'][n]['headline']+' '+clean(scan['items'][n].get('summary')) for n in indices)
+  corpus=' '.join(scan['items'][n]['headline']+' '+clean(evidence_text(scan['items'][n])) for n in indices)
   facts=h.get('fact_checks',[])
   if not facts:raise ValueError('No fact-to-evidence mapping')
   for f in facts:
    n=f['item_index']
    if n not in indices:raise ValueError('Fact uses unapproved source')
-   original=scan['items'][n]['headline']+' '+clean(scan['items'][n].get('summary'))
+   original=scan['items'][n]['headline']+' '+clean(evidence_text(scan['items'][n]))
    if not f.get('quote') or f['quote'] not in original or not f.get('fact_cn'):raise ValueError('Evidence quote not found')
   fact_text=''.join(f['fact_cn'] for f in facts)
   if h['fact_cn']!=fact_text:raise ValueError('Unmapped public facts')

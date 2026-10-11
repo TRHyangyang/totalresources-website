@@ -18,6 +18,21 @@ class SafetyTests(unittest.TestCase):
  def tearDown(self):
   m.check_url=self.old;m.ROOT=self.old_root;self.fixture_root.cleanup()
  def check(self):return m.validate(self.scan,self.report,self.packet,True)
+ def test_recovered_fact_quotes_use_full_evidence(self):
+  recovered='The Fed confirmed a new collateral review affecting TEST Bank.'
+  self.item['evidence_text']=recovered;self.row['evidence_text']=recovered
+  self.h['fact_checks'][0]['quote']=recovered
+  self.assertEqual(len(self.check()[0]['headlines']),1)
+ def test_recovery_does_not_waive_editorial_review(self):
+  self.item['evidence_text']=self.item['summary'];self.packet['review']['status']='PENDING'
+  self.assertRaisesRegex(ValueError,'review required',self.check)
+ def test_evidence_packet_hash_required(self):
+  self.report['evidence_sha256']='frozen'
+  self.assertRaisesRegex(ValueError,'evidence snapshot',self.check)
+  self.packet['evidence_sha256']='frozen';self.assertEqual(len(self.check()[0]['headlines']),1)
+ def test_historical_test_never_validates_for_publication(self):
+  self.scan['evidence_mode']='HISTORICAL_TEST'
+  self.assertRaisesRegex(ValueError,'Historical test',self.check)
  def test_valid_evidence(self):self.assertEqual(len(self.check()[0]['headlines']),1)
  def test_fabricated_number(self):
   self.h['headline_cn']+='99%';self.assertRaisesRegex(ValueError,'Unsupported number',self.check)

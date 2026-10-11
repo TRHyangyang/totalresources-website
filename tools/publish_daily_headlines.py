@@ -19,7 +19,21 @@ TOPICS=[('hormuz-flow',r'hormuz.*(?:traffic|flow)|oil drops as hormuz'),('saudi-
  ('us-diesel-tax',r'diesel.*restrictions|gas.tax|pump pain'),('euro-fiscal',r'euro.*(?:fiscal|sink|dollar)|eurodrama'),
  ('private-credit-review',r'private.credit'),('ai-task-force',r'ai task force'),('openai-legal',r'legal risks.*openai')]
 def digest(p): return hashlib.sha256(pathlib.Path(p).read_bytes()).hexdigest()
-def clean(value): return html.unescape(re.sub(r'<[^>]*>', '',value or '')).strip()
+def clean(value):
+ # Preserve paragraph/list boundaries when converting supplied HTML to evidence text.
+ value=re.sub(r'</?(?:p|div|li|ul|ol|br|h[1-6])\b[^>]*>', ' ', value or '', flags=re.I)
+ return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]*>', '',value))).strip()
+
+def public_status(receipt):
+ # Only the completed QA-failure outcome is public; never expose audit details.
+ date=receipt.get('date','')
+ if receipt.get('status')!='QA FAIL' or not re.fullmatch(r'\d{4}-\d{2}-\d{2}',date):
+  raise ValueError('Completed QA failure required')
+ ended=stamp(receipt['end_time'])
+ if ended.date().isoformat()!=date:raise ValueError('Failure date mismatch')
+ return {'schema_version':1,'date':date,'timezone':'Asia/Shanghai',
+         'status':'NO_VERIFIED_UPDATE','updated_at':receipt['end_time']}
+
 def urlnorm(url):
  u=urllib.parse.urlsplit(url); return urllib.parse.urlunsplit((u.scheme.lower(),u.netloc.lower(),u.path.rstrip('/'),'', ''))
 def stamp(value):
@@ -249,8 +263,10 @@ def card(h):
  source=' · '.join('<a href="'+esc(s['source_url'],quote=True)+'" rel="noopener noreferrer">'+esc(s['source_name'])+'</a> <time datetime="'+esc(s['source_publish_time'])+'">'+esc(stamp(s['source_publish_time']).strftime('%Y-%m-%d %H:%M'))+' CST</time>' for s in h['sources'])
  label={'CONFIRMED':'已交叉核实','PARTIAL':'部分核实 · 媒体报道口径','DEVELOPING':'事件发展中'}[h['confidence']]
  return '<article class="dh-card"><div class="dh-meta"><span class="dh-category">'+esc(h['category'])+'</span><span>'+esc(h['time'])+' CST</span></div><h3>'+esc(h['headline_cn'])+'</h3><p>'+esc(h['summary'])+'</p><p class="dh-note">'+label+'</p><p class="dh-source">来源：'+source+'</p></article>'
-def widget():
- return '''<section class="dh-section" data-daily-headlines aria-labelledby="dh-heading"><div class="dh-wrap"><p class="dh-eyebrow">DAILY HEADLINES</p><h2 id="dh-heading">每日头条</h2><p class="dh-caption"><span data-dh-date></span> · 能源、宏观与产业链的新变化</p><div class="dh-grid" hidden></div><p class="dh-state" role="status">今日情报更新待完成<span>Daily Intelligence Update Pending</span></p><a class="dh-action" href="/intelligence/daily-headlines/">查看全部今日头条 <span lang="en">View All Daily Headlines</span></a><noscript><p class="dh-caption">请进入日期归档查看已发布内容；今日状态需要 JavaScript 校验。</p></noscript></div></section>'''
+def widget(column=False):
+ heading='' if column else '<p class="dh-eyebrow">DAILY HEADLINES</p><h2 id="dh-heading">每日头条</h2>'
+ label='aria-label="今日更新"' if column else 'aria-labelledby="dh-heading"'
+ return '<section class="dh-section" data-daily-headlines '+label+'><div class="dh-wrap">'+heading+'<p class="dh-caption"><span data-dh-date></span> · 能源、宏观与产业链的新变化</p><div class="dh-grid" hidden></div><p class="dh-state" role="status"><span lang="en">Daily Intelligence Update Pending</span><span lang="zh-CN">今日情报更新待完成</span></p><a class="dh-action" href="/intelligence/daily-headlines/#archive"><span lang="en">View Archive</span><span lang="zh-CN">查看历史归档</span></a><noscript><p class="dh-caption">请进入日期归档查看已发布内容；今日状态需要 JavaScript 校验。</p></noscript></div></section>'
 
 def generate(out,payload):
  if out.exists():raise ValueError('Preview destination already exists')
@@ -269,7 +285,7 @@ def generate(out,payload):
  template=string.Template((out/'tools/daily_headlines_page.html').read_text())
  body='<div class="dh-list">'+''.join(card(h) for h in payload['headlines'])+'</div>' if payload['headlines'] else '<p class="dh-state">今日暂无重大情报变化<span>No Material Intelligence Change</span></p>'
  (pages/(date+'.html')).write_text(template.substitute(title=date+' 每日头条',canonical='https://totalresources.info/intelligence/daily-headlines/'+date+'.html',subtitle=date+' · 发布时区 Asia/Shanghai',content=body,archive=archive,script=''))
- (pages/'index.html').write_text(template.substitute(title='Daily Headlines / 每日头条',canonical='https://totalresources.info/intelligence/daily-headlines/',subtitle='今天发生了什么，什么最重要',content=widget(),archive=archive,script='<script src="/assets/js/daily-headlines.js" defer></script>'))
+ (pages/'index.html').write_text(template.substitute(title='Daily Headlines / 每日头条',canonical='https://totalresources.info/intelligence/daily-headlines/',subtitle='今天发生了什么，什么最重要',content=widget(column=True),archive=archive,script='<script src="/assets/js/daily-headlines.js" defer></script>'))
  index=out/'index.html';text=index.read_text()
  marker='<!-- DAILY HEADLINES V1 -->'
  if marker not in text:

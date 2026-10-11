@@ -5,6 +5,7 @@ spec=importlib.util.spec_from_file_location('daily',pathlib.Path(__file__).with_
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 class SafetyTests(unittest.TestCase):
  def setUp(self):
+  self.old_root=m.ROOT;self.fixture_root=tempfile.TemporaryDirectory();m.ROOT=pathlib.Path(self.fixture_root.name)
   self.date=dt.datetime.now(m.TZ).date().isoformat()
   self.item={'headline':'Fed reviews private-credit loans at TEST Bank','summary':'The Fed is reviewing loan valuations and collateral quality at TEST Bank.','source':'TEST SOURCE','url':'https://test.example.org/article','published':self.date+'T06:00:00+08:00','window_status':'IN_WINDOW_24H','time_source':'FEED_PUBDATE'}
   self.row={'item_index':0,'event_id':'dh-private-credit-review','reason':None,'headline':self.item['headline'],'summary':self.item['summary'],'source_url':self.item['url'],'source_name':'TEST SOURCE','source_publish_time':self.item['published'],'category':'MACRO','previous_source_matches':[],'previous_published_events':[],'score':90}
@@ -14,7 +15,8 @@ class SafetyTests(unittest.TestCase):
   self.h={'event_id':self.row['event_id'],'evidence_indices':[0],'headline_cn':'测试银行贷款估值审查','fact_cn':self.fact,'analysis_cn':'值得关注的是，估值审查可能影响银行风险偏好及信贷供给，尚不能据此判断已出现系统性损失。','confidence':'PARTIAL','material_new_information':'TEST 新监管审查','mcis_relevance':'TEST 金融条件','fact_checks':[{'item_index':0,'quote':self.item['summary'],'fact_cn':self.fact}],'entities':[]}
   self.packet={'date':self.date,'scan_sha256':'test','review':{'status':'REVIEWED',**{k:True for k in ['facts_vs_analysis','numbers_names','headline_summary_consistency','material_novelty','evidence_sufficiency']}},'headlines':[self.h],'decisions':{self.row['event_id']:{'action':'SELECT','reason':'TEST'}}}
   self.old=m.check_url;m.check_url=lambda url:{'url':url,'status':200}
- def tearDown(self):m.check_url=self.old
+ def tearDown(self):
+  m.check_url=self.old;m.ROOT=self.old_root;self.fixture_root.cleanup()
  def check(self):return m.validate(self.scan,self.report,self.packet,True)
  def test_valid_evidence(self):self.assertEqual(len(self.check()[0]['headlines']),1)
  def test_fabricated_number(self):
@@ -72,4 +74,20 @@ class SafetyTests(unittest.TestCase):
   self.packet['clusters']=[{'event_id':self.row['event_id'],'item_indices':[0],'rationale':'TEST same event'}];self.assertEqual(len(self.check()[0]['headlines']),1)
  def test_unknown_gap_blocks_no_change(self):
   self.row['reason']='TRUNCATED_SUMMARY';self.packet.update(headlines=[],no_material_change_reason='TEST',coverage_complete=True,decisions={self.row['event_id']:{'action':'REJECT','reason':'TEST insufficient'}});self.assertRaisesRegex(ValueError,'evidence gap',self.check)
+class ExtractionAndStatusTests(unittest.TestCase):
+ def test_html_block_boundaries_preserved(self):
+  self.assertEqual(m.clean('<p>First <a href="https://example.org">fact</a>.</p><p>Second fact &amp; detail.</p>'), 'First fact. Second fact & detail.')
+ def test_incomplete_html_still_rejected(self):
+  self.assertEqual(m.insufficient({'headline':'TEST','summary':'<p>'+('Evidence words '*8)+'</p><p><st'}),'TRUNCATED_SUMMARY')
+ def test_public_failure_has_no_private_details(self):
+  receipt={'date':'2026-10-11','status':'QA FAIL','end_time':'2026-10-11T07:11:41+08:00','error':'PRIVATE','folder':'PRIVATE','input_files':['PRIVATE']}
+  result=m.public_status(receipt)
+  self.assertEqual(result['status'],'NO_VERIFIED_UPDATE');self.assertNotIn('PRIVATE',str(result))
+  self.assertEqual(set(result),{'schema_version','date','timezone','status','updated_at'})
+ def test_incomplete_run_cannot_be_public_failure(self):
+  for status in ['INPUT NOT READY','DEPLOY FAIL','SUCCESS']:
+   with self.assertRaises(ValueError):m.public_status({'date':'2026-10-11','status':status,'end_time':'2026-10-11T07:11:41+08:00'})
+  with self.assertRaises(KeyError):m.public_status({'date':'2026-10-11','status':'QA FAIL'})
+ def test_column_has_no_duplicate_heading(self):
+  self.assertNotIn('<h2',m.widget(column=True));self.assertIn('#archive',m.widget(column=True))
 if __name__=='__main__':unittest.main()

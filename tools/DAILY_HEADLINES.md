@@ -19,11 +19,11 @@ Secondary input: completed current-date RSS Intelligence. The current RSS Markdo
 Each headline: `event_id`, `date`, `time` (source publication month/day/time in CST), `headline_cn`, `headline_en`, `summary`, `category`, `source_name`, `source_url`, `source_publish_time`, `sources`, `confidence`, `mcis_relevance`, `rank`, `material_new_information`.
 All sources are retained. PARTIAL means a source-attributed report, not an independent confirmation. CONFIRMED requires multiple independent evidence domains plus editorial verification; domains alone do not establish independence.
 
-Date JSON and date HTML are immutable archives. `latest.json` mirrors the latest successful daily result. On the homepage and column index, stale/missing/failed/malformed data shows PENDING and zero cards; a real completed no-change assessment shows NO_MATERIAL_CHANGE. Pending is a display state, never an archived successful production. Open tabs recheck every minute and on visibility change. The homepage displays at most the first three ranked events; date pages display all (maximum five).
+Date JSON and date HTML are immutable archives. `latest.json` mirrors the latest successful daily result. On the homepage and column index, stale/missing/malformed data without a current completed review failure shows PENDING and zero cards; a real completed no-change assessment shows NO_MATERIAL_CHANGE. Pending is a display state, never an archived successful production. Open tabs recheck every minute and on visibility change. The homepage displays at most the first three ranked events; date pages display all (maximum five).
 
 ## Safety boundaries
 
-No public output is produced if evidence, source URLs, snapshots or archive checks fail. A timestamped QA FAIL receipt is retained. A completed no-change result additionally requires a coverage assessment and no unresolved high-priority evidence gaps. Existing production remains untouched. Do not refresh an old event merely because a feed updated its timestamp. Comparison and editorial judgment are necessary for substantive novelty.
+No article or successful-content output is produced if evidence, source URLs, snapshots or archive checks fail. A timestamped QA FAIL receipt is retained. A completed no-change result additionally requires a coverage assessment and no unresolved high-priority evidence gaps. Existing production remains untouched. Do not refresh an old event merely because a feed updated its timestamp. Comparison and editorial judgment are necessary for substantive novelty.
 
 Before a later accepted deployment, refresh origin/main, stop on remote changes or dirty state, stage only reviewed files, use normal commit/push, and verify GitHub Pages plus prior articles. Coordinate with other publishers; never auto-merge, rebase or force-push.
 
@@ -36,3 +36,11 @@ MCIS categories are ranking priors, not quotas. Credible single-source factual r
 Optional `clusters` (`event_id`, `item_indices`, `rationale`) merge semantically duplicate records before final decisions. The identity must preserve an existing input or published event ID; new IDs cannot be invented daily to evade history. Every published claim retains a literal quote and a source index. Previously published events require substantive new evidence and an explicit comparison; continuation alone is insufficient.
 
 The private production runtime is under the existing Vault automation area, outside this public website repository. Inputs, editorial packets, runtime config, credentials, receipts and screenshots must never be committed to the website. The existing wake-recovery service supports current-day catch-up and bounded network/input retries. Its success check requires a verified production receipt, not merely an agent run returning OK.
+
+## Review outcome display
+
+The existing 07:10 runtime publishes `data/daily-headlines/status.json` after a completed QA FAIL, using `public_status(receipt)` to expose only schema version, date, timezone, NO_VERIFIED_UPDATE and completion time. Internal errors, paths and candidate data remain private. A status-only commit never modifies latest.json, dated articles, the sitemap or accepted publication receipts. It uses the same clean-main, unchanged-remote and ordinary-push checks; failures are recorded separately as status_publication_error/status_deployment_result.
+
+Both current-date readers show `No Verified Update｜今日暂无符合发布标准的更新` for this outcome, explicitly stating that review failure does not mean no major news occurred. A verified current-day article always takes precedence; a previous-day outcome is ignored. Pending and failed-review buttons link to `#archive`. No new schedule or news source is added.
+
+HTML-to-text conversion preserves paragraph and list boundaries. Truncated or missing upstream summaries and unverified timestamps remain ineligible. This does not reconstruct missing evidence or relax editorial gates.

@@ -1,4 +1,4 @@
-/* Independent current-date reader. Stale, missing or failed production is PENDING. */
+/* Current Shanghai date only. A failed review is distinct from pending/no change. */
 (() => {
   'use strict';
   const root = document.querySelector('[data-daily-headlines]');
@@ -10,49 +10,67 @@
   const dateInShanghai = () => new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit'
   }).format(new Date());
+  const element = (tag, cls, value, lang) => {
+    const node = document.createElement(tag); node.className = cls; node.textContent = value;
+    if (lang) node.lang = lang;
+    return node;
+  };
+  const label = (target, en, cn) => target.replaceChildren(
+    element('span', '', en, 'en'), element('span', '', cn, 'zh-CN'));
   const pending = () => {
     grid.replaceChildren(); grid.hidden = true; state.hidden = false;
-    state.replaceChildren(document.createTextNode('今日情报更新待完成'));
-    const en = document.createElement('span'); en.textContent = 'Daily Intelligence Update Pending'; state.append(en);
-    dateLabel.textContent = dateInShanghai(); action.href = '/intelligence/daily-headlines/';
-  };
-  const element = (tag, cls, value) => {
-    const node = document.createElement(tag); node.className = cls; node.textContent = value; return node;
+    label(state, 'Daily Intelligence Update Pending', '今日情报更新待完成');
+    dateLabel.textContent = dateInShanghai();
+    action.href = '/intelligence/daily-headlines/#archive';
+    label(action, 'View Archive', '查看历史归档');
   };
   let request = 0;
   async function refresh() {
     const token = ++request; pending();
     const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 10000);
+    const read = async path => {
+      try {
+        const response = await fetch(path, {cache:'no-store',signal:controller.signal});
+        return response.ok ? await response.json() : null;
+      } catch (_) { return null; }
+    };
     try {
-      const response = await fetch('/data/daily-headlines/latest.json', {cache:'no-store',signal:controller.signal});
-      if (!response.ok) throw new Error('Unavailable');
-      const data = await response.json();
+      const [data, outcome] = await Promise.all([
+        read('/data/daily-headlines/latest.json'), read('/data/daily-headlines/status.json')
+      ]);
       if (token !== request) return;
-      if (data.schema_version !== 1 || data.date !== dateInShanghai() || !Array.isArray(data.headlines)) throw new Error('Stale or malformed');
-      if (!['PUBLISHED','NO_MATERIAL_CHANGE'].includes(data.status)) throw new Error('Incomplete');
-      if (data.status === 'NO_MATERIAL_CHANGE') {
-        if (data.headlines.length) throw new Error('Invalid empty state');
-        state.replaceChildren(document.createTextNode('今日暂无重大情报变化'),element('span','','No Material Intelligence Change'));
-      } else {
-        if (!data.headlines.length || data.headlines.length > 5) throw new Error('Invalid count');
-        for (const h of data.headlines.slice(0,3)) {
-          if (h.date !== data.date || !h.headline_cn || !h.summary || !h.category || !['CONFIRMED','PARTIAL','DEVELOPING'].includes(h.confidence)) throw new Error('Invalid headline');
-          const card = element('article','dh-card','');
-          const meta = element('div','dh-meta','');
-          meta.append(element('span','dh-category',h.category));
-          if (h.time) meta.append(element('span','',h.time+' CST'));
-          card.append(meta,element('h3','',h.headline_cn),element('p','',h.summary));
-          if (h.confidence !== 'CONFIRMED') card.append(element('p','dh-note',h.confidence === 'PARTIAL' ? '部分核实 · 媒体报道口径' : '事件发展中'));
-          grid.append(card);
+      const today = dateInShanghai();
+      // An accepted same-day publication takes precedence over an earlier failed attempt.
+      let published = false;
+      if (data?.schema_version === 1 && data.date === today && Array.isArray(data.headlines)) {
+        if (data.status === 'NO_MATERIAL_CHANGE' && data.headlines.length === 0) {
+          label(state, 'No Material Intelligence Change', '今日暂无重大情报变化'); published = true;
+        } else if (data.status === 'PUBLISHED' && data.headlines.length > 0 && data.headlines.length <= 5 &&
+          data.headlines.every(h => h && h.date === data.date && h.headline_cn && h.summary && h.category &&
+            ['CONFIRMED','PARTIAL','DEVELOPING'].includes(h.confidence))) {
+          const cards = document.createDocumentFragment();
+          for (const h of data.headlines.slice(0,3)) {
+            const card = element('article','dh-card','');
+            const meta = element('div','dh-meta','');
+            meta.append(element('span','dh-category',h.category));
+            if (h.time) meta.append(element('span','',h.time+' CST'));
+            card.append(meta,element('h3','',h.headline_cn),element('p','',h.summary));
+            if (h.confidence !== 'CONFIRMED') card.append(element('p','dh-note',h.confidence === 'PARTIAL' ? '部分核实 · 媒体报道口径' : '事件发展中'));
+            cards.append(card);
+          }
+          grid.replaceChildren(cards); grid.hidden = false; state.hidden = true; published = true;
         }
-        grid.hidden = false; state.hidden = true;
       }
-      action.href = '/intelligence/daily-headlines/'+data.date+'.html';
-    } catch (_) { if(token === request) pending(); }
-    finally {clearTimeout(timer);}
+      if (published) {
+        action.href = '/intelligence/daily-headlines/'+data.date+'.html';
+        label(action, 'View All Daily Headlines', '查看全部今日头条');
+      } else if (outcome?.schema_version === 1 && outcome.date === today && outcome.status === 'NO_VERIFIED_UPDATE') {
+        state.replaceChildren(document.createTextNode('No Verified Update｜今日暂无符合发布标准的更新'),
+          element('span','dh-explanation','审核未通过不代表当天没有重大新闻。','zh-CN'));
+      }
+    } finally {clearTimeout(timer);}
   }
   refresh();
-  // Open tabs must change to PENDING at Shanghai midnight even without a reload.
   setInterval(refresh,60000);
   document.addEventListener('visibilitychange',() => {if(!document.hidden) refresh();});
 })();

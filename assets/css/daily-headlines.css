@@ -32,3 +32,12 @@
 .dh-page *{box-sizing:border-box}
 .dh-review{color:#786124;border:1px solid #c8a957;padding:12px 16px;background:#fff;font-size:13px}
 @media(max-width:760px){.dh-grid{grid-template-columns:minmax(0,1fr)}.dh-section{padding:30px 0}.dh-card{padding:20px}.dh-list .dh-card{padding:20px}.dh-main{padding:30px 0}.dh-wrap{width:90%}.dh-nav{gap:14px}.dh-card h3{font-size:19px}.dh-action{width:100%;justify-content:center;text-align:center}}
+
+/* Bilingual labels use one consistent vertical layout within Daily Headlines. */
+[data-daily-headlines] .dh-action,.dh-page .dh-label{display:inline-flex;flex-direction:column;gap:2px;line-height:1.5}
+[data-daily-headlines] .dh-action span[lang="en"],.dh-label span[lang="en"]{font-size:12px;letter-spacing:.4px}
+[data-daily-headlines] .dh-state span:first-child{color:#071f38;font-size:15px}
+[data-daily-headlines] .dh-state .dh-explanation{margin-top:10px;font-size:12px;color:#687582}
+.dh-page [data-daily-headlines]{padding-top:12px}
+.dh-page [data-daily-headlines]>.dh-wrap{width:100%}
+[data-daily-headlines] [hidden]{display:none!important}

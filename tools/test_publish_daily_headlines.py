@@ -144,6 +144,61 @@ class SafetyTests(unittest.TestCase):
   self.row['previous_source_matches']=[{'evidence_text':self.item['summary']}]
   self.h.update(prior_comparison='TEST comparison',novelty_quote=self.item['summary'])
   self.assertRaisesRegex(ValueError,'already in historical',self.check)
+ def assert_copy_requires_review(self,body,edited=None,field='summary'):
+  self.item[field]=body
+  # Full evidence remains available for factual mapping; REVIEWED cannot waive copy QA.
+  self.item['evidence_text']=self.item.get('evidence_text','')+' '+body
+  self.h['fact_cn']=self.fact+(body if edited is None else edited)
+  self.h['fact_checks'][0].update(quote=body,fact_cn=self.h['fact_cn'])
+  with self.assertRaisesRegex(ValueError,'HUMAN_REVIEW_REQUIRED'):
+   self.check()
+ def test_72_character_full_paid_summary_requires_review(self):
+  paid='Private subscribers receive the full report. Oil supply remains limited.'
+  self.assertEqual(len(paid),72)
+  self.assert_copy_requires_review(paid)
+  with tempfile.TemporaryDirectory() as tmp:
+   out=pathlib.Path(tmp)/'preview'
+   with self.assertRaisesRegex(ValueError,'HUMAN_REVIEW_REQUIRED'):
+    payload,_=self.check();m.generate(out,payload)
+   self.assertFalse(out.exists())
+ def test_copy_gate_has_no_short_body_length_exemption(self):
+  for body in ['Oil fell.','Oil supply is tight.','Subscribers received the complete oil market report.']:
+   with self.subTest(body=body):self.assert_copy_requires_review(body)
+ def test_short_chinese_paid_body_requires_review(self):
+  self.assert_copy_requires_review('油轮运输受阻，炼厂原料供应趋紧。')
+ def test_mixed_language_paid_body_requires_review(self):
+  self.assert_copy_requires_review('Oil supply趋紧，炼厂正在调整采购计划。')
+ def test_cosmetic_changes_do_not_hide_paid_body(self):
+  self.assert_copy_requires_review('Oil supply remains limited.','ＯＩＬ supply—REMAINS\u200b limited!')
+ def test_light_english_rewrite_requires_review(self):
+  self.assert_copy_requires_review('Private subscribers receive the full report. Oil supply remains limited.',
+   'Private readers receive the complete report. Oil supply is still limited.')
+ def test_light_chinese_rewrite_requires_review(self):
+  self.assert_copy_requires_review('油轮运输受阻，炼厂原料供应趋紧。','油轮运输遇阻，炼厂原料供应偏紧。')
+ def test_light_mixed_rewrite_requires_review(self):
+  self.assert_copy_requires_review('Oil supply趋紧，炼厂正在调整采购计划。','Oil supply偏紧，炼厂正在调整采购安排。')
+ def test_each_private_evidence_field_is_compared(self):
+  for field in ('summary','evidence_text','body_text'):
+   with self.subTest(field=field):self.assert_copy_requires_review('Oil supply remains limited.',field=field)
+ def test_missing_editorial_summary_never_falls_back_to_body(self):
+  self.item['summary']='Private subscribers receive the full report. Oil supply remains limited.'
+  self.h.pop('fact_cn')
+  with self.assertRaisesRegex(ValueError,'HUMAN_REVIEW_REQUIRED'):self.check()
+ def test_raw_full_summary_stays_private_in_all_generated_outputs(self):
+  self.item['summary']+=' '+'SYNTHETIC_PAYWALL_BODY_DO_NOT_PUBLISH '*12
+  self.test_private_body_never_enters_public_artifacts()
+ def test_split_body_across_editorial_fields_requires_review(self):
+  body='Private subscribers receive the full report about oil supply and refinery constraints.'
+  self.item['summary']=body
+  self.h['fact_cn']=self.fact+'Private subscribers receive the full report'
+  self.h['analysis_cn']='值得关注的是，about oil supply and refinery constraints. 信贷风险仍有待进一步核实。'
+  self.h['fact_checks'][0].update(quote=body,fact_cn=self.h['fact_cn'])
+  with self.assertRaisesRegex(ValueError,'HUMAN_REVIEW_REQUIRED'):self.check()
+ def test_unapproved_summary_field_cannot_replace_editorial_fields(self):
+  self.h['summary']='PRIVATE UNREVIEWED RAW BODY'
+  payload,_=self.check()
+  self.assertEqual(payload['headlines'][0]['summary'],self.fact+self.h['analysis_cn'])
+  self.assertNotIn('PRIVATE UNREVIEWED RAW BODY',json.dumps(payload))
 class ExtractionAndStatusTests(unittest.TestCase):
  def test_html_block_boundaries_preserved(self):
   self.assertEqual(m.clean('<p>First <a href="https://example.org">fact</a>.</p><p>Second fact &amp; detail.</p>'), 'First fact. Second fact & detail.')

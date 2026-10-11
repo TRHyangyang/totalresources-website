@@ -4,7 +4,7 @@ Editorial decisions are an explicit input, never inferred from importance labels
 """
 import importlib.util
 import argparse, datetime as dt, difflib, hashlib, html, json, pathlib, re, shutil
-import string, sys, tempfile, urllib.parse, urllib.request, urllib.error, xml.etree.ElementTree as ET
+import string, sys, tempfile, unicodedata, urllib.parse, urllib.request, urllib.error, xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 sys.dont_write_bytecode=True
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -59,17 +59,50 @@ def public_payload(payload):
   out['headlines'].append(h)
  return out
 
+def editorial_tokens(text):
+ # Ignore cosmetic changes, including case, punctuation, Unicode width and invisible marks.
+ text=unicodedata.normalize('NFKC',clean(text)).casefold()
+ text=''.join(c for c in text if unicodedata.category(c)!='Cf')
+ return re.findall(r'[\u3400-\u9fff]|[^\W_]+',text)
+
 def reject_body_copy(headline, items):
- # Catch direct body substitution even when disguised as an allowed editorial field.
- for key in ('headline_cn','headline_en','fact_cn','analysis_cn'):
-  value=clean(headline.get(key,''))
-  for item in items:
-   for field in ('evidence_text','body_text','summary'):
-    body=clean(item.get(field,''))
-    if not body:continue
-    size=24 if re.search(r'[\u4e00-\u9fff]',body) else 80
-    if len(value)>=size and any(value[n:n+size] in body for n in range(len(value)-size+1)):
-     raise ValueError('Public editorial text copies source body')
+ # Review flags never exempt public text from this gate. Compare both individual
+ # editorial fields and the assembled summary so splitting a body cannot bypass it.
+ values=[headline.get(k,'') for k in ('headline_cn','headline_en','fact_cn','analysis_cn')]
+ values.append(headline.get('fact_cn','')+headline.get('analysis_cn',''))
+ public=[editorial_tokens(v) for v in values if v]
+ for item in items:
+  for field in ('evidence_text','body_text','summary'):
+   body=clean(item.get(field,''))
+   if not body:continue
+   # Whole-body and sentence coverage is relative to the evidence length, including
+   # short dispatches. Sentence comparison also catches excerpts of longer articles.
+   units=[body]+re.split(r'(?<!\d)[.!?。！？;；]+(?:\s*|$)',body)
+   for unit in units:
+    source=editorial_tokens(unit)
+    if not source:continue
+    for value in public:
+     # Preserve the previous long-excerpt protection in addition to relative coverage.
+     alignment=difflib.SequenceMatcher(None,source,value,autojunk=False)
+     block=alignment.find_longest_match()
+     excerpt=''.join(source[block.a:block.a+block.size])
+     limit=24 if re.search(r'[\u3400-\u9fff]',excerpt) else 80
+     if block.size and (block.size==len(source) or len(excerpt)>=limit):
+      raise ValueError('Public editorial text copies source body; HUMAN_REVIEW_REQUIRED')
+     # A local, order-sensitive comparison catches small insertions, omissions and
+     # substitutions. Ambiguous near-copies fail closed rather than trusting REVIEWED.
+     n=len(source);slack=max(1,n//4)
+     if n-slack>len(value):continue
+     # Anchor candidate windows to matching runs instead of a quadratic all-window scan.
+     starts={max(0,x.b-x.a) for x in alignment.get_matching_blocks() if x.size}
+     widths={max(1,n-slack),n,n+slack}
+     for start in starts:
+      for width in widths:
+       match=difflib.SequenceMatcher(None,source,value[start:start+width],autojunk=False)
+       coverage=sum(x.size for x in match.get_matching_blocks())/n
+       if coverage>=0.7 and match.ratio()>=0.65:
+        raise ValueError('Public editorial text copies source body or is ambiguous; HUMAN_REVIEW_REQUIRED')
+
 
 def private_report_destination(path):
  path=path.resolve();root=ROOT.resolve()
@@ -268,6 +301,8 @@ def validate(scan,report,packet,verify):
     if row['reason'] in ('EMPTY_SUMMARY','TRUNCATED_SUMMARY','TIME_NOT_ABSOLUTELY_VERIFIED','INSUFFICIENT_FACTS') and decisions[row['event_id']].get('disposition') not in ('NON_MATERIAL','OLD_NEWS','OUT_OF_SCOPE'):raise ValueError('Unresolved high-relevance evidence gap cannot mean no material change')
  seen=set();headlines=[];urls=[]
  for rank,h in enumerate(selected,1):
+  if any(not isinstance(h.get(k),str) or not h[k].strip() for k in ('headline_cn','fact_cn','analysis_cn')):
+   raise ValueError('Independent editorial text required; HUMAN_REVIEW_REQUIRED')
   eid=h['event_id']
   if eid in seen:raise ValueError('Duplicate event')
   seen.add(eid)

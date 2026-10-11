@@ -97,7 +97,7 @@ def load(source):
     issues = []
     if 'pending' in scalar(meta.get('status')).lower():
         issues.append('Resolve pending publication status in FINAL.md')
-    if re.search(r'\[(?:iea|english\.stm|csis)\](?!\()', body):
+    if re.search(r'\[(?:iea|english\.stm|csis|ppl-ai-file-upload\.s3\.amazonaws|uae-embassy|state|britannica|presidency\.ucsb)\](?!\()', body):
         issues.append('Replace source placeholders with verified clickable links')
     if '发布前核验' in body and not (meta.get('verification_status') in {'completed', 'completed-with-disclosed-limitations'} and meta.get('verification_notes_section') and ('## '+str(meta['verification_notes_section'])) in body):
         issues.append('Resolve the file’s pre-publication verification notes')
@@ -125,14 +125,20 @@ def run(args):
     hero = ''
     if args.image:
         image_bytes = args.image.resolve(strict=True).read_bytes()
-        if not image_bytes.startswith(b'\xff\xd8\xff'):
-            raise ValueError('Hero image must be JPEG')
+        if image_bytes.startswith(b'\xff\xd8\xff'):
+            image_extension = '.jpg'
+        elif image_bytes[4:8] == b'ftyp' and (b'avif' in image_bytes[8:32] or b'avis' in image_bytes[8:32]):
+            image_extension = '.avif'
+        else:
+            raise ValueError('Hero image must be JPEG or AVIF')
         if not args.image_alt:
             raise ValueError('Supply --image-alt')
-        image_url = 'assets/'+slug+'.jpg'
-        hero = '<figure class="report-hero-image"><img src="'+image_url+'" alt="'+html.escape(args.image_alt, quote=True)+'" width="'+str(args.image_width)+'" height="'+str(args.image_height)+'" fetchpriority="high"></figure>'
+        image_url = 'assets/'+slug+image_extension
+        image_credit = scalar(meta.get('image_credit'))
+        hero = '<figure class="report-hero-image"><img src="'+image_url+'" alt="'+html.escape(args.image_alt, quote=True)+'" width="'+str(args.image_width)+'" height="'+str(args.image_height)+'" fetchpriority="high">'+('<figcaption>'+html.escape(image_credit)+'</figcaption>' if image_credit else '')+'</figure>'
     values = dict(TITLE=title, DESCRIPTION=scalar(meta.get('description')) or title, CANONICAL=canonical,
-                  DATE=day, AUTHORS=scalar(meta.get('authors') or meta.get('author')), SOURCE=scalar(meta.get('source')),
+                  DATE=day, AUTHORS=scalar(meta.get('authors') or meta.get('author') or meta.get('original_author')), SOURCE=scalar(meta.get('source')), KEYWORDS=', '.join(map(str,meta.get('tags',[]))) if isinstance(meta.get('tags'),list) else scalar(meta.get('keywords') or meta.get('tags')),
+                  CATEGORY=scalar(meta.get('subcategory')) or 'Special Reports｜专题研究',
                   ORIGINALDATE=scalar(meta.get('original_date')) or '—')
     if args.publish:
         if not args.approval:

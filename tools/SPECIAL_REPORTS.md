@@ -52,3 +52,8 @@ python3 tools/publish_special_report.py /absolute/path/FINAL.md --date YYYY-MM-D
 ## 首页同步
 
 正式发布时同一工具更新 index.html 中独立的 SPECIAL REPORTS HOME 区块，只显示最新一篇的标题、网站发布日期、简短摘要、阅读链接与全部专题入口。模块始终位于 Weekly Outlook 下方。优先使用 FINAL.md 的 summary 或 description；缺省时截取正文首个普通段落（最多140字），不另写研究内容。历史回填不会替换首页较新的文章。原有《环球脉搏》、Daily Headlines、Weekly Outlook 的 HTML、样式和脚本不变；无需新增自动化或修改 Website Skill。发布提交必须包含 index.html。
+
+
+## SEO 与配图格式
+
+支持 original_author 作者字段；subcategory 用于公开文章分类，tags 用于 SEO 关键词。模板输出标题、摘要、关键词、作者、article:section 和规范化 URL。图片支持 JPEG 与原生 AVIF，原样复制、不裁剪；image_credit 用于已获授权图片的署名。仍需精确图片 SHA-256 的授权记录。

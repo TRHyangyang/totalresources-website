@@ -57,3 +57,6 @@ python3 tools/publish_special_report.py /absolute/path/FINAL.md --date YYYY-MM-D
 ## SEO 与配图格式
 
 支持 original_author 作者字段；subcategory 用于公开文章分类，tags 用于 SEO 关键词。模板输出标题、摘要、关键词、作者、article:section 和规范化 URL。图片支持 JPEG 与原生 AVIF，原样复制、不裁剪；image_credit 用于已获授权图片的署名。仍需精确图片 SHA-256 的授权记录。
+
+
+已发布文章补图使用 --publish --update-image，并提供 --image、原始宽高及署名。审批记录需绑定源稿、图片和 existing_article_sha256；仅更新对应文章及新增图片资产，不重复添加索引或 sitemap。普通发布仍拒绝覆盖历史文章。

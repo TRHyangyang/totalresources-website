@@ -181,6 +181,19 @@ def run(args):
         print(out/(slug+'.html'))
         return
     target = ROOT/relative
+    if args.update_image:
+        if not image_bytes or not target.is_file():
+            raise ValueError('Image update requires an image and an existing article')
+        if receipt.get('existing_article_sha256') != hashlib.sha256(target.read_bytes()).hexdigest():
+            raise ValueError('Existing article does not match the approved update')
+        image_target = ROOT/'special-reports'/image_url
+        if image_target.exists():
+            raise ValueError('Image asset already exists')
+        image_target.parent.mkdir(exist_ok=True)
+        image_target.write_bytes(image_bytes)
+        target.write_text(page)
+        print(canonical)
+        return
     if target.exists():
         raise ValueError('Duplicate slug; existing articles cannot be overwritten')
     indexpath = ROOT/'intelligence.html'
@@ -224,6 +237,7 @@ def run(args):
 if __name__ == '__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('source',type=Path);p.add_argument('--date');p.add_argument('--slug')
+    p.add_argument('--update-image',action='store_true',help='Explicitly authorized image update; receipt must bind existing article hash')
     p.add_argument('--image',type=Path);p.add_argument('--image-alt');p.add_argument('--image-width',type=int,default=1400);p.add_argument('--image-height',type=int,default=600)
     p.add_argument('--preview-dir',type=Path);p.add_argument('--publish',action='store_true');p.add_argument('--approval',type=Path)
     try:

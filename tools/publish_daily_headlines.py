@@ -28,6 +28,55 @@ def clean(value):
  value=re.sub(r'</?(?:p|div|li|ul|ol|br|h[1-6])\b[^>]*>', ' ', value or '', flags=re.I)
  return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]*>', '',value))).strip()
 
+# Evidence cleaning is not public redaction. Only this schema crosses the output boundary.
+PUBLIC_PAYLOAD = ('schema_version','date','timezone','status','generated_at','headlines')
+PUBLIC_HEADLINE = ('event_id','date','time','headline_cn','headline_en','summary','category',
+                   'source_name','source_url','source_publish_time','sources','confidence','rank')
+PUBLIC_SOURCE = ('source_name','source_url','source_publish_time')
+def public_payload(payload):
+ def project(obj, fields):
+  if not isinstance(obj,dict):raise ValueError('Invalid public object')
+  result={k:obj[k] for k in fields}
+  for key,value in result.items():
+   if key in ('headlines','sources'):
+    if not isinstance(value,list):raise ValueError('Invalid public list')
+   elif key in ('schema_version','rank'):
+    if type(value) is not int:raise ValueError('Invalid public integer')
+   elif not isinstance(value,str):raise ValueError('Invalid public text')
+  return result
+ out=project(payload,PUBLIC_PAYLOAD)
+ out['headlines']=[]
+ for item in payload['headlines']:
+  h=project(item,PUBLIC_HEADLINE)
+  h['sources']=[project(source,PUBLIC_SOURCE) for source in h['sources']]
+  limits={'headline_cn':50,'headline_en':200,'summary':600,'source_name':80}
+  for key,limit in limits.items():
+   if len(h[key])>limit:raise ValueError('Oversized public '+key)
+  for source in [h]+h['sources']:
+   u=urllib.parse.urlsplit(source['source_url'])
+   if u.scheme!='https' or not u.hostname or u.username or u.password:
+    raise ValueError('Invalid public source URL')
+  out['headlines'].append(h)
+ return out
+
+def reject_body_copy(headline, items):
+ # Catch direct body substitution even when disguised as an allowed editorial field.
+ for key in ('headline_cn','headline_en','fact_cn','analysis_cn'):
+  value=clean(headline.get(key,''))
+  for item in items:
+   for field in ('evidence_text','body_text','summary'):
+    body=clean(item.get(field,''))
+    if not body:continue
+    size=24 if re.search(r'[\u4e00-\u9fff]',body) else 80
+    if len(value)>=size and any(value[n:n+size] in body for n in range(len(value)-size+1)):
+     raise ValueError('Public editorial text copies source body')
+
+def private_report_destination(path):
+ path=path.resolve();root=ROOT.resolve()
+ if path==root or root in path.parents:
+  raise ValueError('Private reports must be outside website repository')
+
+
 def public_status(receipt):
  # Only the completed QA-failure outcome is public; never expose audit details.
  date=receipt.get('date','')
@@ -130,7 +179,7 @@ def discover(scan_path,date,history_dir,rss,evidence_path=None):
   possible.update({id(x):x for x in history_topics.get(eventid(i),[])})
   for x in possible.values():
    if eventid(x)==eventid(i) or urlnorm(x.get('url',''))==urlnorm(i['url']) or difflib.SequenceMatcher(None,clean(x.get('headline')).lower(),i['headline'].lower()).ratio()>.9:
-    prior.append({'headline':x.get('headline'),'summary':clean(evidence_text(x)),'source_url':x.get('url')})
+    prior.append({'headline':x.get('headline'),'evidence_text':clean(evidence_text(x)),'source_url':x.get('url')})
   eid=eventid(i)
   published_before=[x for x in memory if x['event_id']==eid or urlnorm(x['source_url'])==urlnorm(i['url'])]
   score={1:85,2:80,3:80,4:78,5:76,6:72,7:0}[priority]
@@ -234,7 +283,7 @@ def validate(scan,report,packet,verify):
   if any(r['event_id']!=eid for r in rows):raise ValueError('Cross-event evidence')
   if any(r['previous_source_matches'] or r['previous_published_events'] for r in rows):
    if not h.get('material_new_information') or not h.get('prior_comparison') or not h.get('novelty_quote'):raise ValueError('Old-news replay lacks comparison and new evidence quote')
-   prior_text=' '.join(x.get('summary','') for r in rows for x in r['previous_source_matches'])
+   prior_text=' '.join(x.get('evidence_text',x.get('summary','')) for r in rows for x in r['previous_source_matches'])
    if h['novelty_quote'] not in ' '.join(r['headline']+' '+r.get('evidence_text',r['summary']) for r in rows):raise ValueError('Novelty quote not in current evidence')
    prior_text+=' '+' '.join(x.get('headline','') for r in rows for x in r['previous_source_matches'])
    if h['novelty_quote'] in prior_text:raise ValueError('Novelty quote already in historical evidence')
@@ -250,6 +299,7 @@ def validate(scan,report,packet,verify):
   fact_text=''.join(f['fact_cn'] for f in facts)
   if h['fact_cn']!=fact_text:raise ValueError('Unmapped public facts')
   if not h.get('analysis_cn','').startswith('值得关注的是'):raise ValueError('Analysis must be separately signposted')
+  reject_body_copy(h,[scan['items'][n] for n in indices])
   summary=h['fact_cn']+h['analysis_cn']
   if not 50<=len(re.findall(r'[\u4e00-\u9fff]',summary))<=120:raise ValueError('Summary outside 50–120 Chinese characters')
   if len(h['headline_cn'])>50 or re.search(r'[↑↓→]{2,}',h['headline_cn']+summary):raise ValueError('Editorial style violation')
@@ -276,7 +326,7 @@ def validate(scan,report,packet,verify):
  payload={'schema_version':1,'date':report['date'],'timezone':'Asia/Shanghai',
   'status':'PUBLISHED' if headlines else 'NO_MATERIAL_CHANGE','generated_at':dt.datetime.now(TZ).isoformat(),
   'headlines':headlines}
- return payload,receipts
+ return public_payload(payload),receipts
 
 def card(h):
  esc=html.escape
@@ -289,6 +339,7 @@ def widget(column=False):
  return '<section class="dh-section" data-daily-headlines '+label+'><div class="dh-wrap">'+heading+'<p class="dh-caption"><span data-dh-date></span> · 能源、宏观与产业链的新变化</p><div class="dh-grid" hidden></div><p class="dh-state" role="status"><span lang="en">Daily Intelligence Update Pending</span><span lang="zh-CN">今日情报更新待完成</span></p><a class="dh-action" href="/intelligence/daily-headlines/#archive"><span lang="en">View Archive</span><span lang="zh-CN">查看历史归档</span></a><noscript><p class="dh-caption">请进入日期归档查看已发布内容；今日状态需要 JavaScript 校验。</p></noscript></div></section>'
 
 def generate(out,payload):
+ payload=public_payload(payload)
  if out.exists():raise ValueError('Preview destination already exists')
  if out==ROOT or ROOT in out.parents:raise ValueError('Preview must be outside repository')
  shutil.copytree(ROOT,out,ignore=shutil.ignore_patterns('.git','__pycache__'))
@@ -346,7 +397,7 @@ def main():
  ap.add_argument('--history-dir',type=pathlib.Path,required=True);ap.add_argument('--rss',type=pathlib.Path)
  ap.add_argument('--editorial',type=pathlib.Path);ap.add_argument('--report-dir',type=pathlib.Path,required=True)
  ap.add_argument('--preview-dir',type=pathlib.Path);ap.add_argument('--verify-urls',action='store_true')
- a=ap.parse_args();a.report_dir.mkdir(parents=True,exist_ok=True)
+ a=ap.parse_args();private_report_destination(a.report_dir);a.report_dir.mkdir(parents=True,exist_ok=True)
  result={'date':a.date,'status':'QA_FAIL','website_changed':False,'deploy':'NOT_RUN'}
  try:
   if not re.fullmatch(r'\d{4}-\d{2}-\d{2}',a.date):raise ValueError('Invalid date format')

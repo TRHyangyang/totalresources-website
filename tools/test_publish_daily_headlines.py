@@ -1,5 +1,5 @@
 """Safety tests use synthetic TEST fixtures only; no network or published fixture data."""
-import copy, datetime as dt, importlib.util, pathlib, sys, tempfile, unittest
+import json, copy, datetime as dt, importlib.util, pathlib, sys, tempfile, unittest
 sys.dont_write_bytecode=True
 spec=importlib.util.spec_from_file_location('daily',pathlib.Path(__file__).with_name('publish_daily_headlines.py'))
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
@@ -89,6 +89,61 @@ class SafetyTests(unittest.TestCase):
   self.packet['clusters']=[{'event_id':self.row['event_id'],'item_indices':[0],'rationale':'TEST same event'}];self.assertEqual(len(self.check()[0]['headlines']),1)
  def test_unknown_gap_blocks_no_change(self):
   self.row['reason']='TRUNCATED_SUMMARY';self.packet.update(headlines=[],no_material_change_reason='TEST',coverage_complete=True,decisions={self.row['event_id']:{'action':'REJECT','reason':'TEST insufficient'}});self.assertRaisesRegex(ValueError,'evidence gap',self.check)
+ def test_private_body_never_enters_public_artifacts(self):
+  secret='SYNTHETIC_PAYWALL_BODY_DO_NOT_PUBLISH ' * 12
+  reference='/private/evidence/paid-article.txt'
+  self.item.update(evidence_text=self.item['summary']+' '+secret,body_text=secret,evidence_ref=reference)
+  self.row.update(evidence_text=self.item['evidence_text'],body_text=secret,evidence_ref=reference)
+  self.h.update(mcis_relevance=secret,material_new_information=secret,body_text=secret,evidence_ref=reference)
+  self.row['previous_source_matches']=[{'headline':'TEST old event','evidence_text':secret}]
+  self.h.update(prior_comparison=secret,novelty_quote=self.item['summary'])
+  payload,_=self.check()
+  self.assertNotIn(secret,json.dumps(payload));self.assertNotIn('mcis_relevance',payload['headlines'][0])
+  # Defense in depth: callers attaching private data after validation cannot serialize it.
+  payload.update(evidence_text=secret,body_text=secret,evidence_ref=reference)
+  payload['headlines'][0].update(evidence_text=secret,body_text=secret,evidence_ref=reference)
+  payload['headlines'][0]['sources'][0].update(body_text=secret,evidence_ref=reference)
+  root=m.ROOT
+  (root/'tools').mkdir();(root/'tools/daily_headlines_page.html').write_text((self.old_root/'tools/daily_headlines_page.html').read_text())
+  (root/'index.html').write_text('<html><head></head><body><section class="hero">KEEP HERO</section><section class="global-pulse">KEEP PULSE</section><!-- DAILY HEADLINES V1 --></body></html>')
+  (root/'intelligence.html').write_text('<html><head></head><body><!-- DAILY HEADLINES V1 --><section class="latest-section" id="research-archive">KEEP RESEARCH</section></body></html>')
+  (root/'sitemap.xml').write_text('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://totalresources.info/</loc></url></urlset>')
+  archive=root/'intelligence/daily-headlines';archive.mkdir(parents=True)
+  (archive/'2000-01-01.html').write_text('KEEP OLD ARTICLE')
+  old=root/'data/daily-headlines/2000/01/2000-01-01.json';old.parent.mkdir(parents=True);old.write_text('{"date":"2000-01-01","headlines":[]}')
+  with tempfile.TemporaryDirectory() as tmp:
+   out=pathlib.Path(tmp)/'preview';m.generate(out,payload)
+   public=list(out.rglob('*.html'))+list(out.rglob('*.json'))
+   for path in public:
+    text=path.read_text()
+    for forbidden in ('SYNTHETIC_PAYWALL_BODY_DO_NOT_PUBLISH',reference,'evidence_text','body_text','evidence_ref','prior_comparison','fact_checks'):
+     self.assertNotIn(forbidden,text,str(path))
+   published=json.loads((out/'data/daily-headlines/latest.json').read_text())
+   self.assertEqual(published['headlines'][0]['summary'],self.h['fact_cn']+self.h['analysis_cn'])
+   self.assertIn(self.h['headline_cn'],(out/'intelligence/daily-headlines'/ (self.date+'.html')).read_text())
+   self.assertEqual((out/'intelligence/daily-headlines/2000-01-01.html').read_text(),'KEEP OLD ARTICLE')
+   self.assertEqual((out/old.relative_to(root)).read_bytes(),old.read_bytes())
+   dated=out/'data/daily-headlines'/self.date[:4]/self.date[5:7]/(self.date+'.json')
+   self.assertEqual(json.loads(dated.read_text()),published)
+ def test_body_cannot_be_disguised_as_editorial_summary(self):
+  self.item['body_text']=self.fact
+  self.assertRaisesRegex(ValueError,'copies source body',self.check)
+ def test_body_cannot_be_disguised_as_english_headline(self):
+  self.item['evidence_text']='Private paid article sentence with confidential original wording. '*5
+  self.item['evidence_text']+=self.item['summary']
+  self.h['headline_en']=self.item['evidence_text'][:130]
+  self.assertRaisesRegex(ValueError,'copies source body',self.check)
+ def test_public_field_cannot_contain_nested_private_object(self):
+  payload,_=self.check();payload['headlines'][0]['summary']={'body_text':'PRIVATE'}
+  self.assertRaisesRegex(ValueError,'public text',m.public_payload,payload)
+ def test_private_reports_cannot_be_written_into_public_tree(self):
+  self.assertRaisesRegex(ValueError,'outside website',m.private_report_destination,m.ROOT/'data/private')
+  with tempfile.TemporaryDirectory() as tmp:
+   m.private_report_destination(pathlib.Path(tmp))
+ def test_historical_private_body_remains_available_for_novelty_qa(self):
+  self.row['previous_source_matches']=[{'evidence_text':self.item['summary']}]
+  self.h.update(prior_comparison='TEST comparison',novelty_quote=self.item['summary'])
+  self.assertRaisesRegex(ValueError,'already in historical',self.check)
 class ExtractionAndStatusTests(unittest.TestCase):
  def test_html_block_boundaries_preserved(self):
   self.assertEqual(m.clean('<p>First <a href="https://example.org">fact</a>.</p><p>Second fact &amp; detail.</p>'), 'First fact. Second fact & detail.')

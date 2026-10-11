@@ -97,7 +97,7 @@ def load(source):
     issues = []
     if 'pending' in scalar(meta.get('status')).lower():
         issues.append('Resolve pending publication status in FINAL.md')
-    if re.search(r'\[(?:iea|english\.stm|csis)\](?!\()', body):
+    if re.search(r'\[(?:iea|english\.stm|csis|ppl-ai-file-upload\.s3\.amazonaws|uae-embassy|state|britannica|presidency\.ucsb)\](?!\()', body):
         issues.append('Replace source placeholders with verified clickable links')
     if '发布前核验' in body and not (meta.get('verification_status') in {'completed', 'completed-with-disclosed-limitations'} and meta.get('verification_notes_section') and ('## '+str(meta['verification_notes_section'])) in body):
         issues.append('Resolve the file’s pre-publication verification notes')
@@ -125,14 +125,20 @@ def run(args):
     hero = ''
     if args.image:
         image_bytes = args.image.resolve(strict=True).read_bytes()
-        if not image_bytes.startswith(b'\xff\xd8\xff'):
-            raise ValueError('Hero image must be JPEG')
+        if image_bytes.startswith(b'\xff\xd8\xff'):
+            image_extension = '.jpg'
+        elif image_bytes[4:8] == b'ftyp' and (b'avif' in image_bytes[8:32] or b'avis' in image_bytes[8:32]):
+            image_extension = '.avif'
+        else:
+            raise ValueError('Hero image must be JPEG or AVIF')
         if not args.image_alt:
             raise ValueError('Supply --image-alt')
-        image_url = 'assets/'+slug+'.jpg'
-        hero = '<figure class="report-hero-image"><img src="'+image_url+'" alt="'+html.escape(args.image_alt, quote=True)+'" width="'+str(args.image_width)+'" height="'+str(args.image_height)+'" fetchpriority="high"></figure>'
+        image_url = 'assets/'+slug+image_extension
+        image_credit = scalar(meta.get('image_credit'))
+        hero = '<figure class="report-hero-image"><img src="'+image_url+'" alt="'+html.escape(args.image_alt, quote=True)+'" width="'+str(args.image_width)+'" height="'+str(args.image_height)+'" fetchpriority="high">'+('<figcaption>'+html.escape(image_credit)+'</figcaption>' if image_credit else '')+'</figure>'
     values = dict(TITLE=title, DESCRIPTION=scalar(meta.get('description')) or title, CANONICAL=canonical,
-                  DATE=day, AUTHORS=scalar(meta.get('authors') or meta.get('author')), SOURCE=scalar(meta.get('source')),
+                  DATE=day, AUTHORS=scalar(meta.get('authors') or meta.get('author') or meta.get('original_author')), SOURCE=scalar(meta.get('source')), KEYWORDS=', '.join(map(str,meta.get('tags',[]))) if isinstance(meta.get('tags'),list) else scalar(meta.get('keywords') or meta.get('tags')),
+                  CATEGORY=scalar(meta.get('subcategory')) or 'Special Reports｜专题研究',
                   ORIGINALDATE=scalar(meta.get('original_date')) or '—')
     if args.publish:
         if not args.approval:
@@ -175,6 +181,19 @@ def run(args):
         print(out/(slug+'.html'))
         return
     target = ROOT/relative
+    if args.update_image:
+        if not image_bytes or not target.is_file():
+            raise ValueError('Image update requires an image and an existing article')
+        if receipt.get('existing_article_sha256') != hashlib.sha256(target.read_bytes()).hexdigest():
+            raise ValueError('Existing article does not match the approved update')
+        image_target = ROOT/'special-reports'/image_url
+        if image_target.exists():
+            raise ValueError('Image asset already exists')
+        image_target.parent.mkdir(exist_ok=True)
+        image_target.write_bytes(image_bytes)
+        target.write_text(page)
+        print(canonical)
+        return
     if target.exists():
         raise ValueError('Duplicate slug; existing articles cannot be overwritten')
     indexpath = ROOT/'intelligence.html'
@@ -218,6 +237,7 @@ def run(args):
 if __name__ == '__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('source',type=Path);p.add_argument('--date');p.add_argument('--slug')
+    p.add_argument('--update-image',action='store_true',help='Explicitly authorized image update; receipt must bind existing article hash')
     p.add_argument('--image',type=Path);p.add_argument('--image-alt');p.add_argument('--image-width',type=int,default=1400);p.add_argument('--image-height',type=int,default=600)
     p.add_argument('--preview-dir',type=Path);p.add_argument('--publish',action='store_true');p.add_argument('--approval',type=Path)
     try:

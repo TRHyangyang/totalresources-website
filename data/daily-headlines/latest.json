@@ -1,101 +1,103 @@
 {
   "schema_version": 1,
-  "date": "2026-10-10",
+  "date": "2026-10-13",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-10T07:13:56.934180+08:00",
+  "generated_at": "2026-10-13T07:15:14.487710+08:00",
   "headlines": [
     {
-      "event_id": "dh-trump-says-us-will-not-strike-iran-before-midterms",
-      "date": "2026-10-10",
-      "time": "10-09 06:37",
-      "headline_cn": "特朗普称中期选举前不打击伊朗，油价反应平淡",
-      "headline_en": "Trump says US will not strike Iran before midterms",
-      "summary": "Semafor报道，特朗普表示不会在中期选举前打击伊朗。石油市场对此反应平淡。值得关注的是，这一表态可能暂时压低美国直接打击伊朗的战争风险溢价；但市场反应平淡显示，袭击与航运风险仍是能源价格的主要变量，判断可能随冲突进展变化。",
+      "event_id": "dh-event-8315eab74fdb2a1c149e8a5b",
+      "date": "2026-10-13",
+      "time": "10-13 00:50",
+      "headline_cn": "油价升至近两周高位，中东供应风险重归焦点",
+      "headline_en": "Oil climbs to a near two-week high as Middle East supply risk returns",
+      "summary": "据OilPrice报道，因沙特阿拉伯遭袭及霍尔木兹海峡附近油轮遇袭，油价周一升至近两周高位，中东供应风险重归市场焦点。值得关注的是，若袭击与航运风险持续，油价与油轮运费可能维持高位，并传导至炼化与成品油进口成本；目前该行情仅来自单一来源，方向仍需更多数据确认。",
       "category": "ENERGY",
-      "source_name": "SEMAFOR",
-      "source_url": "https://www.semafor.com/article/10/08/2026/trump-says-us-will-not-strike-iran-before-midterms",
-      "source_publish_time": "2026-10-09T06:37:53+08:00",
+      "source_name": "OILPRICE",
+      "source_url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Jump-2-on-Saudi-Attacks-as-OPEC-Sees-Demand-Rebound.html",
+      "source_publish_time": "2026-10-13T00:50:00+08:00",
       "sources": [
         {
-          "source_name": "SEMAFOR",
-          "source_url": "https://www.semafor.com/article/10/08/2026/trump-says-us-will-not-strike-iran-before-midterms",
-          "source_publish_time": "2026-10-09T06:37:53+08:00"
+          "source_name": "OILPRICE",
+          "source_url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Jump-2-on-Saudi-Attacks-as-OPEC-Sees-Demand-Rebound.html",
+          "source_publish_time": "2026-10-13T00:50:00+08:00"
+        },
+        {
+          "source_name": "OILPRICE",
+          "source_url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Jumps-2-as-Saudi-Attacks-and-Tanker-Strikes-Revive-Hormuz-Fears.html",
+          "source_publish_time": "2026-10-12T21:35:00+08:00"
         }
       ],
       "confidence": "PARTIAL",
-      "mcis_relevance": "直接关系美国对伊政策与油价风险溢价，是能源与地缘传导的关键变量。",
-      "rank": 1,
-      "material_new_information": "今日窗口新增特朗普明确承诺中期选举前不打击伊朗，并给出石油市场的即时反应，属美伊政策路径的最新节点。"
+      "rank": 1
     },
     {
-      "event_id": "dh-new-construction-projects-in-the-gulf-plunge-37",
-      "date": "2026-10-10",
-      "time": "10-09 23:41",
-      "headline_cn": "海湾新建项目下滑37%，天然气与化工是唯一增长板块",
-      "headline_en": "Gulf construction projects plunge 37%",
-      "summary": "Semafor报道，海湾地区新建项目下滑37%。天然气与化工是唯一增长板块，ADNOC与沙特阿美继续支出。值得关注的是，工程发包收缩而天然气与化工资本开支仍在扩张，可能显示海湾上游与炼化投资结构分化，对化工原料与能源项目需求判断有参考意义。",
+      "event_id": "dh-event-493bf90a93f8ac333aa03817",
+      "date": "2026-10-13",
+      "time": "10-13 06:00",
+      "headline_cn": "欧洲天然气价格趋向多年高位，LNG短缺加剧",
+      "headline_en": "European gas heads for multi-year highs as LNG shortage deepens",
+      "summary": "据OilPrice报道，尽管俄乌周末达成能源停火且霍尔木兹海峡能源流量改善，欧洲主要天然气价格基准仍趋向多年高位。欧洲在缺少卡塔尔LNG出口的情况下进入北半球冬季，储气水平远低于15年低位。波斯湾LNG流量仍较二月二十八日前低逾75%。值得关注的是，气价高企可能抬升欧洲化工原料与发电成本。",
       "category": "ENERGY",
-      "source_name": "SEMAFOR",
-      "source_url": "https://www.semafor.com/article/10/09/2026/new-construction-projects-in-the-gulf-plunge-37",
-      "source_publish_time": "2026-10-09T23:41:14+08:00",
+      "source_name": "OILPRICE",
+      "source_url": "https://oilprice.com/Energy/Natural-Gas/Global-Coal-Demand-Rises-as-LNG-Shortage-Deepens.html",
+      "source_publish_time": "2026-10-13T06:00:00+08:00",
       "sources": [
         {
-          "source_name": "SEMAFOR",
-          "source_url": "https://www.semafor.com/article/10/09/2026/new-construction-projects-in-the-gulf-plunge-37",
-          "source_publish_time": "2026-10-09T23:41:14+08:00"
+          "source_name": "OILPRICE",
+          "source_url": "https://oilprice.com/Energy/Natural-Gas/Global-Coal-Demand-Rises-as-LNG-Shortage-Deepens.html",
+          "source_publish_time": "2026-10-13T06:00:00+08:00"
+        },
+        {
+          "source_name": "OILPRICE",
+          "source_url": "https://oilprice.com/Energy/Natural-Gas/European-Natural-Gas-Prices-Headed-for-Multi-Year-Highs.html",
+          "source_publish_time": "2026-10-13T01:00:00+08:00"
         }
       ],
       "confidence": "PARTIAL",
-      "mcis_relevance": "海湾资本开支与化工板块景气直接关系上游投资与化工原料供需前景。",
-      "rank": 2,
-      "material_new_information": "今日窗口新增海湾新建项目金额下滑37%的数据，并明确天然气与化工为唯一增长板块。"
+      "rank": 2
     },
     {
-      "event_id": "dh-china-rejects-yuan-manipulation-claims-amid-eu-trade-dispute",
-      "date": "2026-10-10",
-      "time": "10-09 06:55",
-      "headline_cn": "中国否认操纵人民币汇率，中欧贸易谈判交锋",
-      "headline_en": "China rejects yuan manipulation claims",
-      "summary": "Semafor报道，中国否认操纵人民币汇率的说法。中国反驳了有关其操纵汇率以促进出口的说法，北京与布鲁塞尔正就贸易问题进行磋商。值得关注的是，汇率议题进入中欧贸易谈判，可能增加人民币汇率与出口链的政策不确定性；但当前仍属表态层面的交锋，具体措施待观察。",
-      "category": "CHINA",
+      "event_id": "dh-event-25a4a51de6ff169d3aa5f908",
+      "date": "2026-10-13",
+      "time": "10-12 06:44",
+      "headline_cn": "中欧达成协议，将对欧混动车出口减少一半",
+      "headline_en": "EU and China agree to halve Chinese hybrid vehicle exports to Europe",
+      "summary": "据Semafor报道，欧盟与中国上周五达成协议，把中国对欧洲的混合动力汽车出口量减少一半。值得关注的是，该协议若落地，中国混动车出口与欧洲汽车贸易条件可能变化，实际执行范围仍待观察。",
+      "category": "TRADE",
       "source_name": "SEMAFOR",
-      "source_url": "https://www.semafor.com/article/10/08/2026/china-refutes-yuan-manipulation-claims-amidst-trades-tensions-with-eu",
-      "source_publish_time": "2026-10-09T06:55:00+08:00",
+      "source_url": "https://www.semafor.com/article/10/11/2026/china-eu-reach-agreement-to-reduce-chinese-hybrid-vehicle-imports",
+      "source_publish_time": "2026-10-12T06:44:39+08:00",
       "sources": [
         {
           "source_name": "SEMAFOR",
-          "source_url": "https://www.semafor.com/article/10/08/2026/china-refutes-yuan-manipulation-claims-amidst-trades-tensions-with-eu",
-          "source_publish_time": "2026-10-09T06:55:00+08:00"
+          "source_url": "https://www.semafor.com/article/10/11/2026/china-eu-reach-agreement-to-reduce-chinese-hybrid-vehicle-imports",
+          "source_publish_time": "2026-10-12T06:44:39+08:00"
         }
       ],
       "confidence": "PARTIAL",
-      "mcis_relevance": "中欧贸易与汇率摩擦影响中国出口链与化工品贸易条件，是重要的政策风险变量。",
-      "rank": 3,
-      "material_new_information": "今日窗口新增中国官方对人民币操纵指控的公开反驳，以及中欧正就贸易问题磋商的最新状态，属该争端的新表态阶段。"
+      "rank": 3
     },
     {
-      "event_id": "dh-germany-raises-growth-forecast-in-spite-of-iran-war-concerns",
-      "date": "2026-10-10",
-      "time": "10-09 18:42",
-      "headline_cn": "德国上调今年增长预期，预计GDP增长1.3%",
-      "headline_en": "Germany raises growth forecast in spite of Iran war concerns",
-      "summary": "Semafor报道，德国上调今年经济增长预期。德国预计今年GDP增长1.3%，明年增速相近。值得关注的是，在伊朗战事与能源价格高企背景下仍上调增长预期，可能缓解市场对欧洲需求下滑的担忧；但该预期对能源价格与外部需求的假设仍存不确定性。",
-      "category": "GEOPOLITICS",
-      "source_name": "SEMAFOR",
-      "source_url": "https://www.semafor.com/article/10/09/2026/germany-raises-growth-forecast-in-spite-of-iran-war-concerns",
-      "source_publish_time": "2026-10-09T18:42:59+08:00",
+      "event_id": "dh-event-04036d77e94b029395e5344d",
+      "date": "2026-10-13",
+      "time": "10-13 04:00",
+      "headline_cn": "中国乘用车零售同比降28%，出口成缓冲",
+      "headline_en": "China's September passenger-vehicle retail sales fall 28%",
+      "summary": "据OilPrice报道，中国乘用车协会数据显示，九月购车旺季失速，乘用车零售销量同比下滑28%，厂商更多依赖海外买家缓冲疲软内需。值得关注的是，内需走弱而出口依赖上升，可能放大中国汽车产业链对海外需求与贸易政策的敏感度。",
+      "category": "TRADE",
+      "source_name": "OILPRICE",
+      "source_url": "https://oilprice.com/Energy/Energy-General/Chinas-Auto-Exports-Explode-as-Domestic-Demand-Craters.html",
+      "source_publish_time": "2026-10-13T04:00:00+08:00",
       "sources": [
         {
-          "source_name": "SEMAFOR",
-          "source_url": "https://www.semafor.com/article/10/09/2026/germany-raises-growth-forecast-in-spite-of-iran-war-concerns",
-          "source_publish_time": "2026-10-09T18:42:59+08:00"
+          "source_name": "OILPRICE",
+          "source_url": "https://oilprice.com/Energy/Energy-General/Chinas-Auto-Exports-Explode-as-Domestic-Demand-Craters.html",
+          "source_publish_time": "2026-10-13T04:00:00+08:00"
         }
       ],
       "confidence": "PARTIAL",
-      "mcis_relevance": "欧洲增长与能源成本直接影响成品油、化工品需求与全球宏观风险偏好。",
-      "rank": 4,
-      "material_new_information": "今日窗口新增德国官方对今年GDP增长1.3%、明年增速相近的最新预测，并置于伊朗战事背景之下。"
+      "rank": 4
     }
   ]
 }

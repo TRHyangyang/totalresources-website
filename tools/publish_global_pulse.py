@@ -287,7 +287,7 @@ def render_markdown(markdown):
     return "\n".join(out)
 
 
-def render(source_path):
+def render(source_path, title_image=None, image_alt=""):
     source = source_path.read_text(encoding="utf-8")
     metadata, body = frontmatter(source)
     body = public_body(body, metadata.get("research_cutoff", ""))
@@ -301,13 +301,25 @@ def render(source_path):
     page_title = metadata["title"] if metadata["title"].endswith(subtitle) else metadata["title"] + "｜" + subtitle
     description = "{} 研究截止：{}。".format(page_title, metadata.get("research_cutoff", ""))
     rendered = TEMPLATE.read_text(encoding="utf-8")
+    article = render_markdown(body)
+    if title_image is not None:
+        image_path = Path(title_image)
+        if image_path.is_absolute() or ".." in image_path.parts:
+            raise ValueError("Title image must be relative to the article directory")
+        image_file = ROOT / "intelligence" / image_path
+        if not image_file.is_file() or image_file.suffix.lower() not in (".jpg", ".jpeg", ".png", ".webp"):
+            raise ValueError("Title image must be an existing supported image")
+        if not image_alt.strip():
+            raise ValueError("Title image requires alternative text")
+        image_markup = '<figure class="article-title-photo" style="margin:0 0 24px"><img src="{}" alt="{}" style="display:block;width:100%;height:auto" fetchpriority="high"></figure>'.format(html.escape(image_path.as_posix(), quote=True), html.escape(image_alt, quote=True))
+        article = article.replace("</h2>", "</h2>\n" + image_markup, 1)
     values = {
         "TITLE": html.escape(page_title),
         "DESCRIPTION": html.escape(description, quote=True),
         "CANONICAL": canonical,
         "DATE": date,
         "CUTOFF": html.escape(metadata.get("research_cutoff", "未提供")),
-        "ARTICLE": render_markdown(body),
+        "ARTICLE": article,
     }
     for key, value in values.items():
         rendered = rendered.replace("{{" + key + "}}", value)
@@ -322,9 +334,11 @@ def render(source_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", type=Path, help="Explicit archived FINAL Markdown source")
+    parser.add_argument("--title-image", type=Path, help="Authorized image relative to intelligence/")
+    parser.add_argument("--image-alt", default="", help="Descriptive alternative text")
     args = parser.parse_args()
     try:
-        print(render(args.source))
+        print(render(args.source, args.title_image, args.image_alt))
     except (OSError, ValueError) as error:
         print("Publication rejected: {}".format(error), file=sys.stderr)
         sys.exit(1)

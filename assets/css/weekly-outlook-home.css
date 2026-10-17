@@ -11,3 +11,7 @@
 .home-weekly-all{display:inline-flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:13px;font-weight:800;color:var(--green);text-decoration:none}
 .home-weekly-status{font-size:14px;color:var(--gray);margin-bottom:16px}
 @media(max-width:760px){.home-weekly{padding:36px 0 40px}.home-weekly-card{grid-template-columns:minmax(0,1fr);gap:14px;padding:24px 20px}.home-weekly-content h3{font-size:20px}.home-weekly-all{display:flex;flex-direction:column;gap:5px}}
+
+.home-weekly-summary{margin-top:14px;white-space:pre-line}
+.home-weekly-all{flex-direction:column;gap:2px}
+.home-weekly-all [lang="en"]{font-size:12px}

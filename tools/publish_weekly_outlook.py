@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Publish one explicitly supplied, archived Weekly FINAL; never discover sources."""
 import argparse
+import hashlib
+import json
 from datetime import date
 import html
 from pathlib import Path
@@ -14,7 +16,7 @@ START = '<!-- WEEKLY OUTLOOK START -->'
 END = '<!-- WEEKLY OUTLOOK END -->'
 
 
-def publish(source):
+def publish(source, review_path=None):
     source = source.resolve(strict=True)
     text = source.read_text(encoding='utf-8')
     match = re.match(r'\A---\r?\n(.*?)\r?\n---\r?\n(.*)\Z', text, re.S)
@@ -25,8 +27,15 @@ def publish(source):
         item = re.match(r'^(date|issue_date|status|publication_status|title|subtitle):\s*(.*?)\s*$', line)
         if item:
             meta[item[1]] = item[2].strip('\'"')
-    if meta.get('status', meta.get('publication_status')) != 'FINAL':
-        raise ValueError('Explicit FINAL status required')
+    review = json.loads(review_path.read_text(encoding='utf-8')) if review_path else None
+    if review is not None:
+        if (review.get('source_sha256') != hashlib.sha256(source.read_bytes()).hexdigest()
+                or review.get('approved') is not True or review.get('critical_errors') != []
+                or not review.get('calendar_checks') or not review.get('public_note')):
+            raise ValueError('Publication review must approve this exact source with calendar evidence and no critical errors')
+    status = meta.get('status', meta.get('publication_status'))
+    if status != 'FINAL' and not (status == 'FINAL — conditional publication QA' and review):
+        raise ValueError('Explicit FINAL status or completed conditional publication review required')
     if meta.get('date') and meta.get('issue_date') and meta['date'] != meta['issue_date']:
         raise ValueError('Conflicting date and issue_date')
     day = meta.get('date', meta.get('issue_date', ''))
@@ -54,11 +63,16 @@ def publish(source):
     page = (ROOT / 'tools/weekly_outlook_article.html').read_text(encoding='utf-8')
     values = {'TITLE': title + ('｜' + subtitle if subtitle else ''), 'DESCRIPTION': title + ' ' + subtitle,
               'CANONICAL': canonical, 'DATE': day, 'ARTICLE': render_markdown(match[2])}
+    if review:
+        values['ARTICLE'] += '\n' + render_markdown(review['public_note'])
     # Single pass: source text containing template-like braces is literal content.
     page = re.sub(r'\{\{([A-Z]+)\}\}', lambda m: values[m[1]], page)
     entry = (f'<!-- weekly-publication:{day} --><li><time datetime="{day}">{day}</time>'
              f'<a href="{relative}">{title}｜{subtitle} →</a></li>')
-    card = (f'<div class="latest-card"><div class="latest-date">{day}</div>'
+    display_title = html.escape(review.get('display_title', meta['title'])) if review else title
+    display_period = html.escape(review.get('display_period', '')) if review else ''
+    summary = html.escape(review.get('summary', '')) if review else ''
+    card = (f'<div class="latest-card" data-display-title="{display_title}" data-display-period="{display_period}" data-summary="{summary}"><div class="latest-date">{day}</div>'
             f'<h3>{title}</h3><p>{subtitle}</p><a href="{relative}">Read Weekly Outlook →</a></div>')
     if START in index:
         if index.count(START) != 1 or index.count(END) != 1:
@@ -104,9 +118,10 @@ def publish(source):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('source', type=Path)
+    parser.add_argument('--publication-review', type=Path, help='Completed source-hash-bound conditional publication review')
     args = parser.parse_args()
     try:
-        print(publish(args.source))
+        print(publish(args.source, args.publication_review))
     except (OSError, ValueError, KeyError, ET.ParseError) as error:
         print('Publication rejected: ' + str(error), file=sys.stderr)
         sys.exit(1)

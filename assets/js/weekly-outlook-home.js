@@ -19,8 +19,9 @@
             const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
             const latest = doc.querySelector('#weekly-outlook .latest-card');
             const date = latest?.querySelector('.latest-date')?.textContent.trim();
-            const title = latest?.querySelector('h3')?.textContent.trim();
-            const period = latest?.querySelector('p')?.textContent.trim();
+            const rawTitle = latest?.querySelector('h3')?.textContent.trim();
+            const title = latest?.dataset.displayTitle || rawTitle?.replace(/^经纬金脉[｜·]全球风险日历与重大事件[：:]?/, '').trim() || rawTitle;
+            const period = latest?.dataset.displayPeriod || latest?.querySelector('p')?.textContent.trim();
             const link = latest?.querySelector('a[href]');
             const url = link && new URL(link.getAttribute('href'), sourceURL);
             if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '') || !title || !period ||
@@ -31,7 +32,10 @@
             time.dateTime = date;
             time.textContent = date;
             card.querySelector('h3').textContent = title;
-            card.querySelector('.home-weekly-content p').textContent = period;
+            card.querySelector('.home-weekly-period').textContent = period;
+            const summary = card.querySelector('.home-weekly-summary');
+            summary.textContent = latest.dataset.summary ? '本周核心观察：' + latest.dataset.summary : '';
+            summary.hidden = !latest.dataset.summary;
             card.querySelector('.home-weekly-read').href = url.pathname;
             card.hidden = false;
             status.hidden = true;

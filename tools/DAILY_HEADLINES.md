@@ -60,3 +60,5 @@ Historical validation manifests are `HISTORICAL_TEST`: they can be inspected off
 The upstream OpenClaw collector was unavailable during this change. Its 400-character truncation has NOT been fixed here. On that host, retain the full feed/article text before any display-length slicing, save it as private `evidence_text`, retain original URL and absolute timestamp provenance, and keep the short display `summary` separate. No missing body or timestamp may be fabricated.
 
 Tests: `python3 tools/test_daily_headlines_evidence.py` and the existing publishing safety tests. Historical network results are private and must not be committed to this public repository.
+
+Homepage status reader distinguishes COLLECTION_FAILED, QA_REJECTED, VERIFICATION_FAILED and PUBLICATION_FAILED. Legacy NO_VERIFIED_UPDATE is treated as an incomplete review, never as a finding of no news. HTTP/JSON read failures display content unavailable. Only a valid same-day NO_MATERIAL_CHANGE publication produces a normal no-change state; a valid same-day PUBLISHED result takes precedence over an earlier failure. Upstream runtime and schedules are unchanged by this presentation contract.

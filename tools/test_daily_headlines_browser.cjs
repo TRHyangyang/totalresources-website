@@ -15,12 +15,16 @@ const assert=(v,m)=>{if(!v)throw Error(m);};
    const failure={schema_version:1,date,status:'NO_VERIFIED_UPDATE'};
    const headline={date,headline_cn:'测试头条',summary:'测试摘要，不是新闻。',category:'TEST',confidence:'PARTIAL'};
    const success={schema_version:1,date,status:'PUBLISHED',headlines:[headline]};
-   const cases=live?[['LIVE',undefined,undefined,'No Verified Update',true]]:[
-    ['PENDING',null,null,'Daily Intelligence Update Pending',true],
-    ['QA_FAIL',null,failure,'No Verified Update',true],
-    ['STALE_ARTICLE',{...success,date:'2000-01-01'},failure,'No Verified Update',true],
-    ['OLD_FAILURE',null,{...failure,date:'2000-01-01'},'Daily Intelligence Update Pending',true],
-    ['MALFORMED', {...success,headlines:[{}]},null,'Daily Intelligence Update Pending',true],
+   const cases=live?[['LIVE',undefined,undefined,null,false]]:[
+    ['PENDING',null,null,'Content Unavailable',true],
+    ['QA_FAIL',null,failure,'Review Incomplete',true],
+    ['COLLECTION_FAILED',null,{...failure,status:'COLLECTION_FAILED'},'Collection Failed',true],
+    ['REVIEW_REJECTED',null,{...failure,status:'QA_REJECTED'},'Review Not Passed',true],
+    ['VERIFY_INTERRUPTED',null,{...failure,status:'VERIFICATION_FAILED'},'Verification Interrupted',true],
+    ['DEPLOY_FAILED',null,{...failure,status:'PUBLICATION_FAILED'},'Publication Failed',true],
+    ['STALE_ARTICLE',{...success,date:'2000-01-01'},failure,'Review Incomplete',true],
+    ['OLD_FAILURE',null,{...failure,date:'2000-01-01'},'Content Unavailable',true],
+    ['MALFORMED', {...success,headlines:[{}]},null,'Content Unavailable',true],
     ['SUCCESS_AFTER_FAILURE',success,failure,null,false],
     ['NO_CHANGE',{schema_version:1,date,status:'NO_MATERIAL_CHANGE',headlines:[]},failure,'No Material Intelligence Change',false]
    ];
@@ -33,7 +37,7 @@ const assert=(v,m)=>{if(!v)throw Error(m);};
      const response=await page.goto(base+route,{waitUntil:'networkidle'});assert(response.status()===200,route+' HTTP');
      const root=page.locator('[data-daily-headlines]');const state=root.locator('.dh-state');
      if(expected){assert((await state.innerText()).includes(expected),name+' state');assert(await root.locator('.dh-card').count()===0,name+' leaked cards');}
-     else assert(await root.locator('.dh-card').count()===1,name+' missing cards');
+     else assert(await root.locator('.dh-card').count()===(live?3:1),name+' missing cards');
      const href=await root.locator('.dh-action').getAttribute('href');
      assert(href===(archive?'/intelligence/daily-headlines/#archive':'/intelligence/daily-headlines/'+date+'.html'),name+' link');
      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),name+' overflow');
@@ -51,7 +55,7 @@ const assert=(v,m)=>{if(!v)throw Error(m);};
     await page.route('**/data/daily-headlines/status.json',r=>r.fulfill({json:failure}));
     await page.clock.install({time:new Date(date+'T15:59:50Z')});await page.goto(base+'/intelligence/daily-headlines/',{waitUntil:'networkidle'});
     await page.clock.runFor(70000);
-    await page.waitForFunction(()=>document.querySelector('.dh-state').textContent.includes('Daily Intelligence Update Pending'));
+    await page.waitForFunction(()=>document.querySelector('.dh-state').textContent.includes('Content Unavailable'));
     checks++;
    }
    assert(errors.length===0,errors.join('\n'));await context.close();

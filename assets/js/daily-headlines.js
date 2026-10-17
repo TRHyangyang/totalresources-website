@@ -13,10 +13,11 @@
   const element = (tag, cls, value, lang) => {
     const node = document.createElement(tag); node.className = cls; node.textContent = value;
     if (lang) node.lang = lang;
+    if (lang === 'en') node.translate = false;
     return node;
   };
   const label = (target, en, cn) => target.replaceChildren(
-    element('span', '', en, 'en'), element('span', '', cn, 'zh-CN'));
+    element('span', '', cn, 'zh-CN'), element('span', '', en, 'en'));
   const pending = () => {
     grid.replaceChildren(); grid.hidden = true; state.hidden = false;
     label(state, 'Daily Intelligence Update Pending', '今日情报更新待完成');
@@ -28,11 +29,13 @@
   async function refresh() {
     const token = ++request; pending();
     const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 10000);
+    let readFailed = false;
     const read = async path => {
       try {
         const response = await fetch(path, {cache:'no-store',signal:controller.signal});
-        return response.ok ? await response.json() : null;
-      } catch (_) { return null; }
+        if (!response.ok) { if (response.status !== 404) readFailed = true; return null; }
+        return await response.json();
+      } catch (_) { readFailed = true; return null; }
     };
     try {
       const [data, outcome] = await Promise.all([
@@ -64,9 +67,23 @@
       if (published) {
         action.href = '/intelligence/daily-headlines/'+data.date+'.html';
         label(action, 'View All Daily Headlines', '查看全部今日头条');
-      } else if (outcome?.schema_version === 1 && outcome.date === today && outcome.status === 'NO_VERIFIED_UPDATE') {
-        state.replaceChildren(document.createTextNode('No Verified Update｜今日暂无符合发布标准的更新'),
-          element('span','dh-explanation','审核未通过不代表当天没有重大新闻。','zh-CN'));
+      } else {
+        const messages = {
+          COLLECTION_FAILED: ['Collection Failed', '新闻采集失败'],
+          QA_REJECTED: ['Review Not Passed', '新闻审核未通过'],
+          VERIFICATION_FAILED: ['Verification Interrupted', '新闻核验中断'],
+          PUBLICATION_FAILED: ['Publication Failed', '今日头条发布失败'],
+          NO_VERIFIED_UPDATE: ['Review Incomplete', '新闻核验未完成']
+        };
+        if (outcome?.schema_version === 1 && outcome.date === today && messages[outcome.status]) {
+          label(state, ...messages[outcome.status]);
+          state.append(element('span','dh-explanation',outcome.status === 'PUBLICATION_FAILED' && outcome.reason_code === 'VERIFICATION_NETWORK_ERROR'
+            ? '采集已有结果；来源核验连接异常，最终审核未完成。此状态不代表没有重大新闻。'
+            : '此状态不代表当天没有重大新闻。','zh-CN'));
+        } else if (readFailed || (data?.date === today && !published)) {
+          label(state, 'Content Unavailable', '最新内容读取失败');
+          state.append(element('span','dh-explanation','请稍后重试或查看历史归档；不能据此判断当天是否有重大新闻。','zh-CN'));
+        }
       }
     } finally {clearTimeout(timer);}
   }

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-19T09:59:28.851655+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-d7657b6e6b4060c1a96ec9e0",
+      "date": "2026-10-19",
+      "time": "10-19 06:34",
+      "headline_cn": "Semafor：中国考虑对AI模型和芯片实施出口管制",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国正在考虑对AI模型和芯片实施出口管制，以加强对科技行业的监管。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/18/2026/china-mulls-ai-export-rules",
+      "source_publish_time": "2026-10-18T22:34:45Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/18/2026/china-mulls-ai-export-rules",
+          "source_publish_time": "2026-10-18T22:34:45Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    }
+  ]
+}

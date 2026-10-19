@@ -1,93 +1,30 @@
 {
   "schema_version": 1,
-  "date": "2026-10-17",
+  "date": "2026-10-19",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-17T11:09:25.373724+08:00",
+  "generated_at": "2026-10-19T09:59:28.851655+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-8f26c0a070591718158b8167",
-      "date": "2026-10-17",
-      "time": "10-17 02:30",
-      "headline_cn": "美国再向市场投放战略石油储备原油，IEA前一日加快紧急释放",
-      "headline_en": "U.S. offers more strategic crude after IEA sped up emergency releases",
-      "summary": "据OilPrice报道，美国将再从战略石油储备中投放17 million barrels原油；此前一日国际能源署（IEA）已加快紧急库存释放；各国政府正设法向紧张的油品市场提供更多原油与燃料。值得关注的是，储备连续投放可能短期缓解燃料紧张，但也说明供应缺口尚未修复；对炼化利润的支撑是否减弱仍待观察。",
-      "category": "ENERGY",
-      "source_name": "OILPRICE",
-      "source_url": "https://oilprice.com/Latest-Energy-News/World-News/US-Offers-Another-17-Million-SPR-Barrels-as-Fuel-Crisis-Deepens.html",
-      "source_publish_time": "2026-10-17T02:30:00+08:00",
+      "event_id": "dh-event-d7657b6e6b4060c1a96ec9e0",
+      "date": "2026-10-19",
+      "time": "10-19 06:34",
+      "headline_cn": "Semafor：中国考虑对AI模型和芯片实施出口管制",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国正在考虑对AI模型和芯片实施出口管制，以加强对科技行业的监管。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/18/2026/china-mulls-ai-export-rules",
+      "source_publish_time": "2026-10-18T22:34:45Z",
       "sources": [
         {
-          "source_name": "OILPRICE",
-          "source_url": "https://oilprice.com/Latest-Energy-News/World-News/US-Offers-Another-17-Million-SPR-Barrels-as-Fuel-Crisis-Deepens.html",
-          "source_publish_time": "2026-10-17T02:30:00+08:00"
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/18/2026/china-mulls-ai-export-rules",
+          "source_publish_time": "2026-10-18T22:34:45Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
-    },
-    {
-      "event_id": "dh-event-1ac6e2e8ff2c74ec7fcac151",
-      "date": "2026-10-17",
-      "time": "10-16 22:00",
-      "headline_cn": "乌克兰恢复打击俄能源设施，梁赞炼厂据报遇袭",
-      "headline_en": "Ukraine resumes strikes on Russian energy infrastructure; Ryazan refinery hit",
-      "summary": "据OilPrice报道，俄方官员称乌军袭击了俄梁赞地区一座炼油厂；数小时前乌总统泽连斯基称将恢复打击俄能源设施；并对美国卫星情报中断表示不满。值得关注的是，炼厂打击若持续，柴油等成品油供应风险可能回升并放大炼化利润波动；事件仍在发展中，规模与走向待确认。",
-      "category": "ENERGY",
-      "source_name": "OILPRICE",
-      "source_url": "https://oilprice.com/Geopolitics/Europe/Ukraine-Defies-Trump-With-Renewed-Attacks-on-Russian-Oil-Infrastructure.html",
-      "source_publish_time": "2026-10-16T22:00:00+08:00",
-      "sources": [
-        {
-          "source_name": "OILPRICE",
-          "source_url": "https://oilprice.com/Geopolitics/Europe/Ukraine-Defies-Trump-With-Renewed-Attacks-on-Russian-Oil-Infrastructure.html",
-          "source_publish_time": "2026-10-16T22:00:00+08:00"
-        }
-      ],
-      "confidence": "DEVELOPING",
-      "rank": 2
-    },
-    {
-      "event_id": "dh-event-185c46bbd8d01dcde2e2f5b0",
-      "date": "2026-10-17",
-      "time": "10-16 20:30",
-      "headline_cn": "报道称美国暂不介入沙特与胡塞战事，两项决定牵动周末能源风险",
-      "headline_en": "Report: Washington stays out of the Saudi-Houthi war; two decisions shape weekend energy risk",
-      "summary": "据OilPrice报道，两项特朗普决定将决定本周末能源风险，且两项都在放弃筹码以压低油价；第一项是不让美国火力介入沙特与胡塞武装的战争。值得关注的是，不介入可降低冲突升级的尾部风险，但沙特能源设施与航运所受威胁短期更依赖自身防御；该取向与美方压低油价诉求一致。",
-      "category": "ENERGY",
-      "source_name": "OILPRICE",
-      "source_url": "https://oilprice.com/Energy/Energy-General/Trumps-Oil-Price-Strategy-Faces-Two-Major-Tests-This-Weekend.html",
-      "source_publish_time": "2026-10-16T20:30:00+08:00",
-      "sources": [
-        {
-          "source_name": "OILPRICE",
-          "source_url": "https://oilprice.com/Energy/Energy-General/Trumps-Oil-Price-Strategy-Faces-Two-Major-Tests-This-Weekend.html",
-          "source_publish_time": "2026-10-16T20:30:00+08:00"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 3
-    },
-    {
-      "event_id": "dh-event-657781982c1242fa4bb87e78",
-      "date": "2026-10-17",
-      "time": "10-16 19:08",
-      "headline_cn": "甲骨文债务评级逼近垃圾级，微软AAA债务保险成本上升25%",
-      "headline_en": "AI infrastructure debt costs soar",
-      "summary": "据Semafor报道，甲骨文$160 billion的债务评级仅略高于垃圾级；微软AAA级债务的保险成本较三个月前上升25%。值得关注的是，AI基础设施融资成本上升可能压制相关资本开支节奏，并推动信用市场对科技债务重新定价；是否扩散至更广泛融资条件仍待观察。",
-      "category": "TECHNOLOGY",
-      "source_name": "SEMAFOR",
-      "source_url": "https://www.semafor.com/article/10/16/2026/ai-infrastructure-debt-costs-soar-amid-investor-concerns",
-      "source_publish_time": "2026-10-16T19:08:06+08:00",
-      "sources": [
-        {
-          "source_name": "SEMAFOR",
-          "source_url": "https://www.semafor.com/article/10/16/2026/ai-infrastructure-debt-costs-soar-amid-investor-concerns",
-          "source_publish_time": "2026-10-16T19:08:06+08:00"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 4
     }
   ]
 }

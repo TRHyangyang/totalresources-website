@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-20T08:54:39.095784+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-1ef805b77de6119c44d1e510",
+      "date": "2026-10-20",
+      "time": "10-19 16:43",
+      "headline_cn": "Semafor：沙特取消FII线下会议，告知代表延期",
+      "headline_en": "",
+      "summary": "据Semafor援引知情人士报道，华尔街高管私下表达安全担忧后，沙特取消利雅得旗舰投资会议的线下参会安排。报道并称，主办方向代表告知会议延期至2027年。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/19/2026/saudi-to-decide-on-postponing-fii-after-wall-street-lobbying",
+      "source_publish_time": "2026-10-19T08:43:33Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/19/2026/saudi-to-decide-on-postponing-fii-after-wall-street-lobbying",
+          "source_publish_time": "2026-10-19T08:43:33Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-7bf55da10ab6a08038197f67",
+      "date": "2026-10-20",
+      "time": "10-19 18:44",
+      "headline_cn": "Semafor：中国三季度增长超预期，内需仍弱",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国第三季度经济增长快于预期，出口提供支撑，但国内消费仍然落后。",
+      "category": "TRADE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/19/2026/chinas-powerful-export-machine-propelled-gdp-growth-beyond-expectations",
+      "source_publish_time": "2026-10-19T10:44:12Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/19/2026/chinas-powerful-export-machine-propelled-gdp-growth-beyond-expectations",
+          "source_publish_time": "2026-10-19T10:44:12Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-69d3fee96907c4685f98c8db",
+      "date": "2026-10-20",
+      "time": "10-19 21:12",
+      "headline_cn": "Semafor：布隆迪与Anzana签署电力协议",
+      "headline_en": "",
+      "summary": "据Semafor报道，布隆迪与获美国支持的Anzana Electric Group签署电力协议。协议为期25年，拟扩大向家庭与企业的供电连接。",
+      "category": "FINANCE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/19/2026/burundi-signs-14b-electricity-deal-with-us-backed-anzana-electric-group",
+      "source_publish_time": "2026-10-19T13:12:16Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/19/2026/burundi-signs-14b-electricity-deal-with-us-backed-anzana-electric-group",
+          "source_publish_time": "2026-10-19T13:12:16Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-3c1ac121ec1551f73534b0b9",
+      "date": "2026-10-20",
+      "time": "10-20 06:37",
+      "headline_cn": "Semafor：Waymo拟于明年底将车队扩至20,000辆",
+      "headline_en": "",
+      "summary": "据Semafor援引知情人士报道，Waymo拟在今年底将车队扩大至8,000辆，明年底增至20,000辆。Waymo拒绝置评。",
+      "category": "FINANCE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/19/2026/waymo-plans-to-quintuple-its-fleet",
+      "source_publish_time": "2026-10-19T22:37:08Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/19/2026/waymo-plans-to-quintuple-its-fleet",
+          "source_publish_time": "2026-10-19T22:37:08Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    }
+  ]
+}

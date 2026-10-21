@@ -205,7 +205,8 @@ def run(args):
     entries = re.findall(r'<!-- special-report:(\d{4}-\d{2}-\d{2}):([a-z0-9-]+) --><li>.*?</li>', section, re.S)
     existing = re.findall(r'<!-- special-report:\d{4}-\d{2}-\d{2}:[a-z0-9-]+ --><li>.*?</li>', section, re.S)
     entry = f'<!-- special-report:{day}:{slug} --><li><time datetime="{day}">{day}</time><a href="{relative}">{escaped["TITLE"]} →</a></li>'
-    ordered = sorted(existing+[entry], key=lambda x:re.search(r'special-report:([^:]+):',x)[1], reverse=True)
+    # Stable date sort keeps the newly published entry first among same-day reports.
+    ordered = sorted([entry]+existing, key=lambda x:re.search(r'special-report:([^:]+):',x)[1], reverse=True)
     archive = ''.join(ordered)
     latest = ordered[0]
     latest_slug = re.search(r'special-report:[^:]+:([^ ]+) ', latest)[1]

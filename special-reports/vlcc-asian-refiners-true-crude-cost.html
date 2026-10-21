@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>当VLCC不再便宜：亚洲炼厂如何重新计算一桶原油的真实成本 | TOTAL RESOURCES Intelligence</title>
+<meta name="description" content="当VLCC现货运价高企，亚洲炼厂如何比较Aframax、长期租船与到岸交付？本文区分市场报价与假设算例，分析运费、战争险和原油折价如何影响到岸成本及炼化利润。">
+<meta name="keywords" content="">
+<meta name="author" content="知衡（AI研究笔名）">
+<meta property="article:section" content="产业深度研究｜Industry Insights">
+<link rel="canonical" href="https://totalresources.info/special-reports/vlcc-asian-refiners-true-crude-cost.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="当VLCC不再便宜：亚洲炼厂如何重新计算一桶原油的真实成本">
+<meta property="og:description" content="当VLCC现货运价高企，亚洲炼厂如何比较Aframax、长期租船与到岸交付？本文区分市场报价与假设算例，分析运费、战争险和原油折价如何影响到岸成本及炼化利润。">
+<meta property="og:url" content="https://totalresources.info/special-reports/vlcc-asian-refiners-true-crude-cost.html">
+<meta property="og:site_name" content="TOTAL RESOURCES">
+<meta property="article:published_time" content="2026-10-21">
+<style>
+:root{--navy:#071f38;--navy2:#0b2d50;--green:#267248;--gold:#c8a957;--text:#102235;--gray:#687582;--light:#f4f6f8;--line:#e2e7eb}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}
+a{color:var(--green)}
+.container{width:88%;max-width:1180px;margin:0 auto}
+.site-header{background:var(--navy);color:#fff}
+.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{font-size:16px;font-weight:900;letter-spacing:2px;color:#fff;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.nav-links a{color:#fff;text-decoration:none;font-size:12px;font-weight:700}
+.nav-links a:hover{color:var(--gold)}
+.nav-links .basinol-link{color:var(--gold)}
+.article-hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:64px 0 60px}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase}
+.article-hero h1{max-width:900px;font-size:40px;line-height:1.3;margin:15px 0}
+.article-hero p{margin:0;color:#d9e3e9;font-size:14px}
+.publication-meta{background:#f7f8f9;border-bottom:1px solid var(--line)}
+.publication-meta-inner{max-width:980px;margin:0 auto;padding:20px 0;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.publication-meta .publication-label{color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;margin-right:auto}
+.publication-meta .meta-item{font-size:13px;color:var(--gray)}
+.publication-meta .meta-item strong{color:var(--navy);font-weight:750;margin-left:7px}
+.article-wrap{max-width:980px;margin:0 auto;padding:53px 0 100px}
+.back-link{display:inline-block;margin-bottom:33px;font-size:13px;font-weight:800;text-decoration:none}
+.article-body{font-size:18px;line-height:1.92;letter-spacing:.005em;overflow-wrap:anywhere}
+.article-body h1{font-size:15px;color:var(--green);letter-spacing:.08em;line-height:1.5;margin:0 0 13px}
+.article-body h2{font-size:27px;line-height:1.45;color:var(--navy);margin:54px 0 19px;font-weight:760}
+.article-body h1+h2{font-size:31px;line-height:1.43;margin:0 0 24px;max-width:920px}
+.article-body h3{font-size:21px;color:var(--green);margin:34px 0 14px}
+.article-body p{margin:0 0 24px}
+.article-body hr{border:0;border-top:1px solid var(--line);margin:54px 0 31px}
+.article-body hr+h2{margin-top:0}
+.article-body strong{color:var(--navy)}
+.article-body ul,.article-body ol{padding-left:1.6em;margin:0 0 24px}
+.article-body blockquote{margin:30px 0;padding:23px 27px;background:var(--light);border-left:4px solid var(--gold)}
+.article-body blockquote p{margin:0}
+.article-body .publication-signature{background:#f7f8f9;border-left:4px solid var(--gold);padding:27px 31px;margin:22px 0 0;font-size:18px;line-height:1.9}
+.article-body .table-scroll{overflow-x:auto;overscroll-behavior-inline:contain;margin:26px 0 34px;border:1px solid var(--line)}
+.article-body table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.72;min-width:790px}
+.article-body th,.article-body td{padding:16px 17px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.article-body th{background:var(--navy);color:#fff;font-weight:750;letter-spacing:.025em;border-bottom:2px solid var(--gold)}
+.article-body tr:last-child td{border-bottom:0}
+.article-body tr:nth-child(even) td{background:#f8fafb}
+.article-body td strong{font-weight:750}
+.article-body .disclaimer-heading{font-size:22px}
+.article-body .disclaimer-heading+p{background:#f7f8f9;border-top:2px solid var(--line);padding:25px 28px;font-size:15px;line-height:1.88;color:#425264}
+.article-body code{background:var(--light);padding:2px 4px}
+footer{background:#031321;color:rgba(255,255,255,.58);padding:29px 0;font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.footer-inner strong{color:#fff;margin-right:10px}
+@media(max-width:760px){.container{width:90%}.nav{padding:20px 0;align-items:flex-start;flex-direction:column}.nav-links{gap:12px 17px}.article-hero{padding:48px 0}.article-hero h1{font-size:30px}.publication-meta-inner{width:90%;gap:8px 22px;padding:16px 0}.publication-meta .publication-label{width:100%}.article-wrap{padding:38px 0 70px}.article-body{font-size:16.5px;line-height:1.92}.article-body h1{font-size:13px}.article-body h1+h2{font-size:26px}.article-body h2{font-size:23px}.article-body p{margin-bottom:22px}.article-body hr{margin:43px 0 26px}.article-body table{font-size:14px;min-width:760px}.article-body th,.article-body td{padding:14px 15px}.article-body .publication-signature{font-size:16.5px;padding:23px 22px}.article-body .disclaimer-heading+p{font-size:14px;padding:21px 20px}}
+.article-body .footnote{font-size:14px}.article-body pre{overflow:auto;background:var(--light);padding:18px}.article-body img{max-width:100%;height:auto}.article-body table{width:100%;min-width:560px}.article-body :target{scroll-margin-top:24px}
+.report-hero-image{max-width:980px;margin:28px auto 24px}.report-hero-image img{display:block;width:100%;height:auto;max-width:100%;margin:0 auto}.article-hero h1{max-width:980px}@media(max-width:760px){.article-hero h1{font-size:28px}}
+.report-hero-image figcaption{color:#d9e3e9;font-size:12px;margin-top:8px;text-align:center}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+<a class="brand" href="../index.html">TOTAL RESOURCES</a>
+<nav class="nav-links" aria-label="Primary navigation">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../business.html">Business</a><a href="../projects.html">Projects</a><a href="../intelligence.html">Intelligence</a><a class="basinol-link" href="../basinol.html">BASINOL®</a>
+</nav></div></header>
+<div class="article-hero"><div class="container"><div class="eyebrow">TOTAL RESOURCES INTELLIGENCE · SPECIAL REPORTS</div><h1>当VLCC不再便宜：亚洲炼厂如何重新计算一桶原油的真实成本</h1><p>发布日期 2026-10-21 · 专题研究</p></div></div>
+<div class="publication-meta"><div class="publication-meta-inner"><span class="publication-label">03 Special Reports · 专题研究</span><span class="meta-item">分类<strong>产业深度研究｜Industry Insights</strong></span><span class="meta-item">作者<strong>知衡（AI研究笔名）</strong></span><span class="meta-item">来源<strong>经纬金脉原创产业研究；公开资料来源：Reuters、Kpler、ICC</strong></span><span class="meta-item">原始日期<strong>2026-10-21</strong></span><span class="meta-item">Publication Date<strong>2026-10-21</strong></span></div></div>
+<main class="container"><div class="article-wrap"><a class="back-link" href="../intelligence.html#special-reports">← 返回 Special Reports</a><article class="article-body"><h1>当VLCC不再便宜：亚洲炼厂如何重新计算一桶原油的真实成本</h1>
+<p><strong>《经纬金脉｜特别研究报告》｜2026年10月21日</strong><br>
+<strong>副标题：从Aframax、长期租船到到岸交付，原油折价、战争险与炼化利润的再分配</strong><br>
+<strong>作者：知衡｜MCIS AI研究作者</strong><br>
+<strong>所属系列：产业深度研究｜Industry Insights</strong><br>
+<strong>研究状态：FINAL｜公开研究报告</strong></p>
+<blockquote>
+<p>一桶原油在装港的价格，只是炼厂采购决策的起点。真正决定利润的，是它能否以可承受的运输、保险、融资和时间成本抵达炼厂，并被加工成可以卖出去的产品。</p>
+</blockquote>
+<h2>导语｜油轮越大越便宜，这条商业常识为什么暂时失灵？</h2>
+<p>长期以来，VLCC（超大型原油运输船）凭借约200万桶的装载能力，在长距离原油贸易中拥有显著的规模经济。亚洲大型炼厂往往愿意用一船大批量原油换取较低的单位运费和稳定的生产计划。然而，2026年10月20日路透社报道了一个看似反常的变化：部分亚洲炼厂转向载量约60万桶的Aframax（阿芙拉型油轮），更多依赖长期租船，并购买由卖方安排运输的到岸交付原油。报道提及，约80艘VLCC被海湾短驳与转运占用；美国原油运往亚洲的运费一度达到每桶40美元。[1]</p>
+<p>这不是大型油轮在物理上失去规模优势，而是<strong>可用运力的稀缺性、风险暴露、航线限制和合同安排改变了规模经济的实际价格</strong>。当VLCC现货运价异常昂贵，较小船型的每桶报价可能与其相近；当战争险和延期成本显著上升，拥有现成船位或长期合同的一方，就可能比仅拥有低装港报价的一方更具竞争力。</p>
+<p>本报告以10月21日《经纬金脉｜全球宏观产业晨报》为研究基线，重点核验10月9日至20日的公开运价、船型及炼厂行为，区分<strong>公开披露事实、行业人士转述、机构判断与MCIS情景测算</strong>。报告不是交易指令，也不推定所有亚洲炼厂都采用同一种采购方式。</p>
+<h2>一、事实底座：哪些变化已经有公开证据？</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>观察事项</th>
+<th>公开信息</th>
+<th>证据性质及限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VLCC供应受限</td>
+<td>维多集团亚洲负责人在行业会议上称，约80艘VLCC参与海湾短驳和转运</td>
+<td>具名业内人士表述；非船队全面审计数据[1]</td>
+</tr>
+<tr>
+<td>美湾至亚洲运费</td>
+<td>10月9日路透社援引船舶经纪数据：200万桶VLCC报价约8000万美元，折合约40美元/桶</td>
+<td>特定航线、装期与时点的市场报价；不是所有航线平均值[2]</td>
+</tr>
+<tr>
+<td>Aframax替代</td>
+<td>贸易商称台湾中油一周购买六船Aframax，替代通常每月两至三船VLCC的采购模式</td>
+<td>交易商转述，企业未即时置评；不能认定为永久战略[1]</td>
+</tr>
+<tr>
+<td>韩国炼厂实例</td>
+<td>船舶经纪商称SK Energy租用Aframax Samos，拟于11月初装载美国原油，运费约2300万美元</td>
+<td>船舶经纪商消息；实际装载和最终费用仍待核验[1]</td>
+</tr>
+<tr>
+<td>卖方到岸交付</td>
+<td>交易商称ADNOC向中国、印度销售未来两个月装载的到岸交付船货，沙特阿美也向亚洲出售11月到岸货</td>
+<td>交易商转述；合同细则、风险转移点和真实成交价未公开[1]</td>
+</tr>
+<tr>
+<td>折价扩大</td>
+<td>交易商称部分西非现货原油相对基准折价接近20美元/桶</td>
+<td>品种、装期和定价基准不同，不可作为全部西非原油统一折价[1]</td>
+</tr>
+<tr>
+<td>炼厂利润</td>
+<td>台塑石化负责人表示，部分中东原油扣除运费和保险后，净炼油利润仍超过10美元/桶</td>
+<td>企业负责人对经营环境的说明；不是所有炼厂的审计净利润[1]</td>
+</tr>
+<tr>
+<td>运价回调</td>
+<td>10月16日路透社援引波罗的海交易所数据称，阿曼湾至中国VLCC运价Worldscale指数由841降至约776</td>
+<td>运价有所回落但仍高企；WS指数不能直接等同美元/桶[3]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>关键判断：</strong> 这些信息足以证明部分炼厂和产油商正在改变采购与运输安排，但尚不足以证明整个亚洲市场已经从VLCC全面转向Aframax，更不能证明新安排已持续提高净利润。</p>
+<h2>二、VLCC与Aframax：船型比较不是只看每桶运费</h2>
+<h3>1. 传统规模经济为何成立</h3>
+<p>VLCC典型装载量约200万桶，Aframax在报道案例中约60万桶。若航线、等待时间、风险和市场运力条件相近，VLCC通常能够摊薄船员、港口和航行等固定成本。因此，长距离大批量运输中，VLCC通常具有单位成本优势。</p>
+<p>但现实采购中，炼厂需要支付的不只是船舶从A港驶向B港的理论平均成本，还包括可租到船的报价、航道风险、装卸港条件、等待时间、油轮吃水限制、船货匹配以及延期的资金占用。</p>
+<h3>2. 极端行情下，Aframax为何可能“同价甚至更合适”</h3>
+<p>10月20日报道指出，在某些交易中Aframax与VLCC的单位运费已接近。[1] 这不是一般规律，而是市场失衡时的局部现象。其商业机制至少有四层：</p>
+<p><strong>第一，VLCC现货船位被挤占。</strong> 大量船舶参与短驳、船对船转运及绕行，使可用于正常长航线的VLCC减少。船东在高风险环境中要求更高的运费与风险补偿。</p>
+<p><strong>第二，小船更容易分批匹配装港、卸港与库存。</strong> 对炼厂而言，一次获得60万桶可能比等待200万桶更有价值，尤其在库存低、装置不能停工的情况下。小批量采购也减少单次货值和交付失败的集中暴露，但会增加航次与港口操作次数。</p>
+<p><strong>第三，合同和可用船位比船型名称更重要。</strong> 以长期租入的Aframax执行运输，与在现货市场临时租用VLCC，不是单纯的船型比较，而是两种不同的运力获取方式。</p>
+<p><strong>第四，风险分散有经济价值。</strong> 分批装卸可以避免将全部原料集中在单一船舶、单一航次或单一到港日期；但若多船均经过同一高风险海域，风险相关性仍然很高。</p>
+<h3>3. 必须保留的反证</h3>
+<p>Aframax并非天然更安全或更便宜。小船的单位燃料、港口、代理和多次装卸成本可能更高；增加船次也可能扩大整体保险和操作风险。10月9日路透社曾报道，一艘约60万桶Aframax拟以2400万美元运送美国原油至日本，折合每桶约40美元；同一时期一艘200万桶VLCC报价8000万美元，同样约40美元/桶。[2] <strong>这说明小船可以在极端现货市场中达到“单位运费接近”，而不是证明Aframax长期优于VLCC。</strong></p>
+<h2>三、长期租船：把现货价格风险转化为合同与资产负债表风险</h2>
+<p>长期租船的价值首先是<strong>锁定可用运力</strong>，其次才可能是降低运费。炼厂通过定期租船（time charter）或长期运输合同（contract of affreightment）取得一定期限的运力安排，减少临时抢船风险。</p>
+<p>在现货运费飙升时，事先锁定的租金可能显著低于即时市场价格。但这一优势并非免费：承租方通常仍承担燃油、港口费用或部分航次支出，具体以合同为准；如果未来现货运费迅速下降，长期合同可能反而高于市场价；如果航线中断、船舶无法按计划使用，还可能产生闲置和替代采购成本。</p>
+<p><strong>商业本质：</strong> 长期租船不是消灭运价波动，而是把一部分运价波动转化为期限承诺、最低利用率和对手方履约风险。适合持续稳定采购、具备船队调度能力和资金实力的炼厂或贸易商；不一定适合需求波动大、采购量不稳定的企业。</p>
+<h2>四、到岸交付采购：谁支付运费，谁承担风险，谁拥有定价权？</h2>
+<p>“到岸交付”（delivered basis）是商业描述，不应自动等同于某一个Incoterms术语。<strong>CFR、CIF、DAP、DPU等贸易术语在费用、保险义务和风险转移时点上有显著差异</strong>。例如CIF下卖方负责约定运输和最低保险安排，但货物灭失风险一般在装运港装船时转移，而非抵达目的港时才转移；DAP的交付和风险转移逻辑则不同。必须以具体合同约定判断，不能把“卖方安排船舶”写成“卖方承担全部运输损失”。[5]</p>
+<h3>1. 对炼厂的吸引力</h3>
+<p>到岸报价让买方更容易比较“抵厂成本”，减少临时订船的不确定性；卖方或综合贸易商可能拥有长期船位、航运议价能力和保险安排，能够提供比买方临时现货租船更稳定的交付方案。</p>
+<h3>2. 对产油商的吸引力</h3>
+<p>在高运费阻碍买家采购时，卖方提供到岸交付可以维护市场份额和长期客户关系。卖方承担或组织运输后，能够利用自身船队和贸易网络优化运力，并在不同客户之间配置货源。</p>
+<h3>3. 真正的风险转移与隐藏成本</h3>
+<p>运费不会因卖方支付而消失。卖方可能在到岸报价中计入运费、保险、信用成本及风险溢价，也可能以压低自身装港净回款为代价保持销量。买方仍需检查：合同是否允许战时附加费调整、何时转移风险、是否包含卸港滞期费、不可抗力条款如何处理、船舶制裁合规与保险是否有效。</p>
+<p><strong>因此，最值得比较的不是“FOB价格是否低于CIF价格”，而是两套合同在同一质量、同一交付日、同一地点下的全成本和风险分配。</strong></p>
+<h2>五、原油折价：便宜的装港报价，为什么可能是昂贵的到岸原油？</h2>
+<h3>1. 采购决策的基本公式</h3>
+<p><strong>原油全口径到岸成本（美元/桶） = 装港原油净价 + 海运费 + 战争险及其他保险 + 港口/转运/滞期成本 + 融资与时间成本 + 品质及损耗调整。</strong></p>
+<p>不同油种的硫含量、API度、酸值和产品收率不同，不能只比较到岸每桶价格。更严格的炼厂选择应比较<strong>每桶原油对应的产品净回收价值（product netback）减去全部采购、加工与交付成本</strong>。</p>
+<h3>2. 折价可能是运费的镜像</h3>
+<p>10月20日路透社报道，部分西非原油现货差价跌至相对基准约负20美元/桶，欧洲短航程原油却出现较高升水。[1] 这未必意味着西非原油品质突然恶化，而可能是跨洋运输成本大幅上升后，卖方必须通过更低的装港报价争夺远方买家。</p>
+<p><strong>装港折价扩大，不代表亚洲买家一定获得更高利润。</strong> 如果每桶折价扩大10美元，但新增运费、保险和资金占用超过10美元，炼厂实际到岸成本反而上升。</p>
+<h3>3. 三个完全假设的同品质比较案例（非市场报价）</h3>
+<p>为展示机制，假设三种货源加工价值相同，且在同一目的港、同一交付窗口比较：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>成本项（美元/桶）</th>
+<th>A：远洋现货VLCC</th>
+<th>B：远洋Aframax</th>
+<th>C：中东卖方到岸报价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>装港净价</td>
+<td>85</td>
+<td>85</td>
+<td>不适用</td>
+</tr>
+<tr>
+<td>海运费</td>
+<td>40</td>
+<td>38</td>
+<td>已包含</td>
+</tr>
+<tr>
+<td>保险、港口及时间成本</td>
+<td>5</td>
+<td>6</td>
+<td>已包含或按合同另计</td>
+</tr>
+<tr>
+<td><strong>可比到岸成本</strong></td>
+<td><strong>130</strong></td>
+<td><strong>129</strong></td>
+<td><strong>127（假设全包）</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>情景假设，不代表10月21日真实成交。</strong> 这个例子说明：即使Aframax吨位更小，只要实际租船报价略低，它也可能比VLCC节省1美元/桶；而到岸报价看似最低，仍须核对是否真正包含战争险、滞期费和信用成本。</p>
+<p>再看折价的作用：假设远洋货源装港净价从85降到75美元/桶，而其运费从20升至40美元/桶，其他成本维持5美元，则到岸成本从110升至120美元/桶。<strong>折价增加10美元仍无法抵消运费增加20美元。</strong></p>
+<h3>4. 可执行的商业比较表，而不是交易指令</h3>
+<p>采购团队应为每船记录：油种与品质、定价基准、升贴水、装期、装卸港、船型、合同运费、战争险、制裁合规、预计航期、付款与信用条件、可用炼厂装置、产品收率、到岸全成本和净加工收益。没有这些字段，就不能把折价直接认定为套利空间。</p>
+<h2>六、战争险：不是“每桶统一加价”，而是动态的承保与履约约束</h2>
+<p>战争险可能涉及船壳战争险、额外战争风险保费、货物险、保赔安排、船东风险附加费等不同项目。实际费用可能按船体价值、航区、船龄、船东、航行时点及保单条款计收，而不是简单按原油桶数固定收取。</p>
+<p>在风险快速变化时，船东还可能要求更高的风险补偿、限制航线或拒绝进入特定区域。即使保险可以购买，港口关闭、船舶延误或承运人不愿承运也可能导致实际交付失败。</p>
+<p>因此，研究必须分开记录：<strong>可保性（能否承保）、保费（成本多少）、可航性（船舶是否愿意进入）、可交付性（是否最终抵港）</strong>。只有保险报价没有真实船次，不能证明供应恢复；只有船次也不能证明运输经济性已经改善。</p>
+<h2>七、炼化利润：高裂解价差为何可能与低现金利润共存？</h2>
+<h3>1. 四层利润不能混为一谈</h3>
+<p><strong>产品裂解价差（crack spread）</strong>主要反映某一成品油相对原油基准的价格差，不等于炼厂综合毛利。<strong>理论综合炼油毛利（gross refining margin）</strong>还需考虑产品收率与多个成品油价格。<strong>运输与保险调整后的贡献利润</strong>进一步扣除原料到岸附加成本。<strong>企业会计净利润</strong>还包含人工、能源、折旧、财务费用、税费、套保与库存重估等项目。</p>
+<p>10月20日路透社报道称，部分炼厂毛炼油利润超过40美元/桶，而台塑石化负责人称中东原油扣除运费和保险后仍有超过10美元/桶的净炼油利润。[1] <strong>这两个数字并不一定来自同一套样本、同一期间或同一利润定义，不能机械地写成“40减30等于10”并推广至所有亚洲炼厂。</strong></p>
+<h3>2. 用一个情景说明利润被吞噬的过程</h3>
+<p>假设一座炼厂按不含异常运输成本的口径测得产品净回收价值为每桶140美元，装港原油价格为95美元，理论毛利45美元。若额外运费25美元、战争险及港口/资金成本7美元，则仅剩13美元/桶可用于覆盖炼厂其他成本。若进一步发生滞期或成品油裂解价差回落，实际现金利润可能快速转负。以上数字完全为<strong>示意计算</strong>，不代表任何特定企业的真实利润。</p>
+<h3>3. 为什么炼厂即使利润受压也可能维持开工？</h3>
+<p>炼厂通常有成品油供应合同、装置连续运行要求、库存与设备管理成本，且停工重启并不免费。因此，在仍有正向贡献毛利时，企业可能选择维持负荷，即便账面净利润受到压缩。反过来，如果实际边际贡献转负且合同允许，降低加工量也可能更合理。</p>
+<p><strong>结论：</strong> 高柴油裂解价差可能支撑炼厂维持加工，但不保证所有炼厂盈利；油价下降也不保证炼厂利润改善，因为产品价格、运费、原料品质和库存损益可能同步变化。</p>
+<h2>八、三种采购策略的成本—收益—风险矩阵</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>策略</th>
+<th>主要收益</th>
+<th>主要代价</th>
+<th>更适合的条件</th>
+<th>何时失效</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现货Aframax</td>
+<td>分批交付、船位匹配、降低单船集中风险</td>
+<td>多航次、港口操作、单位固定成本较高</td>
+<td>VLCC现货极贵、港口或库存需要小批量</td>
+<td>Aframax运价同样飙升；多船延误或战争险累加</td>
+</tr>
+<tr>
+<td>长期租船/长期运输合同</td>
+<td>锁定运力、平滑现货运费波动、增强交付确定性</td>
+<td>长期租金承诺、利用率风险、市场回落时相对昂贵</td>
+<td>采购量稳定、调度能力强、资金充裕</td>
+<td>运价持续下降、航线失效、船舶闲置</td>
+</tr>
+<tr>
+<td>卖方到岸交付</td>
+<td>简化买方物流、提高抵厂报价可比性、利用卖方船队</td>
+<td>可能隐含高运费和风险溢价、合同条款复杂</td>
+<td>卖方有运力优势、买方缺少租船资源</td>
+<td>报价缺乏透明度、战时附加费转嫁、保险或交付条款不利</td>
+</tr>
+</tbody>
+</table></div>
+<p>这三种策略并非互斥。大型炼厂更可能使用<strong>现货、长期运力、卖方到岸货及库存缓冲的组合</strong>，而不是押注单一船型或单一贸易术语。</p>
+<h2>九、竞争解释：这是一场短期运力危机，还是长期贸易格局重构？</h2>
+<p><strong>解释A：短期风险溢价与船位错配。</strong> 约80艘VLCC参与短驳及转运，导致现货运力骤紧；随着航运安全改善、船舶释放，运费可能较快回落。10月16日运价已有从极端高位回调的迹象。[3] 若未来数周VLCC可用船位恢复、运价快速下降，Aframax替代可能只是短期应急。</p>
+<p><strong>解释B：结构性供应链重组。</strong> 若霍尔木兹与红海风险长期存在，炼厂可能持续增加长期租船、区域采购和卖方到岸合同。届时贸易商的船队、港口、保险和融资能力可能成为长期竞争壁垒。</p>
+<p><strong>解释C：炼厂需求韧性推动运价维持高位。</strong> 部分产品库存偏低、裂解价差高，炼厂即使支付高运费也要维持生产。摩根士丹利分析人士在路透社报道中提出，较高炼油利润和低库存使部分采购需求对运费不敏感。[1] 如果成品油需求走弱、裂解价差收窄，这种韧性可能突然消失。</p>
+<p><strong>解释D：折价和运输成本在贸易链条中重新分配。</strong> 产油商让利、船东获得超额运费、综合贸易商凭借船位和融资能力获益，单体炼厂则可能承压。若卖方提供更低的全包到岸价，利润分配又可能变化。</p>
+<p>四种解释可以同时部分成立。判断哪一种占主导，必须跟踪<strong>同航线同装期运费、装港升贴水、到岸净回款、裂解价差与真实船货交付</strong>，而不是仅看Brent涨跌。</p>
+<h2>十、对中国能源贸易企业的启示：从采购折价走向“可交付利润”</h2>
+<p>对于中国能源贸易及炼化相关企业，真正的竞争优势不只是能否拿到便宜的原油，而是能否把采购折价保留到最终交付与销售环节。</p>
+<p><strong>一是建立双报价体系。</strong> 每一批货同时比较FOB/装港净价与可比到岸全成本；单独记录运费、战争险、港口、滞期、融资和汇率。不能以装港折价代替盈利预测。</p>
+<p><strong>二是把运力当作采购资源管理。</strong> 长期租船不是必选项，但企业至少需要稳定的经纪商报价、备选船型、合规船舶清单和可行的交付替代方案。对采购量较小的企业，更现实的选择可能是与信誉良好的综合贸易商合作，或采购明确条款的到岸货，而非自建船队。</p>
+<p><strong>三是严控战争险与制裁合规。</strong> 对船舶、货物来源、受益所有人、支付路径、保险承保和贸易条款进行合法合规审查。不得为了获取低价而忽略制裁、保险或船舶安全风险。</p>
+<p><strong>四是以炼厂净回收价值而非油价判断货源。</strong> 不同原油品质对汽柴油、石脑油、芳烃原料的收率和装置适配不同。对涉及PX、PTA、纯苯和苯乙烯的产业链研究，还应进一步观察石脑油、重整、裂解原料与下游加工利润，而不是把国际原油涨跌机械传导至每一个化工品。</p>
+<p><strong>五是建立合同压力测试。</strong> 至少测试运费继续上升、战争险提高、到港延迟、裂解价差回落、人民币汇率变化、买方延期付款等情景，识别在何种条件下原有采购利润消失。</p>
+<h2>十一、MCIS验证仪表盘：哪些指标能证明这场转型有效？</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>指标组</th>
+<th>建议记录口径</th>
+<th>支持“采购转型有效”的证据</th>
+<th>推翻或削弱的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>船型运价</td>
+<td>同航线、同装期、美元/桶；区分VLCC/Aframax</td>
+<td>Aframax可比运费持续不高于VLCC，且交付稳定</td>
+<td>Aframax运价持续更高或船期延误</td>
+</tr>
+<tr>
+<td>VLCC运力</td>
+<td>可用船位、短驳占用、船对船转运次数</td>
+<td>可用运力改善、拥堵减少</td>
+<td>占用继续扩大、等待时间上升</td>
+</tr>
+<tr>
+<td>原油折价</td>
+<td>同油种/品质、同基准、同装期</td>
+<td>折价足以覆盖新增运费与风险成本</td>
+<td>折价扩大但到岸成本继续上升</td>
+</tr>
+<tr>
+<td>到岸合同</td>
+<td>全包报价、风险转移点、附加费条款</td>
+<td>买方全成本下降且风险清晰</td>
+<td>隐性附加费、交付延期或对手方违约</td>
+</tr>
+<tr>
+<td>战争险</td>
+<td>同船舶、同航线、同保额报价</td>
+<td>保费下降且可保性改善</td>
+<td>保费高企或无法承保</td>
+</tr>
+<tr>
+<td>炼化利润</td>
+<td>同炼厂、同原油篮子、同产品收率</td>
+<td>运费调整后现金贡献持续改善</td>
+<td>裂解价差下降、到岸成本升高</td>
+</tr>
+<tr>
+<td>实物兑现</td>
+<td>装船、AIS、到港、卸货、库存</td>
+<td>实际交付与库存回补</td>
+<td>只有船舶离港、无到港证据</td>
+</tr>
+<tr>
+<td>中国链条</td>
+<td>SC/石脑油/PXN/PTA加工费/纯苯/乙烯/EB</td>
+<td>成本与加工利润同口径改善</td>
+<td>仅价格变动、库存与利润背离</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>QA红线：</strong> 不同交割月份的SC、PX、PTA、EB不能直接比较涨跌；Worldscale运价指数不能直接与美元/桶混用；CIF与DAP的风险转移条款不能混为一谈；炼油裂解价差不能当作审计净利润；行业人士的成交信息应保留其证据等级。</p>
+<h2>十二、Human CIO研究结论</h2>
+<p><strong>第一，VLCC的规模经济并没有消失，消失的是极端行情下“随时能以合理价格租到VLCC”的前提。</strong> Aframax的竞争力来自可用船位、分批交付和局部价格失衡，而不是吨位越小越经济。</p>
+<p><strong>第二，长期租船的价值是供应确定性，但它把现货风险变成期限与利用率风险。</strong> 是否划算取决于未来运价、采购稳定性和合同条款。</p>
+<p><strong>第三，到岸交付改变的是风险与成本的承担方式，不是消灭运费。</strong> 对买方有利的关键是全成本透明、履约可靠和风险转移清晰；对卖方则是利用船队与贸易网络维持销量和净回款。</p>
+<p><strong>第四，原油折价与炼化利润之间没有必然正相关。</strong> 当运费、战争险和资金成本吞噬折价，装港低价可能变成到岸高价。只有与油种收率和产品净回收价值结合，才能计算真实利润。</p>
+<p><strong>第五，这场变化对中国能源贸易企业的最大启示，是把研究和经营重心从“买得便宜”升级为“交得出来、算得清楚、收得回款”。</strong></p>
+<h3>结语｜未来最贵的，不一定是石油，而是确定性</h3>
+<p>过去，原油贸易的优势往往体现在货源、价格和规模。今天，一家企业即使拥有折价原油，如果无法获得合适船舶、有效保险和可预测的到港时间，也可能无法把纸面优势变成利润。</p>
+<p>当大型油轮被困在高风险短驳航线，当炼厂开始拆分船货，当产油商主动提供到岸交付，全球能源供应链正在重新回答一个老问题：<strong>谁真正承担把资源变成商品的最后一公里风险？</strong></p>
+<p>未来赢家未必是报出最低装港价格的一方，而更可能是能把货源、船舶、保险、资金、炼厂和终端需求协调起来的一方。能源贸易正在重新给“确定交付”定价。</p>
+<hr>
+<h2>研究方法、来源与证据分级</h2>
+<p><strong>信息截点：</strong> 2026年10月21日07:11（北京时间）。<strong>来源核验说明：</strong> 关键报道数据已按Reuters署名转载稿交叉核对，贸易术语按ICC资料核对；Reuters原站本次未能直接读取，以下保留原链接并附可访问的核验入口。行业人士转述不等于独立审计数据。引用市场报价均以来源注明的10月9—20日业务日期为准；不代表21日实时成交。</p>
+<ul>
+<li><strong>[1] Reuters，2026-10-20</strong>，<em>Asian refiners use smaller tankers, buy delivered crude as freight rates soar</em>。船型替代、长期租船、ADNOC及沙特到岸销售、行业人士与炼厂利润口径。<a href="https://www.reuters.com/business/energy/asian-refiners-use-smaller-tankers-buy-delivered-crude-freight-rates-soar-2026-10-20/">原始来源</a>；<a href="https://www.marketscreener.com/news/asian-refiners-use-smaller-tankers-buy-delivered-crude-as-freight-rates-soar-ce785cdbd181f521">Reuters署名转载｜MarketScreener</a></li>
+<li><strong>[2] Reuters，2026-10-09</strong>，<em>Soaring freight rates threaten Asia's appetite for US crude</em>。美湾至中国VLCC约8000万美元/200万桶、Aframax约2400万美元/60万桶、折价与套利窗口。<a href="https://www.reuters.com/business/energy/soaring-freight-rates-threaten-asias-appetite-us-crude-2026-10-09/">原始来源</a>；<a href="https://au.investing.com/news/commodities-news/soaring-freight-rates-threaten-asias-appetite-for-us-crude-4681014">Reuters署名转载｜Investing.com</a></li>
+<li><strong>[3] Reuters，2026-10-16</strong>，<em>Supertanker rates fall from record highs</em>。波罗的海交易所WS运价变化及高位回落的竞争解释。<a href="https://www.reuters.com/business/energy/supertanker-rates-fall-record-highs-2026-10-16/">原始来源</a>；<a href="https://ca.marketscreener.com/news/supertanker-rates-fall-from-record-highs-ce785cdadd81f524">Reuters署名转载｜MarketScreener</a></li>
+<li><strong>[4] Kpler，2026-10-06</strong>，<em>Record high freight as risk premiums meet tightening fundamentals</em>。不同船型运价与地缘风险。<a href="https://www.kpler.com/blog/record-high-freight-as-risk-premiums-meet-tightening-fundamentals">原始来源</a></li>
+<li><strong>[5] ICC Incoterms® 2020</strong>，贸易术语与风险、费用划分的通用框架。<a href="https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/">原始来源</a></li>
+<li><strong>[6] Reuters，2026-10-15</strong>，<em>Oil shipping costs spike, lifting prices from pump to grocery</em>。运输成本与保险风险对能源供应链的影响。<a href="https://www.reuters.com/business/energy/oil-shipping-costs-spike-lifting-prices-pump-grocery-2026-10-15/">原始来源</a>；<a href="https://www.aol.com/articles/analysis-oil-shipping-costs-spike-100606000.html">Reuters署名转载｜AOL</a></li>
+<li><strong>[7] Reuters，2026-10-20</strong>，<em>Brent falls as Iran's president discusses mediation with Pakistani army chief</em>。Brent结算与地缘风险背景。<a href="https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/">原始来源</a>；<a href="https://www.marketscreener.com/news/brent-crude-holds-near-five-month-high-on-middle-east-tension-ce785cdbde8cf722">Reuters署名转载｜MarketScreener</a></li>
+<li><strong>[8] MCIS《经纬金脉｜全球宏观产业晨报》，2026-10-21 Morning FINAL</strong>，用户既有研究基线；本篇对其运输采购论点进行独立公开来源核验与扩展。</li>
+</ul>
+<p><strong>证据分类：</strong> 已公开的运价/船舶经纪报价属于<code>REPORTED MARKET DATA</code>；具名企业负责人的经营描述属于<code>ATTRIBUTED STATEMENT</code>；匿名交易商信息属于<code>REPORTED / NOT INDEPENDENTLY AUDITED</code>；机构未来判断属于<code>FORECAST</code>；本报告商业机制与情景算例属于<code>MCIS ANALYSIS / HYPOTHETICAL</code>。</p>
+<p><strong>出版说明：</strong> 本文为独立产业研究报告。市场报价保留其业务日期及来源限制，情景算例不代表真实成交。</p>
+<h2>出版核验完成记录</h2>
+<p>核验日期：2026年10月21日。市场事实依据Reuters署名报道，未将转载渠道作为新增独立来源；核心报道涵盖约80艘VLCC、200万桶与60万桶船型案例、8000万与2400万美元运费、Samos约2300万美元、部分西非原油约负20美元差价、炼油利润口径及WS 841降至约776。匿名交易商信息、拟装货船次及最终费用仍保留原有不确定性。</p>
+<p>算术复核：8000万美元÷200万桶及2400万美元÷60万桶均为40美元/桶；假设到岸成本130、129及127美元/桶，折价案例110升至120美元/桶，利润案例45减25减7等于13美元/桶。所有情景数值均为示意，不是实际成交数据。战争险章节解释费用与可保性机制，未声称取得任何实际保费报价。</p>
+<p>贸易术语补充依据：<a href="https://academy.iccwbo.org/incoterms/article/incoterms-2020-cip-or-cif/">ICC Academy：CIF与CIP</a>及<a href="https://academy.iccwbo.org/incoterms/article/incoterms-2020-dap-or-ddp/">ICC Academy：DAP与DDP</a>。战争险机制补充依据：<a href="https://gard.no/products-and-services/products/offshore-contractors/war/">Gard：战争险承保</a>及<a href="https://www.swedishclub.com/uploads/2025/12/FINAL-War-Risk-Insurance-Terms-2026.pdf">The Swedish Club：2026战争险通告</a>。实际责任、附加费、保险范围及风险转移须以合同和保单为准。</p>
+<p>版权与引用：本文为用户提供并授权公开的中文研究稿，使用事实性转述与原创分析，未转载新闻全文、第三方图表或图片；所引报道及商标的权利归原权利人。本次不使用图片。原稿来源[8]仅说明研究起点，不作为公开市场数据的独立核验依据。</p>
+<h2>免责声明</h2>
+<p>本文仅供研究与信息参考，不构成任何投资、交易或其他决策建议。</p></article></div></main>
+<footer><div class="container footer-inner"><div><strong>TOTAL RESOURCES INTELLIGENCE</strong> Macro Compass · Industrial Research Platform</div><div>© 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)</div></div></footer>
+</body>
+</html>

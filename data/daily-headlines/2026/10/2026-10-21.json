@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-21T08:06:31.628625+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-2fd7e1e5f35f4dcfe8412b76",
+      "date": "2026-10-21",
+      "time": "10-21 06:40",
+      "headline_cn": "Semafor：鲁比奥拟推动印度炼厂增加加工委内瑞拉原油",
+      "headline_en": "",
+      "summary": "据Semafor报道，鲁比奥预计周三参观信实炼油厂，推动其增加加工委内瑞拉原油；报道所述仍是访问与推动计划。值得关注的是，若计划落实，可能影响原油流向与炼厂原料配置，尚不能视为实际增产。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/20/2026/rubio-to-push-india-on-refining-more-crude",
+      "source_publish_time": "2026-10-20T22:40:56Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/20/2026/rubio-to-push-india-on-refining-more-crude",
+          "source_publish_time": "2026-10-20T22:40:56Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-2e05bc81ab53fd02d7bf778b",
+      "date": "2026-10-21",
+      "time": "10-20 19:54",
+      "headline_cn": "Semafor：法国与德国十年期国债利差创二〇一二年以来最高",
+      "headline_en": "",
+      "summary": "据Semafor报道，法国与德国十年期国债利差扩大至二〇一二年以来最高，反映市场在法国政治与财政忧虑下要求更高风险溢价。值得关注的是，利差扩大可能收紧融资条件；向欧洲其他市场传导的程度仍待观察。",
+      "category": "FINANCE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/20/2026/french-debt-costs-spiral-amid-growing-concern-over-political-and-fiscal-crises",
+      "source_publish_time": "2026-10-20T11:54:50Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/20/2026/french-debt-costs-spiral-amid-growing-concern-over-political-and-fiscal-crises",
+          "source_publish_time": "2026-10-20T11:54:50Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-6ddf34a1b94e213694ee475c",
+      "date": "2026-10-21",
+      "time": "10-20 19:55",
+      "headline_cn": "Semafor：美国禁止多数政府系统使用DeepSeek",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国禁止在多数政府系统使用中国人工智能企业DeepSeek，并要求机构移除以其技术构建的所有技术。值得关注的是，政府采购限制可能影响人工智能供应链选择；执行范围仍需关注。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/20/2026/washington-bans-deepseek-from-government-agencies",
+      "source_publish_time": "2026-10-20T11:55:17Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/20/2026/washington-bans-deepseek-from-government-agencies",
+          "source_publish_time": "2026-10-20T11:55:17Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-b990b884d566f24a263a91f0",
+      "date": "2026-10-21",
+      "time": "10-21 06:44",
+      "headline_cn": "Semafor引路透：中国三家科技企业订购逾三百五十亿美元英伟达芯片",
+      "headline_en": "",
+      "summary": "Semafor援引路透社报道，阿里巴巴、字节跳动与腾讯合计订购超过三百五十亿美元的英伟达芯片；这是订单报道。值得关注的是，订单需求可能牵动算力供应链；不能据此认定交付已经完成。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/20/2026/chinese-tech-firms-purchase-more-than-35-billion-of-nvidia-chips-reuters",
+      "source_publish_time": "2026-10-20T22:44:57Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/20/2026/chinese-tech-firms-purchase-more-than-35-billion-of-nvidia-chips-reuters",
+          "source_publish_time": "2026-10-20T22:44:57Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    }
+  ]
+}

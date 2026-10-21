@@ -1,89 +1,89 @@
 {
   "schema_version": 1,
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-20T08:54:39.095784+08:00",
+  "generated_at": "2026-10-21T08:06:31.628625+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-1ef805b77de6119c44d1e510",
-      "date": "2026-10-20",
-      "time": "10-19 16:43",
-      "headline_cn": "Semafor：沙特取消FII线下会议，告知代表延期",
+      "event_id": "dh-event-2fd7e1e5f35f4dcfe8412b76",
+      "date": "2026-10-21",
+      "time": "10-21 06:40",
+      "headline_cn": "Semafor：鲁比奥拟推动印度炼厂增加加工委内瑞拉原油",
       "headline_en": "",
-      "summary": "据Semafor援引知情人士报道，华尔街高管私下表达安全担忧后，沙特取消利雅得旗舰投资会议的线下参会安排。报道并称，主办方向代表告知会议延期至2027年。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，鲁比奥预计周三参观信实炼油厂，推动其增加加工委内瑞拉原油；报道所述仍是访问与推动计划。值得关注的是，若计划落实，可能影响原油流向与炼厂原料配置，尚不能视为实际增产。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/19/2026/saudi-to-decide-on-postponing-fii-after-wall-street-lobbying",
-      "source_publish_time": "2026-10-19T08:43:33Z",
+      "source_url": "https://www.semafor.com/article/10/20/2026/rubio-to-push-india-on-refining-more-crude",
+      "source_publish_time": "2026-10-20T22:40:56Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/19/2026/saudi-to-decide-on-postponing-fii-after-wall-street-lobbying",
-          "source_publish_time": "2026-10-19T08:43:33Z"
+          "source_url": "https://www.semafor.com/article/10/20/2026/rubio-to-push-india-on-refining-more-crude",
+          "source_publish_time": "2026-10-20T22:40:56Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-7bf55da10ab6a08038197f67",
-      "date": "2026-10-20",
-      "time": "10-19 18:44",
-      "headline_cn": "Semafor：中国三季度增长超预期，内需仍弱",
+      "event_id": "dh-event-2e05bc81ab53fd02d7bf778b",
+      "date": "2026-10-21",
+      "time": "10-20 19:54",
+      "headline_cn": "Semafor：法国与德国十年期国债利差创二〇一二年以来最高",
       "headline_en": "",
-      "summary": "据Semafor报道，中国第三季度经济增长快于预期，出口提供支撑，但国内消费仍然落后。",
-      "category": "TRADE",
+      "summary": "据Semafor报道，法国与德国十年期国债利差扩大至二〇一二年以来最高，反映市场在法国政治与财政忧虑下要求更高风险溢价。值得关注的是，利差扩大可能收紧融资条件；向欧洲其他市场传导的程度仍待观察。",
+      "category": "FINANCE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/19/2026/chinas-powerful-export-machine-propelled-gdp-growth-beyond-expectations",
-      "source_publish_time": "2026-10-19T10:44:12Z",
+      "source_url": "https://www.semafor.com/article/10/20/2026/french-debt-costs-spiral-amid-growing-concern-over-political-and-fiscal-crises",
+      "source_publish_time": "2026-10-20T11:54:50Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/19/2026/chinas-powerful-export-machine-propelled-gdp-growth-beyond-expectations",
-          "source_publish_time": "2026-10-19T10:44:12Z"
+          "source_url": "https://www.semafor.com/article/10/20/2026/french-debt-costs-spiral-amid-growing-concern-over-political-and-fiscal-crises",
+          "source_publish_time": "2026-10-20T11:54:50Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-69d3fee96907c4685f98c8db",
-      "date": "2026-10-20",
-      "time": "10-19 21:12",
-      "headline_cn": "Semafor：布隆迪与Anzana签署电力协议",
+      "event_id": "dh-event-6ddf34a1b94e213694ee475c",
+      "date": "2026-10-21",
+      "time": "10-20 19:55",
+      "headline_cn": "Semafor：美国禁止多数政府系统使用DeepSeek",
       "headline_en": "",
-      "summary": "据Semafor报道，布隆迪与获美国支持的Anzana Electric Group签署电力协议。协议为期25年，拟扩大向家庭与企业的供电连接。",
-      "category": "FINANCE",
+      "summary": "据Semafor报道，美国禁止在多数政府系统使用中国人工智能企业DeepSeek，并要求机构移除以其技术构建的所有技术。值得关注的是，政府采购限制可能影响人工智能供应链选择；执行范围仍需关注。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/19/2026/burundi-signs-14b-electricity-deal-with-us-backed-anzana-electric-group",
-      "source_publish_time": "2026-10-19T13:12:16Z",
+      "source_url": "https://www.semafor.com/article/10/20/2026/washington-bans-deepseek-from-government-agencies",
+      "source_publish_time": "2026-10-20T11:55:17Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/19/2026/burundi-signs-14b-electricity-deal-with-us-backed-anzana-electric-group",
-          "source_publish_time": "2026-10-19T13:12:16Z"
+          "source_url": "https://www.semafor.com/article/10/20/2026/washington-bans-deepseek-from-government-agencies",
+          "source_publish_time": "2026-10-20T11:55:17Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-3c1ac121ec1551f73534b0b9",
-      "date": "2026-10-20",
-      "time": "10-20 06:37",
-      "headline_cn": "Semafor：Waymo拟于明年底将车队扩至20,000辆",
+      "event_id": "dh-event-b990b884d566f24a263a91f0",
+      "date": "2026-10-21",
+      "time": "10-21 06:44",
+      "headline_cn": "Semafor引路透：中国三家科技企业订购逾三百五十亿美元英伟达芯片",
       "headline_en": "",
-      "summary": "据Semafor援引知情人士报道，Waymo拟在今年底将车队扩大至8,000辆，明年底增至20,000辆。Waymo拒绝置评。",
-      "category": "FINANCE",
+      "summary": "Semafor援引路透社报道，阿里巴巴、字节跳动与腾讯合计订购超过三百五十亿美元的英伟达芯片；这是订单报道。值得关注的是，订单需求可能牵动算力供应链；不能据此认定交付已经完成。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/19/2026/waymo-plans-to-quintuple-its-fleet",
-      "source_publish_time": "2026-10-19T22:37:08Z",
+      "source_url": "https://www.semafor.com/article/10/20/2026/chinese-tech-firms-purchase-more-than-35-billion-of-nvidia-chips-reuters",
+      "source_publish_time": "2026-10-20T22:44:57Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/19/2026/waymo-plans-to-quintuple-its-fleet",
-          "source_publish_time": "2026-10-19T22:37:08Z"
+          "source_url": "https://www.semafor.com/article/10/20/2026/chinese-tech-firms-purchase-more-than-35-billion-of-nvidia-chips-reuters",
+          "source_publish_time": "2026-10-20T22:44:57Z"
         }
       ],
       "confidence": "PARTIAL",

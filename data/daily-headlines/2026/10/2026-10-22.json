@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-22T08:27:54.869866+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-1051f0f567eec3e7d042588a",
+      "date": "2026-10-22",
+      "time": "10-21 20:42",
+      "headline_cn": "Semafor：加纳计划2030年前禁止原矿出口",
+      "headline_en": "",
+      "summary": "据Semafor报道，加纳总统表示，该国计划到2030年禁止原矿出口，以促进国内加工。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/21/2026/ghana-eyes-mineral-export-ban-by-2030-to-boost-domestic-processing",
+      "source_publish_time": "2026-10-21T12:42:53Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/21/2026/ghana-eyes-mineral-export-ban-by-2030-to-boost-domestic-processing",
+          "source_publish_time": "2026-10-21T12:42:53Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-40070f3720641bb31db9ef28",
+      "date": "2026-10-22",
+      "time": "10-21 19:15",
+      "headline_cn": "Semafor：SpaceX与特斯拉开始探索合并",
+      "headline_en": "",
+      "summary": "据Semafor报道，SpaceX与特斯拉已开始探索合并，潜在交易涉及多个前沿科技领域。",
+      "category": "MACRO",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/21/2026/spacex-and-tesla-mega-merger-under-discussion",
+      "source_publish_time": "2026-10-21T11:15:00Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/21/2026/spacex-and-tesla-mega-merger-under-discussion",
+          "source_publish_time": "2026-10-21T11:15:00Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-acefe4a6bb341f2386fec58c",
+      "date": "2026-10-22",
+      "time": "10-22 03:17",
+      "headline_cn": "Semafor：Meta拟引入无投票权股票",
+      "headline_en": "",
+      "summary": "据Semafor报道，Meta宣布计划引入无投票权股票。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/21/2026/meta-plans-nonvoting-shares-eyeing-more-stock-sales-to-fund-its-ai-dreams",
+      "source_publish_time": "2026-10-21T19:17:10Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/21/2026/meta-plans-nonvoting-shares-eyeing-more-stock-sales-to-fund-its-ai-dreams",
+          "source_publish_time": "2026-10-21T19:17:10Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-b654670cb26b22cb979d939a",
+      "date": "2026-10-22",
+      "time": "10-22 06:42",
+      "headline_cn": "Semafor：宁德时代利润增长逊预期后股价下跌",
+      "headline_en": "",
+      "summary": "据Semafor报道，宁德时代公布的利润增长低于预期后，股价大幅下跌；公司面临国内竞争加剧与电动车价格战。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/21/2026/batterymaker-catl-tumbles-on-earnings-miss-competition-fears",
+      "source_publish_time": "2026-10-21T22:42:27Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/21/2026/batterymaker-catl-tumbles-on-earnings-miss-competition-fears",
+          "source_publish_time": "2026-10-21T22:42:27Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    }
+  ]
+}

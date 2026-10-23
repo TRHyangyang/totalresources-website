@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>苯乙烯定价、基差与成本传导 | TOTAL RESOURCES Intelligence</title>
+<meta name="description" content="从现货指数均价长约、EB期货基差点价到纯苯与乙烯成本传导，梳理苯乙烯产业定价机制及数据口径边界。">
+<meta name="keywords" content="苯乙烯, EB, 基差, 成本传导, 产业深度研究">
+<meta name="author" content="经纬知微（AI辅助研究笔名）">
+<meta property="article:section" content="产业深度研究">
+<link rel="canonical" href="https://totalresources.info/special-reports/styrene-pricing-basis-cost-transmission.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="苯乙烯定价、基差与成本传导">
+<meta property="og:description" content="从现货指数均价长约、EB期货基差点价到纯苯与乙烯成本传导，梳理苯乙烯产业定价机制及数据口径边界。">
+<meta property="og:url" content="https://totalresources.info/special-reports/styrene-pricing-basis-cost-transmission.html">
+<meta property="og:site_name" content="TOTAL RESOURCES">
+<meta property="article:published_time" content="2026-10-23">
+<style>
+:root{--navy:#071f38;--navy2:#0b2d50;--green:#267248;--gold:#c8a957;--text:#102235;--gray:#687582;--light:#f4f6f8;--line:#e2e7eb}
+*{box-sizing:border-box}
+body{margin:0;color:var(--text);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}
+a{color:var(--green)}
+.container{width:88%;max-width:1180px;margin:0 auto}
+.site-header{background:var(--navy);color:#fff}
+.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{font-size:16px;font-weight:900;letter-spacing:2px;color:#fff;text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.nav-links a{color:#fff;text-decoration:none;font-size:12px;font-weight:700}
+.nav-links a:hover{color:var(--gold)}
+.nav-links .basinol-link{color:var(--gold)}
+.article-hero{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:64px 0 60px}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase}
+.article-hero h1{max-width:900px;font-size:40px;line-height:1.3;margin:15px 0}
+.article-hero p{margin:0;color:#d9e3e9;font-size:14px}
+.publication-meta{background:#f7f8f9;border-bottom:1px solid var(--line)}
+.publication-meta-inner{max-width:980px;margin:0 auto;padding:20px 0;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.publication-meta .publication-label{color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;margin-right:auto}
+.publication-meta .meta-item{font-size:13px;color:var(--gray)}
+.publication-meta .meta-item strong{color:var(--navy);font-weight:750;margin-left:7px}
+.article-wrap{max-width:980px;margin:0 auto;padding:53px 0 100px}
+.back-link{display:inline-block;margin-bottom:33px;font-size:13px;font-weight:800;text-decoration:none}
+.article-body{font-size:18px;line-height:1.92;letter-spacing:.005em;overflow-wrap:anywhere}
+.article-body h1{font-size:15px;color:var(--green);letter-spacing:.08em;line-height:1.5;margin:0 0 13px}
+.article-body h2{font-size:27px;line-height:1.45;color:var(--navy);margin:54px 0 19px;font-weight:760}
+.article-body h1+h2{font-size:31px;line-height:1.43;margin:0 0 24px;max-width:920px}
+.article-body h3{font-size:21px;color:var(--green);margin:34px 0 14px}
+.article-body p{margin:0 0 24px}
+.article-body hr{border:0;border-top:1px solid var(--line);margin:54px 0 31px}
+.article-body hr+h2{margin-top:0}
+.article-body strong{color:var(--navy)}
+.article-body ul,.article-body ol{padding-left:1.6em;margin:0 0 24px}
+.article-body blockquote{margin:30px 0;padding:23px 27px;background:var(--light);border-left:4px solid var(--gold)}
+.article-body blockquote p{margin:0}
+.article-body .publication-signature{background:#f7f8f9;border-left:4px solid var(--gold);padding:27px 31px;margin:22px 0 0;font-size:18px;line-height:1.9}
+.article-body .table-scroll{overflow-x:auto;overscroll-behavior-inline:contain;margin:26px 0 34px;border:1px solid var(--line)}
+.article-body table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.72;min-width:790px}
+.article-body th,.article-body td{padding:16px 17px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.article-body th{background:var(--navy);color:#fff;font-weight:750;letter-spacing:.025em;border-bottom:2px solid var(--gold)}
+.article-body tr:last-child td{border-bottom:0}
+.article-body tr:nth-child(even) td{background:#f8fafb}
+.article-body td strong{font-weight:750}
+.article-body .disclaimer-heading{font-size:22px}
+.article-body .disclaimer-heading+p{background:#f7f8f9;border-top:2px solid var(--line);padding:25px 28px;font-size:15px;line-height:1.88;color:#425264}
+.article-body code{background:var(--light);padding:2px 4px}
+footer{background:#031321;color:rgba(255,255,255,.58);padding:29px 0;font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.footer-inner strong{color:#fff;margin-right:10px}
+@media(max-width:760px){.container{width:90%}.nav{padding:20px 0;align-items:flex-start;flex-direction:column}.nav-links{gap:12px 17px}.article-hero{padding:48px 0}.article-hero h1{font-size:30px}.publication-meta-inner{width:90%;gap:8px 22px;padding:16px 0}.publication-meta .publication-label{width:100%}.article-wrap{padding:38px 0 70px}.article-body{font-size:16.5px;line-height:1.92}.article-body h1{font-size:13px}.article-body h1+h2{font-size:26px}.article-body h2{font-size:23px}.article-body p{margin-bottom:22px}.article-body hr{margin:43px 0 26px}.article-body table{font-size:14px;min-width:760px}.article-body th,.article-body td{padding:14px 15px}.article-body .publication-signature{font-size:16.5px;padding:23px 22px}.article-body .disclaimer-heading+p{font-size:14px;padding:21px 20px}}
+.article-body .footnote{font-size:14px}.article-body pre{overflow:auto;background:var(--light);padding:18px}.article-body img{max-width:100%;height:auto}.article-body table{width:100%;min-width:560px}.article-body :target{scroll-margin-top:24px}
+.report-hero-image{max-width:980px;margin:28px auto 24px}.report-hero-image img{display:block;width:100%;height:auto;max-width:100%;margin:0 auto}.article-hero h1{max-width:980px}@media(max-width:760px){.article-hero h1{font-size:28px}}
+.report-hero-image figcaption{color:#d9e3e9;font-size:12px;margin-top:8px;text-align:center}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+<a class="brand" href="../index.html">TOTAL RESOURCES</a>
+<nav class="nav-links" aria-label="Primary navigation">
+<a href="../index.html">Home</a><a href="../about.html">About</a><a href="../business.html">Business</a><a href="../projects.html">Projects</a><a href="../intelligence.html">Intelligence</a><a class="basinol-link" href="../basinol.html">BASINOL®</a>
+</nav></div></header>
+<div class="article-hero"><div class="container"><div class="eyebrow">TOTAL RESOURCES INTELLIGENCE · SPECIAL REPORTS</div><h1>苯乙烯定价、基差与成本传导</h1><p>发布日期 2026-10-23 · 专题研究</p></div></div>
+<div class="publication-meta"><div class="publication-meta-inner"><span class="publication-label">03 Special Reports · 专题研究</span><span class="meta-item">分类<strong>产业深度研究</strong></span><span class="meta-item">作者<strong>经纬知微（AI辅助研究笔名）</strong></span><span class="meta-item">来源<strong>用户提供的产业研究资料及文末公开来源</strong></span><span class="meta-item">原始日期<strong>2026-10-23</strong></span><span class="meta-item">Publication Date<strong>2026-10-23</strong></span></div></div>
+<main class="container"><div class="article-wrap"><a class="back-link" href="../intelligence.html#special-reports">← 返回 Special Reports</a><article class="article-body"><h1>苯乙烯定价、基差与成本传导</h1>
+<blockquote>
+<p><strong>产业深度研究｜Special Reports</strong><br>
+<strong>日期：2026年10月23日</strong><br>
+<strong>主题：苯乙烯（EB）定价机制、期现基差、纯苯与乙烯成本传导</strong></p>
+</blockquote>
+<p><strong>阅读说明：</strong> 本文依据所附研究资料整理，保留原文数据、计算、案例及引用编号。文中2026年10月的行情观察仅适用于所列日期；公开替代现货数据不等于安迅思（ICIS）原始报价。来源表中的部分内容基于搜索摘要，未完成逐项原始资料审计。</p>
+<hr>
+<h2>第一章｜中国苯乙烯参与方与价格结算体系</h2>
+<h3>一、不同参与方之间，实际怎么定价？</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>交易关系</th>
+<th>可核实的参与方实例</th>
+<th>价格基准与结算方式</th>
+<th>证据边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>苯乙烯生产商 → 直接下游工厂</td>
+<td>中海壳牌、中海油东方石化及其关联企业、青岛海湾化学 → 仁信新材（PS生产商）</td>
+<td>长约采用公式化定价，以资讯机构现货价格在约定时期内的均价为基础；具体报价系列可指向安迅思江苏／张家港出罐价格。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a></td>
+<td>来自仁信新材2021年披露的招股说明书，反映其报告期采购安排</td>
+</tr>
+<tr>
+<td>上游生产商／贸易商 → 供应链贸易商</td>
+<td>四邦实业等上游贸易商 → 浙期实业</td>
+<td>长期采购框架协议，按现货月均价结算，每月固定数量采购。<a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></td>
+<td>报道未披露该案例究竟采用哪家资讯机构的月均价</td>
+</tr>
+<tr>
+<td>供应链贸易商 → 下游工厂</td>
+<td>浙期实业 → 下游成品工厂</td>
+<td>基差点价，也可以按当天市场价格供货。<a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></td>
+<td>同一贸易商可以同时提供不同定价方式</td>
+</tr>
+<tr>
+<td>贸易商 → 下游采购企业</td>
+<td>江阴市金桥化工 → 某下游客户</td>
+<td>指定月份EB期货价格＋固定基差；有“先提货、后点价”的实际合同。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></td>
+<td>客户名称未公开，但合约月份、吨数和点价过程均有披露</td>
+</tr>
+<tr>
+<td>大型贸易商的苯乙烯业务</td>
+<td>厦门国贸石化</td>
+<td>受访业务负责人称，大部分贸易采取基差贸易模式，在盘面实现价格保护。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></td>
+<td>这是该企业受访时的业务情况，不能等同全行业比例</td>
+</tr>
+<tr>
+<td>国内生产商的年度长约</td>
+<td>2026年首创期货调研中的某国内生产企业</td>
+<td>苯乙烯年度长约参考安迅思报价；内贸企业则依托华东纸货、期货开展基差交易。<a href="https://www.7hcn.com/article/482252-1.html">web:10</a></td>
+<td>匿名调研未公布完整计价窗口与升贴水</td>
+</tr>
+</tbody>
+</table></div>
+<p>因此，不能简单说“生产商都按现货月均、贸易商都按期货点价”。更准确的是：交易关系不同，合同结构不同；同一家公司上游按月均买入、下游按期货点价卖出，是已有公开案例的经营方式。<a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></p>
+<p>这里的“直接下游用户”，例如仁信新材这样的PS生产商，是实际采购并消耗苯乙烯单体的企业；不要与其更下游的家电、包装等产品用户混为一类。仁信新材披露，其主要原料为苯乙烯，而产品为聚苯乙烯。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a></p>
+<h3>二、“华东市场价格”具体指哪个市场？</h3>
+<h4>1. 最具体、可核实的合同口径：江苏张家港出罐价</h4>
+<p>仁信新材的采购定价披露明确出现以下定义：</p>
+<p>“计价期内每个工作日安迅思中国发布的江苏市场苯乙烯现货张家港出罐收盘价格的算术平均值。”<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a></p>
+<p>这句话包含四项不能省略的信息：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>该披露中的具体口径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>报价发布方</td>
+<td>安迅思，即ICIS</td>
+</tr>
+<tr>
+<td>地理市场</td>
+<td>江苏市场，具体为张家港</td>
+</tr>
+<tr>
+<td>交货报价条件</td>
+<td>出罐</td>
+</tr>
+<tr>
+<td>价格与平均方法</td>
+<td>每个工作日的收盘价格，在约定计价期内计算算术平均值</td>
+</tr>
+</tbody>
+</table></div>
+<p>以上均来自该企业披露的具体计价定义。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a></p>
+<p>所以，研究或询价时只问“是不是华东价格”还不够，必须继续核实“哪家机构、哪个报价系列、哪一种交货条件、哪个计价窗口”。</p>
+<h4>2. 企业不在华东，也可以引用华东价格</h4>
+<p>仁信新材位于惠州大亚湾，其苯乙烯采购合同却可以采用上述江苏／张家港市场报价。它与中海壳牌之间还存在园区管道输送安排。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a></p>
+<p>这说明：报价基准所在地，不等于实物交货所在地。判断真实采购成本，需要把指数价格与合同中的物流、交付和价差条款分开看。</p>
+<h4>3. 不能把各家“华东报价”直接当成同一个指数</h4>
+<p>现有资料中的最明确企业合同证据指向安迅思；2026年的产业调研也仍有苯乙烯生产商长约参考安迅思的记录。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a><a href="https://www.7hcn.com/article/482252-1.html">web:10</a></p>
+<p>但这不足以证明所有企业统一采用安迅思，也不足以证明隆众、卓创等报价与该合同系列可以直接互换。对于具体交易，最终仍要拿到合同中写明的报价名称，而不是自行用另一家“华东均价”替代。</p>
+<h3>三、长约是月均价吗？有，也不止月均价</h3>
+<h4>1. 现货月均价长约</h4>
+<p>浙期实业的公开案例很清楚：与上游生产商及贸易商签订长期采购框架，每月固定批量采购，以现货月均价结算；随后再通过基差贸易向下游销售。2022年，其与四邦实业等合作的披露规模为每月1,000吨、全年1.2万吨。<a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></p>
+<p>用概念公式表示，这类合同可以写成：</p>
+<blockquote>
+<p><code>P = (1/N) × Σ(d=1…N) I_d + Δ</code></p>
+</blockquote>
+<p>其中，<code>I_d</code> 为合同指定的日度现货报价，<code>N</code> 为约定计价期内有效报价天数，<code>Δ</code> 为合同约定的价差。这个公式只是说明结构，不代表所有企业采用相同报价源、月份或价差。</p>
+<h4>2. 装货日前后窗口均价</h4>
+<p>仁信新材对青岛海湾化学的采购披露给出了另一种安排：</p>
+<p>“中国上海安迅思化工网公布的苯乙烯华东江苏出罐价装货日前三天及后三天（含装船日）出罐价均价＋40元／吨。”<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a></p>
+<p>这不是全月均价，而是围绕装货／装船日期的窗口均价。</p>
+<p>因此，“按均价结算”还需区分：</p>
+<ul>
+<li>整月均价；</li>
+<li>合同约定的一段计价期均价；</li>
+<li>围绕装货日的窗口均价。</li>
+</ul>
+<p>不能仅凭“长约”二字就判断其一定按自然月均价结算。仁信新材也明确披露：长约采购通常在月度供货量内分批采购，于当月或次月结算，采用公式化定价。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a></p>
+<h3>四、按期货价格结算，具体怎么点价？</h3>
+<h4>1. 不是笼统的“主力价格”，而是指定合约＋基差</h4>
+<p>最直接的公开合同实例来自金桥化工：</p>
+<ul>
+<li>2022年6月6日，与某下游客户签订1,000吨苯乙烯合同；</li>
+<li>定价公式为“EB2207＋40元／吨”；</li>
+<li>双方约定可以先提货、后点价；</li>
+<li>6月22日客户以10,315元／吨点价；</li>
+<li>最终现货结算价为10,355元／吨。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></li>
+</ul>
+<p>对应公式是：</p>
+<blockquote>
+<p><code>P_现货 = F_指定EB合约、约定点价价格 + B</code></p>
+</blockquote>
+<p>这里的 <code>B</code> 是双方先商定的基差。该案例中的＋40元／吨是历史合同价差，不是目前市场通用的基差标准。</p>
+<h4>2. 点价不等于采用交易所“每日结算价”</h4>
+<p>上述案例采用客户在约定时段进行点价的价格，贸易商同步平仓；并非直接拿当日期货结算价作为货款结算基准。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></p>
+<p>对于一份真实合同，应分别核实：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>要素</th>
+<th>要问清的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>期货标的</td>
+<td>EB哪一个月份合约？</td>
+</tr>
+<tr>
+<td>点价价格</td>
+<td>按实际成交价、约定时点价，还是另行规定的收盘价／结算价？</td>
+</tr>
+<tr>
+<td>点价权</td>
+<td>买方点价、卖方点价，还是双方协商？</td>
+</tr>
+<tr>
+<td>点价窗口</td>
+<td>从哪天到哪天，何时截止？</td>
+</tr>
+<tr>
+<td>分批安排</td>
+<td>是否允许分批点价，各批数量如何加权？</td>
+</tr>
+<tr>
+<td>到期处理</td>
+<td>未点价部分如何处理，是否允许移仓，费用由谁承担？</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些是合同核查清单，不是已经确认的行业统一条款。</p>
+<h4>3. 先交货、后定价确实存在</h4>
+<p>金桥化工案例说明，交货时间与最终定价时间可以分离：先约定数量、基差和提货安排，再由客户在合同允许的窗口内点价。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></p>
+<p>但点价并不保证买方一定比月均价买得便宜。该案例恰好是在盘面下跌后点价；公开报道中的降本结果，是那笔交易的历史结果，不应理解为这种模式天然无风险。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></p>
+<h3>五、贸易商为什么能“上游月均买、下游点价卖”？</h3>
+<p>浙期实业的案例把这种结构展示得很完整：</p>
+<p>上游生产商／贸易商</p>
+<ul>
+<li>现货月均价长约</li>
+<li>浙期实业</li>
+<li>EB基差点价或当日市场价</li>
+<li>下游工厂。<a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></li>
+</ul>
+<p>贸易商在这里不只是搬运货物，还在承接上下游对定价时间、供货稳定性和风险管理的不同需求，并利用期货工具进行对冲。报道同时指出，长协价格在剧烈行情下仍可能与市场价格出现较大差异，需要进一步进行风险管理。<a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></p>
+<p>因此，从研究角度看，这类贸易商的重要敞口不只是“苯乙烯涨跌”，还包括：</p>
+<ul>
+<li>上游现货指数均价与下游期货点价之间的差异；</li>
+<li>不同计价窗口之间的差异；</li>
+<li>现货交付安排与所用期货合约之间的匹配情况。</li>
+</ul>
+<p>这是根据上述采购、销售结构得出的风险拆分，不能把“有套保”理解为所有价差风险都已消失。</p>
+<h3>六、用于调研或合同核验，建议直接问这七项</h3>
+<p>如果您要向生产商、贸易商或下游采购负责人核实，最有效的问法不是单问“按华东价还是期货价”，而是：</p>
+<ol>
+<li>
+<p>你们这笔交易的最终价格公式是什么？请直接写成“基准＋／－价差”。</p>
+</li>
+<li>
+<p>若引用现货指数，是哪家机构、哪个完整报价系列？是否为安迅思江苏张家港出罐收盘价？</p>
+</li>
+<li>
+<p>计价窗口是自然月、跨月周期，还是装货日前后窗口？缺失报价日如何处理？</p>
+</li>
+<li>
+<p>若引用期货，是EB哪个月份？点价采用什么价格，谁有点价权？</p>
+</li>
+<li>
+<p>交货地、出罐／出厂／到厂条件分别是什么？运费、罐储等是否另算？</p>
+</li>
+<li>
+<p>税费和账期如何约定？先暂结后补差，还是价格确定后一次结算？</p>
+</li>
+<li>
+<p>上游采购与下游销售是否使用同一基准、同一计价窗口？若不同，中间价差由谁承担？</p>
+</li>
+</ol>
+<p>就目前可核实的证据而言，您可以在研究材料中写为：</p>
+<p>中国苯乙烯贸易存在现货指数均价长约与期货基差点价并行的定价结构。部分生产商—下游长约以安迅思江苏／张家港出罐现货报价在约定期间的均价为基础，计价期既有月均，也有装货日前后窗口；贸易环节则广泛出现以指定月份EB期货价格加减基差、由客户在约定窗口点价的方式，同时保留一口价交易。具体结算必须以双方合同的报价系列、计价窗口和交货条件为准。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a><a href="https://www.htqhedu.com/tz/col48/1188">web:15</a><a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></p>
+<h2>第二章｜期货、现货与合同定价如何相互影响</h2>
+<h3>一、先区分三种看起来相似、实际不同的“价差”</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>价差</th>
+<th>计算方法</th>
+<th>回答的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>当日期现基差</td>
+<td>当日指定现货报价－同一时点指定EB合约价</td>
+<td>今天的实货相对某个月份期货贵多少？</td>
+</tr>
+<tr>
+<td>合同约定基差</td>
+<td>签约时谈定的加减价，例如EB2207＋40</td>
+<td>这笔合同最终按怎样的公式结算？</td>
+</tr>
+<tr>
+<td>月均价与点价的差额</td>
+<td>当月指定现货指数均价－客户实际点价价格</td>
+<td>按月均买、按期货点价卖，两端成本收入差多少？</td>
+</tr>
+</tbody>
+</table></div>
+<p>第一种是市场观测值；第二种是合同条款；第三种还包含不同计价时间带来的差异。不能互相替代。公开案例已经同时显示出指定合约加价点价，以及上游现货月均采购、下游基差销售这两种结构。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a><a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></p>
+<p>尤其要注意：“今天市场基差＋500”，不意味着此前签的“EB＋100”合同自动改成“EB＋500”。是否可以调整，取决于原合同。</p>
+<h3>二、假设今天安迅思比EB主力高500元／吨，意味着什么？</h3>
+<p>以下均为演示数字，不是今日行情：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>假设价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>安迅思江苏张家港出罐现货价</td>
+<td>8,000元／吨</td>
+</tr>
+<tr>
+<td>同时点EB某月份合约价</td>
+<td>7,500元／吨</td>
+</tr>
+<tr>
+<td>现货减期货</td>
+<td>＋500元／吨</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><code>B_t = S_t − F_(t,T) = 500</code></p>
+</blockquote>
+<p>直观理解是：现在能用的现货，比该期货月份对应的货物贵500元／吨。</p>
+<p>它不必意味着期货“定错价”，也不必意味着现货必跌500元。现货与远月货物在可用时间上不同；近期实货紧张、市场预期未来供应改善时，现货高于远月期货可以持续存在。近期公开研究就把苯乙烯高基差与低库存联系起来；10月23日发布的华泰期货报告仍描述苯乙烯港口库存低位、开工回升缓慢。<a href="https://futures.cngold.org/c/2026-10-16/c10819603.html">web:37</a><a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-23/doc-iniweiyt5672898.shtml">web:36</a></p>
+<p>还要核实：这500元究竟是相对近月还是远月。若换成另一个月份合约，得到的基差也会不同。</p>
+<h3>三、期货与现货如何相互影响？</h3>
+<h4>1. 期货上涨，会迅速影响基差点价合同</h4>
+<p>沿用假设：</p>
+<ul>
+<li>期货为7,500元／吨；</li>
+<li>新签实货合同约定“该合约＋500”；</li>
+<li>买方此时点价，货款价为8,000元／吨。</li>
+</ul>
+<p>如果期货随后涨至7,700元，而买方尚未点价、合同基差仍固定＋500，买方此时点价就变成8,200元／吨。</p>
+<p>这种传导是合同公式直接决定的。金桥化工的公开案例中，客户以10,315元／吨点价，加上固定40元／吨，最终结算为10,355元／吨。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></p>
+<p>但对于市场上尚未签约的新交易，基差可以重新谈判。因此：</p>
+<p>期货上涨200元，不等于所有现货报价一定上涨200元；现货也可能只涨100元，相应基差从＋500缩至＋400。</p>
+<h4>2. 实货紧张，会先体现在现货与基差上，再影响期货</h4>
+<p>例如下游急需现货，但港口可流通货源有限，买方可能愿意接受更高的实货升水。这种紧张若被市场判断会延续至期货交割月份，就会进一步支撑对应合约。</p>
+<p>反过来，如果市场认为紧张只是短暂的、到交割月供应会恢复，期货不一定完全跟涨，较高的正基差就可能保留。近期研究对苯乙烯“低库存、高基差”的描述，体现的正是这种近端实货与远期定价之间的关系。<a href="https://futures.cngold.org/c/2026-10-16/c10819603.html">web:37</a><a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-23/doc-iniweiyt5672898.shtml">web:36</a></p>
+<h4>3. 安迅思价格不是由EB机械计算出来的</h4>
+<p>前述合同引用的是安迅思江苏市场张家港出罐现货收盘报价，而不是“EB收盘价加固定金额”。另一些合同则直接使用“指定EB合约＋基差”。这是两个不同的价格引用机制。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a><a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a></p>
+<p>不过，两者也不是互不相关：参与现货报价和成交的企业同时看期货、进行基差交易，期货变动会影响其报价意愿；现货供需又反过来影响基差和期货交易。因此，关系是双向传导，而不是一方每天单向决定另一方。</p>
+<h3>四、“怎么平衡”：靠交易与交割约束，不是把安迅思和EB调成一样</h3>
+<p>EB采用实物交割，货物要符合交割质量要求，并在指定交割仓库完成交割；交割仓库还区分基准与非基准仓库。<a href="https://www.bocifco.com/newsinfo.aspx?cid=4&amp;id=46114">web:49</a><a href="http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html">web:43</a></p>
+<p>这给期现价格提供了连接渠道，但有两种不同情形。</p>
+<h4>情形A：期货显著高于可交割现货成本</h4>
+<p>若出现：</p>
+<blockquote>
+<p><code>F &gt; S + 持有至交割的全部成本</code></p>
+</blockquote>
+<p>具备相应条件的企业可以考虑买现货、卖期货，持货并准备交割。买现货、卖期货的交易方向，会分别支撑现货、压制期货，从而约束过大的期货升水。</p>
+<p>这里的成本不只是运费，还应按具体业务核算资金、仓储、入出库、检验、交割等费用；必须先确认货物与仓库满足交割要求。<a href="http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html">web:43</a><a href="https://www.bocifco.com/newsinfo.aspx?cid=4&amp;id=46114">web:49</a></p>
+<h4>情形B：现货显著高于期货</h4>
+<p>这时不能简单说：“买便宜期货、马上卖贵现货，就无风险赚差价。”</p>
+<p>原因是：期货对应未来交割，今天需要的现货却必须今天拿出来。没有库存或借货渠道，就无法立即完成现货端交付。</p>
+<p>有库存且能够推迟用货的企业，才可能考虑“卖出现货、买入期货，未来再补回”的结构；但仍要承担交割时间、地点、品质和实际补货安排不匹配的风险。EB交割针对的是符合规则的标准化货物，并非对任意时间、任意地点的现货需求提供即时替代。<a href="http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html">web:43</a><a href="https://www.bocifco.com/newsinfo.aspx?cid=4&amp;id=46114">web:49</a></p>
+<p>因此，现货紧缺时，正基差可以较大，也可以持续一段时间。这不是必然存在“没人发现的套利”。</p>
+<h4>到期收敛，究竟收敛的是什么？</h4>
+<p>应当理解为：临近交割时，同一到期合约与可交割现货之间，经过地点、品质及交割费用调整后的价差，受到更直接的交割约束。</p>
+<p>不能理解为：</p>
+<ul>
+<li>今天的现货价必须等于几个月后的主力合约价；</li>
+<li>所有地区的工厂到货价都必须等于EB；</li>
+<li>安迅思月均价必须等于月底期货收盘价。</li>
+</ul>
+<p>这些比较分别混入了时间、交货条件或平均窗口的差异。<a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a><a href="http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html">web:43</a><a href="https://www.bocifco.com/newsinfo.aspx?cid=4&amp;id=46114">web:49</a></p>
+<h3>五、上游按安迅思月均买，下游按EB点价卖，贸易商怎样平衡？</h3>
+<p>这是这一问题中最关键的经营环节。公开案例显示，浙期实业确实采用上游现货月均采购、下游基差销售，并通过期货进行风险管理。<a href="https://www.htqhedu.com/tz/col48/1188">web:15</a></p>
+<p>设：</p>
+<blockquote>
+<p><code>采购价 = Ī + a</code></p>
+<p><code>销售价 = F_τ + b</code></p>
+</blockquote>
+<p>其中：</p>
+<ul>
+<li><code>Ī</code>：约定计价期的安迅思等现货指数均价；</li>
+<li><code>a</code>：上游合同加减价；</li>
+<li><code>F_τ</code>：客户在点价时刻采用的指定EB价格；</li>
+<li><code>b</code>：下游合同固定基差。</li>
+</ul>
+<p>未计费用和套保前，毛价差为：</p>
+<blockquote>
+<p><code>M = F_τ + b − Ī − a</code></p>
+</blockquote>
+<p>问题在于：采购成本在一段时期内形成，销售价格却可能在某一个时刻锁定。两端不是天然匹配的。</p>
+<h4>用期货对冲，可以把主要风险拆成“剩余基差风险”</h4>
+<p>假设下游已经点价，贸易商销售收入固定，但上游月均采购成本尚未完全形成。若市场继续上涨，采购成本可能上升，因此可用买入期货管理这一阶段的价格上涨风险。</p>
+<p>用一个简化的完全匹配模型说明：在客户点价时以 <code>F_τ</code> 买入期货，再随采购计价进度分批平仓。若这些平仓价的加权平均为 <code>F̄</code>，则：</p>
+<blockquote>
+<p><code>期货盈亏 = F̄ − F_τ</code></p>
+</blockquote>
+<p>所以套保后的毛价差近似为：</p>
+<blockquote>
+<p><code>M_套保后 = b − a − (Ī − F̄)</code></p>
+</blockquote>
+<p>这个公式的含义很重要：</p>
+<p>期货对冲后，贸易商不再主要承担单纯的涨跌风险，但仍承担“现货指数均价相对所用期货均价如何变化”的风险，以及物流、资金和执行成本。</p>
+<p>这里是假设数量、计价权重和合约匹配的教学模型，不是对某家企业实际套保操作的还原。现实中，上游计价已完成多少、客户何时点价、库存是否已持有，都会改变应当保留的期货头寸；不能一概说贸易商永远买套保或永远卖套保。</p>
+<h3>六、今天到底该怎样比较，才有研究意义？</h3>
+<p>建议把“安迅思－EB主力”改成一张固定口径监测表：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>应记录的内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现货报价</td>
+<td>安迅思完整报价系列，是否为江苏张家港出罐收盘价</td>
+</tr>
+<tr>
+<td>报价日期与时点</td>
+<td>当日收盘评估，还是盘中信息</td>
+</tr>
+<tr>
+<td>期货合约</td>
+<td>明确写EB2611、EB2612等，不只写“主力”</td>
+</tr>
+<tr>
+<td>期货价格类型</td>
+<td>与现货时点匹配的成交价、收盘价或结算价，固定采用一种</td>
+</tr>
+<tr>
+<td>当日基差</td>
+<td>现货减对应合约</td>
+</tr>
+<tr>
+<td>月均基差</td>
+<td>相同报价日和权重下的现货均价减期货均价</td>
+</tr>
+<tr>
+<td>交付调整</td>
+<td>地点、品质、税费及物流口径是否可比</td>
+</tr>
+</tbody>
+</table></div>
+<p>尤其不宜拿“今天上午EB盘中价”减“昨天安迅思收盘价”，再把差额解释为纯粹的市场基差；其中还混入了隔夜和盘中波动。也不宜把主力换月造成的价差跳变，当成实货突然变紧。</p>
+<p>目前能核实的近期数字是：10月14日公开报告给出的“苯乙烯主力基差”为＋677元／吨；但这既不是10月23日数值，也不能在未核实其现货报价源、合约及取价时点前，改写成“今天安迅思比EB高677元”。<a href="https://www.7hcn.com/article/485594-1.html">web:33</a></p>
+<p>所以，对您关心的“怎么平衡”，最准确的概括是：期货主要提供远期价格发现和涨跌风险转移，现货基差反映具体时间与交货条件下的实货相对价值；交割约束二者不能无限脱节，但企业仍须管理现货指数、期货合约与计价窗口不匹配留下的风险。<a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a><a href="https://www.htqhedu.com/tz/col48/1188">web:15</a><a href="http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html">web:43</a></p>
+<h2>第三章｜近期安迅思与EB基差：数据观察及口径边界</h2>
+<h3>一、最近能核实的走势</h3>
+<p>先将“近期”限定为10月15日至22日，使用同一个期货合约EB2611，避免主力换月干扰。</p>
+<p>以下单位均为元／吨，基差＝现货价格－期货价格。</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>日期</th>
+<th>公开表中现货价格</th>
+<th>EB合约</th>
+<th>表中期货价格</th>
+<th>期现基差</th>
+<th>数据口径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10月15日</td>
+<td>11,240</td>
+<td>EB2611</td>
+<td>10,276</td>
+<td>＋964</td>
+<td>公开基差表，非ICIS口径。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-16/detail-inivkwtt8278732.d.html?oid=weibo&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:55</a></td>
+</tr>
+<tr>
+<td>10月21日</td>
+<td>11,014</td>
+<td>EB2611</td>
+<td>10,455</td>
+<td>＋559</td>
+<td>公开基差表，非ICIS口径。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-22/detail-iniwamir5923023.d.html?oid=www.revistamip.com.mel&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:54</a></td>
+</tr>
+<tr>
+<td>10月22日</td>
+<td>11,060</td>
+<td>EB2611</td>
+<td>10,672</td>
+<td>＋388</td>
+<td>生意社主力基差表，非ICIS口径。<a href="https://www.100ppi.com/sf2/">web:53</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>这是一组已核实日期的观察点，不是完整逐日序列；缺失日期不作插值，也不据此断言期间每天都在收窄。</p>
+<h4>变化幅度</h4>
+<p>根据表内数据计算：</p>
+<ul>
+<li>10月15日至22日：基差收窄576元／吨，约收窄60%。</li>
+<li>10月21日至22日：基差再收窄171元／吨。</li>
+<li>截至22日仍为正基差：现货价格依然高于EB2611，而不是已经转成期货升水。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-16/detail-inivkwtt8278732.d.html?oid=weibo&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:55</a><a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-22/detail-iniwamir5923023.d.html?oid=www.revistamip.com.mel&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:54</a><a href="https://www.100ppi.com/sf2/">web:53</a></li>
+</ul>
+<h3>二、这次是怎样收窄的？</h3>
+<h4>1. 从15日到22日：现货略跌、期货上涨，两端共同压缩价差</h4>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>10月15日</th>
+<th>10月22日</th>
+<th>变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现货价格</td>
+<td>11,240</td>
+<td>11,060</td>
+<td>－180</td>
+</tr>
+<tr>
+<td>EB2611表中价格</td>
+<td>10,276</td>
+<td>10,672</td>
+<td>＋396</td>
+</tr>
+<tr>
+<td>基差</td>
+<td>＋964</td>
+<td>＋388</td>
+<td>－576</td>
+</tr>
+</tbody>
+</table></div>
+<p>以上变化根据公开表中价格计算。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-16/detail-inivkwtt8278732.d.html?oid=weibo&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:55</a><a href="https://www.100ppi.com/sf2/">web:53</a></p>
+<p>因此，这段时间不是简单的“现货大跌，把基差跌没了”，而是现货回落与期货走强共同作用，且期货上涨对基差压缩的贡献更大。</p>
+<h4>2. 21日至22日：现货也涨，但期货涨得更多</h4>
+<p>这一天，现货上涨46元／吨，表中期货价格上涨217元／吨，基差因此收窄171元／吨。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-22/detail-iniwamir5923023.d.html?oid=www.revistamip.com.mel&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:54</a><a href="https://www.100ppi.com/sf2/">web:53</a></p>
+<p>这说明：基差走弱不等于现货一定下跌。期货上涨速度超过现货，同样会造成正基差快速压缩。</p>
+<p>还有一个取价问题需要提醒：上述是公开基差表的“期货价格”口径，不应直接与新闻中“收盘价相对昨结算价”的日涨幅混算。10月22日行情资料分别列示了EB2611收盘价10,672元／吨和结算价10,540元／吨；若换用结算价计算，基差数值会不同。<a href="https://styrene.100ppi.com/">web:56</a></p>
+<h3>三、对“安迅思—EB”可以下什么结论，不能下什么结论？</h3>
+<h4>可以下的结论</h4>
+<p>公开替代现货序列显示，最近一周苯乙烯现货相对EB2611的升水明显压缩，主要体现为期货追赶现货。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-16/detail-inivkwtt8278732.d.html?oid=weibo&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:55</a><a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-22/detail-iniwamir5923023.d.html?oid=www.revistamip.com.mel&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:54</a><a href="https://www.100ppi.com/sf2/">web:53</a></p>
+<h4>暂时不能下的结论</h4>
+<p>不能据此说：</p>
+<p>“安迅思张家港出罐价格相对EB2611的基差，已经从＋964降到＋388。”</p>
+<p>原因是：上表并非安迅思报价序列。本次检查可用数据接口后，也未发现直接提供该ICIS现货历史系列的接口；公开检索尚未取得同一报价系列的近期逐日价格。</p>
+<p>此外，上一轮引用的期货公司“主力基差＋677”等数字，报价源与计算时点尚未核实，不能直接拼入这张表，否则可能把口径变化误当成市场变化。</p>
+<h3>四、这对实际采购和贸易意味着什么？</h3>
+<p>结合上面这组替代口径，可以这样理解，但不能直接当作某家企业的实际盈亏：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>企业状态</th>
+<th>基差收窄的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现在重新谈“EB＋基差”采购</td>
+<td>若合同交付条件和市场基差口径一致，实货升水的谈判参考水平在下降</td>
+</tr>
+<tr>
+<td>已签固定基差、尚未点价</td>
+<td>原合同基差不会因市场收窄自动调整；同时EB上涨可能抬高点价成本</td>
+</tr>
+<tr>
+<td>持有现货、卖出EB套保</td>
+<td>在数量及口径匹配的简化条件下，现货减期货的基差下降，对这组持仓不利</td>
+</tr>
+<tr>
+<td>上游按现货月均采购、下游按EB点价销售</td>
+<td>需要比较整个采购计价窗口与销售点价时点，不能仅凭某天基差判断利润</td>
+</tr>
+</tbody>
+</table></div>
+<p>因此，眼下值得关注的不是“现货已经不紧”，而是：现货仍高于11月期货，但这种相对溢价正在下降。至于这一下降是否也完整体现在安迅思合同基准中，还需要ICIS原始序列确认。<a href="https://www.100ppi.com/sf2/">web:53</a></p>
+<p>若后续取得最近两至四周安迅思“江苏张家港出罐收盘价”的原始序列，可据此重建严格的“ICIS－EB2611”逐日期现基差，并分别列示收盘价和结算价口径。</p>
+<h2>第四章｜基差对EB期货走势的影响</h2>
+<h3>一、先看这次收窄是谁推动的：近期偏向期货补涨</h3>
+<p>沿用上一轮公开替代现货口径，不冒充安迅思数据：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>日期</th>
+<th>现货价格</th>
+<th>EB2611价格</th>
+<th>基差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10月21日</td>
+<td>11,014</td>
+<td>10,455</td>
+<td>＋559</td>
+</tr>
+<tr>
+<td>10月22日</td>
+<td>11,060</td>
+<td>10,672</td>
+<td>＋388</td>
+</tr>
+</tbody>
+</table></div>
+<p>单位：元／吨；两日均为公开基差表口径。<a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-22/doc-iniwamir5923023.shtml">web:64</a><a href="https://www.100ppi.com/sf2/">web:53</a></p>
+<p>这一天：</p>
+<ul>
+<li>现货上涨46元／吨；</li>
+<li>期货上涨217元／吨；</li>
+<li>基差收窄171元／吨。</li>
+</ul>
+<p>所以，近期这段变化的含义是：期货在追赶现货，而不是现货价格下塌。这与“基差走弱，所以应该看空期货”的理解恰好不同。<a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-22/doc-iniwamir5923023.shtml">web:64</a><a href="https://www.100ppi.com/sf2/">web:53</a></p>
+<p>不过，这是价格变化的分解，不足以证明期货上涨全部由基差修复驱动；原油、纯苯等成本变化也可能同时推动EB。</p>
+<h3>二、高正基差为什么对期货有支撑？</h3>
+<p>核心是收敛预期，但不是机械补涨。</p>
+<p>如果现货一直坚挺，而临近交割的期货明显偏低，市场会重新评估：未来交割月份的货，真的能比现在便宜这么多吗？若答案是否定的，期货就有向现货靠拢的动力。</p>
+<p>这种支撑在“现货紧、可交割资源有限、库存迟迟不累”的条件下更强。近期研究指出，苯乙烯库存偏低、库存回建慢于预期、开工低位回升缓慢；也有研究据此认为，高基差与低库存使近月期货获得支撑。<a href="https://www.163.com/dy/article/L96O905K05568W0A.html">web:66</a><a href="https://m.10jqka.com.cn/20261016/c680771229.shtml">web:62</a></p>
+<p>但要同时保留另一种可能：</p>
+<p>不是期货涨上去，而是到货增加、现货跌下来，同样可以完成基差收敛。</p>
+<p>因此，高正基差只能说明期货相对当前现货便宜，不能单独证明期货绝对价格便宜。</p>
+<h3>三、真正决定下一段EB走势的，是哪一种收敛路径</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>情景</th>
+<th>现货与库存表现</th>
+<th>基差变化</th>
+<th>对EB的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>现货坚挺，库存继续低位</td>
+<td>现货不跌，补库困难</td>
+<td>期货上涨，基差收窄</td>
+<td>偏多，属于期货修复贴水</td>
+</tr>
+<tr>
+<td>现货、期货一起上涨</td>
+<td>成本或供需共同推动</td>
+<td>期货涨得快则收窄</td>
+<td>偏多，但不能只归因于基差</td>
+</tr>
+<tr>
+<td>到港或供应恢复，现货下跌</td>
+<td>库存持续累积</td>
+<td>现货跌得快，基差收窄</td>
+<td>偏空，贴水保护被现货下跌消化</td>
+</tr>
+<tr>
+<td>现货暂时稳定，期货先跌</td>
+<td>市场提前交易未来宽松</td>
+<td>基差反而扩大</td>
+<td>不宜仅凭高基差抄底，要验证未来供应预期</td>
+</tr>
+</tbody>
+</table></div>
+<p>这张表的关键是：同样是基差收窄，可以对应期货涨，也可以对应期货跌。基差是相对价格，方向判断必须同时观察现货绝对价格和库存。</p>
+<p>从近期已经看到的价格分解看，第一、第二类特征更明显；但下游偏弱仍是限制。公开研究同时指出，PS、ABS等下游利润承压、开工偏低，因此不能把上游低库存直接等同于终端需求强劲。<a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-22/doc-iniwamir5923023.shtml">web:64</a><a href="https://www.100ppi.com/sf2/">web:53</a><a href="https://www.163.com/dy/article/L96O905K05568W0A.html">web:66</a></p>
+<h3>四、对近月和远月，影响不一样</h3>
+<h4>EB2611：现货约束更直接</h4>
+<p>临近交割，市场更关心交割月前能形成多少可用、可交割货源。若库存回升继续不及预期，近月对现货紧张会更敏感。</p>
+<p>但交割约束针对符合质量、地点和规则要求的货物，不是所有地区现货报价都必须与期货完全相等。<a href="http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html">web:43</a><a href="https://www.bocifco.com/newsinfo.aspx?cid=4&amp;id=46114">web:49</a></p>
+<h4>更远月份：不能照搬当前现货升水</h4>
+<p>远月还要反映装置恢复、未来到港、需求变化等预期。即使今天现货很紧，市场仍可以判断未来供应转松，让远月价格低于现货。</p>
+<p>因此，要判断这次上涨能延续到多远，除了看“现货－EB2611”，还应看近远月价差：</p>
+<ul>
+<li>近月明显强于远月：更像近期货源紧张；</li>
+<li>近远月一起走强：还可能有成本或更持久的供需因素；</li>
+<li>近月优势回落，同时现货转弱：近期紧张的支撑可能在消退。</li>
+</ul>
+<p>这些是判读框架，并非本次已经核实的最新月差走势。</p>
+<h3>五、当前最值得盯的三个信号</h3>
+<p>对您判断EB方向而言，优先级可以排成：</p>
+<ol>
+<li>现货能否守住，而不只是基差是否变小。</li>
+</ol>
+<p>期货上涨后，如果现货跟得上，补涨逻辑更扎实；若现货明显转跌，剩余正基差未必能保护期货。</p>
+<ol start="2">
+<li>港口库存是否连续累积，且超过市场原有预期。</li>
+</ol>
+<p>近期支撑的重要基础是低库存、回建慢。这个条件一旦改变，近月贴水修复逻辑就可能弱化。<a href="https://www.163.com/dy/article/L96O905K05568W0A.html">web:66</a><a href="https://m.10jqka.com.cn/20261016/c680771229.shtml">web:62</a></p>
+<ol start="3">
+<li>期货上涨后，下游是否接受更高的实际采购价。</li>
+</ol>
+<p>下游利润和开工偏弱，意味着“现货贵”未必能不断向下传导；若成交跟不上，现货升水可能随后被压缩。<a href="https://www.163.com/dy/article/L96O905K05568W0A.html">web:66</a></p>
+<p>目前更适合把EB理解为“现货紧张支撑下的贴水修复”，而不是“高基差保证继续上涨”。下一步的分界点是：期货追上来后，现货能否保持坚挺、库存能否继续维持低位。若两者成立，近月仍有支撑；若现货转弱并持续累库，基差收窄就可能从补涨信号转成供需转松信号。</p>
+<h2>第五章｜纯苯、原油与EB的成本传导</h2>
+<h3>一、纯苯对EB：直接、可量化，但并非百分之百传导</h3>
+<p>主流乙苯脱氢工艺的研究测算通常采用：</p>
+<blockquote>
+<p><code>C_SM ≈ 0.79 P_纯苯 + 0.29 P_乙烯 + K</code></p>
+</blockquote>
+<p>其中，各原料价格应统一为可比的人民币／吨口径，<code>K</code> 为加工、能耗等费用；不同装置和研究口径并不完全一致。行业研究中存在采用约1,200元／吨固定费用的模型，但不能把这一历史模型参数当作所有企业目前的实际成本。<a href="https://www.cfachina.org/servicesupport/analygarden/nyhgl/202311/P020231113558601841635.pdf">web:85</a><a href="http://www.cfachina.org/servicesupport/analygarden/ncpl/zly_5804/202206/P020220606605219430682.pdf">web:86</a></p>
+<p>以此计算：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>原料变化</th>
+<th>每吨苯乙烯理论成本变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>纯苯上涨100元／吨</td>
+<td>＋79元／吨</td>
+</tr>
+<tr>
+<td>纯苯上涨300元／吨</td>
+<td>＋237元／吨</td>
+</tr>
+<tr>
+<td>纯苯上涨500元／吨</td>
+<td>＋395元／吨</td>
+</tr>
+<tr>
+<td>乙烯上涨100元／吨</td>
+<td>＋29元／吨</td>
+</tr>
+</tbody>
+</table></div>
+<p>以上是其他条件不变的成本敏感度，不是期货涨幅预测。<a href="https://www.cfachina.org/servicesupport/analygarden/nyhgl/202311/P020231113558601841635.pdf">web:85</a></p>
+<p>传导能否落实，关键看利润：</p>
+<ul>
+<li>EB不跟涨：生产利润受到挤压，部分企业可能降低负荷，使供应支撑随后增强。</li>
+<li>EB同步跟涨：成本上涨被部分向下游传递。</li>
+<li>EB涨得更多：除了原料成本，还可能在交易低库存、未来供应紧张或利润修复。</li>
+</ul>
+<p>近期公开研究同时提到原料高企、苯乙烯开工偏低、下游利润承压，说明成本传导并不是畅通无阻，而是在生产端与下游之间形成挤压。<a href="https://finance.eastmoney.com/a/202610203900808127.html">web:79</a></p>
+<h3>二、用10月22日做一个量级比较：纯苯很重要，但解释不了全部涨幅</h3>
+<p>当天公开行情为：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>品种</th>
+<th>收盘价格</th>
+<th>相对昨结算涨跌额</th>
+<th>涨幅</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EB主力</td>
+<td>10,672元／吨</td>
+<td>＋357元／吨</td>
+<td>＋3.46%</td>
+</tr>
+<tr>
+<td>纯苯主力</td>
+<td>9,497元／吨</td>
+<td>＋194元／吨</td>
+<td>＋2.09%</td>
+</tr>
+</tbody>
+</table></div>
+<p>以上均为收盘价相对上一交易日结算价的比较，不是收盘对收盘。<a href="https://m.jrj.com.cn/madapter/finance/2026/10/22152858821247.shtml">web:70</a></p>
+<p>如果仅用纯苯期货上涨194元／吨作为原料价格变动的近似指标：</p>
+<blockquote>
+<p><code>0.79 × 194 ≈ 153元／吨</code></p>
+</blockquote>
+<p>这一量级约相当于当天EB上涨357元／吨的43%。</p>
+<p>但这里必须划清边界：</p>
+<p>不能据此说“当天EB涨幅的43%由纯苯贡献”。</p>
+<p>原因是我们用的是纯苯期货，而不是企业实际现货采购成本；还没有计入乙烯、能耗、原有套保、计价窗口，以及两种期货各自的预期变化。这个计算只说明：纯苯上涨对应的理论成本抬升，已经是每吨百余元的量级，不是可以忽略的小因素。<a href="https://m.jrj.com.cn/madapter/finance/2026/10/22152858821247.shtml">web:70</a><a href="https://www.cfachina.org/servicesupport/analygarden/nyhgl/202311/P020231113558601841635.pdf">web:85</a></p>
+<p>EB当天涨得比这项成本变化更多，与报道所说的“成本＋低库存共同驱动”相符，但不能把剩余涨幅全部归为库存溢价。<a href="https://finance.sina.com.cn/jjxw/2026-10-22/doc-iniwavxi5202058.shtml">web:69</a></p>
+<h3>三、原油对EB：短线很强，但没有稳定的一对一换算系数</h3>
+<p>原油主要沿两条路径影响EB：</p>
+<h4>1. 成本链条</h4>
+<blockquote>
+<p><code>原油 → 石脑油及炼化原料 → 纯苯、乙烯 → 苯乙烯成本</code></p>
+</blockquote>
+<p>原油上涨后，纯苯和乙烯是否同步上涨、涨多少，还取决于它们各自的供应、库存及加工利润。因此，不能用一个固定比例回答“原油涨1%，EB一定涨多少”。</p>
+<h4>2. 期货预期与风险溢价</h4>
+<p>原油在夜盘或海外时段快速变化时，EB可以先交易未来成本变化，不必等国内纯苯现货报价完成调整。</p>
+<p>近期研究明确把地缘引起的油价波动列为苯乙烯短期单边走势的重要主导因素；新华财经也指出，原油高企是EB维持高位、难以顺畅调整的重要原因。<a href="https://finance.eastmoney.com/a/202610203900808127.html">web:79</a><a href="https://finance.sina.com.cn/jjxw/2026-10-22/doc-iniwavxi5202058.shtml">web:69</a></p>
+<p>需要特别避免重复计算：如果油价上涨已经推动纯苯上涨，就不能再把“纯苯成本贡献”与一个独立估计的“原油成本贡献”简单相加，二者存在上下游重叠。</p>
+<h3>四、为什么近期纯苯能增强、而不是削弱原油支撑？</h3>
+<p>因为纯苯自身也有偏紧因素，并非只是在被动跟油价。</p>
+<p>10月23日发布的华泰期货报告指出：</p>
+<ul>
+<li>纯苯港口库存再度回落；</li>
+<li>10月韩国发货仍低，中国进口到港偏低；</li>
+<li>国内纯苯开工高位盘整，未进一步上升；</li>
+<li>苯乙烯港口库存维持低位，开工回升仍慢。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-23/detail-iniweiyt5672898.d.html?oid=5_bofc&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:74</a></li>
+</ul>
+<p>这意味着近期存在一条叠加链条：</p>
+<p>油价维持高位 → 上游成本偏强；纯苯自身供应偏紧 → 成本支撑不易迅速消失；EB库存低 → 成本冲击更容易反映到期货价格上。</p>
+<p>但支撑也有上限：该报告同时指出，ABS开工继续低位、库存去化较慢；其他近期研究也强调下游对高价原料的接受度有限。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-23/detail-iniweiyt5672898.d.html?oid=5_bofc&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:74</a><a href="https://finance.eastmoney.com/a/202610203900808127.html">web:79</a></p>
+<p>所以，这轮更像成本推动与货源偏紧叠加，并不能据此判断终端需求已经全面转强。</p>
+<h3>五、对接下来EB方向，哪种组合最值得警惕？</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>原油与纯苯组合</th>
+<th>对EB的主要含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原油上涨、纯苯也涨，EB库存仍低</td>
+<td>成本与自身供需同向支撑，上涨逻辑较完整</td>
+</tr>
+<tr>
+<td>原油回落、纯苯仍坚挺</td>
+<td>EB可能先受情绪冲击，但直接成本支撑尚未明显松动</td>
+</tr>
+<tr>
+<td>原油平稳、纯苯因到港增加而下跌</td>
+<td>EB成本下移，不应因油价未跌就忽略下行压力</td>
+</tr>
+<tr>
+<td>原油与纯苯同时下跌，EB又开始累库</td>
+<td>成本和自身供需同时转弱，是更危险的下跌组合</td>
+</tr>
+<tr>
+<td>原油与纯苯上涨，但EB现货跟不上</td>
+<td>成本传导受阻，可能先压缩利润，不能持续按“成本涨多少、EB就涨多少”外推</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些是情景判断，不是已发生行情。</p>
+<p>就当前证据而言，近期EB上涨应把“成本推动”放在重要位置，而不只是解释为基差修复。对后续方向，纯苯是比原油更直接的验证指标：油价回落但纯苯不跌，EB的成本支撑未必消失；若纯苯现货也转跌、同时EB库存回升，那么此前的高基差和成本支撑才更可能一起松动。<a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-23/detail-iniweiyt5672898.d.html?oid=5_bofc&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:74</a><a href="https://finance.eastmoney.com/a/202610203900808127.html">web:79</a></p>
+<h2>第六章｜乙烯对EB成本与利润的影响</h2>
+<h3>一、近期乙烯并非明显下跌</h3>
+<p>目前查到的较近公开报价如下：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>数据日期</th>
+<th>报价口径</th>
+<th>价格及变动</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10月20日</td>
+<td>CFR东北亚乙烯</td>
+<td>1,150美元／吨，页面列示变动＋20美元／吨</td>
+<td>偏强，非成本下移。<a href="https://www.echemi.com/productsInformation/pid_Rock16565-ethene.html">web:107</a></td>
+</tr>
+<tr>
+<td>10月20日</td>
+<td>CFR中国乙烯</td>
+<td>1,145美元／吨，页面列示变动＋15美元／吨</td>
+<td>同样偏强。<a href="https://www.echemi.com/productsInformation/pid_Rock16565-ethene.html">web:107</a></td>
+</tr>
+<tr>
+<td>10月22日报道</td>
+<td>远东乙烯市场</td>
+<td>报道称乙烯“续扬10美元”</td>
+<td>与近期小幅上涨方向一致，但不能与前两项直接拼成同口径逐日序列。<a href="https://www.ctee.com.tw/news/20261022701178-430503">web:100</a></td>
+</tr>
+</tbody>
+</table></div>
+<p>需要说明：10月20日报价页面摘要未明确变动值的比较周期，因此不将＋15、＋20美元擅自解释为单日涨幅；上述不同报价也不能累加。</p>
+<h3>二、折算成EB成本：近期变化约几十元／吨</h3>
+<p>沿用主流乙苯脱氢工艺的理论单耗，每吨苯乙烯约耗用0.29吨乙烯：<a href="http://www.cfachina.org/servicesupport/analygarden/ncpl/zly_5804/202206/P020220606605219430682.pdf">web:86</a></p>
+<blockquote>
+<p><code>ΔC_SM = 0.29 × ΔP_乙烯,美元 × R</code></p>
+</blockquote>
+<p>以假设汇率 <code>R=7.2</code> 计算：</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>乙烯价格变化</th>
+<th>每吨苯乙烯成本变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>＋10美元／吨</td>
+<td>约＋21元／吨</td>
+</tr>
+<tr>
+<td>＋15美元／吨</td>
+<td>约＋31元／吨</td>
+</tr>
+<tr>
+<td>＋20美元／吨</td>
+<td>约＋42元／吨</td>
+</tr>
+<tr>
+<td>－50美元／吨</td>
+<td>约－104元／吨</td>
+</tr>
+<tr>
+<td>－100美元／吨</td>
+<td>约－209元／吨</td>
+</tr>
+</tbody>
+</table></div>
+<p>这是统一汇率、未计税费的敏感度演示。实际测算还需统一进口税费、汇率、采购计价期及企业采购方式，不能直接把CFR美元报价与国内含税价格相加。</p>
+<p>对应近期披露的10—20美元变动幅度，乙烯造成的边际成本变化约为＋21至＋42元／吨，而不是成本下降数百元。</p>
+<h3>三、相对纯苯，乙烯的影响有多大？</h3>
+<p>两项原料的成本敏感度是：</p>
+<blockquote>
+<p><code>ΔC_SM ≈ 0.79 ΔP_纯苯 + 0.29 ΔP_乙烯</code></p>
+</blockquote>
+<p>这里两种原料都须先换成同一人民币价格口径。<a href="http://www.cfachina.org/servicesupport/analygarden/ncpl/zly_5804/202206/P020220606605219430682.pdf">web:86</a></p>
+<p>直观比较：</p>
+<ul>
+<li>纯苯上涨100元／吨：EB理论成本增加79元／吨。</li>
+<li>乙烯下跌10美元／吨：按汇率7.2演示，EB理论成本减少约21元／吨。</li>
+<li>因此，乙烯需要下跌约38美元／吨，才大致抵消纯苯上涨100元／吨带来的成本增量。</li>
+</ul>
+<p>这也意味着，即使后续乙烯小跌10—20美元，只要纯苯仍上涨数百元，乙烯的缓冲一般不足以扭转整体成本方向。</p>
+<h3>四、对EB期货走势：目前更像次要变量，而不是主要利空</h3>
+<p>结合前面讨论，目前可作的判断是：</p>
+<ol>
+<li>乙烯近期没有提供明显的成本下移驱动。</li>
+</ol>
+<p>已查到的近日报价反而小幅上升，不能用“乙烯转弱”来解释近期EB走弱或预测其下跌。<a href="https://www.echemi.com/productsInformation/pid_Rock16565-ethene.html">web:107</a><a href="https://www.ctee.com.tw/news/20261022701178-430503">web:100</a></p>
+<ol start="2">
+<li>近期小幅上涨对EB成本有支撑，但不足以单独解释大幅行情。</li>
+</ol>
+<p>每吨几十元的理论成本变化，与10月22日EB相对昨结算上涨357元／吨不在同一量级；当天报道强调的是纯苯、原油成本与低库存共同作用。<a href="https://m.jrj.com.cn/madapter/finance/2026/10/22152858821247.shtml">web:70</a><a href="https://finance.sina.com.cn/jjxw/2026-10-22/doc-iniwavxi5202058.shtml">web:69</a></p>
+<ol start="3">
+<li>即使乙烯后续明显下跌，也不等于EB立即等幅下跌。</li>
+</ol>
+<p>成本下降可以先转化为生产利润改善；是否进一步压低EB，要看企业是否增加供应，以及现货、库存和需求是否允许价格下移。</p>
+<p>因此，对当前EB方向，乙烯暂时不是主要的下跌触发项。真正值得警惕的是“乙烯明显下跌＋纯苯同步转弱＋EB库存持续累积”的组合，而不是孤立的乙烯小幅回调。</p>
+<p>归纳为一句话：近期乙烯对EB不是向下的拖累，而是几十元／吨级别的小幅成本抬升；纯苯与原油仍是更重要的边际方向变量。目前尚未取得截至10月22日、同一来源同一口径的完整乙烯序列，因此不能把以上估算表述为“最近一周乙烯对EB成本的精确累计贡献”。<a href="https://www.echemi.com/productsInformation/pid_Rock16565-ethene.html">web:107</a><a href="https://www.ctee.com.tw/news/20261022701178-430503">web:100</a><a href="https://finance.sina.com.cn/jjxw/2026-10-22/doc-iniwavxi5202058.shtml">web:69</a></p>
+<h2>参考资料与原文引用编号</h2>
+<p>本表只对应原文引用，不额外补写行情结论。重复来源以不同原始标记出现的，保留各自编号。部分原文由搜索摘要支持，不能据此认为所有精确数据均已完成原始资料审计。</p>
+<ul>
+<li><a href="https://www.7hcn.com/article/482252-1.html">web:10</a> 首创期货：2026年华东化工产业调研报告 — https://www.7hcn.com/article/482252-1.html</li>
+<li><a href="https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html">web:12</a> 中国期货业协会：苯乙烯期货定价影响力不断增强 — https://www.cfachina.org/industrydynamics/mediaviewoffuturesmarket/202409/t20240930_75936.html</li>
+<li><a href="https://www.htqhedu.com/tz/col48/1188">web:15</a> 期货日报：期货提升苯乙烯产业“双链”韧性 — https://www.htqhedu.com/tz/col48/1188</li>
+<li><a href="https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986">web:25</a> 仁信新材招股说明书（申报稿） — https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=301395&amp;id=7534986</li>
+<li><a href="https://www.7hcn.com/article/485594-1.html">web:33</a> 陈莉：纯苯基差再度冲高，港口库存仍紧 — https://www.7hcn.com/article/485594-1.html</li>
+<li><a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-23/doc-iniweiyt5672898.shtml">web:36</a> 华泰期货：纯苯苯乙烯上涨，后续关注俄乌谈判进展 — https://finance.sina.com.cn/money/future/fmnews/2026-10-23/doc-iniweiyt5672898.shtml</li>
+<li><a href="https://futures.cngold.org/c/2026-10-16/c10819603.html">web:37</a> 库存低位难累积，苯乙烯期货向上空间大于向下空间 — https://futures.cngold.org/c/2026-10-16/c10819603.html</li>
+<li><a href="http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html">web:43</a> 大连商品交易所苯乙烯期货业务细则 — http://www.dce.com.cn/dalianshangpin/fgfz/6142914/6142926/6187856/index.html</li>
+<li><a href="https://www.bocifco.com/newsinfo.aspx?cid=4&amp;id=46114">web:49</a> 大连商品交易所苯乙烯期货合约（EB） — https://www.bocifco.com/newsinfo.aspx?cid=4&amp;id=46114</li>
+<li><a href="https://www.100ppi.com/sf2/">web:53</a> 生意社商品主力基差表（动态页面） — https://www.100ppi.com/sf2/</li>
+<li><a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-22/detail-iniwamir5923023.d.html?oid=www.revistamip.com.mel&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:54</a> 化工板块互有涨跌，烧碱主力跌逾5% — https://finance.sina.cn/futuremarket/qsyw/2026-10-22/detail-iniwamir5923023.d.html?oid=www.revistamip.com.mel&amp;vt=4&amp;cid=76576&amp;node_id=76576</li>
+<li><a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-16/detail-inivkwtt8278732.d.html?oid=weibo&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:55</a> 化工板块涨跌互现，合成橡胶主力涨近3% — https://finance.sina.cn/futuremarket/qsyw/2026-10-16/detail-inivkwtt8278732.d.html?oid=weibo&amp;vt=4&amp;cid=76576&amp;node_id=76576</li>
+<li><a href="https://styrene.100ppi.com/">web:56</a> 生意社苯乙烯产业网（动态页面；原回复曾引用该页面具体行情） — https://styrene.100ppi.com/</li>
+<li><a href="https://m.10jqka.com.cn/20261016/c680771229.shtml">web:62</a> 库存低位难累积，苯乙烯期货向上空间大于向下空间 — https://m.10jqka.com.cn/20261016/c680771229.shtml</li>
+<li><a href="https://finance.sina.com.cn/money/future/fmnews/2026-10-22/doc-iniwamir5923023.shtml">web:64</a> 化工板块互有涨跌，烧碱主力跌逾5% — https://finance.sina.com.cn/money/future/fmnews/2026-10-22/doc-iniwamir5923023.shtml</li>
+<li><a href="https://www.163.com/dy/article/L96O905K05568W0A.html">web:66</a> 华泰期货：纯苯基差再度冲高，港口库存仍紧 — https://www.163.com/dy/article/L96O905K05568W0A.html</li>
+<li><a href="https://finance.sina.com.cn/jjxw/2026-10-22/doc-iniwavxi5202058.shtml">web:69</a> 新华财经商品日报：强成本驱动两苯齐涨 — https://finance.sina.com.cn/jjxw/2026-10-22/doc-iniwavxi5202058.shtml</li>
+<li><a href="https://m.jrj.com.cn/madapter/finance/2026/10/22152858821247.shtml">web:70</a> 期货收盘：烧碱跌5.18%，苹果跌4.34%，碳酸锂跌3.58% — https://m.jrj.com.cn/madapter/finance/2026/10/22152858821247.shtml</li>
+<li><a href="https://finance.sina.cn/futuremarket/qsyw/2026-10-23/detail-iniweiyt5672898.d.html?oid=5_bofc&amp;vt=4&amp;cid=76576&amp;node_id=76576">web:74</a> 华泰期货：纯苯苯乙烯上涨，后续关注俄乌谈判进展 — https://finance.sina.cn/futuremarket/qsyw/2026-10-23/detail-iniweiyt5672898.d.html?oid=5_bofc&amp;vt=4&amp;cid=76576&amp;node_id=76576</li>
+<li><a href="https://finance.eastmoney.com/a/202610203900808127.html">web:79</a> 能化研究：苯乙烯等品种观点 — https://finance.eastmoney.com/a/202610203900808127.html</li>
+<li><a href="https://www.cfachina.org/servicesupport/analygarden/nyhgl/202311/P020231113558601841635.pdf">web:85</a> 中国期货业协会：纯苯系列报告（二）——盘点五大下游产业格局 — https://www.cfachina.org/servicesupport/analygarden/nyhgl/202311/P020231113558601841635.pdf</li>
+<li><a href="http://www.cfachina.org/servicesupport/analygarden/ncpl/zly_5804/202206/P020220606605219430682.pdf">web:86</a> 上海东亚期货研究报告：苯乙烯工艺与原料单耗 — http://www.cfachina.org/servicesupport/analygarden/ncpl/zly_5804/202206/P020220606605219430682.pdf</li>
+<li><a href="https://www.ctee.com.tw/news/20261022701178-430503">web:100</a> 工商时报：台塑、台化、国乔、台达化营运与石化原料行情 — https://www.ctee.com.tw/news/20261022701178-430503</li>
+<li><a href="https://www.echemi.com/productsInformation/pid_Rock16565-ethene.html">web:107</a> ECHEMI：Ethylene Price and Market Analysis（动态页面） — https://www.echemi.com/productsInformation/pid_Rock16565-ethene.html</li>
+</ul>
+<hr>
+<p><strong>研究与引用声明：</strong> 本文为产业知识研究与历史市场观察，不构成交易建议。所有报价应以指定来源、时间、交割条件及合约为准。原文 <code>[web:编号]</code> 与文末来源表一一对应；未对附件所列外部来源开展独立全面复核。</p></article></div></main>
+<footer><div class="container footer-inner"><div><strong>TOTAL RESOURCES INTELLIGENCE</strong> Macro Compass · Industrial Research Platform</div><div>© 2026 TOTAL RESOURCES HOLDING LTD. (CHONGQING)</div></div></footer>
+</body>
+</html>

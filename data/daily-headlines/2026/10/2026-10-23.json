@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-23T08:06:57.097271+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-363e984d5df31769a15bc276",
+      "date": "2026-10-23",
+      "time": "10-23 04:00",
+      "headline_cn": "Semafor：油价升至五个月高位",
+      "headline_en": "",
+      "summary": "据Semafor报道，油价在该文发表当日升至五个月高位。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/22/2026/trump-lacks-options-to-lower-gas-prices-without-ending-war",
+      "source_publish_time": "2026-10-22T20:00:28Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/22/2026/trump-lacks-options-to-lower-gas-prices-without-ending-war",
+          "source_publish_time": "2026-10-22T20:00:28Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-7793e2e8931b08ff2019d769",
+      "date": "2026-10-23",
+      "time": "10-22 16:55",
+      "headline_cn": "Semafor：美国政府内部对住房行政令草案存分歧",
+      "headline_en": "",
+      "summary": "据Semafor援引知情人士报道，特朗普政府内部对旨在改善住房可负担性的行政令存在分歧；报道所涉仍是草案。",
+      "category": "MACRO",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/22/2026/trump-administration-divided-over-housing-order",
+      "source_publish_time": "2026-10-22T08:55:18Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/22/2026/trump-administration-divided-over-housing-order",
+          "source_publish_time": "2026-10-22T08:55:18Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-1df912f9fd1510bd974a0f23",
+      "date": "2026-10-23",
+      "time": "10-23 04:09",
+      "headline_cn": "Semafor：SpaceX债务融资预计面临更高利率",
+      "headline_en": "",
+      "summary": "据Semafor报道，SpaceX正敲定四百亿美元债务融资，利率将明显高于上次向债券投资者融资时；交易尚未最终确定。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/22/2026/spacex-40b-debt-deal-will-cost-it-as-ai-fears-spread",
+      "source_publish_time": "2026-10-22T20:09:20Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/22/2026/spacex-40b-debt-deal-will-cost-it-as-ai-fears-spread",
+          "source_publish_time": "2026-10-22T20:09:20Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-60acf5449ac6330a818089d4",
+      "date": "2026-10-23",
+      "time": "10-22 18:30",
+      "headline_cn": "Semafor：DeepSeek融资约一百五十亿美元",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国人工智能企业DeepSeek融资约一百五十亿美元，以支持其追赶西方前沿人工智能企业。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/22/2026/chinas-ai-leader-deepseek-raises-15b",
+      "source_publish_time": "2026-10-22T10:30:40Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/22/2026/chinas-ai-leader-deepseek-raises-15b",
+          "source_publish_time": "2026-10-22T10:30:40Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-e9a0467dc790f8316e0a03d0",
+      "date": "2026-10-23",
+      "time": "10-22 21:37",
+      "headline_cn": "Semafor：Nadec净利润受物流成本拖累",
+      "headline_en": "",
+      "summary": "据Semafor报道，沙特乳业品牌Nadec所属企业净利润同比下降百分之七十二点五，原因包括饲料价格、运输成本及海运物流附加费上升。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/22/2026/war-dents-gulfs-protein-boom",
+      "source_publish_time": "2026-10-22T13:37:49Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/22/2026/war-dents-gulfs-protein-boom",
+          "source_publish_time": "2026-10-22T13:37:49Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

@@ -219,7 +219,11 @@ def run(args):
     section = re.sub(r'<ul>.*?</ul>',lambda m:'<ul>'+archive+'</ul>',section,flags=re.S)
     newindex = prefix+START+section+END+suffix
     landingpath = ROOT/'special-reports/index.html'
-    landing = re.sub(r'<ul>.*?</ul>',lambda m:'<ul>'+archive.replace('href="special-reports/','href="')+'</ul>',landingpath.read_text(),flags=re.S)
+    landing = landingpath.read_text()
+    main_archive = r'(<h2>专题研究文章列表</h2>.*?<ul>).*?(</ul>)'
+    if len(re.findall(main_archive, landing, re.S)) != 1:
+        raise ValueError('Main Special Reports archive missing or ambiguous')
+    landing = re.sub(main_archive, lambda m: m[1] + archive.replace('href="special-reports/', 'href="') + m[2], landing, count=1, flags=re.S)
     smpath = ROOT/'sitemap.xml'; sm=smpath.read_text()
     if canonical in sm:
         raise ValueError('Duplicate sitemap entry')

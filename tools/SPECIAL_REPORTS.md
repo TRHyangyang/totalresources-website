@@ -60,3 +60,18 @@ python3 tools/publish_special_report.py /absolute/path/FINAL.md --date YYYY-MM-D
 
 
 已发布文章补图使用 --publish --update-image，并提供 --image、原始宽高及署名。审批记录需绑定源稿、图片和 existing_article_sha256；仅更新对应文章及新增图片资产，不重复添加索引或 sitemap。普通发布仍拒绝覆盖历史文章。
+
+
+## 工作 Mac：逐篇人工授权发布与 Git 安全（2026-10-23）
+
+本规则仅适用于 Human CIO 已明确授权的指定 Special Report，不授予自动发布权限，不新建 Skill 或定时任务。继续使用本契约、现有发布器与模板，保留独立内容/桌面/390px 移动 QA、文件及图片 SHA-256 Receipt、GitHub Pages 提交绑定和线上验证。
+
+唯一工作副本为本工作区 `06 AI Workspace（AI工作区）/08 Automation/Daily Headlines V1/Production Website`。禁止使用 `/Users/TRH/Documents/GitHub/totalresources-website` 旧副本。本机 `.git/config` 的 `mcis.specialReportsWorkMacAutoFF=true` 只表示本栏目可按以下条件同步；不得复制到生产 Mac，不读取或扩大 `mcis.globalPulseWorkMacAutoFF` 权限，不修改《环球脉搏》的 Skill、同步规则及发布流程。
+
+1. 开始发布前验证工作路径、origin 为 `TRHyangyang/totalresources-website`、分支为 main、专用标记为 true；工作区（含未跟踪文件）及暂存区必须干净。配置变更本身也不能豁免干净检查。
+2. 执行 `git fetch origin`；失败即 STOP。记录 HEAD、origin/main。HEAD 相等则直接采用该基线；否则要求 `git rev-list --count origin/main..HEAD` 为 0 且 `git merge-base --is-ancestor HEAD origin/main` 成功。
+3. 在同步前逐一核对 `git log HEAD..origin/main` 和 `git diff HEAD..origin/main`，确认全部为正常、可解释的网站发布变更；未知或异常变更即 STOP。仅在核对通过后执行 `git merge --ff-only <已核对的origin/main提交SHA>`，避免同步到未审查的新提交。同步后确认 HEAD 等于已核对SHA、工作区干净，并记录发布基线。禁止自动 merge commit、rebase、reset --hard、amend 或 force push。
+4. 生成与 QA 后、提交前再次 fetch，origin/main 必须仍等于发布基线；仅允许本篇必要文件及对应 Special Reports 入口区块的差异。发现并发更新或范围外改动即 STOP，保留成果，不在脏工作区同步。
+5. 只提交已核对文件；推送前再次 fetch，origin/main 必须仍等于基线，本地仅有本次发布提交且工作区干净，再普通 `git push origin main`。任何分叉、冲突、基线变化、认证/网络失败或推送拒绝即 STOP，不自动合并、重放或强推。推送后的部署和线上验证失败须如实记为未完成。
+
+两台 Mac 共用 main 及首页、Intelligence、sitemap；栏目独立不等于文件无竞争。上述基线检查不取代生产 Mac 自身同步要求，也不授权修改生产 Mac 配置。

@@ -1,68 +1,68 @@
 {
   "schema_version": 1,
-  "date": "2026-10-24",
+  "date": "2026-10-26",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-24T09:18:02.953391+08:00",
+  "generated_at": "2026-10-26T09:16:14.093816+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-361feca00251e34f75bcc9c1",
-      "date": "2026-10-24",
-      "time": "10-23 19:24",
-      "headline_cn": "Semafor：南非提出财政法案草案",
+      "event_id": "dh-event-9ad04cddaf7ac40d0eb3734a",
+      "date": "2026-10-26",
+      "time": "10-26 06:25",
+      "headline_cn": "Semafor：美国宣布拟取消部分加拿大商品关税",
       "headline_en": "",
-      "summary": "Semafor报道，南非随周三预算更新公布财政法案草案，允许未来政府自定债务等目标，由独立议会监督机构检查执行。如被认定偏离目标，民选官员须解释原因。",
-      "category": "FINANCE",
+      "summary": "据Semafor报道，美国宣布计划取消部分加拿大商品关税，此前缅因州一名面临选战压力的共和党参议员曾为此游说。",
+      "category": "TRADE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/23/2026/south-africa-aims-to-lock-in-gains-with-proposed-fiscal-law",
-      "source_publish_time": "2026-10-23T11:24:19Z",
+      "source_url": "https://www.semafor.com/article/10/25/2026/us-to-remove-some-canadian-tariffs",
+      "source_publish_time": "2026-10-25T22:25:38Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/23/2026/south-africa-aims-to-lock-in-gains-with-proposed-fiscal-law",
-          "source_publish_time": "2026-10-23T11:24:19Z"
+          "source_url": "https://www.semafor.com/article/10/25/2026/us-to-remove-some-canadian-tariffs",
+          "source_publish_time": "2026-10-25T22:25:38Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-32049cda3b1e3d6fea19a589",
-      "date": "2026-10-24",
-      "time": "10-23 18:45",
-      "headline_cn": "Semafor：美债上涨，分析师归因于避险",
+      "event_id": "dh-event-2c7a529e58e182404cb90a2b",
+      "date": "2026-10-26",
+      "time": "10-26 06:40",
+      "headline_cn": "Semafor：Weil联席管理合伙人曾洽谈加入竞争对手",
       "headline_en": "",
-      "summary": "Semafor报道，美国国债上涨；分析师将其解读为避险买盘，称投资者对人工智能行业状况及油价上涨日益担忧。这是分析师对市场动因的解释。",
+      "summary": "据Semafor引述知情人士，Weil联席管理合伙人Ramona Nee曾洽谈加入Simpson Thacher & Bartlett。这些人士称，她未必会离职，谈判可能破裂。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/23/2026/us-treasury-bond-yields-gained-in-investors-flight-to-safety",
-      "source_publish_time": "2026-10-23T10:45:58Z",
+      "source_url": "https://www.semafor.com/article/10/25/2026/weils-troubles-mount-with-key-partners-pending-departure",
+      "source_publish_time": "2026-10-25T22:40:42Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/23/2026/us-treasury-bond-yields-gained-in-investors-flight-to-safety",
-          "source_publish_time": "2026-10-23T10:45:58Z"
+          "source_url": "https://www.semafor.com/article/10/25/2026/weils-troubles-mount-with-key-partners-pending-departure",
+          "source_publish_time": "2026-10-25T22:40:42Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-33b230de2ad032e1093815c2",
-      "date": "2026-10-24",
-      "time": "10-23 21:20",
-      "headline_cn": "Semafor：纳米比亚下调今年增长预测至2.3%",
+      "event_id": "dh-event-1e25d561c97feaf815aa597b",
+      "date": "2026-10-26",
+      "time": "10-26 06:16",
+      "headline_cn": "Semafor引Apollo分析：七巨头以外AI投资尚无财务回报",
       "headline_en": "",
-      "summary": "Semafor报道，纳米比亚中期预算审查显示，该国将2026年经济增长预测由二月预计的3.1%下调至2.3%，原因是上半年主要增长驱动力表现逊于预期。",
-      "category": "ENERGY",
+      "summary": "据Semafor转述Apollo一项新分析，美国企业的大规模AI投资在科技七巨头以外尚未带来财务回报；这是该分析的判断。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/23/2026/namibia-trims-growth-forecast-to-23",
-      "source_publish_time": "2026-10-23T13:20:27Z",
+      "source_url": "https://www.semafor.com/article/10/25/2026/hunting-for-ai-gains-outside-magnificent-7",
+      "source_publish_time": "2026-10-25T22:16:34Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/23/2026/namibia-trims-growth-forecast-to-23",
-          "source_publish_time": "2026-10-23T13:20:27Z"
+          "source_url": "https://www.semafor.com/article/10/25/2026/hunting-for-ai-gains-outside-magnificent-7",
+          "source_publish_time": "2026-10-25T22:16:34Z"
         }
       ],
       "confidence": "PARTIAL",

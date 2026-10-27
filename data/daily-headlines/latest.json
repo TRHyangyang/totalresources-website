@@ -1,68 +1,68 @@
 {
   "schema_version": 1,
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-26T09:16:14.093816+08:00",
+  "generated_at": "2026-10-27T08:07:22.020591+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-9ad04cddaf7ac40d0eb3734a",
-      "date": "2026-10-26",
-      "time": "10-26 06:25",
-      "headline_cn": "Semafor：美国宣布拟取消部分加拿大商品关税",
+      "event_id": "dh-event-6c3ba44e0052d646a4cdc73c",
+      "date": "2026-10-27",
+      "time": "10-26 20:32",
+      "headline_cn": "Semafor：Meta宣布九百五十亿美元股票发行计划",
       "headline_en": "",
-      "summary": "据Semafor报道，美国宣布计划取消部分加拿大商品关税，此前缅因州一名面临选战压力的共和党参议员曾为此游说。",
-      "category": "TRADE",
+      "summary": "据Semafor报道，Meta宣布九百五十亿美元股票发行计划，为人工智能建设融资，其中约六百亿美元将采用新设的无投票权股份。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/25/2026/us-to-remove-some-canadian-tariffs",
-      "source_publish_time": "2026-10-25T22:25:38Z",
+      "source_url": "https://www.semafor.com/article/10/26/2026/meta-announces-95b-offering-to-fund-ai",
+      "source_publish_time": "2026-10-26T12:32:12Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/25/2026/us-to-remove-some-canadian-tariffs",
-          "source_publish_time": "2026-10-25T22:25:38Z"
+          "source_url": "https://www.semafor.com/article/10/26/2026/meta-announces-95b-offering-to-fund-ai",
+          "source_publish_time": "2026-10-26T12:32:12Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-2c7a529e58e182404cb90a2b",
-      "date": "2026-10-26",
-      "time": "10-26 06:40",
-      "headline_cn": "Semafor：Weil联席管理合伙人曾洽谈加入竞争对手",
+      "event_id": "dh-event-7440652d4ba2b1a3eaab7621",
+      "date": "2026-10-27",
+      "time": "10-26 23:44",
+      "headline_cn": "Semafor：Anthropic招股文件披露巨额未来支出义务",
       "headline_en": "",
-      "summary": "据Semafor引述知情人士，Weil联席管理合伙人Ramona Nee曾洽谈加入Simpson Thacher & Bartlett。这些人士称，她未必会离职，谈判可能破裂。",
+      "summary": "据Semafor对周一发布的招股文件报道，Anthropic未来在芯片和数据中心租赁方面的支出义务超过四千亿美元。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/25/2026/weils-troubles-mount-with-key-partners-pending-departure",
-      "source_publish_time": "2026-10-25T22:40:42Z",
+      "source_url": "https://www.semafor.com/article/10/26/2026/founder-control-trump-risk-giant-losses-anthropics-ipo-filing",
+      "source_publish_time": "2026-10-26T15:44:52Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/25/2026/weils-troubles-mount-with-key-partners-pending-departure",
-          "source_publish_time": "2026-10-25T22:40:42Z"
+          "source_url": "https://www.semafor.com/article/10/26/2026/founder-control-trump-risk-giant-losses-anthropics-ipo-filing",
+          "source_publish_time": "2026-10-26T15:44:52Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-1e25d561c97feaf815aa597b",
-      "date": "2026-10-26",
-      "time": "10-26 06:16",
-      "headline_cn": "Semafor引Apollo分析：七巨头以外AI投资尚无财务回报",
+      "event_id": "dh-event-4c68af3a08557c2ad318e28b",
+      "date": "2026-10-27",
+      "time": "10-27 02:53",
+      "headline_cn": "Semafor：DoorDash正独家洽谈收购Instacart",
       "headline_en": "",
-      "summary": "据Semafor转述Apollo一项新分析，美国企业的大规模AI投资在科技七巨头以外尚未带来财务回报；这是该分析的判断。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor引述知情人士，DoorDash正独家洽谈收购Instacart；交易尚不确定，谈判仍可能破裂。",
+      "category": "OTHER",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/25/2026/hunting-for-ai-gains-outside-magnificent-7",
-      "source_publish_time": "2026-10-25T22:16:34Z",
+      "source_url": "https://www.semafor.com/article/10/26/2026/doordash-in-exclusive-talks-to-acquire-instacart",
+      "source_publish_time": "2026-10-26T18:53:29Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/25/2026/hunting-for-ai-gains-outside-magnificent-7",
-          "source_publish_time": "2026-10-25T22:16:34Z"
+          "source_url": "https://www.semafor.com/article/10/26/2026/doordash-in-exclusive-talks-to-acquire-instacart",
+          "source_publish_time": "2026-10-26T18:53:29Z"
         }
       ],
       "confidence": "PARTIAL",

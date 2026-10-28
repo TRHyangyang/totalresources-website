@@ -1,72 +1,114 @@
 {
   "schema_version": 1,
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-27T08:07:22.020591+08:00",
+  "generated_at": "2026-10-28T08:09:09.435320+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-6c3ba44e0052d646a4cdc73c",
-      "date": "2026-10-27",
-      "time": "10-26 20:32",
-      "headline_cn": "Semafor：Meta宣布九百五十亿美元股票发行计划",
+      "event_id": "dh-event-97a0770f7ae88b061c2e3eca",
+      "date": "2026-10-28",
+      "time": "10-27 20:04",
+      "headline_cn": "Semafor：卡塔尔能源同意每年购买最多四百万吨美国LNG",
       "headline_en": "",
-      "summary": "据Semafor报道，Meta宣布九百五十亿美元股票发行计划，为人工智能建设融资，其中约六百亿美元将采用新设的无投票权股份。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，卡塔尔能源同意向总部位于休斯敦的Cheniere购买每年最多四百万吨美国液化天然气。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/26/2026/meta-announces-95b-offering-to-fund-ai",
-      "source_publish_time": "2026-10-26T12:32:12Z",
+      "source_url": "https://www.semafor.com/article/10/27/2026/state-owned-qatarenergy-agrees-to-buy-4-million-tons-a-year-of-us-lng",
+      "source_publish_time": "2026-10-27T12:04:24Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/26/2026/meta-announces-95b-offering-to-fund-ai",
-          "source_publish_time": "2026-10-26T12:32:12Z"
+          "source_url": "https://www.semafor.com/article/10/27/2026/state-owned-qatarenergy-agrees-to-buy-4-million-tons-a-year-of-us-lng",
+          "source_publish_time": "2026-10-27T12:04:24Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-7440652d4ba2b1a3eaab7621",
-      "date": "2026-10-27",
-      "time": "10-26 23:44",
-      "headline_cn": "Semafor：Anthropic招股文件披露巨额未来支出义务",
+      "event_id": "dh-event-ed293d5005ac3d396f0f83f8",
+      "date": "2026-10-28",
+      "time": "10-28 00:35",
+      "headline_cn": "Semafor：洛比托铁路赞比亚段选出优先投标人",
       "headline_en": "",
-      "summary": "据Semafor对周一发布的招股文件报道，Anthropic未来在芯片和数据中心租赁方面的支出义务超过四千亿美元。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，意大利Webuild、葡萄牙Mota-Engil和土耳其İçtaş获选为洛比托铁路赞比亚新建段的优先投标人。非洲金融公司称，合同谈判计划下月开始。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/26/2026/founder-control-trump-risk-giant-losses-anthropics-ipo-filing",
-      "source_publish_time": "2026-10-26T15:44:52Z",
+      "source_url": "https://www.semafor.com/article/10/27/2026/africa-finance-corporation-names-lobito-corridor-builders",
+      "source_publish_time": "2026-10-27T16:35:54Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/26/2026/founder-control-trump-risk-giant-losses-anthropics-ipo-filing",
-          "source_publish_time": "2026-10-26T15:44:52Z"
+          "source_url": "https://www.semafor.com/article/10/27/2026/africa-finance-corporation-names-lobito-corridor-builders",
+          "source_publish_time": "2026-10-27T16:35:54Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-4c68af3a08557c2ad318e28b",
-      "date": "2026-10-27",
-      "time": "10-27 02:53",
-      "headline_cn": "Semafor：DoorDash正独家洽谈收购Instacart",
+      "event_id": "dh-event-af19c3f9eb17a57f2a478a1a",
+      "date": "2026-10-28",
+      "time": "10-28 06:25",
+      "headline_cn": "Semafor：出口民调显示以色列选举无明确赢家",
       "headline_en": "",
-      "summary": "据Semafor引述知情人士，DoorDash正独家洽谈收购Instacart；交易尚不确定，谈判仍可能破裂。",
-      "category": "OTHER",
+      "summary": "据Semafor转述出口民调，以色列周二选举未产生明确赢家。报道称，内塔尼亚胡与挑战者艾森科特均无明确组阁路径。",
+      "category": "GEOPOLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/26/2026/doordash-in-exclusive-talks-to-acquire-instacart",
-      "source_publish_time": "2026-10-26T18:53:29Z",
+      "source_url": "https://www.semafor.com/article/10/27/2026/no-clear-winner-in-israels-election-exit-polls-indicate",
+      "source_publish_time": "2026-10-27T22:25:17Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/26/2026/doordash-in-exclusive-talks-to-acquire-instacart",
-          "source_publish_time": "2026-10-26T18:53:29Z"
+          "source_url": "https://www.semafor.com/article/10/27/2026/no-clear-winner-in-israels-election-exit-polls-indicate",
+          "source_publish_time": "2026-10-27T22:25:17Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
+    },
+    {
+      "event_id": "dh-event-30c375c3aa36108d677b703e",
+      "date": "2026-10-28",
+      "time": "10-27 20:17",
+      "headline_cn": "Semafor：中国前三季度大型工业企业利润同比增长逾百分之十五",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国大型工业企业在二〇二六年前九个月的利润同比增长超过百分之十五。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/27/2026/chinas-industrial-profits-surge-amid-ai-buildout",
+      "source_publish_time": "2026-10-27T12:17:21Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/27/2026/chinas-industrial-profits-surge-amid-ai-buildout",
+          "source_publish_time": "2026-10-27T12:17:21Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-526c128272881a1a0608df9a",
+      "date": "2026-10-28",
+      "time": "10-28 06:24",
+      "headline_cn": "Semafor：美国十月消费者信心四个月来首次上升",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国十月消费者信心四个月来首次上升。报道援引世界大型企业联合会称，信心仍处于长期下降趋势。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/27/2026/us-consumer-confidence-ticks-up-in-october",
+      "source_publish_time": "2026-10-27T22:24:04Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/27/2026/us-consumer-confidence-ticks-up-in-october",
+          "source_publish_time": "2026-10-27T22:24:04Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
     }
   ]
 }

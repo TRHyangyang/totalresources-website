@@ -1,114 +1,51 @@
 {
   "schema_version": 1,
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-28T08:09:09.435320+08:00",
+  "generated_at": "2026-10-29T20:43:54.854701+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-97a0770f7ae88b061c2e3eca",
-      "date": "2026-10-28",
-      "time": "10-27 20:04",
-      "headline_cn": "Semafor：卡塔尔能源同意每年购买最多四百万吨美国LNG",
+      "event_id": "dh-event-6f94510bece5388598cf1dad",
+      "date": "2026-10-29",
+      "time": "10-29 13:47",
+      "headline_cn": "Semafor：美官员称外交失败或在中期选举后恢复对伊作战",
       "headline_en": "",
-      "summary": "据Semafor报道，卡塔尔能源同意向总部位于休斯敦的Cheniere购买每年最多四百万吨美国液化天然气。",
-      "category": "ENERGY",
+      "summary": "据Semafor引述一名美国政府官员，若外交失败，美方准备在中期选举后不久恢复作战。",
+      "category": "GEOPOLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/27/2026/state-owned-qatarenergy-agrees-to-buy-4-million-tons-a-year-of-us-lng",
-      "source_publish_time": "2026-10-27T12:04:24Z",
+      "source_url": "https://www.semafor.com/article/10/29/2026/trump-weighs-post-midterms-iran-operations",
+      "source_publish_time": "2026-10-29T05:47:11Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/27/2026/state-owned-qatarenergy-agrees-to-buy-4-million-tons-a-year-of-us-lng",
-          "source_publish_time": "2026-10-27T12:04:24Z"
+          "source_url": "https://www.semafor.com/article/10/29/2026/trump-weighs-post-midterms-iran-operations",
+          "source_publish_time": "2026-10-29T05:47:11Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-ed293d5005ac3d396f0f83f8",
-      "date": "2026-10-28",
-      "time": "10-28 00:35",
-      "headline_cn": "Semafor：洛比托铁路赞比亚段选出优先投标人",
+      "event_id": "dh-event-6d401cd113b13966780a7a67",
+      "date": "2026-10-29",
+      "time": "10-29 14:11",
+      "headline_cn": "Semafor：美国劳联—产联正起草人工智能立法",
       "headline_en": "",
-      "summary": "据Semafor报道，意大利Webuild、葡萄牙Mota-Engil和土耳其İçtaş获选为洛比托铁路赞比亚新建段的优先投标人。非洲金融公司称，合同谈判计划下月开始。",
-      "category": "ENERGY",
+      "summary": "据Semafor对美国劳联—产联主席的采访，该组织正起草人工智能立法，希望下一届国会通过。拟议内容涵盖劳动者保护、隐私及数据保护。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/27/2026/africa-finance-corporation-names-lobito-corridor-builders",
-      "source_publish_time": "2026-10-27T16:35:54Z",
+      "source_url": "https://www.semafor.com/article/10/29/2026/afl-cio-drafting-gold-standard-ai-legislation",
+      "source_publish_time": "2026-10-29T06:11:23Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/27/2026/africa-finance-corporation-names-lobito-corridor-builders",
-          "source_publish_time": "2026-10-27T16:35:54Z"
+          "source_url": "https://www.semafor.com/article/10/29/2026/afl-cio-drafting-gold-standard-ai-legislation",
+          "source_publish_time": "2026-10-29T06:11:23Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
-    },
-    {
-      "event_id": "dh-event-af19c3f9eb17a57f2a478a1a",
-      "date": "2026-10-28",
-      "time": "10-28 06:25",
-      "headline_cn": "Semafor：出口民调显示以色列选举无明确赢家",
-      "headline_en": "",
-      "summary": "据Semafor转述出口民调，以色列周二选举未产生明确赢家。报道称，内塔尼亚胡与挑战者艾森科特均无明确组阁路径。",
-      "category": "GEOPOLITICS",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/27/2026/no-clear-winner-in-israels-election-exit-polls-indicate",
-      "source_publish_time": "2026-10-27T22:25:17Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/27/2026/no-clear-winner-in-israels-election-exit-polls-indicate",
-          "source_publish_time": "2026-10-27T22:25:17Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 3
-    },
-    {
-      "event_id": "dh-event-30c375c3aa36108d677b703e",
-      "date": "2026-10-28",
-      "time": "10-27 20:17",
-      "headline_cn": "Semafor：中国前三季度大型工业企业利润同比增长逾百分之十五",
-      "headline_en": "",
-      "summary": "据Semafor报道，中国大型工业企业在二〇二六年前九个月的利润同比增长超过百分之十五。",
-      "category": "TECHNOLOGY",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/27/2026/chinas-industrial-profits-surge-amid-ai-buildout",
-      "source_publish_time": "2026-10-27T12:17:21Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/27/2026/chinas-industrial-profits-surge-amid-ai-buildout",
-          "source_publish_time": "2026-10-27T12:17:21Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 4
-    },
-    {
-      "event_id": "dh-event-526c128272881a1a0608df9a",
-      "date": "2026-10-28",
-      "time": "10-28 06:24",
-      "headline_cn": "Semafor：美国十月消费者信心四个月来首次上升",
-      "headline_en": "",
-      "summary": "据Semafor报道，美国十月消费者信心四个月来首次上升。报道援引世界大型企业联合会称，信心仍处于长期下降趋势。",
-      "category": "ENERGY",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/27/2026/us-consumer-confidence-ticks-up-in-october",
-      "source_publish_time": "2026-10-27T22:24:04Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/27/2026/us-consumer-confidence-ticks-up-in-october",
-          "source_publish_time": "2026-10-27T22:24:04Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 5
     }
   ]
 }

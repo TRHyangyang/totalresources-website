@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-29T20:43:54.854701+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-6f94510bece5388598cf1dad",
+      "date": "2026-10-29",
+      "time": "10-29 13:47",
+      "headline_cn": "Semafor：美官员称外交失败或在中期选举后恢复对伊作战",
+      "headline_en": "",
+      "summary": "据Semafor引述一名美国政府官员，若外交失败，美方准备在中期选举后不久恢复作战。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/29/2026/trump-weighs-post-midterms-iran-operations",
+      "source_publish_time": "2026-10-29T05:47:11Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/29/2026/trump-weighs-post-midterms-iran-operations",
+          "source_publish_time": "2026-10-29T05:47:11Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-6d401cd113b13966780a7a67",
+      "date": "2026-10-29",
+      "time": "10-29 14:11",
+      "headline_cn": "Semafor：美国劳联—产联正起草人工智能立法",
+      "headline_en": "",
+      "summary": "据Semafor对美国劳联—产联主席的采访，该组织正起草人工智能立法，希望下一届国会通过。拟议内容涵盖劳动者保护、隐私及数据保护。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/29/2026/afl-cio-drafting-gold-standard-ai-legislation",
+      "source_publish_time": "2026-10-29T06:11:23Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/29/2026/afl-cio-drafting-gold-standard-ai-legislation",
+          "source_publish_time": "2026-10-29T06:11:23Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    }
+  ]
+}

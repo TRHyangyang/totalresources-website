@@ -1,51 +1,114 @@
 {
   "schema_version": 1,
-  "date": "2026-10-29",
+  "date": "2026-10-30",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-10-29T20:43:54.854701+08:00",
+  "generated_at": "2026-10-30T08:10:33.383040+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-6f94510bece5388598cf1dad",
-      "date": "2026-10-29",
-      "time": "10-29 13:47",
-      "headline_cn": "Semafor：美官员称外交失败或在中期选举后恢复对伊作战",
+      "event_id": "dh-event-a5277e8e86704df0c1c4a51b",
+      "date": "2026-10-30",
+      "time": "10-29 20:43",
+      "headline_cn": "Semafor：美委协议下首批一百万桶石油抵达得州",
       "headline_en": "",
-      "summary": "据Semafor引述一名美国政府官员，若外交失败，美方准备在中期选举后不久恢复作战。",
-      "category": "GEOPOLITICS",
+      "summary": "据Semafor报道，今年美委协议下首批一百万桶石油已于报道所述当周抵达得克萨斯州。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/29/2026/trump-weighs-post-midterms-iran-operations",
-      "source_publish_time": "2026-10-29T05:47:11Z",
+      "source_url": "https://www.semafor.com/article/10/29/2026/upcoming-elections-put-us-venezuela-oil-deal-at-risk",
+      "source_publish_time": "2026-10-29T12:43:34Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/29/2026/trump-weighs-post-midterms-iran-operations",
-          "source_publish_time": "2026-10-29T05:47:11Z"
+          "source_url": "https://www.semafor.com/article/10/29/2026/upcoming-elections-put-us-venezuela-oil-deal-at-risk",
+          "source_publish_time": "2026-10-29T12:43:34Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-6d401cd113b13966780a7a67",
-      "date": "2026-10-29",
-      "time": "10-29 14:11",
-      "headline_cn": "Semafor：美国劳联—产联正起草人工智能立法",
+      "event_id": "dh-event-1d6fe5927628377b3624cb40",
+      "date": "2026-10-30",
+      "time": "10-29 21:57",
+      "headline_cn": "Semafor：ACWA与EIG拟投入四十亿美元设美国电力合资企业",
       "headline_en": "",
-      "summary": "据Semafor对美国劳联—产联主席的采访，该组织正起草人工智能立法，希望下一届国会通过。拟议内容涵盖劳动者保护、隐私及数据保护。",
+      "summary": "据Semafor报道，沙特ACWA Power与EIG拟承诺投入四十亿美元，成立Plenum Power投资美国电力项目。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/10/29/2026/afl-cio-drafting-gold-standard-ai-legislation",
-      "source_publish_time": "2026-10-29T06:11:23Z",
+      "source_url": "https://www.semafor.com/article/10/29/2026/saudi-arabias-acwa-power-forms-us-joint-venture",
+      "source_publish_time": "2026-10-29T13:57:14Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/10/29/2026/afl-cio-drafting-gold-standard-ai-legislation",
-          "source_publish_time": "2026-10-29T06:11:23Z"
+          "source_url": "https://www.semafor.com/article/10/29/2026/saudi-arabias-acwa-power-forms-us-joint-venture",
+          "source_publish_time": "2026-10-29T13:57:14Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
+    },
+    {
+      "event_id": "dh-event-cda62731e2ec94933dc0bdd1",
+      "date": "2026-10-30",
+      "time": "10-30 06:36",
+      "headline_cn": "Semafor：俄无人机袭击第聂伯罗火车站，至少十四人死亡",
+      "headline_en": "",
+      "summary": "据Semafor报道，俄罗斯无人机周四袭击第聂伯罗一座火车站，造成至少十四名乌克兰人死亡。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/29/2026/russia-strikes-ukraine-amid-ceasefire-in-occupied-oleshky",
+      "source_publish_time": "2026-10-29T22:36:38Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/29/2026/russia-strikes-ukraine-amid-ceasefire-in-occupied-oleshky",
+          "source_publish_time": "2026-10-29T22:36:38Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-fc3fa5a142e3c512669c3ca0",
+      "date": "2026-10-30",
+      "time": "10-29 19:01",
+      "headline_cn": "Semafor：大众第三季度亏损超预期",
+      "headline_en": "",
+      "summary": "据Semafor报道，大众汽车第三季度亏损超出预期。报道称，这是该公司十年来最差业绩。",
+      "category": "OTHER",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/29/2026/volkswagen-reports-its-worst-results-in-a-decade",
+      "source_publish_time": "2026-10-29T11:01:17Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/29/2026/volkswagen-reports-its-worst-results-in-a-decade",
+          "source_publish_time": "2026-10-29T11:01:17Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-0be1455234a6b4d24457bfb8",
+      "date": "2026-10-30",
+      "time": "10-30 06:25",
+      "headline_cn": "Semafor：Alphabet周四股价一度下跌13%",
+      "headline_en": "",
+      "summary": "据Semafor报道，Alphabet股价周四一度下跌13%，市值蒸发逾五千亿美元。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/29/2026/alphabet-loses-500bn-in-market-value",
+      "source_publish_time": "2026-10-29T22:25:39Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/29/2026/alphabet-loses-500bn-in-market-value",
+          "source_publish_time": "2026-10-29T22:25:39Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
     }
   ]
 }

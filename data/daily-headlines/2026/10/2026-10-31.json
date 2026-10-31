@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-31",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-10-31T08:07:50.257156+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-9c0faf546a958a59a14d2107",
+      "date": "2026-10-31",
+      "time": "10-30 21:14",
+      "headline_cn": "Semafor：坦桑尼亚总统称已与安哥拉同意连接铁路",
+      "headline_en": "",
+      "summary": "据Semafor报道，坦桑尼亚总统称，该国与安哥拉已同意连接通往非洲两岸港口的铁路。拟议连接涉及洛比托走廊与坦赞铁路，尚属规划。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/30/2026/tanzania-and-angola-reach-agreement-to-connect-rail-corridors",
+      "source_publish_time": "2026-10-30T13:14:24Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/30/2026/tanzania-and-angola-reach-agreement-to-connect-rail-corridors",
+          "source_publish_time": "2026-10-30T13:14:24Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-2bca3114a5900b1d0225efd9",
+      "date": "2026-10-31",
+      "time": "10-30 18:15",
+      "headline_cn": "Semafor：俄原子能公司与非洲四国深入洽谈浮动核电站",
+      "headline_en": "",
+      "summary": "据Semafor报道，俄罗斯国有企业俄原子能公司正与埃及、多哥、纳米比亚和坦桑尼亚就浮动核电站深入洽谈。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/30/2026/russia-steps-up-africa-nuclear-push",
+      "source_publish_time": "2026-10-30T10:15:15Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/30/2026/russia-steps-up-africa-nuclear-push",
+          "source_publish_time": "2026-10-30T10:15:15Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-f3ad78d5309abb00151a2e8f",
+      "date": "2026-10-31",
+      "time": "10-30 18:10",
+      "headline_cn": "Semafor：法国第三季度经济意外收缩",
+      "headline_en": "",
+      "summary": "据Semafor报道，法国经济在第三季度意外收缩。",
+      "category": "MACRO",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/30/2026/french-economy-unexpectedly-shrank-last-quarter",
+      "source_publish_time": "2026-10-30T10:10:49Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/30/2026/french-economy-unexpectedly-shrank-last-quarter",
+          "source_publish_time": "2026-10-30T10:10:49Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-ed4093ce73d9160d583609b1",
+      "date": "2026-10-31",
+      "time": "10-30 19:50",
+      "headline_cn": "Semafor：微软发行二百五十亿美元债券",
+      "headline_en": "",
+      "summary": "据Semafor报道，微软周四发行二百五十亿美元债券，为其二〇一七年以来首次发债。其中十年期部分融资成本为百分之五点六。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/30/2026/microsoft-reaps-the-benefits-of-protecting-its-aaa-credit-rating",
+      "source_publish_time": "2026-10-30T11:50:44Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/30/2026/microsoft-reaps-the-benefits-of-protecting-its-aaa-credit-rating",
+          "source_publish_time": "2026-10-30T11:50:44Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-276b89cd67a6c591ef613cf6",
+      "date": "2026-10-31",
+      "time": "10-30 18:28",
+      "headline_cn": "Semafor：亚马逊与英特尔业绩消息逊预期，英特尔盘后跌20%",
+      "headline_en": "",
+      "summary": "据Semafor报道，亚马逊与英特尔公布的数据逊于预期。英特尔第四季度销售预测也令市场失望，股价在盘后交易中下跌百分之二十。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/10/30/2026/amazon-and-intel-post-worse-than-expected-results",
+      "source_publish_time": "2026-10-30T10:28:03Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/10/30/2026/amazon-and-intel-post-worse-than-expected-results",
+          "source_publish_time": "2026-10-30T10:28:03Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

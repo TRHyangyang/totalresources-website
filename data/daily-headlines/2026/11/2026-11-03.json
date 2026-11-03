@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-03",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-03T10:59:14.810370+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-8afa3a7d500e24ca3e36274e",
+      "date": "2026-11-03",
+      "time": "11-03 06:22",
+      "headline_cn": "Semafor：布伦特原油周一降至两周低位",
+      "headline_en": "",
+      "summary": "据Semafor报道，布伦特原油价格周一降至两周低位；当时特朗普暗示与德黑兰谈判取得进展，伊朗最高领袖授权政府推进和平谈判。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/02/2026/oil-prices-fall-on-us-iran-negotiations",
+      "source_publish_time": "2026-11-02T22:22:46Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/02/2026/oil-prices-fall-on-us-iran-negotiations",
+          "source_publish_time": "2026-11-02T22:22:46Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-2920a624f29f32622e3db84d",
+      "date": "2026-11-03",
+      "time": "11-03 05:32",
+      "headline_cn": "Semafor：美方拟明年取消南非和卢旺达AGOA资格",
+      "headline_en": "",
+      "summary": "据Semafor报道，特朗普计划明年取消南非和卢旺达的《非洲增长与机会法案》资格，使两国失去该计划下进入美国市场的免税待遇。报道称，美国贸易代表办公室周一表示，特朗普已正式通知国会和两国政府。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/02/2026/trump-cuts-south-africa-rwanda-from-agoa-trade-program",
+      "source_publish_time": "2026-11-02T21:32:14Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/02/2026/trump-cuts-south-africa-rwanda-from-agoa-trade-program",
+          "source_publish_time": "2026-11-02T21:32:14Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-3e5f5d2d7964b00ad0dae7c5",
+      "date": "2026-11-03",
+      "time": "11-03 06:19",
+      "headline_cn": "Semafor：车企敦促美国议员禁止中国汽车进口",
+      "headline_en": "",
+      "summary": "据Semafor报道，主要汽车制造商敦促美国议员在中期选举后禁止中国汽车进口，背景是中国车企迅速拓展国际市场。一名美国行业代表以欧洲汽车业就业受到冲击的说法作为警示。",
+      "category": "TRADE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/02/2026/us-automakers-push-for-a-chinese-vehicle-import-ban",
+      "source_publish_time": "2026-11-02T22:19:10Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/02/2026/us-automakers-push-for-a-chinese-vehicle-import-ban",
+          "source_publish_time": "2026-11-02T22:19:10Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-e715083103336b80ed4ba4ae",
+      "date": "2026-11-03",
+      "time": "11-02 21:52",
+      "headline_cn": "Semafor：非洲贷款机构启动五十亿美元能源银行",
+      "headline_en": "",
+      "summary": "据Semafor报道，非洲贷款机构启动了一家规模五十亿美元的能源银行，重点支持石油和天然气项目；非洲正寻求摆脱成本高昂的燃料进口依赖。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/02/2026/africas-new-energy-bank-is-launched-reducing-the-continents-dependence-on-fuel-imports",
+      "source_publish_time": "2026-11-02T13:52:45Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/02/2026/africas-new-energy-bank-is-launched-reducing-the-continents-dependence-on-fuel-imports",
+          "source_publish_time": "2026-11-02T13:52:45Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-78ffeceb99cd1207d48ba465",
+      "date": "2026-11-03",
+      "time": "11-02 19:28",
+      "headline_cn": "Semafor：中国十月制造业增长放缓",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国十月制造业增长放缓；报道指出，中国经济增长已依赖出口拉动。国内激烈竞争推动生产商降价。",
+      "category": "FINANCE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/02/2026/chinas-manufacturing-growth-slowed-in-october-adding-to-fears-that-the-country-is-over-reliant-on-exports",
+      "source_publish_time": "2026-11-02T11:28:21Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/02/2026/chinas-manufacturing-growth-slowed-in-october-adding-to-fears-that-the-country-is-over-reliant-on-exports",
+          "source_publish_time": "2026-11-02T11:28:21Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

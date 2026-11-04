@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-04",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-04T08:10:24.268583+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-b85ad83107675ca0529f59e3",
+      "date": "2026-11-04",
+      "time": "11-03 19:28",
+      "headline_cn": "Semafor：美军袭击伊朗格什姆岛",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国袭击了伊朗格什姆岛。报道称，特朗普同时寻求结束对伊战争的出路。值得关注的是，军事打击与外交并行可能增加霍尔木兹海峡航运风险的不确定性，尚不能据此判断冲突将全面升级。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/03/2026/us-strikes-irans-qeshm-island-despite-peace-push",
+      "source_publish_time": "2026-11-03T11:28:11Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/03/2026/us-strikes-irans-qeshm-island-despite-peace-push",
+          "source_publish_time": "2026-11-03T11:28:11Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-34e98054c9443a9d6dcba6d7",
+      "date": "2026-11-04",
+      "time": "11-04 04:47",
+      "headline_cn": "Semafor：特朗普称拟在今年后终止对以约四十亿美元援助",
+      "headline_en": "",
+      "summary": "据Semafor报道，特朗普表示，美国计划在今年后终止对以色列约四十亿美元的援助。值得关注的是，该表态可能改变地区安全政策预期，仍须区分总统提出的计划与国会拨款及实际执行。",
+      "category": "POLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/03/2026/trump-says-hell-cut-israel-aid-teeing-up-a-fight",
+      "source_publish_time": "2026-11-03T20:47:28Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/03/2026/trump-says-hell-cut-israel-aid-teeing-up-a-fight",
+          "source_publish_time": "2026-11-03T20:47:28Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-baadb58b2611a17bf962ae26",
+      "date": "2026-11-04",
+      "time": "11-04 06:23",
+      "headline_cn": "Semafor：美国选举日平均汽油价首次突破每加仑四美元",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国平均汽油价格首次在选举日突破每加仑四美元。值得关注的是，零售燃料价格压力可能影响居民支出与通胀预期，不能仅凭这一价格节点推断选举结果。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/03/2026/us-gas-prices-hit-election-day-record",
+      "source_publish_time": "2026-11-03T22:23:44Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/03/2026/us-gas-prices-hit-election-day-record",
+          "source_publish_time": "2026-11-03T22:23:44Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-f1d184e74d5428764034d794",
+      "date": "2026-11-04",
+      "time": "11-03 21:33",
+      "headline_cn": "Semafor：BP掌门称短期内不太可能扭转退出可再生能源发电方向",
+      "headline_en": "",
+      "summary": "据Semafor对BP首席执行官梅格·奥尼尔的采访，该公司短期内不太可能扭转退出可再生能源发电的方向。值得关注的是，这一战略表态可能影响能源投资结构；具体资产出售进度和后续资本开支仍需继续观察。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/03/2026/bp-not-eyeing-return-to-renewables",
+      "source_publish_time": "2026-11-03T13:33:42Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/03/2026/bp-not-eyeing-return-to-renewables",
+          "source_publish_time": "2026-11-03T13:33:42Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-c12cc549acd6a51d68b93d4c",
+      "date": "2026-11-04",
+      "time": "11-04 06:34",
+      "headline_cn": "Semafor：AMD三季度业绩超预期，数据中心收入接近翻倍",
+      "headline_en": "",
+      "summary": "据Semafor报道，AMD第三季度业绩超出华尔街预期。其数据中心收入较去年同期接近翻倍。值得关注的是，这份业绩为人工智能芯片需求提供新的公司层面观察，仍不能代表整个科技行业的投资回报。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/03/2026/amd-beats-estimates-on-near-doubling-of-data-center-revenues",
+      "source_publish_time": "2026-11-03T22:34:20Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/03/2026/amd-beats-estimates-on-near-doubling-of-data-center-revenues",
+          "source_publish_time": "2026-11-03T22:34:20Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

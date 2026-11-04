@@ -1,110 +1,110 @@
 {
   "schema_version": 1,
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-03T10:59:14.810370+08:00",
+  "generated_at": "2026-11-04T08:10:24.268583+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-8afa3a7d500e24ca3e36274e",
-      "date": "2026-11-03",
-      "time": "11-03 06:22",
-      "headline_cn": "Semafor：布伦特原油周一降至两周低位",
+      "event_id": "dh-event-b85ad83107675ca0529f59e3",
+      "date": "2026-11-04",
+      "time": "11-03 19:28",
+      "headline_cn": "Semafor：美军袭击伊朗格什姆岛",
       "headline_en": "",
-      "summary": "据Semafor报道，布伦特原油价格周一降至两周低位；当时特朗普暗示与德黑兰谈判取得进展，伊朗最高领袖授权政府推进和平谈判。",
+      "summary": "据Semafor报道，美国袭击了伊朗格什姆岛。报道称，特朗普同时寻求结束对伊战争的出路。值得关注的是，军事打击与外交并行可能增加霍尔木兹海峡航运风险的不确定性，尚不能据此判断冲突将全面升级。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/02/2026/oil-prices-fall-on-us-iran-negotiations",
-      "source_publish_time": "2026-11-02T22:22:46Z",
+      "source_url": "https://www.semafor.com/article/11/03/2026/us-strikes-irans-qeshm-island-despite-peace-push",
+      "source_publish_time": "2026-11-03T11:28:11Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/02/2026/oil-prices-fall-on-us-iran-negotiations",
-          "source_publish_time": "2026-11-02T22:22:46Z"
+          "source_url": "https://www.semafor.com/article/11/03/2026/us-strikes-irans-qeshm-island-despite-peace-push",
+          "source_publish_time": "2026-11-03T11:28:11Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-2920a624f29f32622e3db84d",
-      "date": "2026-11-03",
-      "time": "11-03 05:32",
-      "headline_cn": "Semafor：美方拟明年取消南非和卢旺达AGOA资格",
+      "event_id": "dh-event-34e98054c9443a9d6dcba6d7",
+      "date": "2026-11-04",
+      "time": "11-04 04:47",
+      "headline_cn": "Semafor：特朗普称拟在今年后终止对以约四十亿美元援助",
       "headline_en": "",
-      "summary": "据Semafor报道，特朗普计划明年取消南非和卢旺达的《非洲增长与机会法案》资格，使两国失去该计划下进入美国市场的免税待遇。报道称，美国贸易代表办公室周一表示，特朗普已正式通知国会和两国政府。",
-      "category": "GEOPOLITICS",
+      "summary": "据Semafor报道，特朗普表示，美国计划在今年后终止对以色列约四十亿美元的援助。值得关注的是，该表态可能改变地区安全政策预期，仍须区分总统提出的计划与国会拨款及实际执行。",
+      "category": "POLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/02/2026/trump-cuts-south-africa-rwanda-from-agoa-trade-program",
-      "source_publish_time": "2026-11-02T21:32:14Z",
+      "source_url": "https://www.semafor.com/article/11/03/2026/trump-says-hell-cut-israel-aid-teeing-up-a-fight",
+      "source_publish_time": "2026-11-03T20:47:28Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/02/2026/trump-cuts-south-africa-rwanda-from-agoa-trade-program",
-          "source_publish_time": "2026-11-02T21:32:14Z"
+          "source_url": "https://www.semafor.com/article/11/03/2026/trump-says-hell-cut-israel-aid-teeing-up-a-fight",
+          "source_publish_time": "2026-11-03T20:47:28Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-3e5f5d2d7964b00ad0dae7c5",
-      "date": "2026-11-03",
-      "time": "11-03 06:19",
-      "headline_cn": "Semafor：车企敦促美国议员禁止中国汽车进口",
+      "event_id": "dh-event-baadb58b2611a17bf962ae26",
+      "date": "2026-11-04",
+      "time": "11-04 06:23",
+      "headline_cn": "Semafor：美国选举日平均汽油价首次突破每加仑四美元",
       "headline_en": "",
-      "summary": "据Semafor报道，主要汽车制造商敦促美国议员在中期选举后禁止中国汽车进口，背景是中国车企迅速拓展国际市场。一名美国行业代表以欧洲汽车业就业受到冲击的说法作为警示。",
-      "category": "TRADE",
+      "summary": "据Semafor报道，美国平均汽油价格首次在选举日突破每加仑四美元。值得关注的是，零售燃料价格压力可能影响居民支出与通胀预期，不能仅凭这一价格节点推断选举结果。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/02/2026/us-automakers-push-for-a-chinese-vehicle-import-ban",
-      "source_publish_time": "2026-11-02T22:19:10Z",
+      "source_url": "https://www.semafor.com/article/11/03/2026/us-gas-prices-hit-election-day-record",
+      "source_publish_time": "2026-11-03T22:23:44Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/02/2026/us-automakers-push-for-a-chinese-vehicle-import-ban",
-          "source_publish_time": "2026-11-02T22:19:10Z"
+          "source_url": "https://www.semafor.com/article/11/03/2026/us-gas-prices-hit-election-day-record",
+          "source_publish_time": "2026-11-03T22:23:44Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-e715083103336b80ed4ba4ae",
-      "date": "2026-11-03",
-      "time": "11-02 21:52",
-      "headline_cn": "Semafor：非洲贷款机构启动五十亿美元能源银行",
+      "event_id": "dh-event-f1d184e74d5428764034d794",
+      "date": "2026-11-04",
+      "time": "11-03 21:33",
+      "headline_cn": "Semafor：BP掌门称短期内不太可能扭转退出可再生能源发电方向",
       "headline_en": "",
-      "summary": "据Semafor报道，非洲贷款机构启动了一家规模五十亿美元的能源银行，重点支持石油和天然气项目；非洲正寻求摆脱成本高昂的燃料进口依赖。",
+      "summary": "据Semafor对BP首席执行官梅格·奥尼尔的采访，该公司短期内不太可能扭转退出可再生能源发电的方向。值得关注的是，这一战略表态可能影响能源投资结构；具体资产出售进度和后续资本开支仍需继续观察。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/02/2026/africas-new-energy-bank-is-launched-reducing-the-continents-dependence-on-fuel-imports",
-      "source_publish_time": "2026-11-02T13:52:45Z",
+      "source_url": "https://www.semafor.com/article/11/03/2026/bp-not-eyeing-return-to-renewables",
+      "source_publish_time": "2026-11-03T13:33:42Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/02/2026/africas-new-energy-bank-is-launched-reducing-the-continents-dependence-on-fuel-imports",
-          "source_publish_time": "2026-11-02T13:52:45Z"
+          "source_url": "https://www.semafor.com/article/11/03/2026/bp-not-eyeing-return-to-renewables",
+          "source_publish_time": "2026-11-03T13:33:42Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
     },
     {
-      "event_id": "dh-event-78ffeceb99cd1207d48ba465",
-      "date": "2026-11-03",
-      "time": "11-02 19:28",
-      "headline_cn": "Semafor：中国十月制造业增长放缓",
+      "event_id": "dh-event-c12cc549acd6a51d68b93d4c",
+      "date": "2026-11-04",
+      "time": "11-04 06:34",
+      "headline_cn": "Semafor：AMD三季度业绩超预期，数据中心收入接近翻倍",
       "headline_en": "",
-      "summary": "据Semafor报道，中国十月制造业增长放缓；报道指出，中国经济增长已依赖出口拉动。国内激烈竞争推动生产商降价。",
-      "category": "FINANCE",
+      "summary": "据Semafor报道，AMD第三季度业绩超出华尔街预期。其数据中心收入较去年同期接近翻倍。值得关注的是，这份业绩为人工智能芯片需求提供新的公司层面观察，仍不能代表整个科技行业的投资回报。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/02/2026/chinas-manufacturing-growth-slowed-in-october-adding-to-fears-that-the-country-is-over-reliant-on-exports",
-      "source_publish_time": "2026-11-02T11:28:21Z",
+      "source_url": "https://www.semafor.com/article/11/03/2026/amd-beats-estimates-on-near-doubling-of-data-center-revenues",
+      "source_publish_time": "2026-11-03T22:34:20Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/02/2026/chinas-manufacturing-growth-slowed-in-october-adding-to-fears-that-the-country-is-over-reliant-on-exports",
-          "source_publish_time": "2026-11-02T11:28:21Z"
+          "source_url": "https://www.semafor.com/article/11/03/2026/amd-beats-estimates-on-near-doubling-of-data-center-revenues",
+          "source_publish_time": "2026-11-03T22:34:20Z"
         }
       ],
       "confidence": "PARTIAL",

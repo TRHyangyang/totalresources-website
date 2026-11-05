@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-05T08:12:26.458886+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-a290609cdf28d39adc9e4e93",
+      "date": "2026-11-05",
+      "time": "11-04 21:25",
+      "headline_cn": "Semafor：中阿曼呼吁恢复霍尔木兹安全通航",
+      "headline_en": "",
+      "summary": "据Semafor报道，习近平在北京会见阿曼苏丹海赛姆。两国领导人联合声明呼吁恢复霍尔木兹海峡安全通航，并呼吁美伊恢复六月停火。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/04/2026/china-ups-diplomatic-efforts-in-the-gulf",
+      "source_publish_time": "2026-11-04T13:25:18Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/04/2026/china-ups-diplomatic-efforts-in-the-gulf",
+          "source_publish_time": "2026-11-04T13:25:18Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-39c8192ae4611d2365761aa1",
+      "date": "2026-11-05",
+      "time": "11-04 21:56",
+      "headline_cn": "Semafor转述：NNPC可能在拉各斯IPO出售最多10%股份",
+      "headline_en": "",
+      "summary": "据Semafor转述路透，尼日利亚国家石油公司NNPC首席执行官称，该公司可能在拉各斯IPO中出售最多10%股份，随后在伦敦或纽约二次上市。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/04/2026/nigerias-state-oil-company-nnpc-plans-10-stake-float-for-ipo",
+      "source_publish_time": "2026-11-04T13:56:09Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/04/2026/nigerias-state-oil-company-nnpc-plans-10-stake-float-for-ipo",
+          "source_publish_time": "2026-11-04T13:56:09Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-4165544b693f14f0c9249026",
+      "date": "2026-11-05",
+      "time": "11-04 21:40",
+      "headline_cn": "Semafor：美国多地投票支持限制数据中心",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国九州逾30个地方的居民投票支持暂停、禁止数据中心及其他措施，部分针对在建项目。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures",
+      "source_publish_time": "2026-11-04T13:40:29Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures",
+          "source_publish_time": "2026-11-04T13:40:29Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-f104dcc04b90382237abf411",
+      "date": "2026-11-05",
+      "time": "11-04 19:15",
+      "headline_cn": "Semafor：Meta首次发行欧元债",
+      "headline_en": "",
+      "summary": "据Semafor报道，Meta首次发行欧元债。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/04/2026/meta-launches-debut-euro-bond-joining-other-hyperscalers",
+      "source_publish_time": "2026-11-04T11:15:37Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/04/2026/meta-launches-debut-euro-bond-joining-other-hyperscalers",
+          "source_publish_time": "2026-11-04T11:15:37Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-1c489ae1190ae0d554c3786f",
+      "date": "2026-11-05",
+      "time": "11-05 06:20",
+      "headline_cn": "Semafor：欧洲制冷系统遭新一轮网络攻击",
+      "headline_en": "",
+      "summary": "据Semafor报道，欧洲超市制冷系统本周遭新一轮网络攻击。报道转述法国国家血液服务机构称，黑客提高冷库温度，但攻击在造成损害前被阻止。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/04/2026/cyberattacks-in-europe-target-supermarkets-blood-banks",
+      "source_publish_time": "2026-11-04T22:20:07Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/04/2026/cyberattacks-in-europe-target-supermarkets-blood-banks",
+          "source_publish_time": "2026-11-04T22:20:07Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

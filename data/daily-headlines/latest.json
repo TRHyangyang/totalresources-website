@@ -1,110 +1,110 @@
 {
   "schema_version": 1,
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-05T08:12:26.458886+08:00",
+  "generated_at": "2026-11-06T08:10:00.242239+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-a290609cdf28d39adc9e4e93",
-      "date": "2026-11-05",
-      "time": "11-04 21:25",
-      "headline_cn": "Semafor：中阿曼呼吁恢复霍尔木兹安全通航",
+      "event_id": "dh-event-ef94de75f6e9ce7b0faba0a9",
+      "date": "2026-11-06",
+      "time": "11-05 19:22",
+      "headline_cn": "Semafor转述：摩根大通估算上月原油供应过剩",
       "headline_en": "",
-      "summary": "据Semafor报道，习近平在北京会见阿曼苏丹海赛姆。两国领导人联合声明呼吁恢复霍尔木兹海峡安全通航，并呼吁美伊恢复六月停火。",
+      "summary": "据Semafor报道，摩根大通估算，上月全球原油供应每日超过需求一百四十万桶，主要因中东出口恢复至战前水平。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/04/2026/china-ups-diplomatic-efforts-in-the-gulf",
-      "source_publish_time": "2026-11-04T13:25:18Z",
+      "source_url": "https://www.semafor.com/article/11/05/2026/oil-market-shifts-to-supply-surplus-despite-months-of-war-disruption",
+      "source_publish_time": "2026-11-05T11:22:11Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/04/2026/china-ups-diplomatic-efforts-in-the-gulf",
-          "source_publish_time": "2026-11-04T13:25:18Z"
+          "source_url": "https://www.semafor.com/article/11/05/2026/oil-market-shifts-to-supply-surplus-despite-months-of-war-disruption",
+          "source_publish_time": "2026-11-05T11:22:11Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-39c8192ae4611d2365761aa1",
-      "date": "2026-11-05",
-      "time": "11-04 21:56",
-      "headline_cn": "Semafor转述：NNPC可能在拉各斯IPO出售最多10%股份",
+      "event_id": "dh-event-3c5a02efa9e2d92eb93e18ac",
+      "date": "2026-11-06",
+      "time": "11-06 06:28",
+      "headline_cn": "Semafor引路透：约六十万英伟达芯片滞港",
       "headline_en": "",
-      "summary": "据Semafor转述路透，尼日利亚国家石油公司NNPC首席执行官称，该公司可能在拉各斯IPO中出售最多10%股份，随后在伦敦或纽约二次上市。",
-      "category": "ENERGY",
+      "summary": "据Semafor转述路透社，约六十万枚运往中国的先进英伟达芯片滞留香港，北京阻止其入境。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/04/2026/nigerias-state-oil-company-nnpc-plans-10-stake-float-for-ipo",
-      "source_publish_time": "2026-11-04T13:56:09Z",
+      "source_url": "https://www.semafor.com/article/11/05/2026/nvidia-chips-stuck-in-hong-kong-over-china-approval",
+      "source_publish_time": "2026-11-05T22:28:40Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/04/2026/nigerias-state-oil-company-nnpc-plans-10-stake-float-for-ipo",
-          "source_publish_time": "2026-11-04T13:56:09Z"
+          "source_url": "https://www.semafor.com/article/11/05/2026/nvidia-chips-stuck-in-hong-kong-over-china-approval",
+          "source_publish_time": "2026-11-05T22:28:40Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-4165544b693f14f0c9249026",
-      "date": "2026-11-05",
-      "time": "11-04 21:40",
-      "headline_cn": "Semafor：美国多地投票支持限制数据中心",
+      "event_id": "dh-event-482929c546cd7a1f1198b007",
+      "date": "2026-11-06",
+      "time": "11-06 06:26",
+      "headline_cn": "Semafor：以色列阿拉伯政党联盟支持艾森科特组阁",
       "headline_en": "",
-      "summary": "据Semafor报道，美国九州逾30个地方的居民投票支持暂停、禁止数据中心及其他措施，部分针对在建项目。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，以色列最大的阿拉伯政党联盟周四宣布支持加迪·艾森科特组建下一届政府。",
+      "category": "POLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures",
-      "source_publish_time": "2026-11-04T13:40:29Z",
+      "source_url": "https://www.semafor.com/article/11/05/2026/arab-grouping-backs-netanyahu-challenger-for-next-israeli-government",
+      "source_publish_time": "2026-11-05T22:26:18Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/04/2026/us-voters-roundly-reject-data-centers-in-ballot-measures",
-          "source_publish_time": "2026-11-04T13:40:29Z"
+          "source_url": "https://www.semafor.com/article/11/05/2026/arab-grouping-backs-netanyahu-challenger-for-next-israeli-government",
+          "source_publish_time": "2026-11-05T22:26:18Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-f104dcc04b90382237abf411",
-      "date": "2026-11-05",
-      "time": "11-04 19:15",
-      "headline_cn": "Semafor：Meta首次发行欧元债",
+      "event_id": "dh-event-47465fd1f5421fceec43de11",
+      "date": "2026-11-06",
+      "time": "11-06 03:32",
+      "headline_cn": "Semafor：纳指周四下跌百分之五",
       "headline_en": "",
-      "summary": "据Semafor报道，Meta首次发行欧元债。",
+      "summary": "据Semafor报道，纳斯达克指数周四下跌百分之五，抹去中期选举后涨幅，并进入回调区间。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/04/2026/meta-launches-debut-euro-bond-joining-other-hyperscalers",
-      "source_publish_time": "2026-11-04T11:15:37Z",
+      "source_url": "https://www.semafor.com/article/11/05/2026/us-tech-selloff-erases-post-midterm-gains",
+      "source_publish_time": "2026-11-05T19:32:12Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/04/2026/meta-launches-debut-euro-bond-joining-other-hyperscalers",
-          "source_publish_time": "2026-11-04T11:15:37Z"
+          "source_url": "https://www.semafor.com/article/11/05/2026/us-tech-selloff-erases-post-midterm-gains",
+          "source_publish_time": "2026-11-05T19:32:12Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
     },
     {
-      "event_id": "dh-event-1c489ae1190ae0d554c3786f",
-      "date": "2026-11-05",
-      "time": "11-05 06:20",
-      "headline_cn": "Semafor：欧洲制冷系统遭新一轮网络攻击",
+      "event_id": "dh-event-5d8706e1aecfa46642db9c8d",
+      "date": "2026-11-06",
+      "time": "11-06 06:24",
+      "headline_cn": "Semafor：OpenAI承诺调整数据中心协议",
       "headline_en": "",
-      "summary": "据Semafor报道，欧洲超市制冷系统本周遭新一轮网络攻击。报道转述法国国家血液服务机构称，黑客提高冷库温度，但攻击在造成损害前被阻止。",
+      "summary": "据Semafor报道，OpenAI周四表示，将避免在数据中心协议中使用保密条款，并确保设施不推高居民能源成本。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/04/2026/cyberattacks-in-europe-target-supermarkets-blood-banks",
-      "source_publish_time": "2026-11-04T22:20:07Z",
+      "source_url": "https://www.semafor.com/article/11/05/2026/openai-looks-to-make-data-centers-more-palatable",
+      "source_publish_time": "2026-11-05T22:24:18Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/04/2026/cyberattacks-in-europe-target-supermarkets-blood-banks",
-          "source_publish_time": "2026-11-04T22:20:07Z"
+          "source_url": "https://www.semafor.com/article/11/05/2026/openai-looks-to-make-data-centers-more-palatable",
+          "source_publish_time": "2026-11-05T22:24:18Z"
         }
       ],
       "confidence": "PARTIAL",

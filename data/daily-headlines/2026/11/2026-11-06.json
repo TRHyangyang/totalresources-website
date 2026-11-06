@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-06T08:10:00.242239+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-ef94de75f6e9ce7b0faba0a9",
+      "date": "2026-11-06",
+      "time": "11-05 19:22",
+      "headline_cn": "Semafor转述：摩根大通估算上月原油供应过剩",
+      "headline_en": "",
+      "summary": "据Semafor报道，摩根大通估算，上月全球原油供应每日超过需求一百四十万桶，主要因中东出口恢复至战前水平。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/05/2026/oil-market-shifts-to-supply-surplus-despite-months-of-war-disruption",
+      "source_publish_time": "2026-11-05T11:22:11Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/05/2026/oil-market-shifts-to-supply-surplus-despite-months-of-war-disruption",
+          "source_publish_time": "2026-11-05T11:22:11Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-3c5a02efa9e2d92eb93e18ac",
+      "date": "2026-11-06",
+      "time": "11-06 06:28",
+      "headline_cn": "Semafor引路透：约六十万英伟达芯片滞港",
+      "headline_en": "",
+      "summary": "据Semafor转述路透社，约六十万枚运往中国的先进英伟达芯片滞留香港，北京阻止其入境。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/05/2026/nvidia-chips-stuck-in-hong-kong-over-china-approval",
+      "source_publish_time": "2026-11-05T22:28:40Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/05/2026/nvidia-chips-stuck-in-hong-kong-over-china-approval",
+          "source_publish_time": "2026-11-05T22:28:40Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-482929c546cd7a1f1198b007",
+      "date": "2026-11-06",
+      "time": "11-06 06:26",
+      "headline_cn": "Semafor：以色列阿拉伯政党联盟支持艾森科特组阁",
+      "headline_en": "",
+      "summary": "据Semafor报道，以色列最大的阿拉伯政党联盟周四宣布支持加迪·艾森科特组建下一届政府。",
+      "category": "POLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/05/2026/arab-grouping-backs-netanyahu-challenger-for-next-israeli-government",
+      "source_publish_time": "2026-11-05T22:26:18Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/05/2026/arab-grouping-backs-netanyahu-challenger-for-next-israeli-government",
+          "source_publish_time": "2026-11-05T22:26:18Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-47465fd1f5421fceec43de11",
+      "date": "2026-11-06",
+      "time": "11-06 03:32",
+      "headline_cn": "Semafor：纳指周四下跌百分之五",
+      "headline_en": "",
+      "summary": "据Semafor报道，纳斯达克指数周四下跌百分之五，抹去中期选举后涨幅，并进入回调区间。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/05/2026/us-tech-selloff-erases-post-midterm-gains",
+      "source_publish_time": "2026-11-05T19:32:12Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/05/2026/us-tech-selloff-erases-post-midterm-gains",
+          "source_publish_time": "2026-11-05T19:32:12Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-5d8706e1aecfa46642db9c8d",
+      "date": "2026-11-06",
+      "time": "11-06 06:24",
+      "headline_cn": "Semafor：OpenAI承诺调整数据中心协议",
+      "headline_en": "",
+      "summary": "据Semafor报道，OpenAI周四表示，将避免在数据中心协议中使用保密条款，并确保设施不推高居民能源成本。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/05/2026/openai-looks-to-make-data-centers-more-palatable",
+      "source_publish_time": "2026-11-05T22:24:18Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/05/2026/openai-looks-to-make-data-centers-more-palatable",
+          "source_publish_time": "2026-11-05T22:24:18Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

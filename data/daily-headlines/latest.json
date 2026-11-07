@@ -1,110 +1,110 @@
 {
   "schema_version": 1,
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-06T08:10:00.242239+08:00",
+  "generated_at": "2026-11-07T08:16:49.886793+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-ef94de75f6e9ce7b0faba0a9",
-      "date": "2026-11-06",
-      "time": "11-05 19:22",
-      "headline_cn": "Semafor转述：摩根大通估算上月原油供应过剩",
+      "event_id": "dh-event-ffb113295be7f63b6fa15517",
+      "date": "2026-11-07",
+      "time": "11-06 19:15",
+      "headline_cn": "Semafor：油价连续下跌后一度逼近每桶一百美元",
       "headline_en": "",
-      "summary": "据Semafor报道，摩根大通估算，上月全球原油供应每日超过需求一百四十万桶，主要因中东出口恢复至战前水平。",
+      "summary": "据Semafor报道，美伊战事可能重启的担忧再起，油价在连续数日下跌后一度逼近每桶一百美元。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/05/2026/oil-market-shifts-to-supply-surplus-despite-months-of-war-disruption",
-      "source_publish_time": "2026-11-05T11:22:11Z",
+      "source_url": "https://www.semafor.com/article/11/06/2026/oil-prices-up-after-days-long-selloff-on-revived-us-iran-war-fears",
+      "source_publish_time": "2026-11-06T11:15:28Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/05/2026/oil-market-shifts-to-supply-surplus-despite-months-of-war-disruption",
-          "source_publish_time": "2026-11-05T11:22:11Z"
+          "source_url": "https://www.semafor.com/article/11/06/2026/oil-prices-up-after-days-long-selloff-on-revived-us-iran-war-fears",
+          "source_publish_time": "2026-11-06T11:15:28Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-3c5a02efa9e2d92eb93e18ac",
-      "date": "2026-11-06",
-      "time": "11-06 06:28",
-      "headline_cn": "Semafor引路透：约六十万英伟达芯片滞港",
+      "event_id": "dh-event-545632f6640f7a1a7d80cdbd",
+      "date": "2026-11-07",
+      "time": "11-06 23:34",
+      "headline_cn": "Semafor：美国十月新增十六万五千个就业岗位",
       "headline_en": "",
-      "summary": "据Semafor转述路透社，约六十万枚运往中国的先进英伟达芯片滞留香港，北京阻止其入境。",
+      "summary": "据Semafor报道，美国十月新增十六万五千个就业岗位，超出经济学家预期，失业率降至百分之四点一。美国劳工统计局还上修八月和九月数据。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/05/2026/nvidia-chips-stuck-in-hong-kong-over-china-approval",
-      "source_publish_time": "2026-11-05T22:28:40Z",
+      "source_url": "https://www.semafor.com/article/11/06/2026/us-adds-165000-jobs-in-october-far-exceeding-expectations",
+      "source_publish_time": "2026-11-06T15:34:14Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/05/2026/nvidia-chips-stuck-in-hong-kong-over-china-approval",
-          "source_publish_time": "2026-11-05T22:28:40Z"
+          "source_url": "https://www.semafor.com/article/11/06/2026/us-adds-165000-jobs-in-october-far-exceeding-expectations",
+          "source_publish_time": "2026-11-06T15:34:14Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-482929c546cd7a1f1198b007",
-      "date": "2026-11-06",
-      "time": "11-06 06:26",
-      "headline_cn": "Semafor：以色列阿拉伯政党联盟支持艾森科特组阁",
+      "event_id": "dh-event-3136dc53f8a14eb6b390f0d3",
+      "date": "2026-11-07",
+      "time": "11-06 21:09",
+      "headline_cn": "Semafor：阿联酋航空半年度利润下降三分之二",
       "headline_en": "",
-      "summary": "据Semafor报道，以色列最大的阿拉伯政党联盟周四宣布支持加迪·艾森科特组建下一届政府。",
-      "category": "POLITICS",
+      "summary": "据Semafor报道，阿联酋航空半年度利润下降三分之二，伊朗战争影响海湾转机客流，霍尔木兹海峡关闭推高航油价格。货运业务和燃料对冲使公司维持盈利。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/05/2026/arab-grouping-backs-netanyahu-challenger-for-next-israeli-government",
-      "source_publish_time": "2026-11-05T22:26:18Z",
+      "source_url": "https://www.semafor.com/article/11/06/2026/war-dents-emirates-profit-as-transit-passengers-stay-away",
+      "source_publish_time": "2026-11-06T13:09:03Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/05/2026/arab-grouping-backs-netanyahu-challenger-for-next-israeli-government",
-          "source_publish_time": "2026-11-05T22:26:18Z"
+          "source_url": "https://www.semafor.com/article/11/06/2026/war-dents-emirates-profit-as-transit-passengers-stay-away",
+          "source_publish_time": "2026-11-06T13:09:03Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-47465fd1f5421fceec43de11",
-      "date": "2026-11-06",
-      "time": "11-06 03:32",
-      "headline_cn": "Semafor：纳指周四下跌百分之五",
+      "event_id": "dh-event-a8f4064ff99ebfb4e2d2a48f",
+      "date": "2026-11-07",
+      "time": "11-06 22:30",
+      "headline_cn": "Semafor：Sibanye下调美国铂族金属产量预期",
       "headline_en": "",
-      "summary": "据Semafor报道，纳斯达克指数周四下跌百分之五，抹去中期选举后涨幅，并进入回调区间。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，蒙大拿州持续五周的罢工后，Sibanye-Stillwater下调美国铂族金属业务全年产量预测，并上调成本指引。",
+      "category": "TRADE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/05/2026/us-tech-selloff-erases-post-midterm-gains",
-      "source_publish_time": "2026-11-05T19:32:12Z",
+      "source_url": "https://www.semafor.com/article/11/06/2026/sibanye-stillwater-cuts-pgm-annual-production-forecast",
+      "source_publish_time": "2026-11-06T14:30:55Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/05/2026/us-tech-selloff-erases-post-midterm-gains",
-          "source_publish_time": "2026-11-05T19:32:12Z"
+          "source_url": "https://www.semafor.com/article/11/06/2026/sibanye-stillwater-cuts-pgm-annual-production-forecast",
+          "source_publish_time": "2026-11-06T14:30:55Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
     },
     {
-      "event_id": "dh-event-5d8706e1aecfa46642db9c8d",
-      "date": "2026-11-06",
-      "time": "11-06 06:24",
-      "headline_cn": "Semafor：OpenAI承诺调整数据中心协议",
+      "event_id": "dh-event-3d9b443646b89253ccd6e8cf",
+      "date": "2026-11-07",
+      "time": "11-06 21:13",
+      "headline_cn": "Semafor：卡塔尔主权基金与Brookfield支持英国数据中心计划",
       "headline_en": "",
-      "summary": "据Semafor报道，OpenAI周四表示，将避免在数据中心协议中使用保密条款，并确保设施不推高居民能源成本。",
+      "summary": "据Semafor报道，卡塔尔主权财富基金与Brookfield支持在英国北部拟建一吉瓦数据中心。合作方拟在未来五年投入三十四亿美元。咨询机构Global SWF指出，项目仍需开工许可、主要租户和政府批准。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/05/2026/openai-looks-to-make-data-centers-more-palatable",
-      "source_publish_time": "2026-11-05T22:24:18Z",
+      "source_url": "https://www.semafor.com/article/11/06/2026/qai-and-brookfield-back-supersized-uk-data-center",
+      "source_publish_time": "2026-11-06T13:13:38Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/05/2026/openai-looks-to-make-data-centers-more-palatable",
-          "source_publish_time": "2026-11-05T22:24:18Z"
+          "source_url": "https://www.semafor.com/article/11/06/2026/qai-and-brookfield-back-supersized-uk-data-center",
+          "source_publish_time": "2026-11-06T13:13:38Z"
         }
       ],
       "confidence": "PARTIAL",

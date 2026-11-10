@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-10",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-10T08:06:52.122877+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-676e5c44714bf8f3e1e61ddd",
+      "date": "2026-11-10",
+      "time": "11-10 06:24",
+      "headline_cn": "Semafor：俄国有石油集团开始配给加油站燃料",
+      "headline_en": "",
+      "summary": "据Semafor报道，乌克兰恢复打击能源目标后，俄国有石油集团开始在全国加油站配给燃料。报道引述俄官员周一称，该国第二大炼厂遇袭，为两周内第八座遇袭炼厂。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/09/2026/russia-rations-fuel-as-ukraine-resumes-strikes-on-refineries",
+      "source_publish_time": "2026-11-09T22:24:46Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/09/2026/russia-rations-fuel-as-ukraine-resumes-strikes-on-refineries",
+          "source_publish_time": "2026-11-09T22:24:46Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-630d14e8e05975ee7c00ef8d",
+      "date": "2026-11-10",
+      "time": "11-10 07:05",
+      "headline_cn": "Semafor：美两党议员推动调查黄仁勋并加强芯片出口管制",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国两党议员推动加强出口管制并调查英伟达首席执行官黄仁勋。该媒体另称，北京否认针对英伟达首席执行官的间谍指控。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/09/2026/nvidia-ceo-is-in-congress-sights-after-spy-scandal",
+      "source_publish_time": "2026-11-09T23:05:20Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/09/2026/nvidia-ceo-is-in-congress-sights-after-spy-scandal",
+          "source_publish_time": "2026-11-09T23:05:20Z"
+        },
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/09/2026/china-rejects-allegations-it-spied-on-nvidias-jensen-huang",
+          "source_publish_time": "2026-11-09T22:20:42Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-18dc29bf9eb781f80dbe30b3",
+      "date": "2026-11-10",
+      "time": "11-09 21:23",
+      "headline_cn": "Semafor：加蓬计划与中阿企业开发稀土和铌项目",
+      "headline_en": "",
+      "summary": "据Semafor报道，加蓬计划与阿联酋和中国企业合作，投资二十亿美元开采及加工稀土和铌。报道引述总统府称，项目由New Energy Metals开发，ENFI提供工程支持，预计2027年开工。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/09/2026/gabon-outlines-2b-mining-project-with-emirati-and-chinese-companies",
+      "source_publish_time": "2026-11-09T13:23:10Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/09/2026/gabon-outlines-2b-mining-project-with-emirati-and-chinese-companies",
+          "source_publish_time": "2026-11-09T13:23:10Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-f214071914c792333ff9e46b",
+      "date": "2026-11-10",
+      "time": "11-09 21:13",
+      "headline_cn": "Semafor引世行：低中收入国家外债创纪录",
+      "headline_en": "",
+      "summary": "据Semafor转述世行报告，低中收入国家2025年外债增长百分之五点五，至创纪录的九点四万亿美元。符合世行最优惠融资资格的非洲最贫困借款国，当年新债利率为百分之九点八。",
+      "category": "FINANCE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/09/2026/africa-returns-to-global-debt-market-as-new-credit-agency-begins-operations",
+      "source_publish_time": "2026-11-09T13:13:45Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/09/2026/africa-returns-to-global-debt-market-as-new-credit-agency-begins-operations",
+          "source_publish_time": "2026-11-09T13:13:45Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    }
+  ]
+}

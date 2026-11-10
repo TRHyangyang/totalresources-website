@@ -1,114 +1,98 @@
 {
   "schema_version": 1,
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-09T23:12:59.286177+08:00",
+  "generated_at": "2026-11-10T08:06:52.122877+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-d2023e1aad0f89f0d6664685",
-      "date": "2026-11-09",
-      "time": "11-09 06:28",
-      "headline_cn": "Semafor：胡塞袭击损坏利雅得阿美大楼",
+      "event_id": "dh-event-676e5c44714bf8f3e1e61ddd",
+      "date": "2026-11-10",
+      "time": "11-10 06:24",
+      "headline_cn": "Semafor：俄国有石油集团开始配给加油站燃料",
       "headline_en": "",
-      "summary": "据Semafor报道，胡塞武装周日袭击沙特首都金融区；无人机和导弹攻击损坏了当地沙特阿美大楼。值得关注的是，企业地标受袭可能增加地区资产安全风险；这不代表油气生产设施受损或供应已经减少。",
-      "category": "GEOPOLITICS",
+      "summary": "据Semafor报道，乌克兰恢复打击能源目标后，俄国有石油集团开始在全国加油站配给燃料。报道引述俄官员周一称，该国第二大炼厂遇袭，为两周内第八座遇袭炼厂。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/08/2026/houthis-strike-aramco-tower-in-riyadh",
-      "source_publish_time": "2026-11-08T22:28:14Z",
+      "source_url": "https://www.semafor.com/article/11/09/2026/russia-rations-fuel-as-ukraine-resumes-strikes-on-refineries",
+      "source_publish_time": "2026-11-09T22:24:46Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/08/2026/houthis-strike-aramco-tower-in-riyadh",
-          "source_publish_time": "2026-11-08T22:28:14Z"
+          "source_url": "https://www.semafor.com/article/11/09/2026/russia-rations-fuel-as-ukraine-resumes-strikes-on-refineries",
+          "source_publish_time": "2026-11-09T22:24:46Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-1868c25446396609270c154f",
-      "date": "2026-11-09",
-      "time": "11-09 19:17",
-      "headline_cn": "Semafor：外交希望重燃之际油价下跌",
+      "event_id": "dh-event-630d14e8e05975ee7c00ef8d",
+      "date": "2026-11-10",
+      "time": "11-10 07:05",
+      "headline_cn": "Semafor：美两党议员推动调查黄仁勋并加强芯片出口管制",
       "headline_en": "",
-      "summary": "据Semafor报道，结束伊朗战争的外交希望再起之际，油价下跌；美方异议使乐观情绪受抑。值得关注的是，外交预期可能影响能源风险溢价；这次下跌不能证明停火已达成，也不能据此推断后续价格方向。",
-      "category": "ENERGY",
+      "summary": "据Semafor报道，美国两党议员推动加强出口管制并调查英伟达首席执行官黄仁勋。该媒体另称，北京否认针对英伟达首席执行官的间谍指控。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/09/2026/oil-prices-fall-on-renewed-hopes-for-diplomatic-end-to-iran-war",
-      "source_publish_time": "2026-11-09T11:17:49Z",
+      "source_url": "https://www.semafor.com/article/11/09/2026/nvidia-ceo-is-in-congress-sights-after-spy-scandal",
+      "source_publish_time": "2026-11-09T23:05:20Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/09/2026/oil-prices-fall-on-renewed-hopes-for-diplomatic-end-to-iran-war",
-          "source_publish_time": "2026-11-09T11:17:49Z"
+          "source_url": "https://www.semafor.com/article/11/09/2026/nvidia-ceo-is-in-congress-sights-after-spy-scandal",
+          "source_publish_time": "2026-11-09T23:05:20Z"
+        },
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/09/2026/china-rejects-allegations-it-spied-on-nvidias-jensen-huang",
+          "source_publish_time": "2026-11-09T22:20:42Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-7b22dc4d4f3702898a222801",
-      "date": "2026-11-09",
-      "time": "11-09 06:36",
-      "headline_cn": "Semafor：巴拉圭数字银行崩溃，总统被免职拘留",
+      "event_id": "dh-event-18dc29bf9eb781f80dbe30b3",
+      "date": "2026-11-10",
+      "time": "11-09 21:23",
+      "headline_cn": "Semafor：加蓬计划与中阿企业开发稀土和铌项目",
       "headline_en": "",
-      "summary": "据Semafor报道，巴拉圭最大数字银行崩溃后，总统被免职并拘留；全国一半人口无法动用资金。值得关注的是，取款受阻与政治危机可能冲击金融信心；报道尚不足以量化损失或确定违法责任。",
-      "category": "FINANCE",
+      "summary": "据Semafor报道，加蓬计划与阿联酋和中国企业合作，投资二十亿美元开采及加工稀土和铌。报道引述总统府称，项目由New Energy Metals开发，ENFI提供工程支持，预计2027年开工。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/08/2026/paraguays-bank-collapse-hits-millions",
-      "source_publish_time": "2026-11-08T22:36:30Z",
+      "source_url": "https://www.semafor.com/article/11/09/2026/gabon-outlines-2b-mining-project-with-emirati-and-chinese-companies",
+      "source_publish_time": "2026-11-09T13:23:10Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/08/2026/paraguays-bank-collapse-hits-millions",
-          "source_publish_time": "2026-11-08T22:36:30Z"
+          "source_url": "https://www.semafor.com/article/11/09/2026/gabon-outlines-2b-mining-project-with-emirati-and-chinese-companies",
+          "source_publish_time": "2026-11-09T13:23:10Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-7fcbeed08e782216e967c646",
-      "date": "2026-11-09",
-      "time": "11-09 21:06",
-      "headline_cn": "Semafor：贷款组合折价出售，GPU融资承压",
+      "event_id": "dh-event-f214071914c792333ff9e46b",
+      "date": "2026-11-10",
+      "time": "11-09 21:13",
+      "headline_cn": "Semafor引世行：低中收入国家外债创纪录",
       "headline_en": "",
-      "summary": "据Semafor引述一名人士报道，一些贷款组合正被大幅折价兜售，GPU融资尤其承压。值得关注的是，芯片折旧与贷款期限不匹配可能影响信贷定价；这仍是媒体引述人士的观察，不能视为系统性违约已发生。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor转述世行报告，低中收入国家2025年外债增长百分之五点五，至创纪录的九点四万亿美元。符合世行最优惠融资资格的非洲最贫困借款国，当年新债利率为百分之九点八。",
+      "category": "FINANCE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/09/2026/ai-chip-financing-hits-a-wall",
-      "source_publish_time": "2026-11-09T13:06:09Z",
+      "source_url": "https://www.semafor.com/article/11/09/2026/africa-returns-to-global-debt-market-as-new-credit-agency-begins-operations",
+      "source_publish_time": "2026-11-09T13:13:45Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/09/2026/ai-chip-financing-hits-a-wall",
-          "source_publish_time": "2026-11-09T13:06:09Z"
+          "source_url": "https://www.semafor.com/article/11/09/2026/africa-returns-to-global-debt-market-as-new-credit-agency-begins-operations",
+          "source_publish_time": "2026-11-09T13:13:45Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
-    },
-    {
-      "event_id": "dh-event-c8326dcd8fca0ffb4694ef39",
-      "date": "2026-11-09",
-      "time": "11-09 21:09",
-      "headline_cn": "Semafor：南非非国大地方选举得票创历史最差",
-      "headline_en": "",
-      "summary": "据Semafor报道，非国大在南非地方选举中遭遇历史最差结果，全国得票率为百分之三十一。值得关注的是，地方权力格局变化可能影响经济政策与城市治理；得票变化尚不能证明联合政府的具体政策已经改变。",
-      "category": "POLITICS",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/09/2026/south-african-voters-punish-anc-with-worst-ever-result",
-      "source_publish_time": "2026-11-09T13:09:17Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/09/2026/south-african-voters-punish-anc-with-worst-ever-result",
-          "source_publish_time": "2026-11-09T13:09:17Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 5
     }
   ]
 }

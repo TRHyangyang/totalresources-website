@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-11",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-11T08:08:59.062132+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-0307c169b5eac375ba57a1c8",
+      "date": "2026-11-11",
+      "time": "11-10 21:15",
+      "headline_cn": "Semafor：美国参议院推进能源项目许可改革",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国参议院推进旨在加快能源基础设施建设的许可改革。该法案拟调整主要环境法律，简化电力项目、人工智能数据中心及配电网的许可流程。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/10/2026/us-senate-backs-permitting-bill-aimed-at-accelerating-energy-construction",
+      "source_publish_time": "2026-11-10T13:15:48Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/10/2026/us-senate-backs-permitting-bill-aimed-at-accelerating-energy-construction",
+          "source_publish_time": "2026-11-10T13:15:48Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-16d2e7bf7df2e83a14a59cdb",
+      "date": "2026-11-11",
+      "time": "11-10 21:20",
+      "headline_cn": "Semafor：ADNOC Gas上调全年利润预期",
+      "headline_en": "",
+      "summary": "据Semafor报道，ADNOC Gas将全年利润预期上调至少百分之十四。其首席执行官称，公司正考虑投资绕开霍尔木兹海峡的基础设施，包括可能在富查伊拉新建出口终端。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/10/2026/adnoc-gas-lifts-profit-outlook-after-beating-earnings-forecast",
+      "source_publish_time": "2026-11-10T13:20:15Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/10/2026/adnoc-gas-lifts-profit-outlook-after-beating-earnings-forecast",
+          "source_publish_time": "2026-11-10T13:20:15Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-40392c061e4e8f165459ba15",
+      "date": "2026-11-11",
+      "time": "11-11 06:20",
+      "headline_cn": "Semafor：美国通胀数据高于预期，美债遭抛售",
+      "headline_en": "",
+      "summary": "据Semafor报道，美国通胀数据高于预期，周二引发美债抛售，并强化市场对美联储十二月会议加息的预期。食品价格普遍上涨，柴油短缺推高货运成本。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/10/2026/us-inflation-slows-less-than-expected-in-october",
+      "source_publish_time": "2026-11-10T22:20:28Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/10/2026/us-inflation-slows-less-than-expected-in-october",
+          "source_publish_time": "2026-11-10T22:20:28Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-129d008bfa1624ba6340da4b",
+      "date": "2026-11-11",
+      "time": "11-10 19:14",
+      "headline_cn": "Semafor：中国前十个月贸易顺差突破一万亿美元",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国今年前十个月贸易顺差突破一万亿美元。中国十月电动汽车及插电式混合动力汽车出口同比增长百分之一百四十五。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/10/2026/chinas-trade-surplus-passes-1t-as-countrys-exports-grow-at-record-speed",
+      "source_publish_time": "2026-11-10T11:14:33Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/10/2026/chinas-trade-surplus-passes-1t-as-countrys-exports-grow-at-record-speed",
+          "source_publish_time": "2026-11-10T11:14:33Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-b8fa1f306b748483c455ebd5",
+      "date": "2026-11-11",
+      "time": "11-10 19:18",
+      "headline_cn": "Semafor：油价跌至每桶九十美元",
+      "headline_en": "",
+      "summary": "据Semafor报道，受结束中东及乌克兰战事的谈判希望推动，油价跌至每桶九十美元；分析人士对这种乐观情绪持谨慎态度。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/10/2026/oil-sinks-to-90-a-barrel-as-war-talks-drive-optimism",
+      "source_publish_time": "2026-11-10T11:18:00Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/10/2026/oil-sinks-to-90-a-barrel-as-war-talks-drive-optimism",
+          "source_publish_time": "2026-11-10T11:18:00Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

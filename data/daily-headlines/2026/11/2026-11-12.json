@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-12",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-12T08:15:37.711096+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-6c92f50960b0b734656680b6",
+      "date": "2026-11-12",
+      "time": "11-11 19:07",
+      "headline_cn": "Semafor：俄乌能源与黑海航运停火谈判进展有限",
+      "headline_en": "",
+      "summary": "据Semafor报道，俄乌停火谈判进展似乎有限，双方仍在夜间相互打击。美国斡旋的阿布扎比谈判旨在促成停止袭击能源设施和黑海航运。值得关注的是，谈判结果可能影响能源供应与粮食运输风险，尚不能视为已达成停火。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/11/2026/russia-ukraine-ceasefire-negotiations-stall",
+      "source_publish_time": "2026-11-11T11:07:47Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/11/2026/russia-ukraine-ceasefire-negotiations-stall",
+          "source_publish_time": "2026-11-11T11:07:47Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-b82e8005f30b0a561511fbb2",
+      "date": "2026-11-12",
+      "time": "11-12 07:03",
+      "headline_cn": "Semafor引华尔街日报：英伟达董事会准备罢免黄仁勋",
+      "headline_en": "",
+      "summary": "据Semafor转述《华尔街日报》，英伟达董事会正准备罢免首席执行官黄仁勋。值得关注的是，潜在管理层变动可能影响人工智能芯片供应链与融资预期；报道中的准备行动尚不代表罢免已经完成。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/11/2026/nvidia-board-preparing-to-oust-ceo-huang-wsj",
+      "source_publish_time": "2026-11-11T23:03:59Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/11/2026/nvidia-board-preparing-to-oust-ceo-huang-wsj",
+          "source_publish_time": "2026-11-11T23:03:59Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-2da20825fd5215050fde9ee4",
+      "date": "2026-11-12",
+      "time": "11-12 06:18",
+      "headline_cn": "Semafor：CoreWeave业绩超预期后美国科技股上涨",
+      "headline_en": "",
+      "summary": "据Semafor报道，CoreWeave业绩超预期后，美国科技股周三上涨。报道称，该公司收入超预期并上调业绩预测，提振投资者情绪。值得关注的是，这次反弹反映市场对算力需求的重新定价，不能据此判断人工智能融资风险已经消退。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/11/2026/coreweave-results-drive-broad-tech-rally",
+      "source_publish_time": "2026-11-11T22:18:19Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/11/2026/coreweave-results-drive-broad-tech-rally",
+          "source_publish_time": "2026-11-11T22:18:19Z"
+        },
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/11/2026/coreweave-reports-positive-q3-results-but-faces-tough-road-ahead",
+          "source_publish_time": "2026-11-11T12:52:56Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-bfae697fb069be71eb77d9f4",
+      "date": "2026-11-12",
+      "time": "11-11 20:52",
+      "headline_cn": "Semafor：美联储理事警示人工智能回报不及预期风险",
+      "headline_en": "",
+      "summary": "据Semafor报道，一名美联储官员警告，若人工智能回报不及预期，股价可能大幅回调。报道中的官员为美联储理事鲍曼。值得关注的是，这属于附条件的风险判断，可能影响融资预期，并不表示市场回调已经发生。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/11/2026/anthropic-ipo-could-lead-to-large-correction-in-markets-fed-official-says",
+      "source_publish_time": "2026-11-11T12:52:54Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/11/2026/anthropic-ipo-could-lead-to-large-correction-in-markets-fed-official-says",
+          "source_publish_time": "2026-11-11T12:52:54Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-0b5a0714d3caf48b96368516",
+      "date": "2026-11-12",
+      "time": "11-11 21:44",
+      "headline_cn": "Semafor：博茨瓦纳拟将戴比尔斯持股翻倍至三成",
+      "headline_en": "",
+      "summary": "据Semafor报道，博茨瓦纳表示拟将戴比尔斯持股翻倍至三成，以增强对这家钻石企业的战略影响力。值得关注的是，股权计划可能改变资源销售与营销安排，仍需区分政府意向与交易完成。",
+      "category": "MACRO",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/11/2026/botswana-to-double-its-stake-in-diamond-miner-de-beers",
+      "source_publish_time": "2026-11-11T13:44:21Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/11/2026/botswana-to-double-its-stake-in-diamond-miner-de-beers",
+          "source_publish_time": "2026-11-11T13:44:21Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

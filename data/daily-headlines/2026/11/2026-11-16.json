@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-16",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-16T08:11:40.933114+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-6bcbc29283e8f7cdd4888785",
+      "date": "2026-11-16",
+      "time": "11-16 06:26",
+      "headline_cn": "Semafor：伊朗无人机袭击巴林美军基地",
+      "headline_en": "",
+      "summary": "据Semafor报道，伊朗周日对巴林一处美军基地发动无人机袭击。值得关注的是，海湾军事紧张可能影响能源运输风险与保险成本，后续影响取决于冲突是否继续升级。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/15/2026/iran-attacks-bahrain-as-talks-stall",
+      "source_publish_time": "2026-11-15T22:26:54Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/15/2026/iran-attacks-bahrain-as-talks-stall",
+          "source_publish_time": "2026-11-15T22:26:54Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-30df0cde6b8461b1a0abff13",
+      "date": "2026-11-16",
+      "time": "11-16 06:30",
+      "headline_cn": "Semafor：故障路由器可能引发美国全国停飞",
+      "headline_en": "",
+      "summary": "据Semafor报道，一台故障路由器可能引发美国联邦航空管理局周五下令的全国停飞。报道还称，美国交通部长呼吁投入五百亿美元以防重演。值得关注的是，航空通信设施更新可能影响交通可靠性及公共投资需求，该原因说法仍带有不确定性。",
+      "category": "INDUSTRY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/15/2026/faulty-router-aging-infrastructure-blamed-in-us-flight-stoppage",
+      "source_publish_time": "2026-11-15T22:30:28Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/15/2026/faulty-router-aging-infrastructure-blamed-in-us-flight-stoppage",
+          "source_publish_time": "2026-11-15T22:30:28Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    }
+  ]
+}

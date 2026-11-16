@@ -1,114 +1,51 @@
 {
   "schema_version": 1,
-  "date": "2026-11-13",
+  "date": "2026-11-16",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-13T12:03:36.986212+08:00",
+  "generated_at": "2026-11-16T08:11:40.933114+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-8e0ea30b28dcf90fa3367667",
-      "date": "2026-11-13",
-      "time": "11-12 20:59",
-      "headline_cn": "Semafor引OPEC数据：十月产量回升，多数增量来自沙特",
+      "event_id": "dh-event-6bcbc29283e8f7cdd4888785",
+      "date": "2026-11-16",
+      "time": "11-16 06:26",
+      "headline_cn": "Semafor：伊朗无人机袭击巴林美军基地",
       "headline_en": "",
-      "summary": "据Semafor报道，沙特十月石油产量回升，推动OPEC整体产量首次恢复至接近战前水平。报道援引OPEC最新数据称，其产量增加每日一百九十七万桶，多数增量来自沙特。",
+      "summary": "据Semafor报道，伊朗周日对巴林一处美军基地发动无人机袭击。值得关注的是，海湾军事紧张可能影响能源运输风险与保险成本，后续影响取决于冲突是否继续升级。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/12/2026/saudi-oil-production-rebounds-to-near-prewar-levels",
-      "source_publish_time": "2026-11-12T12:59:31Z",
+      "source_url": "https://www.semafor.com/article/11/15/2026/iran-attacks-bahrain-as-talks-stall",
+      "source_publish_time": "2026-11-15T22:26:54Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/12/2026/saudi-oil-production-rebounds-to-near-prewar-levels",
-          "source_publish_time": "2026-11-12T12:59:31Z"
+          "source_url": "https://www.semafor.com/article/11/15/2026/iran-attacks-bahrain-as-talks-stall",
+          "source_publish_time": "2026-11-15T22:26:54Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-4ef71179e3a0cda38e9e05b3",
-      "date": "2026-11-13",
-      "time": "11-13 06:21",
-      "headline_cn": "Semafor：特朗普称美国不需要与伊朗达成协议",
+      "event_id": "dh-event-30df0cde6b8461b1a0abff13",
+      "date": "2026-11-16",
+      "time": "11-16 06:30",
+      "headline_cn": "Semafor：故障路由器可能引发美国全国停飞",
       "headline_en": "",
-      "summary": "据Semafor报道，美国总统特朗普周四表示，美国不需要与伊朗达成协议。",
-      "category": "ENERGY",
+      "summary": "据Semafor报道，一台故障路由器可能引发美国联邦航空管理局周五下令的全国停飞。报道还称，美国交通部长呼吁投入五百亿美元以防重演。值得关注的是，航空通信设施更新可能影响交通可靠性及公共投资需求，该原因说法仍带有不确定性。",
+      "category": "INDUSTRY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/12/2026/trump-says-us-doesnt-need-iran-deal",
-      "source_publish_time": "2026-11-12T22:21:25Z",
+      "source_url": "https://www.semafor.com/article/11/15/2026/faulty-router-aging-infrastructure-blamed-in-us-flight-stoppage",
+      "source_publish_time": "2026-11-15T22:30:28Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/12/2026/trump-says-us-doesnt-need-iran-deal",
-          "source_publish_time": "2026-11-12T22:21:25Z"
+          "source_url": "https://www.semafor.com/article/11/15/2026/faulty-router-aging-infrastructure-blamed-in-us-flight-stoppage",
+          "source_publish_time": "2026-11-15T22:30:28Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
-    },
-    {
-      "event_id": "dh-event-3b60ed1484a04e553a7b7ad6",
-      "date": "2026-11-13",
-      "time": "11-13 04:44",
-      "headline_cn": "Semafor：美两党领袖支持收紧对华芯片出口，条款尚未敲定",
-      "headline_en": "",
-      "summary": "据Semafor报道，美国众议院议长约翰逊和少数党领袖杰弗里斯均支持加强芯片出口管制。三项措施已纳入参院版国防授权法案，但是否纳入两院协商的最终版本仍未达成协议。",
-      "category": "TECHNOLOGY",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/12/2026/a-high-probability-congress-pushes-tighter-export-controls-following-nvidia-scandal",
-      "source_publish_time": "2026-11-12T20:44:46Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/12/2026/a-high-probability-congress-pushes-tighter-export-controls-following-nvidia-scandal",
-          "source_publish_time": "2026-11-12T20:44:46Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 3
-    },
-    {
-      "event_id": "dh-event-3fcb3dc85aa93669871af90d",
-      "date": "2026-11-13",
-      "time": "11-13 06:24",
-      "headline_cn": "Semafor：乌方称新一轮星链中断妨碍军事行动",
-      "headline_en": "",
-      "summary": "据Semafor报道，乌克兰周四表示，星链服务新一轮中断妨碍了其军事行动。",
-      "category": "ENERGY",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/12/2026/ukraine-says-its-facing-starlink-disruptions-again",
-      "source_publish_time": "2026-11-12T22:24:44Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/12/2026/ukraine-says-its-facing-starlink-disruptions-again",
-          "source_publish_time": "2026-11-12T22:24:44Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 4
-    },
-    {
-      "event_id": "dh-event-42ded87aaaaeacdecbda2130",
-      "date": "2026-11-13",
-      "time": "11-12 21:16",
-      "headline_cn": "Semafor：第一阿布扎比银行拟配股筹资一百五十亿迪拉姆",
-      "headline_en": "",
-      "summary": "据Semafor报道，阿联酋最大银行第一阿布扎比银行拟通过配股筹集一百五十亿迪拉姆，为下一阶段增长提供资金。报道称，主权财富基金穆巴达拉支持该交易。",
-      "category": "GEOPOLITICS",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/12/2026/first-abu-dhabi-bank-raises-15-billion-dirhams-for-postwar-boom",
-      "source_publish_time": "2026-11-12T13:16:19Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/12/2026/first-abu-dhabi-bank-raises-15-billion-dirhams-for-postwar-boom",
-          "source_publish_time": "2026-11-12T13:16:19Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 5
     }
   ]
 }

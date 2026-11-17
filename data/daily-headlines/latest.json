@@ -1,51 +1,119 @@
 {
   "schema_version": 1,
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-16T08:11:40.933114+08:00",
+  "generated_at": "2026-11-17T08:10:34.135159+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-6bcbc29283e8f7cdd4888785",
-      "date": "2026-11-16",
-      "time": "11-16 06:26",
-      "headline_cn": "Semafor：伊朗无人机袭击巴林美军基地",
+      "event_id": "dh-event-fca136550be1c431b28159f9",
+      "date": "2026-11-17",
+      "time": "11-16 22:21",
+      "headline_cn": "Semafor：美国发布远程访问芯片临时规则",
       "headline_en": "",
-      "summary": "据Semafor报道，伊朗周日对巴林一处美军基地发动无人机袭击。值得关注的是，海湾军事紧张可能影响能源运输风险与保险成本，后续影响取决于冲突是否继续升级。",
-      "category": "ENERGY",
+      "summary": "据Semafor报道，美国商务部周一发布临时规则，旨在堵住芯片远程访问漏洞。该媒体另称，美国科技股周一继续下跌，英伟达股价跌近5%。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/15/2026/iran-attacks-bahrain-as-talks-stall",
-      "source_publish_time": "2026-11-15T22:26:54Z",
+      "source_url": "https://www.semafor.com/article/11/16/2026/us-moves-to-close-remote-access-chip-loophole",
+      "source_publish_time": "2026-11-16T14:21:48Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/15/2026/iran-attacks-bahrain-as-talks-stall",
-          "source_publish_time": "2026-11-15T22:26:54Z"
+          "source_url": "https://www.semafor.com/article/11/16/2026/us-moves-to-close-remote-access-chip-loophole",
+          "source_publish_time": "2026-11-16T14:21:48Z"
+        },
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/16/2026/us-tech-extends-slide-ahead-of-nvidia-earnings",
+          "source_publish_time": "2026-11-16T22:52:56Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-30df0cde6b8461b1a0abff13",
-      "date": "2026-11-16",
-      "time": "11-16 06:30",
-      "headline_cn": "Semafor：故障路由器可能引发美国全国停飞",
+      "event_id": "dh-event-c57ea50257180f40d60ea069",
+      "date": "2026-11-17",
+      "time": "11-16 19:32",
+      "headline_cn": "Semafor：中国零售与工业产出不及预期",
       "headline_en": "",
-      "summary": "据Semafor报道，一台故障路由器可能引发美国联邦航空管理局周五下令的全国停飞。报道还称，美国交通部长呼吁投入五百亿美元以防重演。值得关注的是，航空通信设施更新可能影响交通可靠性及公共投资需求，该原因说法仍带有不确定性。",
-      "category": "INDUSTRY",
+      "summary": "据Semafor报道，中国上月零售与工业产出均不及预期。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/15/2026/faulty-router-aging-infrastructure-blamed-in-us-flight-stoppage",
-      "source_publish_time": "2026-11-15T22:30:28Z",
+      "source_url": "https://www.semafor.com/article/11/16/2026/chinas-economic-activity-slows-more-than-expected",
+      "source_publish_time": "2026-11-16T11:32:53Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/15/2026/faulty-router-aging-infrastructure-blamed-in-us-flight-stoppage",
-          "source_publish_time": "2026-11-15T22:30:28Z"
+          "source_url": "https://www.semafor.com/article/11/16/2026/chinas-economic-activity-slows-more-than-expected",
+          "source_publish_time": "2026-11-16T11:32:53Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
+    },
+    {
+      "event_id": "dh-event-96658cfea0eba58d579e2b5b",
+      "date": "2026-11-17",
+      "time": "11-17 07:41",
+      "headline_cn": "Semafor：美联航称系统故障已迅速解决",
+      "headline_en": "",
+      "summary": "据Semafor报道，美联航周一稍后称已迅速解决系统故障。该航空公司称，这不是与网络安全有关的问题。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/16/2026/united-airlines-major-us-banks-report-system-outages",
+      "source_publish_time": "2026-11-16T23:41:37Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/16/2026/united-airlines-major-us-banks-report-system-outages",
+          "source_publish_time": "2026-11-16T23:41:37Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-e729c93ef1352ab7fa9e598b",
+      "date": "2026-11-17",
+      "time": "11-16 21:43",
+      "headline_cn": "Semafor：MTN与Telkom启动早期收购磋商",
+      "headline_en": "",
+      "summary": "据Semafor报道，MTN与Telkom两家公司称，已启动早期收购磋商。",
+      "category": "MACRO",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/16/2026/mtn-eyes-2-billion-takeover-of-state-backed-rival-telkom",
+      "source_publish_time": "2026-11-16T13:43:12Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/16/2026/mtn-eyes-2-billion-takeover-of-state-backed-rival-telkom",
+          "source_publish_time": "2026-11-16T13:43:12Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-b5971c7e52df4dccc28d7ac8",
+      "date": "2026-11-17",
+      "time": "11-16 17:36",
+      "headline_cn": "Semafor：民主党拟调查美国在非洲矿产协议",
+      "headline_en": "",
+      "summary": "据Semafor报道，民主党计划利用即将获得的多数席位，调查特朗普政府在非洲关键矿产协议中可能存在的腐败。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/16/2026/democrats-plan-probes-into-africa-minerals-deals",
+      "source_publish_time": "2026-11-16T09:36:17Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/16/2026/democrats-plan-probes-into-africa-minerals-deals",
+          "source_publish_time": "2026-11-16T09:36:17Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
     }
   ]
 }

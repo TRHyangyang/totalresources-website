@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-18",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-18T08:12:12.238574+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-a8906ae066016415819ae291",
+      "date": "2026-11-18",
+      "time": "11-17 21:51",
+      "headline_cn": "Semafor引Ember分析：风电可降低光储供电成本",
+      "headline_en": "",
+      "summary": "据Semafor转述Ember分析，在满足九成电力需求的模型中，加入风电可降低光储组合供电成本。其余需求假设由燃气或柴油备用电源满足。值得关注的是，组合配置可能影响电力项目经济性；这是模型结果。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/17/2026/wind-powers-high-cost-saving-potential",
+      "source_publish_time": "2026-11-17T13:51:48Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/17/2026/wind-powers-high-cost-saving-potential",
+          "source_publish_time": "2026-11-17T13:51:48Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-a161a278026bbb0c7e581b43",
+      "date": "2026-11-18",
+      "time": "11-18 06:36",
+      "headline_cn": "Semafor：中国就美国芯片远程访问限制威胁反制",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国威胁若美国落实限制远程访问先进半导体的计划，将采取反制。值得关注的是，这一有条件的表态可能增加算力获取与双边贸易的不确定性；后续措施仍需观察。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/17/2026/china-threatens-retaliation-against-us-chip-curbs",
+      "source_publish_time": "2026-11-17T22:36:07Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/17/2026/china-threatens-retaliation-against-us-chip-curbs",
+          "source_publish_time": "2026-11-17T22:36:07Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-796e68ab3e1aa0510a91c2cd",
+      "date": "2026-11-18",
+      "time": "11-17 21:14",
+      "headline_cn": "Semafor：中国同意削减部分加拿大商品进口关税",
+      "headline_en": "",
+      "summary": "据Semafor报道，中国同意削减部分加拿大进口商品的关税，加拿大正寻求降低对美贸易依赖。值得关注的是，双边贸易条件可能改善；实际影响仍取决于商品范围、税率及实施安排。",
+      "category": "TRADE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/17/2026/china-agreed-to-cut-some-canada-tariffs",
+      "source_publish_time": "2026-11-17T13:14:54Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/17/2026/china-agreed-to-cut-some-canada-tariffs",
+          "source_publish_time": "2026-11-17T13:14:54Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-54eec64a22231cdd2ef614fe",
+      "date": "2026-11-18",
+      "time": "11-18 06:30",
+      "headline_cn": "Semafor：英伟达董事长排除黄仁勋回归掌舵",
+      "headline_en": "",
+      "summary": "据Semafor报道，英伟达董事长在周二业绩电话会上排除黄仁勋回归担任首席执行官；公司收入超预期，并上调利润指引。值得关注的是，领导层安排与业绩展望可能影响芯片投资预期。",
+      "category": "OTHER",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/17/2026/nvidia-chairman-harvey-jones-rules-out-ex-ceo-jensen-huangs-return",
+      "source_publish_time": "2026-11-17T22:30:28Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/17/2026/nvidia-chairman-harvey-jones-rules-out-ex-ceo-jensen-huangs-return",
+          "source_publish_time": "2026-11-17T22:30:28Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-bb9cd026341cd5a172e4bb1b",
+      "date": "2026-11-18",
+      "time": "11-18 06:28",
+      "headline_cn": "Semafor：文件泄露相关调查报道后德银股价大跌",
+      "headline_en": "",
+      "summary": "据Semafor报道，基于泄露文件、涉及德银历史不当行为的调查报道引发该行周二股价大跌。值得关注的是，声誉风险可能影响银行估值；股价下跌尚不足以量化潜在损失或认定新的违法责任。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/17/2026/deutsche-bank-shares-plunge-after-document-leaks",
+      "source_publish_time": "2026-11-17T22:28:08Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/17/2026/deutsche-bank-shares-plunge-after-document-leaks",
+          "source_publish_time": "2026-11-17T22:28:08Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

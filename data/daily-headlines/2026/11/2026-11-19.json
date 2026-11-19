@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-19",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-19T12:53:41.659808+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-a0b8b429706fb7cf3bea555c",
+      "date": "2026-11-19",
+      "time": "11-19 01:01",
+      "headline_cn": "Semafor：ADNOC船只过霍尔木兹海峡遇袭后有人失踪受伤",
+      "headline_en": "",
+      "summary": "据Semafor转述ADNOC物流与服务公司声明，该公司一艘船在通过霍尔木兹海峡时遇袭，一人失踪、十一人受伤。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/18/2026/uptick-in-middle-east-attacks-indicates-deepening-stalemate",
+      "source_publish_time": "2026-11-18T17:01:48Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/18/2026/uptick-in-middle-east-attacks-indicates-deepening-stalemate",
+          "source_publish_time": "2026-11-18T17:01:48Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-7d3106addac4d6fe83fa240b",
+      "date": "2026-11-19",
+      "time": "11-19 06:23",
+      "headline_cn": "Semafor：英伟达称已暂停对华销售H200芯片",
+      "headline_en": "",
+      "summary": "据Semafor报道，英伟达称已暂停对华销售H200芯片；该芯片此前于一月获白宫批准出口。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/18/2026/nvidia-halts-sale-of-us-approved-h200-chips-to-china",
+      "source_publish_time": "2026-11-18T22:23:17Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/18/2026/nvidia-halts-sale-of-us-approved-h200-chips-to-china",
+          "source_publish_time": "2026-11-18T22:23:17Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-6fec4daeabadf3710fe5f1c4",
+      "date": "2026-11-19",
+      "time": "11-19 06:23",
+      "headline_cn": "Semafor：Anthropic IPO定价每股83美元，高于初始区间",
+      "headline_en": "",
+      "summary": "据Semafor报道，Anthropic周三将首次公开募股价格定为每股83美元，高于公司最初设定的价格区间。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/18/2026/anthropic-prices-ipo-above-target-range",
+      "source_publish_time": "2026-11-18T22:23:39Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/18/2026/anthropic-prices-ipo-above-target-range",
+          "source_publish_time": "2026-11-18T22:23:39Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-60cc0321fde80c1164067431",
+      "date": "2026-11-19",
+      "time": "11-18 19:08",
+      "headline_cn": "Semafor：AI供应链带动日本出口增长，表现超预期",
+      "headline_en": "",
+      "summary": "据Semafor报道，日本出口因其在人工智能供应链中的角色而大幅增长。报道称，日本出口数据超出预期；此前中国官方数据指向经济进一步放缓。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/18/2026/japans-exports-surge-thanks-to-its-role-in-ai-supply-chain",
+      "source_publish_time": "2026-11-18T11:08:28Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/18/2026/japans-exports-surge-thanks-to-its-role-in-ai-supply-chain",
+          "source_publish_time": "2026-11-18T11:08:28Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    }
+  ]
+}

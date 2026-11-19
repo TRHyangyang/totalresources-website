@@ -1,114 +1,93 @@
 {
   "schema_version": 1,
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-18T08:12:12.238574+08:00",
+  "generated_at": "2026-11-19T12:53:41.659808+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-a8906ae066016415819ae291",
-      "date": "2026-11-18",
-      "time": "11-17 21:51",
-      "headline_cn": "Semafor引Ember分析：风电可降低光储供电成本",
+      "event_id": "dh-event-a0b8b429706fb7cf3bea555c",
+      "date": "2026-11-19",
+      "time": "11-19 01:01",
+      "headline_cn": "Semafor：ADNOC船只过霍尔木兹海峡遇袭后有人失踪受伤",
       "headline_en": "",
-      "summary": "据Semafor转述Ember分析，在满足九成电力需求的模型中，加入风电可降低光储组合供电成本。其余需求假设由燃气或柴油备用电源满足。值得关注的是，组合配置可能影响电力项目经济性；这是模型结果。",
+      "summary": "据Semafor转述ADNOC物流与服务公司声明，该公司一艘船在通过霍尔木兹海峡时遇袭，一人失踪、十一人受伤。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/17/2026/wind-powers-high-cost-saving-potential",
-      "source_publish_time": "2026-11-17T13:51:48Z",
+      "source_url": "https://www.semafor.com/article/11/18/2026/uptick-in-middle-east-attacks-indicates-deepening-stalemate",
+      "source_publish_time": "2026-11-18T17:01:48Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/17/2026/wind-powers-high-cost-saving-potential",
-          "source_publish_time": "2026-11-17T13:51:48Z"
+          "source_url": "https://www.semafor.com/article/11/18/2026/uptick-in-middle-east-attacks-indicates-deepening-stalemate",
+          "source_publish_time": "2026-11-18T17:01:48Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-a161a278026bbb0c7e581b43",
-      "date": "2026-11-18",
-      "time": "11-18 06:36",
-      "headline_cn": "Semafor：中国就美国芯片远程访问限制威胁反制",
+      "event_id": "dh-event-7d3106addac4d6fe83fa240b",
+      "date": "2026-11-19",
+      "time": "11-19 06:23",
+      "headline_cn": "Semafor：英伟达称已暂停对华销售H200芯片",
       "headline_en": "",
-      "summary": "据Semafor报道，中国威胁若美国落实限制远程访问先进半导体的计划，将采取反制。值得关注的是，这一有条件的表态可能增加算力获取与双边贸易的不确定性；后续措施仍需观察。",
+      "summary": "据Semafor报道，英伟达称已暂停对华销售H200芯片；该芯片此前于一月获白宫批准出口。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/17/2026/china-threatens-retaliation-against-us-chip-curbs",
-      "source_publish_time": "2026-11-17T22:36:07Z",
+      "source_url": "https://www.semafor.com/article/11/18/2026/nvidia-halts-sale-of-us-approved-h200-chips-to-china",
+      "source_publish_time": "2026-11-18T22:23:17Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/17/2026/china-threatens-retaliation-against-us-chip-curbs",
-          "source_publish_time": "2026-11-17T22:36:07Z"
+          "source_url": "https://www.semafor.com/article/11/18/2026/nvidia-halts-sale-of-us-approved-h200-chips-to-china",
+          "source_publish_time": "2026-11-18T22:23:17Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-796e68ab3e1aa0510a91c2cd",
-      "date": "2026-11-18",
-      "time": "11-17 21:14",
-      "headline_cn": "Semafor：中国同意削减部分加拿大商品进口关税",
+      "event_id": "dh-event-6fec4daeabadf3710fe5f1c4",
+      "date": "2026-11-19",
+      "time": "11-19 06:23",
+      "headline_cn": "Semafor：Anthropic IPO定价每股83美元，高于初始区间",
       "headline_en": "",
-      "summary": "据Semafor报道，中国同意削减部分加拿大进口商品的关税，加拿大正寻求降低对美贸易依赖。值得关注的是，双边贸易条件可能改善；实际影响仍取决于商品范围、税率及实施安排。",
-      "category": "TRADE",
+      "summary": "据Semafor报道，Anthropic周三将首次公开募股价格定为每股83美元，高于公司最初设定的价格区间。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/17/2026/china-agreed-to-cut-some-canada-tariffs",
-      "source_publish_time": "2026-11-17T13:14:54Z",
+      "source_url": "https://www.semafor.com/article/11/18/2026/anthropic-prices-ipo-above-target-range",
+      "source_publish_time": "2026-11-18T22:23:39Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/17/2026/china-agreed-to-cut-some-canada-tariffs",
-          "source_publish_time": "2026-11-17T13:14:54Z"
+          "source_url": "https://www.semafor.com/article/11/18/2026/anthropic-prices-ipo-above-target-range",
+          "source_publish_time": "2026-11-18T22:23:39Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-54eec64a22231cdd2ef614fe",
-      "date": "2026-11-18",
-      "time": "11-18 06:30",
-      "headline_cn": "Semafor：英伟达董事长排除黄仁勋回归掌舵",
+      "event_id": "dh-event-60cc0321fde80c1164067431",
+      "date": "2026-11-19",
+      "time": "11-18 19:08",
+      "headline_cn": "Semafor：AI供应链带动日本出口增长，表现超预期",
       "headline_en": "",
-      "summary": "据Semafor报道，英伟达董事长在周二业绩电话会上排除黄仁勋回归担任首席执行官；公司收入超预期，并上调利润指引。值得关注的是，领导层安排与业绩展望可能影响芯片投资预期。",
-      "category": "OTHER",
+      "summary": "据Semafor报道，日本出口因其在人工智能供应链中的角色而大幅增长。报道称，日本出口数据超出预期；此前中国官方数据指向经济进一步放缓。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/17/2026/nvidia-chairman-harvey-jones-rules-out-ex-ceo-jensen-huangs-return",
-      "source_publish_time": "2026-11-17T22:30:28Z",
+      "source_url": "https://www.semafor.com/article/11/18/2026/japans-exports-surge-thanks-to-its-role-in-ai-supply-chain",
+      "source_publish_time": "2026-11-18T11:08:28Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/17/2026/nvidia-chairman-harvey-jones-rules-out-ex-ceo-jensen-huangs-return",
-          "source_publish_time": "2026-11-17T22:30:28Z"
+          "source_url": "https://www.semafor.com/article/11/18/2026/japans-exports-surge-thanks-to-its-role-in-ai-supply-chain",
+          "source_publish_time": "2026-11-18T11:08:28Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
-    },
-    {
-      "event_id": "dh-event-bb9cd026341cd5a172e4bb1b",
-      "date": "2026-11-18",
-      "time": "11-18 06:28",
-      "headline_cn": "Semafor：文件泄露相关调查报道后德银股价大跌",
-      "headline_en": "",
-      "summary": "据Semafor报道，基于泄露文件、涉及德银历史不当行为的调查报道引发该行周二股价大跌。值得关注的是，声誉风险可能影响银行估值；股价下跌尚不足以量化潜在损失或认定新的违法责任。",
-      "category": "GEOPOLITICS",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/17/2026/deutsche-bank-shares-plunge-after-document-leaks",
-      "source_publish_time": "2026-11-17T22:28:08Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/17/2026/deutsche-bank-shares-plunge-after-document-leaks",
-          "source_publish_time": "2026-11-17T22:28:08Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 5
     }
   ]
 }

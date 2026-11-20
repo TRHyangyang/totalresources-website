@@ -1,93 +1,124 @@
 {
   "schema_version": 1,
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-19T12:53:41.659808+08:00",
+  "generated_at": "2026-11-20T08:10:50.495924+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-a0b8b429706fb7cf3bea555c",
-      "date": "2026-11-19",
-      "time": "11-19 01:01",
-      "headline_cn": "Semafor：ADNOC船只过霍尔木兹海峡遇袭后有人失踪受伤",
+      "event_id": "dh-event-e6ec8bb632bdc2fb693c60d3",
+      "date": "2026-11-20",
+      "time": "11-20 06:16",
+      "headline_cn": "Semafor：美中俄领导人承诺增加成品油供应",
       "headline_en": "",
-      "summary": "据Semafor转述ADNOC物流与服务公司声明，该公司一艘船在通过霍尔木兹海峡时遇袭，一人失踪、十一人受伤。",
+      "summary": "据Semafor报道，美中俄领导人在三方峰会后承诺增加成品油供应，以惠及各国。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/18/2026/uptick-in-middle-east-attacks-indicates-deepening-stalemate",
-      "source_publish_time": "2026-11-18T17:01:48Z",
+      "source_url": "https://www.semafor.com/article/11/19/2026/trump-xi-and-putin-pledge-to-boost-oil-production",
+      "source_publish_time": "2026-11-19T22:16:44Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/18/2026/uptick-in-middle-east-attacks-indicates-deepening-stalemate",
-          "source_publish_time": "2026-11-18T17:01:48Z"
+          "source_url": "https://www.semafor.com/article/11/19/2026/trump-xi-and-putin-pledge-to-boost-oil-production",
+          "source_publish_time": "2026-11-19T22:16:44Z"
+        },
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/19/2026/trump-xi-and-putin-hold-landmark-talks-in-shenzhen",
+          "source_publish_time": "2026-11-19T13:20:11Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-7d3106addac4d6fe83fa240b",
-      "date": "2026-11-19",
-      "time": "11-19 06:23",
-      "headline_cn": "Semafor：英伟达称已暂停对华销售H200芯片",
+      "event_id": "dh-event-151c05ab4489726e6e655e73",
+      "date": "2026-11-20",
+      "time": "11-19 21:20",
+      "headline_cn": "Semafor：国际法院裁定缅甸对罗兴亚人具有种族灭绝意图",
       "headline_en": "",
-      "summary": "据Semafor报道，英伟达称已暂停对华销售H200芯片；该芯片此前于一月获白宫批准出口。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，国际法院裁定，缅甸在近十年前杀害罗兴亚人的事件中具有种族灭绝意图。",
+      "category": "GEOPOLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/18/2026/nvidia-halts-sale-of-us-approved-h200-chips-to-china",
-      "source_publish_time": "2026-11-18T22:23:17Z",
+      "source_url": "https://www.semafor.com/article/11/19/2026/icj-finds-myanmar-guilty-of-genocidal-intent-against-rohingya",
+      "source_publish_time": "2026-11-19T13:20:11Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/18/2026/nvidia-halts-sale-of-us-approved-h200-chips-to-china",
-          "source_publish_time": "2026-11-18T22:23:17Z"
+          "source_url": "https://www.semafor.com/article/11/19/2026/icj-finds-myanmar-guilty-of-genocidal-intent-against-rohingya",
+          "source_publish_time": "2026-11-19T13:20:11Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-6fec4daeabadf3710fe5f1c4",
-      "date": "2026-11-19",
-      "time": "11-19 06:23",
-      "headline_cn": "Semafor：Anthropic IPO定价每股83美元，高于初始区间",
+      "event_id": "dh-event-380bf7d9dbc5dffcc08adc63",
+      "date": "2026-11-20",
+      "time": "11-19 21:08",
+      "headline_cn": "Semafor：IMF转而预测阿联酋今年经济增长0.2%",
       "headline_en": "",
-      "summary": "据Semafor报道，Anthropic周三将首次公开募股价格定为每股83美元，高于公司最初设定的价格区间。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，IMF将阿联酋今年经济预期由一个月前的萎缩改为增长0.2%。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/18/2026/anthropic-prices-ipo-above-target-range",
-      "source_publish_time": "2026-11-18T22:23:39Z",
+      "source_url": "https://www.semafor.com/article/11/19/2026/imf-reverses-uaes-growth-forecast-from-october-estimate",
+      "source_publish_time": "2026-11-19T13:08:50Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/18/2026/anthropic-prices-ipo-above-target-range",
-          "source_publish_time": "2026-11-18T22:23:39Z"
+          "source_url": "https://www.semafor.com/article/11/19/2026/imf-reverses-uaes-growth-forecast-from-october-estimate",
+          "source_publish_time": "2026-11-19T13:08:50Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-60cc0321fde80c1164067431",
-      "date": "2026-11-19",
-      "time": "11-18 19:08",
-      "headline_cn": "Semafor：AI供应链带动日本出口增长，表现超预期",
+      "event_id": "dh-event-73cff38ac024418b958f01a9",
+      "date": "2026-11-20",
+      "time": "11-20 00:21",
+      "headline_cn": "Semafor：Anthropic上市首日股价最高达111.53美元",
       "headline_en": "",
-      "summary": "据Semafor报道，日本出口因其在人工智能供应链中的角色而大幅增长。报道称，日本出口数据超出预期；此前中国官方数据指向经济进一步放缓。",
+      "summary": "据Semafor报道，Anthropic周四上市，股价盘中最高达每股111.53美元，高于83美元的发行价。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/18/2026/japans-exports-surge-thanks-to-its-role-in-ai-supply-chain",
-      "source_publish_time": "2026-11-18T11:08:28Z",
+      "source_url": "https://www.semafor.com/article/11/19/2026/anthropic-makes-record-market-debut",
+      "source_publish_time": "2026-11-19T16:21:27Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/18/2026/japans-exports-surge-thanks-to-its-role-in-ai-supply-chain",
-          "source_publish_time": "2026-11-18T11:08:28Z"
+          "source_url": "https://www.semafor.com/article/11/19/2026/anthropic-makes-record-market-debut",
+          "source_publish_time": "2026-11-19T16:21:27Z"
+        },
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/19/2026/anthropics-ipo-mints-thousands-of-new-millionaires-and-several-billionaires",
+          "source_publish_time": "2026-11-19T22:13:50Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
+    },
+    {
+      "event_id": "dh-event-b35370781b758709db41271e",
+      "date": "2026-11-20",
+      "time": "11-19 18:53",
+      "headline_cn": "Semafor：胡塞袭击持续，更多外籍高管离开利雅得",
+      "headline_en": "",
+      "summary": "据Semafor报道，胡塞袭击持续之际，更多外籍高管离开利雅得；市内主要商务区和学校关闭。报道同时指出，离境人数有限，未受袭地区商业活动仍正常。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/19/2026/expats-leave-riyadh-as-houthi-strikes-persist",
+      "source_publish_time": "2026-11-19T10:53:50Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/19/2026/expats-leave-riyadh-as-houthi-strikes-persist",
+          "source_publish_time": "2026-11-19T10:53:50Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
     }
   ]
 }

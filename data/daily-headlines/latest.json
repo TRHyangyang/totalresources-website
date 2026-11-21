@@ -1,120 +1,110 @@
 {
   "schema_version": 1,
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-20T08:10:50.495924+08:00",
+  "generated_at": "2026-11-21T08:09:28.895628+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-e6ec8bb632bdc2fb693c60d3",
-      "date": "2026-11-20",
-      "time": "11-20 06:16",
-      "headline_cn": "Semafor：美中俄领导人承诺增加成品油供应",
+      "event_id": "dh-event-54b9792d21a913943c6c52b1",
+      "date": "2026-11-21",
+      "time": "11-20 19:03",
+      "headline_cn": "Semafor：美方特使称特朗普对乌安全保证持开放态度",
       "headline_en": "",
-      "summary": "据Semafor报道，美中俄领导人在三方峰会后承诺增加成品油供应，以惠及各国。",
-      "category": "ENERGY",
+      "summary": "据Semafor引述美方特使报道，特朗普对向乌克兰提供类似北约的安全保证持开放态度。值得关注的是，这一表态可能影响和平谈判与欧洲风险预期，尚不代表安全保证已达成。",
+      "category": "GEOPOLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/19/2026/trump-xi-and-putin-pledge-to-boost-oil-production",
-      "source_publish_time": "2026-11-19T22:16:44Z",
+      "source_url": "https://www.semafor.com/article/11/20/2026/trump-open-to-giving-kyiv-a-nato-like-security-guarantee",
+      "source_publish_time": "2026-11-20T11:03:19Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/19/2026/trump-xi-and-putin-pledge-to-boost-oil-production",
-          "source_publish_time": "2026-11-19T22:16:44Z"
-        },
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/19/2026/trump-xi-and-putin-hold-landmark-talks-in-shenzhen",
-          "source_publish_time": "2026-11-19T13:20:11Z"
+          "source_url": "https://www.semafor.com/article/11/20/2026/trump-open-to-giving-kyiv-a-nato-like-security-guarantee",
+          "source_publish_time": "2026-11-20T11:03:19Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-151c05ab4489726e6e655e73",
-      "date": "2026-11-20",
-      "time": "11-19 21:20",
-      "headline_cn": "Semafor：国际法院裁定缅甸对罗兴亚人具有种族灭绝意图",
+      "event_id": "dh-event-f3507e6ab49c17b6432a44ba",
+      "date": "2026-11-21",
+      "time": "11-20 21:18",
+      "headline_cn": "Semafor：肯尼亚选择美国联盟开发矿区",
       "headline_en": "",
-      "summary": "据Semafor报道，国际法院裁定，缅甸在近十年前杀害罗兴亚人的事件中具有种族灭绝意图。",
-      "category": "GEOPOLITICS",
+      "summary": "据Semafor报道，肯尼亚选择美国联盟开发一处重要矿区。Frontier Minerals表示，将重点在肯尼亚发展加工和精炼能力。值得关注的是，项目可能影响关键矿产供应链，实际产能仍取决于后续建设。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/19/2026/icj-finds-myanmar-guilty-of-genocidal-intent-against-rohingya",
-      "source_publish_time": "2026-11-19T13:20:11Z",
+      "source_url": "https://www.semafor.com/article/11/20/2026/kenya-selects-us-led-frontier-minerals-for-mining-project",
+      "source_publish_time": "2026-11-20T13:18:58Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/19/2026/icj-finds-myanmar-guilty-of-genocidal-intent-against-rohingya",
-          "source_publish_time": "2026-11-19T13:20:11Z"
+          "source_url": "https://www.semafor.com/article/11/20/2026/kenya-selects-us-led-frontier-minerals-for-mining-project",
+          "source_publish_time": "2026-11-20T13:18:58Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-380bf7d9dbc5dffcc08adc63",
-      "date": "2026-11-20",
-      "time": "11-19 21:08",
-      "headline_cn": "Semafor：IMF转而预测阿联酋今年经济增长0.2%",
+      "event_id": "dh-event-47b0e9a9e55d3010ca04c549",
+      "date": "2026-11-21",
+      "time": "11-20 19:14",
+      "headline_cn": "Semafor：英国与欧盟拟签关系重置协议",
       "headline_en": "",
-      "summary": "据Semafor报道，IMF将阿联酋今年经济预期由一个月前的萎缩改为增长0.2%。",
-      "category": "ENERGY",
+      "summary": "据Semafor报道，英国与欧盟准备签署旨在重置关系的协议。有限协议拟扩大食品饮料贸易、重新连接碳市场并加强移民合作。值得关注的是，贸易与碳定价安排可能影响企业成本，仍需观察签署及落实。",
+      "category": "TRADE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/19/2026/imf-reverses-uaes-growth-forecast-from-october-estimate",
-      "source_publish_time": "2026-11-19T13:08:50Z",
+      "source_url": "https://www.semafor.com/article/11/20/2026/uk-and-eu-to-sign-a-deal-aimed-at-resetting-relations",
+      "source_publish_time": "2026-11-20T11:14:35Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/19/2026/imf-reverses-uaes-growth-forecast-from-october-estimate",
-          "source_publish_time": "2026-11-19T13:08:50Z"
+          "source_url": "https://www.semafor.com/article/11/20/2026/uk-and-eu-to-sign-a-deal-aimed-at-resetting-relations",
+          "source_publish_time": "2026-11-20T11:14:35Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-73cff38ac024418b958f01a9",
-      "date": "2026-11-20",
-      "time": "11-20 00:21",
-      "headline_cn": "Semafor：Anthropic上市首日股价最高达111.53美元",
+      "event_id": "dh-event-3a418dfcc73c7add7c9fb29a",
+      "date": "2026-11-21",
+      "time": "11-21 02:21",
+      "headline_cn": "Semafor：OpenAI要求模型转售网关接受审核批准",
       "headline_en": "",
-      "summary": "据Semafor报道，Anthropic周四上市，股价盘中最高达每股111.53美元，高于83美元的发行价。",
+      "summary": "据Semafor报道，提供OpenAI技术第三方访问的网关和路由服务，现在须获该公司审核批准。值得关注的是，审批规则可能改变开发者与企业获取模型的渠道，实际影响仍取决于执行范围。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/19/2026/anthropic-makes-record-market-debut",
-      "source_publish_time": "2026-11-19T16:21:27Z",
+      "source_url": "https://www.semafor.com/article/11/20/2026/openai-tightens-grip-on-model-resellers",
+      "source_publish_time": "2026-11-20T18:21:59Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/19/2026/anthropic-makes-record-market-debut",
-          "source_publish_time": "2026-11-19T16:21:27Z"
-        },
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/19/2026/anthropics-ipo-mints-thousands-of-new-millionaires-and-several-billionaires",
-          "source_publish_time": "2026-11-19T22:13:50Z"
+          "source_url": "https://www.semafor.com/article/11/20/2026/openai-tightens-grip-on-model-resellers",
+          "source_publish_time": "2026-11-20T18:21:59Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
     },
     {
-      "event_id": "dh-event-b35370781b758709db41271e",
-      "date": "2026-11-20",
-      "time": "11-19 18:53",
-      "headline_cn": "Semafor：胡塞袭击持续，更多外籍高管离开利雅得",
+      "event_id": "dh-event-f88489ce5dd48186adc0c2ce",
+      "date": "2026-11-21",
+      "time": "11-20 21:02",
+      "headline_cn": "Semafor引币安：阿布扎比法院冻结被盗资产",
       "headline_en": "",
-      "summary": "据Semafor报道，胡塞袭击持续之际，更多外籍高管离开利雅得；市内主要商务区和学校关闭。报道同时指出，离境人数有限，未受袭地区商业活动仍正常。",
-      "category": "GEOPOLITICS",
+      "summary": "据Semafor引述币安说法，阿布扎比全球市场法院对被盗币安资产发出全球冻结令，公司正寻求追回资金。值得关注的是，冻结令可能推进跨境追偿，尚不能视为资产已经收回或损失已经弥补。",
+      "category": "FINANCE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/19/2026/expats-leave-riyadh-as-houthi-strikes-persist",
-      "source_publish_time": "2026-11-19T10:53:50Z",
+      "source_url": "https://www.semafor.com/article/11/20/2026/abu-dhabi-court-orders-freeze-on-stolen-binance-assets-amid-recovery-efforts",
+      "source_publish_time": "2026-11-20T13:02:47Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/19/2026/expats-leave-riyadh-as-houthi-strikes-persist",
-          "source_publish_time": "2026-11-19T10:53:50Z"
+          "source_url": "https://www.semafor.com/article/11/20/2026/abu-dhabi-court-orders-freeze-on-stolen-binance-assets-amid-recovery-efforts",
+          "source_publish_time": "2026-11-20T13:02:47Z"
         }
       ],
       "confidence": "PARTIAL",

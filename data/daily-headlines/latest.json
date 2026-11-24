@@ -1,110 +1,110 @@
 {
   "schema_version": 1,
-  "date": "2026-11-21",
+  "date": "2026-11-24",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-21T08:09:28.895628+08:00",
+  "generated_at": "2026-11-24T10:05:57.069762+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-54b9792d21a913943c6c52b1",
-      "date": "2026-11-21",
-      "time": "11-20 19:03",
-      "headline_cn": "Semafor：美方特使称特朗普对乌安全保证持开放态度",
+      "event_id": "dh-event-2f495209947f1f40249caaf1",
+      "date": "2026-11-24",
+      "time": "11-23 21:08",
+      "headline_cn": "阿曼附近两艘油轮据报遇袭，伊朗外长称六月协议已失效",
       "headline_en": "",
-      "summary": "据Semafor引述美方特使报道，特朗普对向乌克兰提供类似北约的安全保证持开放态度。值得关注的是，这一表态可能影响和平谈判与欧洲风险预期，尚不代表安全保证已达成。",
-      "category": "GEOPOLITICS",
+      "summary": "据Semafor报道，两艘油轮在阿曼附近遇袭。该媒体转述伊朗外长称，六月签署的谅解备忘录已失效，但仍可为未来的协议提供基础。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/20/2026/trump-open-to-giving-kyiv-a-nato-like-security-guarantee",
-      "source_publish_time": "2026-11-20T11:03:19Z",
+      "source_url": "https://www.semafor.com/article/11/23/2026/iran-signals-plans-to-challenge-the-us-naval-blockade",
+      "source_publish_time": "2026-11-23T13:08:41Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/20/2026/trump-open-to-giving-kyiv-a-nato-like-security-guarantee",
-          "source_publish_time": "2026-11-20T11:03:19Z"
+          "source_url": "https://www.semafor.com/article/11/23/2026/iran-signals-plans-to-challenge-the-us-naval-blockade",
+          "source_publish_time": "2026-11-23T13:08:41Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-f3507e6ab49c17b6432a44ba",
-      "date": "2026-11-21",
-      "time": "11-20 21:18",
-      "headline_cn": "Semafor：肯尼亚选择美国联盟开发矿区",
+      "event_id": "dh-event-034f52f081cbdc0d012d0f22",
+      "date": "2026-11-24",
+      "time": "11-24 06:20",
+      "headline_cn": "黄仁勋回任英伟达首席执行官，股价周一涨逾30%",
       "headline_en": "",
-      "summary": "据Semafor报道，肯尼亚选择美国联盟开发一处重要矿区。Frontier Minerals表示，将重点在肯尼亚发展加工和精炼能力。值得关注的是，项目可能影响关键矿产供应链，实际产能仍取决于后续建设。",
+      "summary": "据Semafor报道，黄仁勋回任英伟达首席执行官后，公司股价周一上涨逾30%，为二十年来最大涨幅，并带动美国股指走高。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/20/2026/kenya-selects-us-led-frontier-minerals-for-mining-project",
-      "source_publish_time": "2026-11-20T13:18:58Z",
+      "source_url": "https://www.semafor.com/article/11/23/2026/wall-street-rallies-on-nvidia-ceo-huangs-return",
+      "source_publish_time": "2026-11-23T22:20:38Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/20/2026/kenya-selects-us-led-frontier-minerals-for-mining-project",
-          "source_publish_time": "2026-11-20T13:18:58Z"
+          "source_url": "https://www.semafor.com/article/11/23/2026/wall-street-rallies-on-nvidia-ceo-huangs-return",
+          "source_publish_time": "2026-11-23T22:20:38Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-47b0e9a9e55d3010ca04c549",
-      "date": "2026-11-21",
-      "time": "11-20 19:14",
-      "headline_cn": "Semafor：英国与欧盟拟签关系重置协议",
+      "event_id": "dh-event-648875099e4bb324c4796eda",
+      "date": "2026-11-24",
+      "time": "11-24 06:20",
+      "headline_cn": "CrowdStrike拟以近四百四十亿美元股票收购Zscaler",
       "headline_en": "",
-      "summary": "据Semafor报道，英国与欧盟准备签署旨在重置关系的协议。有限协议拟扩大食品饮料贸易、重新连接碳市场并加强移民合作。值得关注的是，贸易与碳定价安排可能影响企业成本，仍需观察签署及落实。",
-      "category": "TRADE",
+      "summary": "据Semafor报道，网络安全公司CrowdStrike拟收购Zscaler，对价为价值近四百四十亿美元的股票。",
+      "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/20/2026/uk-and-eu-to-sign-a-deal-aimed-at-resetting-relations",
-      "source_publish_time": "2026-11-20T11:14:35Z",
+      "source_url": "https://www.semafor.com/article/11/23/2026/crowdstrike-to-buy-zscaler-for-44b-in-cyber-mega-merger",
+      "source_publish_time": "2026-11-23T22:20:46Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/20/2026/uk-and-eu-to-sign-a-deal-aimed-at-resetting-relations",
-          "source_publish_time": "2026-11-20T11:14:35Z"
+          "source_url": "https://www.semafor.com/article/11/23/2026/crowdstrike-to-buy-zscaler-for-44b-in-cyber-mega-merger",
+          "source_publish_time": "2026-11-23T22:20:46Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-3a418dfcc73c7add7c9fb29a",
-      "date": "2026-11-21",
-      "time": "11-21 02:21",
-      "headline_cn": "Semafor：OpenAI要求模型转售网关接受审核批准",
+      "event_id": "dh-event-74ba8ccc687d847a0baa308c",
+      "date": "2026-11-24",
+      "time": "11-23 21:24",
+      "headline_cn": "卡塔尔投资局与Brookfield拟研究在德国投资一百五十亿欧元",
       "headline_en": "",
-      "summary": "据Semafor报道，提供OpenAI技术第三方访问的网关和路由服务，现在须获该公司审核批准。值得关注的是，审批规则可能改变开发者与企业获取模型的渠道，实际影响仍取决于执行范围。",
+      "summary": "据Semafor报道，卡塔尔对德国进行国事访问期间，卡塔尔投资局与Brookfield计划研究在德国关键行业和国防领域投资一百五十亿欧元。",
       "category": "TECHNOLOGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/20/2026/openai-tightens-grip-on-model-resellers",
-      "source_publish_time": "2026-11-20T18:21:59Z",
+      "source_url": "https://www.semafor.com/article/11/23/2026/germany-secures-a-15-billion-qatari-investment-pledge",
+      "source_publish_time": "2026-11-23T13:24:26Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/20/2026/openai-tightens-grip-on-model-resellers",
-          "source_publish_time": "2026-11-20T18:21:59Z"
+          "source_url": "https://www.semafor.com/article/11/23/2026/germany-secures-a-15-billion-qatari-investment-pledge",
+          "source_publish_time": "2026-11-23T13:24:26Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
     },
     {
-      "event_id": "dh-event-f88489ce5dd48186adc0c2ce",
-      "date": "2026-11-21",
-      "time": "11-20 21:02",
-      "headline_cn": "Semafor引币安：阿布扎比法院冻结被盗资产",
+      "event_id": "dh-event-6eb52f8cf792abb7b9a7f3bb",
+      "date": "2026-11-24",
+      "time": "11-24 06:20",
+      "headline_cn": "荷兰法院禁止比亚迪一款车型在欧洲销售",
       "headline_en": "",
-      "summary": "据Semafor引述币安说法，阿布扎比全球市场法院对被盗币安资产发出全球冻结令，公司正寻求追回资金。值得关注的是，冻结令可能推进跨境追偿，尚不能视为资产已经收回或损失已经弥补。",
-      "category": "FINANCE",
+      "summary": "据Semafor报道，荷兰一家法院禁止比亚迪一款车型在欧洲销售，此后比亚迪股价周一下跌。该车型当时尚未在欧盟销售。",
+      "category": "OTHER",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/20/2026/abu-dhabi-court-orders-freeze-on-stolen-binance-assets-amid-recovery-efforts",
-      "source_publish_time": "2026-11-20T13:02:47Z",
+      "source_url": "https://www.semafor.com/article/11/23/2026/byd-shares-slide-as-dutch-court-rules-against-temu-range-rover",
+      "source_publish_time": "2026-11-23T22:20:54Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/20/2026/abu-dhabi-court-orders-freeze-on-stolen-binance-assets-amid-recovery-efforts",
-          "source_publish_time": "2026-11-20T13:02:47Z"
+          "source_url": "https://www.semafor.com/article/11/23/2026/byd-shares-slide-as-dutch-court-rules-against-temu-range-rover",
+          "source_publish_time": "2026-11-23T22:20:54Z"
         }
       ],
       "confidence": "PARTIAL",

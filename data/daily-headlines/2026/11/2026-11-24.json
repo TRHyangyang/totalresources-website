@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-24",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-24T10:05:57.069762+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-2f495209947f1f40249caaf1",
+      "date": "2026-11-24",
+      "time": "11-23 21:08",
+      "headline_cn": "阿曼附近两艘油轮据报遇袭，伊朗外长称六月协议已失效",
+      "headline_en": "",
+      "summary": "据Semafor报道，两艘油轮在阿曼附近遇袭。该媒体转述伊朗外长称，六月签署的谅解备忘录已失效，但仍可为未来的协议提供基础。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/23/2026/iran-signals-plans-to-challenge-the-us-naval-blockade",
+      "source_publish_time": "2026-11-23T13:08:41Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/23/2026/iran-signals-plans-to-challenge-the-us-naval-blockade",
+          "source_publish_time": "2026-11-23T13:08:41Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-034f52f081cbdc0d012d0f22",
+      "date": "2026-11-24",
+      "time": "11-24 06:20",
+      "headline_cn": "黄仁勋回任英伟达首席执行官，股价周一涨逾30%",
+      "headline_en": "",
+      "summary": "据Semafor报道，黄仁勋回任英伟达首席执行官后，公司股价周一上涨逾30%，为二十年来最大涨幅，并带动美国股指走高。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/23/2026/wall-street-rallies-on-nvidia-ceo-huangs-return",
+      "source_publish_time": "2026-11-23T22:20:38Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/23/2026/wall-street-rallies-on-nvidia-ceo-huangs-return",
+          "source_publish_time": "2026-11-23T22:20:38Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-648875099e4bb324c4796eda",
+      "date": "2026-11-24",
+      "time": "11-24 06:20",
+      "headline_cn": "CrowdStrike拟以近四百四十亿美元股票收购Zscaler",
+      "headline_en": "",
+      "summary": "据Semafor报道，网络安全公司CrowdStrike拟收购Zscaler，对价为价值近四百四十亿美元的股票。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/23/2026/crowdstrike-to-buy-zscaler-for-44b-in-cyber-mega-merger",
+      "source_publish_time": "2026-11-23T22:20:46Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/23/2026/crowdstrike-to-buy-zscaler-for-44b-in-cyber-mega-merger",
+          "source_publish_time": "2026-11-23T22:20:46Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-74ba8ccc687d847a0baa308c",
+      "date": "2026-11-24",
+      "time": "11-23 21:24",
+      "headline_cn": "卡塔尔投资局与Brookfield拟研究在德国投资一百五十亿欧元",
+      "headline_en": "",
+      "summary": "据Semafor报道，卡塔尔对德国进行国事访问期间，卡塔尔投资局与Brookfield计划研究在德国关键行业和国防领域投资一百五十亿欧元。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/23/2026/germany-secures-a-15-billion-qatari-investment-pledge",
+      "source_publish_time": "2026-11-23T13:24:26Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/23/2026/germany-secures-a-15-billion-qatari-investment-pledge",
+          "source_publish_time": "2026-11-23T13:24:26Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-6eb52f8cf792abb7b9a7f3bb",
+      "date": "2026-11-24",
+      "time": "11-24 06:20",
+      "headline_cn": "荷兰法院禁止比亚迪一款车型在欧洲销售",
+      "headline_en": "",
+      "summary": "据Semafor报道，荷兰一家法院禁止比亚迪一款车型在欧洲销售，此后比亚迪股价周一下跌。该车型当时尚未在欧盟销售。",
+      "category": "OTHER",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/23/2026/byd-shares-slide-as-dutch-court-rules-against-temu-range-rover",
+      "source_publish_time": "2026-11-23T22:20:54Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/23/2026/byd-shares-slide-as-dutch-court-rules-against-temu-range-rover",
+          "source_publish_time": "2026-11-23T22:20:54Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

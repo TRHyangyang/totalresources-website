@@ -1,110 +1,110 @@
 {
   "schema_version": 1,
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-24T10:05:57.069762+08:00",
+  "generated_at": "2026-11-25T08:08:38.956535+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-2f495209947f1f40249caaf1",
-      "date": "2026-11-24",
-      "time": "11-23 21:08",
-      "headline_cn": "阿曼附近两艘油轮据报遇袭，伊朗外长称六月协议已失效",
+      "event_id": "dh-event-db1f6cf3f2bfac3754a1eb80",
+      "date": "2026-11-25",
+      "time": "11-25 04:43",
+      "headline_cn": "Semafor称特朗普政府拟推出新一轮关税",
       "headline_en": "",
-      "summary": "据Semafor报道，两艘油轮在阿曼附近遇袭。该媒体转述伊朗外长称，六月签署的谅解备忘录已失效，但仍可为未来的协议提供基础。",
-      "category": "ENERGY",
+      "summary": "一名知情人士向Semafor透露，特朗普政府拟公布新一轮关税。该人士称，拟依据第301条征收的关税将因国家而异，且不会超过贸易协议规定的水平。",
+      "category": "TRADE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/23/2026/iran-signals-plans-to-challenge-the-us-naval-blockade",
-      "source_publish_time": "2026-11-23T13:08:41Z",
+      "source_url": "https://www.semafor.com/article/11/24/2026/trump-to-double-down-on-tariffs-after-midterms-defeat",
+      "source_publish_time": "2026-11-24T20:43:55Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/23/2026/iran-signals-plans-to-challenge-the-us-naval-blockade",
-          "source_publish_time": "2026-11-23T13:08:41Z"
+          "source_url": "https://www.semafor.com/article/11/24/2026/trump-to-double-down-on-tariffs-after-midterms-defeat",
+          "source_publish_time": "2026-11-24T20:43:55Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-034f52f081cbdc0d012d0f22",
-      "date": "2026-11-24",
-      "time": "11-24 06:20",
-      "headline_cn": "黄仁勋回任英伟达首席执行官，股价周一涨逾30%",
+      "event_id": "dh-event-bed9c568b96ea472be2494d7",
+      "date": "2026-11-25",
+      "time": "11-24 19:19",
+      "headline_cn": "Semafor称刚果民主共和国恢复钴出口禁令",
       "headline_en": "",
-      "summary": "据Semafor报道，黄仁勋回任英伟达首席执行官后，公司股价周一上涨逾30%，为二十年来最大涨幅，并带动美国股指走高。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，刚果民主共和国恢复钴出口禁令，以提振钴价。禁令定于下周生效。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/23/2026/wall-street-rallies-on-nvidia-ceo-huangs-return",
-      "source_publish_time": "2026-11-23T22:20:38Z",
+      "source_url": "https://www.semafor.com/article/11/24/2026/democratic-republic-of-congo-reimposes-cobalt-export-ban",
+      "source_publish_time": "2026-11-24T11:19:40Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/23/2026/wall-street-rallies-on-nvidia-ceo-huangs-return",
-          "source_publish_time": "2026-11-23T22:20:38Z"
+          "source_url": "https://www.semafor.com/article/11/24/2026/democratic-republic-of-congo-reimposes-cobalt-export-ban",
+          "source_publish_time": "2026-11-24T11:19:40Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-648875099e4bb324c4796eda",
-      "date": "2026-11-24",
-      "time": "11-24 06:20",
-      "headline_cn": "CrowdStrike拟以近四百四十亿美元股票收购Zscaler",
+      "event_id": "dh-event-8745a76ef03e241afa84d770",
+      "date": "2026-11-25",
+      "time": "11-24 23:47",
+      "headline_cn": "Semafor称英国与欧盟就连接碳市场达成协议",
       "headline_en": "",
-      "summary": "据Semafor报道，网络安全公司CrowdStrike拟收购Zscaler，对价为价值近四百四十亿美元的股票。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor报道，英国与欧盟已就连接双方碳市场达成协议。双方碳排放配额将从2028年起通用。协议也为双方互免高排放商品的碳边境征费铺路。",
+      "category": "TRADE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/23/2026/crowdstrike-to-buy-zscaler-for-44b-in-cyber-mega-merger",
-      "source_publish_time": "2026-11-23T22:20:46Z",
+      "source_url": "https://www.semafor.com/article/11/24/2026/the-uk-and-eu-link-their-carbon-markets",
+      "source_publish_time": "2026-11-24T15:47:14Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/23/2026/crowdstrike-to-buy-zscaler-for-44b-in-cyber-mega-merger",
-          "source_publish_time": "2026-11-23T22:20:46Z"
+          "source_url": "https://www.semafor.com/article/11/24/2026/the-uk-and-eu-link-their-carbon-markets",
+          "source_publish_time": "2026-11-24T15:47:14Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-74ba8ccc687d847a0baa308c",
-      "date": "2026-11-24",
-      "time": "11-23 21:24",
-      "headline_cn": "卡塔尔投资局与Brookfield拟研究在德国投资一百五十亿欧元",
+      "event_id": "dh-event-38cbf8aead9513ebbe69518e",
+      "date": "2026-11-25",
+      "time": "11-24 19:58",
+      "headline_cn": "Semafor称沙特再次请求盟友提供导弹拦截弹",
       "headline_en": "",
-      "summary": "据Semafor报道，卡塔尔对德国进行国事访问期间，卡塔尔投资局与Brookfield计划研究在德国关键行业和国防领域投资一百五十亿欧元。",
-      "category": "TECHNOLOGY",
+      "summary": "据Semafor援引知情人士报道，沙特已再次请求盟友提供更多导弹拦截弹。参与磋商的消息人士称，沙特近几周除接洽美国、英国和法国等传统伙伴外，还联系了美洲和亚洲的其他国家。",
+      "category": "GEOPOLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/23/2026/germany-secures-a-15-billion-qatari-investment-pledge",
-      "source_publish_time": "2026-11-23T13:24:26Z",
+      "source_url": "https://www.semafor.com/article/11/24/2026/saudi-arabia-asks-allies-from-america-to-asia-for-help-restocking-missile-defenses",
+      "source_publish_time": "2026-11-24T11:58:04Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/23/2026/germany-secures-a-15-billion-qatari-investment-pledge",
-          "source_publish_time": "2026-11-23T13:24:26Z"
+          "source_url": "https://www.semafor.com/article/11/24/2026/saudi-arabia-asks-allies-from-america-to-asia-for-help-restocking-missile-defenses",
+          "source_publish_time": "2026-11-24T11:58:04Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
     },
     {
-      "event_id": "dh-event-6eb52f8cf792abb7b9a7f3bb",
-      "date": "2026-11-24",
-      "time": "11-24 06:20",
-      "headline_cn": "荷兰法院禁止比亚迪一款车型在欧洲销售",
+      "event_id": "dh-event-34f594cf3afa504f0f006f44",
+      "date": "2026-11-25",
+      "time": "11-25 06:17",
+      "headline_cn": "Semafor转述官媒称陈吉宁正接受调查",
       "headline_en": "",
-      "summary": "据Semafor报道，荷兰一家法院禁止比亚迪一款车型在欧洲销售，此后比亚迪股价周一下跌。该车型当时尚未在欧盟销售。",
-      "category": "OTHER",
+      "summary": "据Semafor转述，中国官媒称一名中共中央政治局委员因涉嫌严重违纪违法正接受调查。Semafor指被调查者为上海市委书记陈吉宁。",
+      "category": "GEOPOLITICS",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/23/2026/byd-shares-slide-as-dutch-court-rules-against-temu-range-rover",
-      "source_publish_time": "2026-11-23T22:20:54Z",
+      "source_url": "https://www.semafor.com/article/11/24/2026/china-investigates-politburo-member-amid-anti-corruption-purge",
+      "source_publish_time": "2026-11-24T22:17:37Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/23/2026/byd-shares-slide-as-dutch-court-rules-against-temu-range-rover",
-          "source_publish_time": "2026-11-23T22:20:54Z"
+          "source_url": "https://www.semafor.com/article/11/24/2026/china-investigates-politburo-member-amid-anti-corruption-purge",
+          "source_publish_time": "2026-11-24T22:17:37Z"
         }
       ],
       "confidence": "PARTIAL",

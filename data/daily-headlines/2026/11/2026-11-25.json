@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-25",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-25T08:08:38.956535+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-db1f6cf3f2bfac3754a1eb80",
+      "date": "2026-11-25",
+      "time": "11-25 04:43",
+      "headline_cn": "Semafor称特朗普政府拟推出新一轮关税",
+      "headline_en": "",
+      "summary": "一名知情人士向Semafor透露，特朗普政府拟公布新一轮关税。该人士称，拟依据第301条征收的关税将因国家而异，且不会超过贸易协议规定的水平。",
+      "category": "TRADE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/24/2026/trump-to-double-down-on-tariffs-after-midterms-defeat",
+      "source_publish_time": "2026-11-24T20:43:55Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/24/2026/trump-to-double-down-on-tariffs-after-midterms-defeat",
+          "source_publish_time": "2026-11-24T20:43:55Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-bed9c568b96ea472be2494d7",
+      "date": "2026-11-25",
+      "time": "11-24 19:19",
+      "headline_cn": "Semafor称刚果民主共和国恢复钴出口禁令",
+      "headline_en": "",
+      "summary": "据Semafor报道，刚果民主共和国恢复钴出口禁令，以提振钴价。禁令定于下周生效。",
+      "category": "ENERGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/24/2026/democratic-republic-of-congo-reimposes-cobalt-export-ban",
+      "source_publish_time": "2026-11-24T11:19:40Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/24/2026/democratic-republic-of-congo-reimposes-cobalt-export-ban",
+          "source_publish_time": "2026-11-24T11:19:40Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-8745a76ef03e241afa84d770",
+      "date": "2026-11-25",
+      "time": "11-24 23:47",
+      "headline_cn": "Semafor称英国与欧盟就连接碳市场达成协议",
+      "headline_en": "",
+      "summary": "据Semafor报道，英国与欧盟已就连接双方碳市场达成协议。双方碳排放配额将从2028年起通用。协议也为双方互免高排放商品的碳边境征费铺路。",
+      "category": "TRADE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/24/2026/the-uk-and-eu-link-their-carbon-markets",
+      "source_publish_time": "2026-11-24T15:47:14Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/24/2026/the-uk-and-eu-link-their-carbon-markets",
+          "source_publish_time": "2026-11-24T15:47:14Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-38cbf8aead9513ebbe69518e",
+      "date": "2026-11-25",
+      "time": "11-24 19:58",
+      "headline_cn": "Semafor称沙特再次请求盟友提供导弹拦截弹",
+      "headline_en": "",
+      "summary": "据Semafor援引知情人士报道，沙特已再次请求盟友提供更多导弹拦截弹。参与磋商的消息人士称，沙特近几周除接洽美国、英国和法国等传统伙伴外，还联系了美洲和亚洲的其他国家。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/24/2026/saudi-arabia-asks-allies-from-america-to-asia-for-help-restocking-missile-defenses",
+      "source_publish_time": "2026-11-24T11:58:04Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/24/2026/saudi-arabia-asks-allies-from-america-to-asia-for-help-restocking-missile-defenses",
+          "source_publish_time": "2026-11-24T11:58:04Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    },
+    {
+      "event_id": "dh-event-34f594cf3afa504f0f006f44",
+      "date": "2026-11-25",
+      "time": "11-25 06:17",
+      "headline_cn": "Semafor转述官媒称陈吉宁正接受调查",
+      "headline_en": "",
+      "summary": "据Semafor转述，中国官媒称一名中共中央政治局委员因涉嫌严重违纪违法正接受调查。Semafor指被调查者为上海市委书记陈吉宁。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/24/2026/china-investigates-politburo-member-amid-anti-corruption-purge",
+      "source_publish_time": "2026-11-24T22:17:37Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/24/2026/china-investigates-politburo-member-amid-anti-corruption-purge",
+          "source_publish_time": "2026-11-24T22:17:37Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 5
+    }
+  ]
+}

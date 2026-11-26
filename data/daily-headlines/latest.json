@@ -1,114 +1,93 @@
 {
   "schema_version": 1,
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "timezone": "Asia/Shanghai",
   "status": "PUBLISHED",
-  "generated_at": "2026-11-25T08:08:38.956535+08:00",
+  "generated_at": "2026-11-26T08:10:30.059683+08:00",
   "headlines": [
     {
-      "event_id": "dh-event-db1f6cf3f2bfac3754a1eb80",
-      "date": "2026-11-25",
-      "time": "11-25 04:43",
-      "headline_cn": "Semafor称特朗普政府拟推出新一轮关税",
+      "event_id": "dh-event-cd5278e2c2ad4354eb02f167",
+      "date": "2026-11-26",
+      "time": "11-25 12:39",
+      "headline_cn": "美国拟对中国、欧盟等贸易伙伴加征关税",
       "headline_en": "",
-      "summary": "一名知情人士向Semafor透露，特朗普政府拟公布新一轮关税。该人士称，拟依据第301条征收的关税将因国家而异，且不会超过贸易协议规定的水平。",
+      "summary": "据Semafor报道，特朗普政府拟对中国、欧盟及其他十二个贸易伙伴加征关税。一名美国高级官员称，美方提议对中国输美商品普遍加征20%关税，部分商品拟获豁免。",
       "category": "TRADE",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/24/2026/trump-to-double-down-on-tariffs-after-midterms-defeat",
-      "source_publish_time": "2026-11-24T20:43:55Z",
+      "source_url": "https://www.semafor.com/article/11/25/2026/us-proposes-sweeping-new-tariffs-on-china-others",
+      "source_publish_time": "2026-11-25T04:39:10Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/24/2026/trump-to-double-down-on-tariffs-after-midterms-defeat",
-          "source_publish_time": "2026-11-24T20:43:55Z"
+          "source_url": "https://www.semafor.com/article/11/25/2026/us-proposes-sweeping-new-tariffs-on-china-others",
+          "source_publish_time": "2026-11-25T04:39:10Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 1
     },
     {
-      "event_id": "dh-event-bed9c568b96ea472be2494d7",
-      "date": "2026-11-25",
-      "time": "11-24 19:19",
-      "headline_cn": "Semafor称刚果民主共和国恢复钴出口禁令",
+      "event_id": "dh-event-e93c1261670ccf27328f288f",
+      "date": "2026-11-26",
+      "time": "11-26 06:27",
+      "headline_cn": "美国第三季度经济增长4.3%",
       "headline_en": "",
-      "summary": "据Semafor报道，刚果民主共和国恢复钴出口禁令，以提振钴价。禁令定于下周生效。",
+      "summary": "据Semafor报道，美国第三季度经济增长4.3%，通胀仍处于高位。",
       "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/24/2026/democratic-republic-of-congo-reimposes-cobalt-export-ban",
-      "source_publish_time": "2026-11-24T11:19:40Z",
+      "source_url": "https://www.semafor.com/article/11/25/2026/us-economy-expands-at-a-rapid-43-in-third-quarter",
+      "source_publish_time": "2026-11-25T22:27:19Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/24/2026/democratic-republic-of-congo-reimposes-cobalt-export-ban",
-          "source_publish_time": "2026-11-24T11:19:40Z"
+          "source_url": "https://www.semafor.com/article/11/25/2026/us-economy-expands-at-a-rapid-43-in-third-quarter",
+          "source_publish_time": "2026-11-25T22:27:19Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 2
     },
     {
-      "event_id": "dh-event-8745a76ef03e241afa84d770",
-      "date": "2026-11-25",
-      "time": "11-24 23:47",
-      "headline_cn": "Semafor称英国与欧盟就连接碳市场达成协议",
+      "event_id": "dh-event-d443ff3c41c866bfec8f71f0",
+      "date": "2026-11-26",
+      "time": "11-25 19:28",
+      "headline_cn": "沙特拟削减明年开支，预计财政赤字率收窄",
       "headline_en": "",
-      "summary": "据Semafor报道，英国与欧盟已就连接双方碳市场达成协议。双方碳排放配额将从2028年起通用。协议也为双方互免高排放商品的碳边境征费铺路。",
-      "category": "TRADE",
+      "summary": "据Semafor报道，沙特政府计划明年削减开支，预计财政赤字将收窄至国内生产总值的3.6%。沙特财政大臣贾丹称，面对地区冲突和石油出口受扰，沙特迄今未动用储备。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/24/2026/the-uk-and-eu-link-their-carbon-markets",
-      "source_publish_time": "2026-11-24T15:47:14Z",
+      "source_url": "https://www.semafor.com/article/11/25/2026/saudi-arabia-can-fund-a-prolonged-war-finance-minister-says",
+      "source_publish_time": "2026-11-25T11:28:37Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/24/2026/the-uk-and-eu-link-their-carbon-markets",
-          "source_publish_time": "2026-11-24T15:47:14Z"
+          "source_url": "https://www.semafor.com/article/11/25/2026/saudi-arabia-can-fund-a-prolonged-war-finance-minister-says",
+          "source_publish_time": "2026-11-25T11:28:37Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 3
     },
     {
-      "event_id": "dh-event-38cbf8aead9513ebbe69518e",
-      "date": "2026-11-25",
-      "time": "11-24 19:58",
-      "headline_cn": "Semafor称沙特再次请求盟友提供导弹拦截弹",
+      "event_id": "dh-event-1ba6906a6447c3c236031f96",
+      "date": "2026-11-26",
+      "time": "11-25 21:04",
+      "headline_cn": "尼日利亚央行维持基准利率在23%",
       "headline_en": "",
-      "summary": "据Semafor援引知情人士报道，沙特已再次请求盟友提供更多导弹拦截弹。参与磋商的消息人士称，沙特近几周除接洽美国、英国和法国等传统伙伴外，还联系了美洲和亚洲的其他国家。",
-      "category": "GEOPOLITICS",
+      "summary": "据Semafor报道，尼日利亚央行将基准利率维持在23%。该行利率决策委员会指出，通胀已连续五个月放缓。",
+      "category": "ENERGY",
       "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/24/2026/saudi-arabia-asks-allies-from-america-to-asia-for-help-restocking-missile-defenses",
-      "source_publish_time": "2026-11-24T11:58:04Z",
+      "source_url": "https://www.semafor.com/article/11/25/2026/nigeria-holds-benchmark-interest-rate-before-elections-in-january",
+      "source_publish_time": "2026-11-25T13:04:57Z",
       "sources": [
         {
           "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/24/2026/saudi-arabia-asks-allies-from-america-to-asia-for-help-restocking-missile-defenses",
-          "source_publish_time": "2026-11-24T11:58:04Z"
+          "source_url": "https://www.semafor.com/article/11/25/2026/nigeria-holds-benchmark-interest-rate-before-elections-in-january",
+          "source_publish_time": "2026-11-25T13:04:57Z"
         }
       ],
       "confidence": "PARTIAL",
       "rank": 4
-    },
-    {
-      "event_id": "dh-event-34f594cf3afa504f0f006f44",
-      "date": "2026-11-25",
-      "time": "11-25 06:17",
-      "headline_cn": "Semafor转述官媒称陈吉宁正接受调查",
-      "headline_en": "",
-      "summary": "据Semafor转述，中国官媒称一名中共中央政治局委员因涉嫌严重违纪违法正接受调查。Semafor指被调查者为上海市委书记陈吉宁。",
-      "category": "GEOPOLITICS",
-      "source_name": "WWW.SEMAFOR.COM",
-      "source_url": "https://www.semafor.com/article/11/24/2026/china-investigates-politburo-member-amid-anti-corruption-purge",
-      "source_publish_time": "2026-11-24T22:17:37Z",
-      "sources": [
-        {
-          "source_name": "WWW.SEMAFOR.COM",
-          "source_url": "https://www.semafor.com/article/11/24/2026/china-investigates-politburo-member-amid-anti-corruption-purge",
-          "source_publish_time": "2026-11-24T22:17:37Z"
-        }
-      ],
-      "confidence": "PARTIAL",
-      "rank": 5
     }
   ]
 }

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-27T08:12:05.329964+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-351e6279ef6bf02117160cb5",
+      "date": "2026-11-27",
+      "time": "11-26 21:38",
+      "headline_cn": "Semafor：花旗和摩根大通正推介AI相关贷款组合",
+      "headline_en": "Semafor reports Citi and JPMorgan are marketing AI-related loan portfolios",
+      "summary": "据Semafor引述知情人士报道，花旗和摩根大通等银行正向市场推介人工智能相关贷款组合。部分银行提出将贷款留在自身资产负债表上，并把损失风险转给投资者。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/26/2026/banks-look-to-dump-ai-debt",
+      "source_publish_time": "2026-11-26T13:38:48Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/26/2026/banks-look-to-dump-ai-debt",
+          "source_publish_time": "2026-11-26T13:38:48Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-0e6502931f41304c7dafccfb",
+      "date": "2026-11-27",
+      "time": "11-27 00:01",
+      "headline_cn": "MTN首席执行官称正寻求非洲三国金融牌照",
+      "headline_en": "MTN CEO says the company is seeking financial licenses in three African countries",
+      "summary": "MTN首席执行官告诉Semafor，公司正寻求在尼日利亚获得区域性银行牌照，并在加纳和卢旺达获得金融服务牌照。他称，截至九月底的九个月，公司金融科技网络处理的交易额超过五千亿美元。",
+      "category": "FINANCE",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/26/2026/mtn-eyes-bank-licenses-in-africa-fintech-push",
+      "source_publish_time": "2026-11-26T16:01:12Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/26/2026/mtn-eyes-bank-licenses-in-africa-fintech-push",
+          "source_publish_time": "2026-11-26T16:01:12Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-cc6b36ff20f51d8d658ffaff",
+      "date": "2026-11-27",
+      "time": "11-26 20:44",
+      "headline_cn": "Semafor：穆迪将英伟达评级展望由正面调整为稳定",
+      "headline_en": "Semafor reports Moody’s revised Nvidia’s credit outlook to stable from positive",
+      "summary": "据Semafor报道，穆迪将英伟达的信用评级展望由正面调整为稳定，标普全球则提到对公司首席执行官离任后回归的担忧。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/26/2026/nvidias-credit-rating-the-ai-trades-collateral-is-at-risk",
+      "source_publish_time": "2026-11-26T12:44:49Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/26/2026/nvidias-credit-rating-the-ai-trades-collateral-is-at-risk",
+          "source_publish_time": "2026-11-26T12:44:49Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    }
+  ]
+}

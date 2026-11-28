@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-28",
+  "timezone": "Asia/Shanghai",
+  "status": "PUBLISHED",
+  "generated_at": "2026-11-28T08:09:25.367670+08:00",
+  "headlines": [
+    {
+      "event_id": "dh-event-eb79d00e859af01da46ccff2",
+      "date": "2026-11-28",
+      "time": "11-27 21:39",
+      "headline_cn": "塞内加尔议长敦促总统提前举行选举",
+      "headline_en": "",
+      "summary": "据Semafor报道，塞内加尔围绕如何管理政府财政的分歧加深，议长敦促总统提前举行选举。议员警告，依据修订预算举债缺乏合法授权。这场僵局可能进一步推迟国际货币基金组织批准一项二十二亿美元的计划。",
+      "category": "MACRO",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/27/2026/senegal-speaker-urges-early-elections-deepening-rift-between-parliament-and-president",
+      "source_publish_time": "2026-11-27T13:39:55Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/27/2026/senegal-speaker-urges-early-elections-deepening-rift-between-parliament-and-president",
+          "source_publish_time": "2026-11-27T13:39:55Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 1
+    },
+    {
+      "event_id": "dh-event-ac945829138478983d404830",
+      "date": "2026-11-28",
+      "time": "11-27 21:30",
+      "headline_cn": "南非央行警告人工智能企业举债或推高融资成本",
+      "headline_en": "",
+      "summary": "据Semafor报道，南非央行警告，西方科技企业为开发人工智能而大量举债，可能在南非面临再融资压力时推高其融资成本。报道说，2030至2032年，南非每年到期债务预计将增至约二百三十亿美元，超过此前水平的两倍。",
+      "category": "TECHNOLOGY",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/27/2026/ai-debt-boom-could-push-up-funding-costs-as-south-africa-approaches-refinancing",
+      "source_publish_time": "2026-11-27T13:30:46Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/27/2026/ai-debt-boom-could-push-up-funding-costs-as-south-africa-approaches-refinancing",
+          "source_publish_time": "2026-11-27T13:30:46Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 2
+    },
+    {
+      "event_id": "dh-event-dd34099a57f34d33cb2e60da",
+      "date": "2026-11-28",
+      "time": "11-27 17:11",
+      "headline_cn": "Semafor称沙特主权财富基金搁置医疗用品经销商上市计划",
+      "headline_en": "",
+      "summary": "Semafor援引知情人士称，沙特主权财富基金搁置了医疗用品经销商NUPCO的首次公开募股计划。知情人士说，基金近几周已要求银行停止推进这项原可能筹资近十亿美元的交易。该基金拒绝置评。",
+      "category": "GEOPOLITICS",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/27/2026/saudi-wealth-fund-shelves-medical-distributors-ipo",
+      "source_publish_time": "2026-11-27T09:11:22Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/27/2026/saudi-wealth-fund-shelves-medical-distributors-ipo",
+          "source_publish_time": "2026-11-27T09:11:22Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 3
+    },
+    {
+      "event_id": "dh-event-c2f6cc5f39af87091167c414",
+      "date": "2026-11-28",
+      "time": "11-27 21:26",
+      "headline_cn": "非洲金融科技公司M-Kopa拟明年销售五百万部手机",
+      "headline_en": "",
+      "summary": "M-Kopa首席执行官杰西·摩尔向Semafor表示，公司计划扩大智能手机分期融资业务，目标是明年售出五百万部手机。报道说，该公司过去五年已售出逾一千万部智能手机。",
+      "category": "OTHER",
+      "source_name": "WWW.SEMAFOR.COM",
+      "source_url": "https://www.semafor.com/article/11/27/2026/african-fintech-company-m-kopa-aims-to-boost-smartphone-sales",
+      "source_publish_time": "2026-11-27T13:26:11Z",
+      "sources": [
+        {
+          "source_name": "WWW.SEMAFOR.COM",
+          "source_url": "https://www.semafor.com/article/11/27/2026/african-fintech-company-m-kopa-aims-to-boost-smartphone-sales",
+          "source_publish_time": "2026-11-27T13:26:11Z"
+        }
+      ],
+      "confidence": "PARTIAL",
+      "rank": 4
+    }
+  ]
+}
